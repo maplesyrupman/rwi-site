@@ -23,7 +23,7 @@
   line-height: 48px;
 }
 
-.about {}
+/* ------- about ------- */
 
 .aboutIntroCon {
   position: relative;
@@ -45,8 +45,6 @@
   gap: 86px;
 }
 
-.aboutPara {}
-
 .aboutParaHeading {
   font-size: 96px;
   font-weight: 800;
@@ -61,6 +59,8 @@
   line-height: 43px;
   font-weight: 600;
 }
+
+/* ------- services ------- */
 
 .servicesGrid {
   display: grid;
@@ -107,6 +107,12 @@
   font-size: 32px;
   font-weight: 600;
   line-height: 56px;
+}
+
+/* ------- team ------- */
+
+.team {
+  padding-bottom: 156px !important;
 }
 
 .teamCon {
@@ -158,7 +164,120 @@
 
 .teamLinkedIn {
   font-size: 36px;
+  color:#03053E;
 }
+
+/* ------- contact ------- */
+
+.contactHeading {
+  padding-top: 3rem;
+}
+
+.contactCon {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 80px;
+}
+
+.contactInfoCon {
+  width: 100%;
+  max-width: 40%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.linkCon {
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+}
+
+.contactCta {
+  font-weight: 800;
+  font-size: 48px;
+  line-height: 36px;
+}
+
+.contactEmailCon {
+  display: flex;
+}
+
+.emailIcon {
+  font-size: 2rem;
+  max-width: fit-content;
+  padding: 15px;
+  display: flex;
+}
+
+.email {
+  max-width: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 36px;
+  padding-left: 1rem;
+}
+
+.emailLink {
+  text-decoration: none;
+}
+
+.socialCta {
+  font-size: 36px;
+}
+
+.socialIconCon {
+  display: flex;
+  gap: 7%;
+}
+
+.socialLink {
+  font-size: 2.7rem;
+}
+
+.contactForm {
+  width: 100%;
+  max-width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.inputContainer {
+  width: 100%;
+  max-width: 80%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  font-size: 1.7rem;
+  line-height: 26px;
+}
+
+.contactField {
+  width: 100%;
+  padding: 15px;
+  outline-style: none;
+}
+
+.contactBtn {
+  font-size: 2rem;
+  font-family: Gilmer;
+  border: none;
+  border-radius: 5px;
+  padding: .9rem 1.5rem;
+  max-width: fit-content;
+  margin-left: auto;
+  cursor: pointer;
+}
+
+.contactBtn:hover {
+  background-color: #ca5745;
+}
+
 
 @media (max-width: 810px) {
   .logoContainer {

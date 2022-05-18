@@ -23,7 +23,7 @@
     display: flex;
     list-style: none;
     gap: 3rem;
-    font-size: 32px;
+    font-size: 28px;
     align-items: flex-start;
     max-height: fit-content;
 }

@@ -25,6 +25,7 @@ const aboutParas = [
     colour: 'txtRed'
   }
 ]
+
 const services = [
   {
     title: 'Web Design and Development',
@@ -93,6 +94,9 @@ export default function Home() {
 
   return (
     <Layout>
+      <Head>
+        <title>RWI Labs</title>
+      </Head>
       <section className={`${styles.hero} gutters`}>
         <div className={`${styles.heroText} txtWhite`} >
           <h1 className={styles.heroHeading}>
@@ -207,46 +211,59 @@ export default function Home() {
 
       <section
         id='contact'
-        className={`${styles.contact} gutters`}
+        className={`${styles.contact} gutters bgBlue`}
       >
-        <h2 className={`sectionHeading`}>Contact</h2>
+        <h2 className={`sectionHeading ${styles.contactHeading}`}>Contact Us</h2>
         <div className={styles.contactCon}>
           <div className={styles.contactInfoCon}>
-            <h3 className={styles.contactHeading}>
-              Got an idea? Lets hear it!
-            </h3>
-            <Link href={'mailto:contact@rwilabs.io'}>
-              <a>
-                <div className={styles.contactEmailCon}>
-                  <div className={styles.emailIcon}>
-                    <FaEnvelope />
+              <h3 className={`${styles.contactCta} txtWhite`}>
+                Got an idea? Lets hear it!
+              </h3>
+              <Link href={'mailto:contact@rwilabs.io'}>
+                <a className={styles.emailLink}>
+                  <div className={styles.contactEmailCon}>
+                    <div className={`${styles.emailIcon} bgRed txtWhite`}>
+                      <FaEnvelope />
+                    </div>
+                    <div className={`${styles.email} txtWhite`}>
+                      contact@rwilabs.io
+                    </div>
                   </div>
-                  <div className={styles.email}>
-                    contact@rwilabs.io
-                  </div>
-                </div>
-              </a>
-            </Link>
-            <div className={styles.socialCon}>
-              {socials.map((social, idx) => {
-                return (
-                  <div key={`soc${idx}`} className={styles.socialLink}>
-                    <Link href={social.url}>
-                      <a>
-                        {social.icon}
-                      </a>
-                    </Link>
-                  </div>
-                )
-              })}
+                </a>
+              </Link>
+            <div>
+              <h3 className={`${styles.socialCta} txtRed`}>
+                We&apos;ll keep you posted
+              </h3>
+              <div className={styles.socialIconCon}>
+                {socials.map((social, idx) => {
+                  return (
+                    <div key={`soc${idx}`} className={styles.socialLink}>
+                      <Link href={social.url}>
+                        <a className='txtRed'>
+                          {social.icon}
+                        </a>
+                      </Link>
+                    </div>
+                  )
+                })}
+              </div>
             </div>
           </div>
-          <form>
-            <div>
-              <input type='text' placeholder='Name' />
-              <input type='email' placeholder='Email' />
-              <textarea placeholder='Message' />
+          <form className={styles.contactForm}>
+            <div className={styles.inputContainer}>
+              <input className={styles.contactField} type='text' placeholder='Name' name='name' />
+              <input className={styles.contactField} type='text' placeholder='Company' name='company' />
+              <input className={styles.contactField} type='email' placeholder='Email' name='email' />
+              <input className={styles.contactField}  type='text' placeholder='Phone' name='phone' />
+              <textarea className={styles.contactField} placeholder='Message' name='message' />
+                          
+              <button className={`bgRed txtWhite ${styles.contactBtn}`}>
+                Submit
+              </button>
             </div>
+
+            
 
           </form>
         </div>
