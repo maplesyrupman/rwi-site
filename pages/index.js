@@ -233,7 +233,7 @@ export default function Home() {
               </Link>
             <div>
               <h3 className={`${styles.socialCta} txtRed`}>
-                We&apos;ll keep you posted
+                We&apos;ll keep you posted.
               </h3>
               <div className={styles.socialIconCon}>
                 {socials.map((social, idx) => {

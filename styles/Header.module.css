@@ -10,6 +10,7 @@
 
 .logo {
     width: 17rem;
+    padding: 1rem;
 }
 
 .nav {
@@ -23,7 +24,7 @@
     display: flex;
     list-style: none;
     gap: 3rem;
-    font-size: 28px;
+    font-size: 1.5rem;
     align-items: flex-start;
     max-height: fit-content;
 }
