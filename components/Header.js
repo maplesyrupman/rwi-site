@@ -6,7 +6,7 @@ export default function Header() {
 
 
     return (
-        <header className={styles.header}>
+        <header className={`${styles.header} bgBlue gutters`}>
             <Link href='/'>
                 <a>
                     <div className={styles.logo}>

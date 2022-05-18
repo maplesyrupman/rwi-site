@@ -1,19 +1,162 @@
-.container {
+.hero {
   background-color: #03053E;
+  background-image: url('../public/circuit-board.png');
+  background-repeat: repeat;
   height: 100vh;
   display: flex;
-  justify-content: center;
   align-items: center;
 }
 
-.logoContainer {
-  margin-top: -3rem;
-  max-width: 700px;
-  width: 700px;
+.heroText {
+  max-width: 55%;
+  padding-left: 7rem;
+}
+
+.heroHeading {
+  font-size: 5rem;
+  line-height: 5.7rem;
+  font-weight: 800;
+}
+
+.heroPara {
+  font-size: 32px;
+  line-height: 48px;
+}
+
+.about {}
+
+.aboutIntroCon {
+  position: relative;
+  box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.15);
+  padding: 40px;
+  top: -50px;
+}
+
+.aboutIntroPara {
+  font-size: 36px;
+  line-height: 60px;
   text-align: center;
+  font-weight: 700;
+}
+
+.aboutParaCon {
+  display: flex;
+  flex-direction: column;
+  gap: 86px;
+}
+
+.aboutPara {}
+
+.aboutParaHeading {
+  font-size: 96px;
+  font-weight: 800;
+  font-style: oblique;
+  line-height: 115px;
+}
+
+.aboutParaText {
+  max-width: 85%;
+  margin: 0 auto;
+  font-size: 36px;
+  line-height: 43px;
+  font-weight: 600;
+}
+
+.servicesGrid {
+  display: grid;
+  grid-template-columns: 5fr 7fr;
   color: white;
-  font-size: 4rem;
-  font-weight: 200;
+}
+
+.servicesMenu {
+  column-span: 5;
+}
+
+.serviceHeading {
+  padding: 51px 0 51px 148px;
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 48px;
+  background-color: #28284A;
+}
+
+.serviceHeading:hover {
+  background-color:#03053E;
+  cursor: pointer;
+}
+
+.serviceBlurbCon {
+  column-span: 7;
+  display: flex;
+  justify-content: center;
+  padding: 51px 148px 0 136px;
+}
+
+.sericeBlurb {
+  max-width: 1080px;
+}
+
+.serviceIcon {
+  font-size: 13rem;
+  height: 13rem;
+  margin-bottom: 56px;
+}
+
+.servicePara {
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 56px;
+}
+
+.teamCon {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.teamCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 56px;
+  text-align: center;
+  box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.1);
+  max-width: 556px;
+  padding: 46px 58px;
+}
+
+.teamImg {
+  width: 150px;
+  height: 150px;
+  border: 7px solid #CC2C12;
+  border-radius: 50%;
+}
+
+.teamInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.teamName {
+  font-size: 36px;
+  font-weight: 800;
+  line-height: 43px;
+}
+
+.teamTitle {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 800;
+}
+
+.teamBio {
+  font-size: 24px;
+  line-height: 36px;
+  font-weight: 600;
+}
+
+.teamLinkedIn {
+  font-size: 36px;
 }
 
 @media (max-width: 810px) {
