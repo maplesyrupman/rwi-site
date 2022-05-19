@@ -545,8 +545,43 @@
 
 /* SM Mobile */
 
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 380px) {
+  .heroPara {
+    line-height: 2.25rem;
+  }
 
+  .aboutIntroPara {
+    font-size: 1.25rem;
+    line-height: 2rem;
+  }
+
+  .aboutIntroCon {
+    padding: 1.9rem;
+  }
+
+  .teamName {
+    font-size: 2rem;
+  }
+
+  .teamTitle {
+    font-size: 1rem;
+  }
+
+  .contactCta {
+    line-height: 2.5rem;
+  }
+
+  .email {
+    font-size: 1.25rem;
+  }
+
+  .inputContainer {
+    font-size: 1rem;
+  }
+
+  .socialIconCon {
+    gap: 18%;
+  }
 }
 
 /* @media (max-width: 810px) {

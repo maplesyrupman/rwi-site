@@ -160,7 +160,7 @@ h1,h2,h3,h4,h5,h6,p,div {
   font-weight: 800;
   font-size: 3.5rem;
   line-height: 67px;
-  padding:156px 0 56px 0;
+  padding: 9.75rem 0 3.5rem 0;
 }
 
 @media screen and (max-width: 1200px) {
@@ -172,5 +172,16 @@ h1,h2,h3,h4,h5,h6,p,div {
 @media screen and (max-width: 600px) {
   .sectionHeading {
     font-size: 3rem;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .btn {
+    font-size: 1.25rem;
+  }
+
+  .sectionHeading {
+    font-size: 2.5rem;
+    padding: 8.75rem 0 3rem 0;
   }
 }
