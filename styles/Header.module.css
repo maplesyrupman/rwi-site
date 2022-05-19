@@ -10,7 +10,7 @@
 
 .logo {
     width: 17rem;
-    padding: 1rem;
+    padding: 1rem 0;
 }
 
 .nav {
@@ -32,4 +32,11 @@
 .navLink {
     text-decoration: none;
     color: white;
+}
+
+@media screen and (max-width: 1024px) {
+    .logo {
+        width: 12rem;
+        padding: 1rem 0;
+    }
 }

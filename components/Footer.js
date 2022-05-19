@@ -7,7 +7,7 @@ export default function Footer() {
     return (
         <footer className={`${styles.footer} gutters`}>
             <div className={styles.logo}>
-            <svg width="301" height="129" viewBox="0 0 301 129" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg viewBox="0 0 301 129" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M88.3914 49.3796V58.4928C81.798 57.4079 78.6257 60.1976 78.6257 67.854V80.8108H68.86V49.8135H78.6257V53.9982C80.4606 50.6505 83.8195 48.7596 88.3914 49.3796Z" fill="#F3F5F7"/>
             <path d="M142.6 49.813L131.839 80.8413H122.82L117.222 63.4518L111.531 80.8723H102.48L91.7192 49.844H101.796L107.487 68.4734L113.117 49.844H121.234L126.925 68.4734L132.555 49.844H142.6V49.813Z" fill="#F3F5F7"/>
             <path d="M147.017 49.813H156.782V80.8413H147.017V49.813Z" fill="#F3F5F7"/>

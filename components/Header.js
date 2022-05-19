@@ -10,7 +10,7 @@ export default function Header() {
             <Link href='/'>
                 <a>
                     <div className={styles.logo}>
-                    <svg width="211.5" height="60" viewBox="0 0 282 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg viewBox="0 0 282 80" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M33.6 24.36V40.11C22.26 38.22 16.8 43.05 16.8 56.28V78.63H0V25.08H16.8V32.31C19.95 26.55 25.74 23.31 33.6 24.36Z" fill="#F3F5F7"/>
                     <path d="M126.78 25.08L108.3 78.6H92.76L83.1 48.6L73.35 78.6H57.81L39.33 25.08H56.7L66.45 57.18L76.11 25.08H90.06L99.81 57.18L109.47 25.08H126.78Z" fill="#F3F5F7"/>
                     <path d="M134.34 25.08H151.14V78.6H134.34V25.08Z" fill="#F3F5F7"/>

@@ -19,3 +19,16 @@
     color: white;
     justify-content: center;
 }
+
+@media screen and (max-width: 1024px) {
+    .logo {
+        width: 12rem;
+        padding: 1rem 0;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .logo {
+        width: 8rem;
+    }
+}
