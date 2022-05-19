@@ -144,7 +144,7 @@ h1,h2,h3,h4,h5,h6,p,div {
 }
 
 .gutters {
-  padding: 0 148px !important;
+  padding: 0 8% !important;
 }
 
 .btn {
@@ -161,4 +161,10 @@ h1,h2,h3,h4,h5,h6,p,div {
   font-size: 3.5rem;
   line-height: 67px;
   padding:156px 0 56px 0;
+}
+
+@media (max-width: 1200px) {
+  .btn {
+    font-size: 1.5rem;
+  }
 }

@@ -92,6 +92,8 @@ export default function Home() {
     setActiveService(services[e.target.dataset.idx])
   }
 
+  var linebreak = '\n'
+
   return (
     <Layout>
       <Head>
