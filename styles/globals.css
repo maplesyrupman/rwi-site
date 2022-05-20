@@ -144,12 +144,12 @@ h1,h2,h3,h4,h5,h6,p,div {
 }
 
 .gutters {
-  padding: 0 148px !important;
+  padding: 0 8% !important;
 }
 
 .btn {
   padding: 1rem 3rem;
-  font-size: 32px;
+  font-size: 2rem;
   text-decoration: none;
   font-weight: 800;
 }
@@ -158,7 +158,36 @@ h1,h2,h3,h4,h5,h6,p,div {
   color: #CC2C12;
   text-align: center;
   font-weight: 800;
-  font-size: 56px;
+  font-size: 3.5rem;
   line-height: 67px;
-  padding:156px 0 56px 0;
+  padding: 9.75rem 0 3.5rem 0;
+}
+
+
+
+.swiper-pagination-bullet {
+  background-color: #F3F5F7 !important;
+}
+
+@media screen and (max-width: 1200px) {
+  .btn {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .sectionHeading {
+    font-size: 3rem;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .btn {
+    font-size: 1.25rem;
+  }
+
+  .sectionHeading {
+    font-size: 2.5rem;
+    padding: 8.75rem 0 3rem 0;
+  }
 }
