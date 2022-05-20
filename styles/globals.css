@@ -163,6 +163,12 @@ h1,h2,h3,h4,h5,h6,p,div {
   padding: 9.75rem 0 3.5rem 0;
 }
 
+
+
+.swiper-pagination-bullet {
+  background-color: #F3F5F7 !important;
+}
+
 @media screen and (max-width: 1200px) {
   .btn {
     font-size: 1.5rem;
