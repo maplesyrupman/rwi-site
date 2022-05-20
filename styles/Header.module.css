@@ -59,14 +59,12 @@
         flex-direction: column;
         align-items: flex-end;
         padding: 1rem 0;
-
     }
 
     .hamburger {
         display: block;
         position: fixed;
-        right: 1.5rem;
-        top: 1.5rem;
+        top: 2rem;
     }
 
     .linkContainer {
@@ -91,7 +89,6 @@
     }
 
     .hamburger {
-        right: 1rem;
         top: 1rem;
     }
 }
