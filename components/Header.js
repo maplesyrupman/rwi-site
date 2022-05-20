@@ -1,9 +1,32 @@
+import { useState } from 'react';
 import Link from 'next/link'
 import Image from 'next/image'
 import styles from '../styles/Header.module.css'
 
-export default function Header() {
+import { HiMenu } from "react-icons/hi";
 
+export default function Header() {
+    const [navbarOpen, setNavbarOpen] = useState(false);
+
+    const handleToggle = () => {
+        setNavbarOpen(!navbarOpen);
+    }
+
+    const getStyles = () => {
+        if (navbarOpen) {
+            return styles.navOpen;
+        } else {
+            return styles.nav;
+        }
+    }
+
+    const getLinkStyles = () => {
+        if (navbarOpen) {
+            return styles.linkMenu;
+        } else {
+            return styles.linkContainer;
+        }
+    }
 
     return (
         <header className={`${styles.header} bgBlue gutters`}>
@@ -23,8 +46,11 @@ export default function Header() {
                     </div>
                 </a>
             </Link>
-            <nav className={styles.nav}>
-                <ul className={styles.linkContainer}>
+            <nav className={getStyles()}>
+                <button className={styles.hamburger} onClick={handleToggle}>
+                    <HiMenu className='txtWhite' />
+                </button>
+                <ul className={getLinkStyles()}>
                     <li className={styles.navLink}>
                         <Link href='#about'>
                             <a className={styles.navLink} >
