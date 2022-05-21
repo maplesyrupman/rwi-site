@@ -87,21 +87,43 @@ const socials = [
 ]
 
 export default function Home() {
-  const [width, setWidth] = useState(0);
-  const breakpoint = 600;
+  const [isMobile, setIsMobile] = useState(false)
 
   useEffect(() => {
-    const handleWindowResize = () => setWidth(window.innerWidth)
-    window.addEventListener("resize", handleWindowResize);
-
-    // Return a function from the effect that removes the event listener
-    return () => window.removeEventListener("resize", handleWindowResize);
+    window.onresize = () => setIsMobile(window.matchMedia('(max-width: 600px)').matches)
   }, []);
 
   const [activeService, setActiveService] = useState(services[0])
 
   function selectService(e) {
     setActiveService(services[e.target.dataset.idx])
+  }
+
+  const [formState, updateForm] = useState({ name: '', company: '', email: '', phone: '', message: '' })
+
+  function handleChange(e) {
+    switch (e.target.name) {
+      case 'name':
+        updateForm({ ...formState, name: e.target.value })
+        break
+      case 'company':
+        updateForm({ ...formState, company: e.target.value })
+        break
+      case 'email':
+        updateForm({ ...formState, email: e.target.value })
+        break
+      case 'phone':
+        updateForm({ ...formState, phone: e.target.value })
+        break
+      default:
+        updateForm({ ...formState, message: e.target.value })
+        break
+    }
+  }
+
+  function handleSubmit(e) {
+    e.preventDefault()
+    console.log(formState)
   }
 
   return (
@@ -130,7 +152,7 @@ export default function Home() {
         className={`${styles.about} gutters bgWhite`}>
         <div className={`${styles.aboutIntroCon} bgWhite ${styles.aboutIntroPara}`}>
           <p className='txtBlue'>
-            In a rapidly evolving technological world, online presence has never been more important to a business&apos;s success. Between managing multiple Social Media platforms, maintaining a user and SEO friendly website, and running successful advertising campaigns, all while portraying a cohesive brand identity, there&apos;s a lot to consider. 
+            In a rapidly evolving technological world, online presence has never been more important to a business&apos;s success. Between managing multiple Social Media platforms, maintaining a user and SEO friendly website, and running successful advertising campaigns, all while portraying a cohesive brand identity, there&apos;s a lot to consider.
           </p>
           <p className='txtRed'>
             We&apos;re here to help.
@@ -162,10 +184,10 @@ export default function Home() {
         <div className={`bgBlue`}>
 
 
-            { width > breakpoint ? 
-                <>
-                <div className={`${styles.servicesGrid} bgBlue`}>
-                  <div className={styles.servicesMenu}>
+          {!isMobile ?
+            <>
+              <div className={`${styles.servicesGrid} bgBlue`}>
+                <div className={styles.servicesMenu}>
                   {services.map((service, idx) => {
                     return (
                       <div
@@ -179,20 +201,20 @@ export default function Home() {
                     )
                   })}
                 </div><div className={styles.serviceBlurbCon}>
-                    <div className={styles.serviceBlurb}>
-                      <div className={styles.serviceIcon}>
-                        {activeService.icon}
-                      </div>
-                      <div className={styles.servicePara}>
-                        {activeService.para}
-                      </div>
+                  <div className={styles.serviceBlurb}>
+                    <div className={styles.serviceIcon}>
+                      {activeService.icon}
                     </div>
+                    <div className={styles.servicePara}>
+                      {activeService.para}
+                    </div>
+                  </div>
                 </div>
               </div>
-                </>
+            </>
             :
-                <ServicesSlider services={services}/>
-            }
+            <ServicesSlider services={services} />
+          }
 
         </div>
       </section>
@@ -239,21 +261,21 @@ export default function Home() {
         <h2 className={`sectionHeading ${styles.contactHeading}`}>Contact Us</h2>
         <div className={styles.contactCon}>
           <div className={styles.contactInfoCon}>
-              <h3 className={`${styles.contactCta} txtWhite`}>
-                Got an idea? Lets hear it!
-              </h3>
-              <Link href={'mailto:contact@rwilabs.io'}>
-                <a className={styles.emailLink}>
-                  <div className={styles.contactEmailCon}>
-                    <div className={`${styles.emailIcon} bgRed txtWhite`}>
-                      <FaEnvelope />
-                    </div>
-                    <div className={`${styles.email} txtWhite`}>
-                      contact@rwilabs.io
-                    </div>
+            <h3 className={`${styles.contactCta} txtWhite`}>
+              Got an idea? Lets hear it!
+            </h3>
+            <Link href={'mailto:contact@rwilabs.io'}>
+              <a className={styles.emailLink}>
+                <div className={styles.contactEmailCon}>
+                  <div className={`${styles.emailIcon} bgRed txtWhite`}>
+                    <FaEnvelope />
                   </div>
-                </a>
-              </Link>
+                  <div className={`${styles.email} txtWhite`}>
+                    contact@rwilabs.io
+                  </div>
+                </div>
+              </a>
+            </Link>
             <div>
               <h3 className={`${styles.socialCta} txtRed`}>
                 We&apos;ll keep you posted.
@@ -273,20 +295,52 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <form className={styles.contactForm}>
+          <form
+            className={styles.contactForm}
+            onSubmit={handleSubmit}
+          >
             <div className={styles.inputContainer}>
-              <input className={styles.contactField} type='text' placeholder='Name' name='name' />
-              <input className={styles.contactField} type='text' placeholder='Company' name='company' />
-              <input className={styles.contactField} type='email' placeholder='Email' name='email' />
-              <input className={styles.contactField}  type='text' placeholder='Phone' name='phone' />
-              <textarea className={styles.contactField} placeholder='Message' name='message' />
-                          
+              <input
+                onChange={handleChange}
+                className={styles.contactField}
+                type='text'
+                placeholder='Name'
+                name='name'
+              />
+              <input
+                onChange={handleChange}
+                className={styles.contactField}
+                type='text'
+                placeholder='Company'
+                name='company'
+              />
+              <input
+                onChange={handleChange}
+                className={styles.contactField}
+                type='email'
+                placeholder='Email'
+                name='email'
+              />
+              <input
+                onChange={handleChange}
+                className={styles.contactField}
+                type='text'
+                placeholder='Phone'
+                name='phone'
+              />
+              <textarea
+                onChange={handleChange}
+                className={styles.contactField}
+                placeholder='Message'
+                name='message'
+              />
+
               <button className={`bgRed txtWhite ${styles.contactBtn}`}>
                 Submit
               </button>
             </div>
 
-            
+
 
           </form>
         </div>
