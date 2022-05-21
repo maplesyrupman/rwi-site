@@ -11,17 +11,17 @@ import Link from 'next/link'
 const aboutParas = [
   {
     title: 'Read',
-    para: 'Sed porttitor lectus nibh. Donec sollicitudin molestie malesuada. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.',
+    para: 'Emerging trends, policy changes, market research, and the latest technological advancements make for a lengthy reading list. By staying on top of our research, we are able to advise our clients on all digital aspects of their business with confidence.',
     colour: 'txtBlue'
   },
   {
     title: 'Write',
-    para: 'Sed porttitor lectus nibh. Donec sollicitudin molestie malesuada. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.',
+    para: 'Mark Twain said to write what you know, and for us that means code, copy, and corny jokes. We help business owners tell their story online in such a way that keeps their customers wanting to read more. What\'s the difference between biscuits and cookies? No one rejects all biscuits!',
     colour: 'txtBlue'
   },
   {
     title: 'Innovate',
-    para: 'Sed porttitor lectus nibh. Donec sollicitudin molestie malesuada. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.',
+    para: 'In a constantly evolving world, businesses must include change as part of their strategy. We are always working on ways to make our websites faster, create marketing campaigns that excite their target audiences, and adapt online strategies to accomodate new legeslation and policy updates.',
     colour: 'txtRed'
   }
 ]
@@ -29,22 +29,22 @@ const aboutParas = [
 const services = [
   {
     title: 'Web Design and Development',
-    para: 'Sed porttitor lectus nibh. Donec sollicitudin molestie malesuada. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.',
+    para: 'A company\'s website is often the first place customers go when researching a business. They expect the pages to load quickly (under 2 seconds), have an appealing design, and to function accross a variety of different screen sizes.',
     icon: <FaLaptopCode />
   },
   {
     title: 'Digital Marketing',
-    para: 'Sed porttitor lectus nibh. Donec sollicitudin molestie malesuada. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.',
+    para: 'Determining a target audience as well as the most appropriate platforms to engage with is only one part of the marketing equation. The real challenge lays in crafting a campaign that is both persuasive and representative of the company\'s brand.',
     icon: <FaUsers />
   },
   {
     title: 'Brand Development',
-    para: 'Sed porttitor lectus nibh. Donec sollicitudin molestie malesuada. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.',
+    para: 'A brand is more than just a logo, it\'s a company\'s personality. From the colours on a website to the tone of voice of a sales representative, every interaction a customer has with a business impacts their brand identity.',
     icon: <FaFingerprint />
   },
   {
     title: 'Consulting',
-    para: 'Sed porttitor lectus nibh. Donec sollicitudin molestie malesuada. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.',
+    para: 'Sometimes, a second set of eyes can make all the difference. If your business already has a website, social media presence, or marketing campaign that isn\'t yielding the desired results, we can help get things back on track.',
     icon: <FaRegHandshake />
   }
 ]
@@ -103,7 +103,7 @@ export default function Home() {
             A Digital Solutions Agency
           </h1>
           <p className={styles.heroPara}>
-            Serving Custom tailored digital solutions to help businesses <span className='txtRed'>succeed</span> online
+            Crafting custom tailored digital solutions that help businesses <span className='txtRed'>succeed</span> online.
           </p>
           <Link href='#contact'>
             <a className='btn txtWhite bgRed'>
@@ -116,9 +116,12 @@ export default function Home() {
       <section
         id='about'
         className={`${styles.about} gutters bgWhite`}>
-        <div className={`${styles.aboutIntroCon} bgWhite`}>
-          <p className={`${styles.aboutIntroPara} txtBlue`}>
-            <span className={`txtRed`}>RWI Labs</span> is a digital marketing agency dedicated to creating and maintaining an effective online presence for businesses through web design & development, social media advertising, and more.
+        <div className={`${styles.aboutIntroCon} bgWhite ${styles.aboutIntroPara}`}>
+          <p className='txtBlue'>
+            In a rapidly evolving technological world, online presence has never been more important to a business&apos;s success. Between managing multiple Social Media platforms, maintaining a user and SEO friendly website, and running successful advertising campaigns, all while portraying a cohesive brand identity, there&apos;s a lot to consider. 
+          </p>
+          <p className='txtRed'>
+            We&apos;re here to help.
           </p>
         </div>
         <div className={styles.aboutParaCon}>
@@ -239,7 +242,7 @@ export default function Home() {
                 {socials.map((social, idx) => {
                   return (
                     <div key={`soc${idx}`} className={styles.socialLink}>
-                      <Link href={social.url}>
+                      <Link href={social.url} target='_blank'>
                         <a className='txtRed'>
                           {social.icon}
                         </a>
