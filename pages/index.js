@@ -1,11 +1,12 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 import { FaLaptopCode, FaUsers, FaFingerprint, FaRegHandshake, FaLinkedin, FaEnvelope, FaInstagram, FaFacebookF, FaTwitter, FaLinkedinIn } from 'react-icons/fa'
 
 import Layout from '../components/Layout'
+import ServicesSlider from '../components/ServicesSlider'
 import Link from 'next/link'
 
 const aboutParas = [
@@ -86,6 +87,17 @@ const socials = [
 ]
 
 export default function Home() {
+  const [width, setWidth] = useState(0);
+  const breakpoint = 600;
+
+  useEffect(() => {
+    const handleWindowResize = () => setWidth(window.innerWidth)
+    window.addEventListener("resize", handleWindowResize);
+
+    // Return a function from the effect that removes the event listener
+    return () => window.removeEventListener("resize", handleWindowResize);
+  }, []);
+
   const [activeService, setActiveService] = useState(services[0])
 
   function selectService(e) {
@@ -148,32 +160,40 @@ export default function Home() {
         className={`${styles.services}`}>
         <h2 className={`sectionHeading bgWhite`}>Our Services</h2>
         <div className={`bgBlue`}>
-          <div className={`${styles.servicesGrid} bgBlue`}>
-            <div className={styles.servicesMenu}>
-              {services.map((service, idx) => {
-                return (
-                  <div
-                    key={`srv${idx}`}
-                    className={`${styles.serviceHeading} ${activeService.title === service.title ? 'bgBlue' : ''}`}
-                    onClick={selectService}
-                    data-idx={idx}
-                  >
-                    {service.title}
-                  </div>
-                )
-              })}
-            </div>
-            <div className={styles.serviceBlurbCon}>
-              <div className={styles.serviceBlurb}>
-                <div className={styles.serviceIcon}>
-                  {activeService.icon}
-                </div>
-                <div className={styles.servicePara} >
-                  {activeService.para}
+
+
+            { width > breakpoint ? 
+                <>
+                <div className={`${styles.servicesGrid} bgBlue`}>
+                  <div className={styles.servicesMenu}>
+                  {services.map((service, idx) => {
+                    return (
+                      <div
+                        key={`srv${idx}`}
+                        className={`${styles.serviceHeading} ${activeService.title === service.title ? 'bgBlue' : ''}`}
+                        onClick={selectService}
+                        data-idx={idx}
+                      >
+                        {service.title}
+                      </div>
+                    )
+                  })}
+                </div><div className={styles.serviceBlurbCon}>
+                    <div className={styles.serviceBlurb}>
+                      <div className={styles.serviceIcon}>
+                        {activeService.icon}
+                      </div>
+                      <div className={styles.servicePara}>
+                        {activeService.para}
+                      </div>
+                    </div>
                 </div>
               </div>
-            </div>
-          </div>
+                </>
+            :
+                <ServicesSlider services={services}/>
+            }
+
         </div>
       </section>
 
@@ -236,7 +256,7 @@ export default function Home() {
               </Link>
             <div>
               <h3 className={`${styles.socialCta} txtRed`}>
-                We&apos;ll keep you posted
+                We&apos;ll keep you posted.
               </h3>
               <div className={styles.socialIconCon}>
                 {socials.map((social, idx) => {
