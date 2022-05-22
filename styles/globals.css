@@ -27,6 +27,10 @@ ol[role='list'] {
   list-style: none;
 }
 
+html, body {
+  max-width: 100vw;
+}
+
 /*\ Set core root defaults */
 html:focus-within {
   scroll-behavior: smooth;

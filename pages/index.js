@@ -90,6 +90,7 @@ export default function Home() {
   const [isMobile, setIsMobile] = useState(false)
 
   useEffect(() => {
+    setIsMobile(window.matchMedia('(max-width: 600px)').matches)
     window.onresize = () => setIsMobile(window.matchMedia('(max-width: 600px)').matches)
   }, []);
 

@@ -5,26 +5,10 @@ import styles from '../styles/Header.module.css'
 import { HiMenu } from "react-icons/hi";
 
 export default function Header() {
-    const [navbarOpen, setNavbarOpen] = useState(false);
+    const [menuOpen, setMenuOpen] = useState(false);
 
-    const handleToggle = () => {
-        setNavbarOpen(!navbarOpen);
-    }
-
-    const getStyles = () => {
-        if (navbarOpen) {
-            return styles.navOpen;
-        } else {
-            return styles.nav;
-        }
-    }
-
-    const getLinkStyles = () => {
-        if (navbarOpen) {
-            return styles.linkMenu;
-        } else {
-            return styles.linkContainer;
-        }
+    const toggleDropdown = () => {
+        setMenuOpen(!menuOpen);
     }
 
     return (
@@ -45,35 +29,38 @@ export default function Header() {
                     </div>
                 </a>
             </Link>
-            <nav className={getStyles()}>
-                <button className={styles.hamburger} onClick={handleToggle}>
+            <nav className={styles.nav}>
+                <button className={styles.hamburger} onClick={toggleDropdown}>
                     <HiMenu className='txtWhite' />
                 </button>
-                <ul className={getLinkStyles()}>
+                <ul className={`${styles.dropdownMenu} ${menuOpen ? styles.menuOpen : ''}`}>
                     <li className={styles.navLink}>
                         <Link href='#about'>
-                            <a className={styles.navLink} >
+                            <a 
+                                className={styles.navLink} 
+                                onClick={toggleDropdown}
+                            >
                                 About
                             </a>
                         </Link>
                     </li>
                     <li className={styles.navLink}>
                         <Link href='#services'>
-                            <a className={styles.navLink} >
+                            <a className={styles.navLink} onClick={toggleDropdown} >
                                 Services
                             </a>
                         </Link>
                     </li>
                     <li className={styles.navLink}>
                         <Link href='#team'>
-                            <a className={styles.navLink} >
+                            <a className={styles.navLink} onClick={toggleDropdown} >
                                 Team
                             </a>
                         </Link>
                     </li>
                     <li className={styles.navLink}>
                         <Link href='#contact'>
-                            <a className={styles.navLink} >
+                            <a className={styles.navLink} onClick={toggleDropdown} >
                                 Contact
                             </a>
                         </Link>
