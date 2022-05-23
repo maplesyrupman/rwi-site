@@ -5,7 +5,8 @@
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 7;
+    max-width: 100vw;
+    z-index: 100;
 }
 
 .logo {
@@ -54,9 +55,10 @@
     .hamburger {
         display: inline-block;
         position: absolute;
+        top: 1.3rem;
         background: none;
         border: none;
-        font-size: 2.3rem;
+        font-size: 2.5rem;
         cursor: pointer;
         z-index: 8;
     }
@@ -76,7 +78,7 @@
 
     .dropdownMenu.menuOpen {
         max-height: 300px !important;
-        padding-top: 3rem;
+        padding-top: 4rem;
         opacity: 1;
     }
 }

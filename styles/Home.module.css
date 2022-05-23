@@ -4,7 +4,9 @@
   background-repeat: repeat;
   height: 100vh;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
 }
 
 .heroText {
@@ -23,13 +25,31 @@
   line-height: 3rem;
 }
 
+.aboutArrowCon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.aboutArrow {
+  color: #F3F5F7;
+  font-size: 2.7rem;
+  width:auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-self: flex-end;
+  position: absolute;
+  bottom: 1rem;
+}
+
 /* ------- about ------- */
 
 .aboutIntroCon {
   position: relative;
   box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.15);
   padding: 2.5rem;
-  top: -50px;
+  top: 160px;
 }
 
 .aboutIntroPara {
@@ -43,6 +63,7 @@
   display: flex;
   flex-direction: column;
   gap: 86px;
+  padding-top: 246px;
 }
 
 .aboutParaHeading {
@@ -66,10 +87,12 @@
   display: grid;
   grid-template-columns: 5fr 7fr;
   color: white;
+  height: 71vh;
 }
 
 .servicesMenu {
   column-span: 5;
+  height: 100%;
 }
 
 .serviceHeading {
@@ -78,10 +101,13 @@
   font-weight: 600;
   line-height: 3rem;
   background-color: #28284A;
+  height: 25%;
+  display: flex;
+  align-items: center;
 }
 
 .serviceHeading:hover {
-  background-color:#03053E;
+  background-color: #03053E;
   cursor: pointer;
 }
 
@@ -164,7 +190,7 @@
 
 .teamLinkedIn {
   font-size: 2.25rem;
-  color:#03053E;
+  color: #03053E;
 }
 
 /* ------- contact ------- */
@@ -201,6 +227,7 @@
 
 .contactEmailCon {
   display: flex;
+  
 }
 
 .emailIcon {
@@ -208,17 +235,19 @@
   max-width: fit-content;
   padding: 0.95rem;
   display: flex;
+  border-top: 1px solid #CC2C12;
+  border-bottom: 1px solid #CC2C12;
 }
 
 .email {
-  max-width: fit-content;
   display: flex;
   flex-direction: column;
   justify-content: center;
   font-weight: 600;
   font-size: 2.25rem;
   line-height: 2.25rem;
-  padding-left: 1rem;
+  padding: 0 1rem;
+  border: 1px solid #CC2C12;
 }
 
 .emailLink {
@@ -228,12 +257,13 @@
 .socialCta {
   font-size: 2.25rem;
   font-weight: 600;
+  white-space: nowrap;
 }
 
 .socialIconCon {
   display: flex;
   gap: 7%;
-  margin-top: 2.25rem
+  margin-top: .3rem
 }
 
 .socialLink {
@@ -303,7 +333,7 @@
   .aboutParaText {
     max-width: 95%;
     font-size: 1.75rem;
-    line-hieght: 2rem;
+    line-height: 2rem;
     margin: 0 0 0 auto;
   }
 
@@ -335,6 +365,7 @@
   .heroText {
     padding: 0 2.5rem;
   }
+
   .heroHeading {
     font-size: 3.5rem;
     line-height: 4.5rem;
@@ -372,7 +403,7 @@
     font-size: 1.5rem;
     line-height: 2.5rem;
     padding: 2.5rem 1rem 2.5rem 2.5rem;
-  }  
+  }
 
   .serviceIcon {
     font-size: 10rem;
@@ -447,6 +478,15 @@
     padding-bottom: 1rem;
   }
 
+  .aboutArrow {
+    font-size: 2.3rem;
+  }
+  
+  .aboutIntroCon {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
   .aboutIntroPara {
     font-size: 1.25rem;
   }
@@ -464,6 +504,7 @@
   .serviceBlurbCon {
     padding: 0 1.5rem 1rem 2rem
   }
+
   .serviceIcon {
     font-size: 8rem;
     height: 8rem;
@@ -489,7 +530,7 @@
   }
 
   .contactCon {
-    flex-direction: column;
+    flex-direction: column-reverse;
     gap: 4.5rem;
   }
 
@@ -502,6 +543,14 @@
 
   .contactForm {
     max-width: 100%;
+  }
+
+  .contactBtn {
+    margin: 0 auto;
+  }
+
+  .contactEmailCon {
+    justify-content: center;
   }
 
   .socialIconCon {
@@ -517,13 +566,28 @@
     text-align: center;
     padding: 0;
   }
+
   .heroPara {
     padding-bottom: 1.75rem;
+  }
+
+  .aboutIntroCon {
+    top: 100px;
+  }
+
+  .aboutParaCon {
+    gap: 3rem;
+    padding-top: 200px;
   }
 
   .teamCard {
     padding: 2.25rem 1.25rem;
     margin: 0;
+  }
+
+  .contactCon {
+    padding-bottom: 2rem;
+    gap: 2rem;
   }
 
   .contactCta {
@@ -532,6 +596,7 @@
 
   .contactInfoCon {
     padding: 0 0.5rem;
+    gap: 2rem;
   }
 
   .socialIconCon {

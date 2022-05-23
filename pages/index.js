@@ -3,7 +3,7 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import { useState, useEffect } from 'react'
 
-import { FaLaptopCode, FaUsers, FaFingerprint, FaRegHandshake, FaLinkedin, FaEnvelope, FaInstagram, FaFacebookF, FaTwitter, FaLinkedinIn } from 'react-icons/fa'
+import { FaLaptopCode, FaUsers, FaFingerprint, FaRegHandshake, FaLinkedin, FaEnvelope, FaInstagram, FaFacebookF, FaTwitter, FaLinkedinIn, FaArrowDown } from 'react-icons/fa'
 
 import Layout from '../components/Layout'
 import ServicesSlider from '../components/ServicesSlider'
@@ -12,7 +12,7 @@ import Link from 'next/link'
 const aboutParas = [
   {
     title: 'Read',
-    para: 'Emerging trends, policy changes, market research, and the latest technological advancements make for a lengthy reading list. By staying on top of our research, we are able to advise our clients on all digital aspects of their business with confidence.',
+    para: 'Emerging trends, policy changes, market research, and the latest technological advancements make for a lengthy reading list. By staying on top of our research, we are able to provide our clients with valuable insights on all digital aspects of their business.',
     colour: 'txtBlue'
   },
   {
@@ -90,7 +90,7 @@ export default function Home() {
   const [isMobile, setIsMobile] = useState(false)
 
   useEffect(() => {
-    setIsMobile(window.matchMedia('(max-width: 600px)').matches)
+    setIsMobile(window.matchMedia('(max-width: 810px)').matches)
     window.onresize = () => setIsMobile(window.matchMedia('(max-width: 600px)').matches)
   }, []);
 
@@ -146,6 +146,14 @@ export default function Home() {
             </a>
           </Link>
         </div>
+        <div className={styles.aboutArrowCon}>
+          <Link href='#about'>
+            <a className={styles.aboutArrow}>
+              <FaArrowDown />
+            </a>
+          </Link>
+        </div>
+
       </section>
 
       <section
@@ -263,7 +271,7 @@ export default function Home() {
         <div className={styles.contactCon}>
           <div className={styles.contactInfoCon}>
             <h3 className={`${styles.contactCta} txtWhite`}>
-              Got an idea? Lets hear it!
+              Got an idea? {isMobile && <br/>} Lets hear it!
             </h3>
             <Link href={'mailto:contact@rwilabs.io'}>
               <a className={styles.emailLink}>
@@ -340,9 +348,6 @@ export default function Home() {
                 Submit
               </button>
             </div>
-
-
-
           </form>
         </div>
       </section>
