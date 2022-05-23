@@ -244,7 +244,7 @@
   flex-direction: column;
   justify-content: center;
   font-weight: 600;
-  font-size: 2.25rem;
+  font-size: 2rem;
   line-height: 2.25rem;
   padding: 0 1rem;
   border: 1px solid #CC2C12;
@@ -530,7 +530,7 @@
   }
 
   .contactCon {
-    flex-direction: column-reverse;
+    flex-direction: column;
     gap: 4.5rem;
   }
 
@@ -587,7 +587,7 @@
 
   .contactCon {
     padding-bottom: 2rem;
-    gap: 2rem;
+    gap: 4rem;
   }
 
   .contactCta {

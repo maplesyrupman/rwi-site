@@ -55,14 +55,14 @@ const team = [
     name: 'William Weiland',
     title: 'Co-Founder | Marketing, Development',
     img: '/',
-    bio: 'Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.',
+    bio: 'William is a web developer and marketing strategist who specializes in e-commerce and data driven web applications. ',
     linkedIn: 'https://www.linkedin.com/in/william-weiland'
   },
   {
     name: 'Samantha Urwin',
     title: 'Co-Founder | Design, Development',
     img: '/',
-    bio: 'Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.',
+    bio: 'Samantha is a designer and devloper with a passion for online brand development. She has experience designing everything from product packaging to user interfaces, with an affinity for UI development and marketing graphics.',
     linkedIn: 'https://www.linkedin.com/in/samanthaurwin'
   }
 ]
@@ -271,7 +271,7 @@ export default function Home() {
         <div className={styles.contactCon}>
           <div className={styles.contactInfoCon}>
             <h3 className={`${styles.contactCta} txtWhite`}>
-              Got an idea? {isMobile && <br/>} Lets hear it!
+              Got an idea? {isMobile && <br />} Lets hear it!
             </h3>
             <Link href={'mailto:contact@rwilabs.io'}>
               <a className={styles.emailLink}>

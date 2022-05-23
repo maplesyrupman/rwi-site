@@ -74,6 +74,7 @@
         transition: all .4s ease-in-out !important;
         max-height: 0px;
         opacity: 0;
+        overflow-y: hidden;
     }
 
     .dropdownMenu.menuOpen {
