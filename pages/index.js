@@ -11,25 +11,6 @@ import Link from 'next/link'
 
 import axios from 'axios'
 
-const aboutParas = [
-  {
-    title: 'Read',
-    para: 'Emerging trends, policy changes, market research, and the latest technological advancements make for a lengthy reading list. By staying on top of our research, we are able to provide our clients with valuable insights on all digital aspects of their business.',
-    colour: 'txtBlue'
-  },
-  {
-    title: 'Write',
-    para: 'Mark Twain said to write what you know, and for us that means code, copy, and corny jokes. We help businesses tell their story online in such a way that invites their customers to be a supporting character instead of just an audience member.',
-    colour: 'txtBlue',
-    joke: 'What\'s the difference between biscuits and cookies? No one rejects all biscuits!'
-  },
-  {
-    title: 'Innovate',
-    para: 'In a constantly evolving world, businesses must include change as part of their strategy. We are always working on ways to make our websites faster, create marketing campaigns that excite their target audiences, and adapt online strategies to accomodate new legeslation and policy updates.',
-    colour: 'txtRed'
-  }
-]
-
 const services = [
   {
     title: 'Web Design and Development',
@@ -58,7 +39,7 @@ const team = [
     name: 'William Weiland',
     title: 'Co-Founder | Marketing, Development',
     img: '/',
-    bio: 'My deep interest in human psychology coupled with a passion for digital systems has lead me to the world of digital marketing and e-commerce. I am facinated by the process of researching an audience and then designing a digital journey that acquaints them with a company and their brand. ',
+    bio: 'My deep interest in human psychology coupled with a passion for digital systems has lead me to the world of digital marketing and e-commerce. I am fascinated by the process of researching an audience and then designing a digital journey that acquaints them with a company and their brand. ',
     linkedIn: 'https://www.linkedin.com/in/william-weiland'
   },
   {
@@ -92,10 +73,22 @@ const socials = [
 export default function Home() {
   const [isMobile, setIsMobile] = useState(false)
 
+  const [jokeVisible, setJokeVisible] = useState(false)
+  function toggleJokeVisibility(e) {
+    setJokeVisible(!jokeVisible)
+  }
+
+  function hideJoke() {
+    setJokeVisible(false)
+  }
+
   useEffect(() => {
     setIsMobile(window.matchMedia('(max-width: 810px)').matches)
     window.onresize = () => setIsMobile(window.matchMedia('(max-width: 600px)').matches)
-  }, []);
+    if (jokeVisible) {
+      window.addEventListener('scroll', hideJoke)
+    }
+  },[jokeVisible]);
 
   const [activeService, setActiveService] = useState(services[0])
 
@@ -136,8 +129,32 @@ export default function Home() {
     })
   }
 
+  const aboutParas = [
+    {
+      title: 'Read',
+      para: <p className={styles.aboutParaText}>
+        Emerging trends, policy changes, market research, and the latest technological advancements make for a lengthy reading list. By staying on top of our research, we are able to provide our clients with valuable insights on all digital aspects of their business.
+      </p>,
+      colour: 'txtBlue'
+    },
+    {
+      title: 'Write',
+      para: <p className={styles.aboutParaText}>
+        Mark Twain said to write what you know, and for us that means code, copy, and <span className='jokeQuestion' onClick={toggleJokeVisibility} onFocus={() => console.log('blur')} >corny jokes<span className={`jokePunch ${jokeVisible ? 'jokePunchShow' : ''}`}>What&apos;s the difference between cookies and biscuits? No one rejects all biscuits!</span></span>. We help businesses tell their story online in such a way that invites their customers to be a supporting character instead of just an audience member.
+      </p>,
+      colour: 'txtBlue'
+    },
+    {
+      title: 'Innovate',
+      para: <p className={styles.aboutParaText}>
+        In a constantly evolving world, businesses must include change as part of their strategy. We are always working on ways to make our websites faster, create marketing campaigns that excite their target audiences, and adapt online strategies to accomodate new legeslation and policy updates.
+      </p>,
+      colour: 'txtRed'
+    }
+  ]
+
   return (
-    <Layout>
+    <Layout onScroll={() => jokeVisible ? setJokeVisible(fasle) : null}>
       <Head>
         <title>RWI Labs</title>
       </Head>
@@ -186,9 +203,7 @@ export default function Home() {
                 <h2 className={`${styles.aboutParaHeading} ${data.colour}`}>
                   {data.title}
                 </h2>
-                <p className={styles.aboutParaText}>
-                  {data.para}
-                </p>
+                {data.para}
               </div>
             )
           })}
