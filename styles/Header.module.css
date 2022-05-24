@@ -78,9 +78,10 @@
     }
 
     .dropdownMenu.menuOpen {
-        max-height: 300px !important;
+        max-height: 325px !important;
         padding-top: 4rem;
         opacity: 1;
+        overflow: visible;
     }
 }
 

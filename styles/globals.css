@@ -192,6 +192,7 @@ h1,h2,h3,h4,h5,h6,p,div {
 .jokePunchShow {
   height: fit-content;
   width: max-content;
+  max-width: 80vw;
   background-color: #222349;
   bottom: 25px;
 }
@@ -210,6 +211,13 @@ h1,h2,h3,h4,h5,h6,p,div {
   .sectionHeading {
     font-size: 3rem;
     padding: 5rem 0 1rem 0 !important;
+  }
+
+  .jokePunchShow {
+    bottom: 25px;
+    right: 10px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 0px;
   }
 }
 
