@@ -9,6 +9,8 @@ import Layout from '../components/Layout'
 import ServicesSlider from '../components/ServicesSlider'
 import Link from 'next/link'
 
+import axios from 'axios'
+
 const aboutParas = [
   {
     title: 'Read',
@@ -17,8 +19,9 @@ const aboutParas = [
   },
   {
     title: 'Write',
-    para: 'Mark Twain said to write what you know, and for us that means code, copy, and corny jokes. We help business owners tell their story online in such a way that keeps their customers wanting to read more. What\'s the difference between biscuits and cookies? No one rejects all biscuits!',
-    colour: 'txtBlue'
+    para: 'Mark Twain said to write what you know, and for us that means code, copy, and corny jokes. We help businesses tell their story online in such a way that invites their customers to be a supporting character instead of just an audience member.',
+    colour: 'txtBlue',
+    joke: 'What\'s the difference between biscuits and cookies? No one rejects all biscuits!'
   },
   {
     title: 'Innovate',
@@ -55,7 +58,7 @@ const team = [
     name: 'William Weiland',
     title: 'Co-Founder | Marketing, Development',
     img: '/',
-    bio: 'William is a web developer and marketing strategist who specializes in e-commerce and data driven web applications. ',
+    bio: 'My deep interest in human psychology coupled with a passion for digital systems has lead me to the world of digital marketing and e-commerce. I am facinated by the process of researching an audience and then designing a digital journey that acquaints them with a company and their brand. ',
     linkedIn: 'https://www.linkedin.com/in/william-weiland'
   },
   {
@@ -124,7 +127,13 @@ export default function Home() {
 
   function handleSubmit(e) {
     e.preventDefault()
-    console.log(formState)
+    axios({
+      method: 'post',
+      url: 'api/contact',
+      data: formState
+    }).then(response => {
+      console.log(response)
+    })
   }
 
   return (

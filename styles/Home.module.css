@@ -395,6 +395,16 @@
     font-size: 1.5rem;
   }
 
+  .jokeDiv {
+    position: relative;
+  }
+
+  .jokeSpan {
+    position: absolute;
+    color: black;
+    font-size: .5rem;
+  }
+
   .serviceBlurbCon {
     padding: 0 2rem 1rem 2.25rem;
   }
