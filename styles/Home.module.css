@@ -1,7 +1,6 @@
 .hero {
   background-color: #03053E;
-  background-image: url('../public/circuit-board.png');
-  background-repeat: repeat;
+  background-image: url('../public/circut-board.png');
   height: 100vh;
   display: flex;
   flex-direction: column;
