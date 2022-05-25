@@ -4,7 +4,7 @@ import styles from '../styles/Home.module.css'
 import { useState, useEffect } from 'react'
 
 import { FaLaptopCode, FaUsers, FaFingerprint, FaRegHandshake, FaLinkedin, FaEnvelope, FaInstagram, FaFacebookF, FaTwitter, FaLinkedinIn, FaArrowDown, FaRegLightbulb, FaBook, FaPenNib } from 'react-icons/fa'
-import { BsPen, BsBook} from 'react-icons/bs'
+import { BsPen, BsBook } from 'react-icons/bs'
 import Layout from '../components/Layout'
 import ServicesSlider from '../components/ServicesSlider'
 import Link from 'next/link'
@@ -39,14 +39,14 @@ const team = [
     name: 'William Weiland',
     title: 'Co-Founder | Marketing, Development',
     img: '/',
-    bio: 'My deep interest in human psychology coupled with a passion for digital systems has lead me to the world of digital marketing and e-commerce. I am fascinated by the process of researching an audience and then designing a digital journey that acquaints them with a company and their brand. ',
+    bio: 'William\'s interest in human psychology coupled with an affinity for digital systems has been the driving motivation behind his career in digital marketing and e-commerce. He specializes in constructing digital journeys that acquaint customers with companies and their brand.',
     linkedIn: 'https://www.linkedin.com/in/william-weiland'
   },
   {
     name: 'Samantha Urwin',
     title: 'Co-Founder | Design, Development',
     img: '/',
-    bio: 'Samantha is a designer and devloper with a passion for online brand development. She has experience designing everything from product packaging to user interfaces, with an affinity for UI development and marketing graphics.',
+    bio: 'Samantha is a developer and designer who merges creativity with strategic thinking in her work. She has a passion for online brand development, is dedicated to designing seamless user experiences and bringing brands to life!',
     linkedIn: 'https://www.linkedin.com/in/samanthaurwin'
   }
 ]
@@ -128,7 +128,7 @@ export default function Home() {
       console.log(response)
     })
   }
-  
+
   const aboutParas = [
     {
       title: 'Read',
@@ -149,7 +149,7 @@ export default function Home() {
     {
       title: 'Innovate',
       para: <p className={styles.aboutParaText}>
-        In a constantly evolving world, businesses must include change as part of their strategy. We are always working on ways to make our websites faster, create marketing campaigns that excite their target audiences, and adapt online strategies to accomodate new legeslation and policy updates.
+        The digital world is changing rapdily, and along with it, how businesses operate online. That&apos;s why we&apos;re always working on new ways to make faster websites, create exciting marketing campaigns that appeal to their target audience, and implement online strategies that help our clients achieve their goals.
       </p>,
       colour: 'txtRed',
       icon: <FaRegLightbulb />
@@ -167,7 +167,7 @@ export default function Home() {
             A Digital Solutions Agency
           </h1>
           <p className={styles.heroPara}>
-            Crafting custom tailored digital solutions that help businesses <span className='txtRed'>succeed</span> online.
+            Providing custom tailored digital solutions that help businesses <span className='txtRed'>succeed</span> online.
           </p>
           <Link href='#contact'>
             <a className='btn txtWhite bgRed'>
@@ -207,9 +207,9 @@ export default function Home() {
                   {data.title}
                 </h2>
                 <div className={styles.aboutParaBox} >
-                  <div className={`${styles.aboutIcon} ${data.colour}`}>
+                  {/* <div className={`${styles.aboutIcon} ${data.colour}`}>
                     {data.icon}
-                  </div>
+                  </div> */}
                   {data.para}
                 </div>
               </div>
@@ -221,9 +221,8 @@ export default function Home() {
       <section
         id='services'
         className={`${styles.services}`}>
-        <h2 className={`sectionHeading bgWhite`}>Our Services</h2>
+        <h2 className={`sectionHeading bgWhite`}>Our Solutions</h2>
         <div className={`bgBlue`}>
-
 
           {!isMobile ?
             <>
