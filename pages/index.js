@@ -3,8 +3,8 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import { useState, useEffect } from 'react'
 
-import { FaLaptopCode, FaUsers, FaFingerprint, FaRegHandshake, FaLinkedin, FaEnvelope, FaInstagram, FaFacebookF, FaTwitter, FaLinkedinIn, FaArrowDown } from 'react-icons/fa'
-
+import { FaLaptopCode, FaUsers, FaFingerprint, FaRegHandshake, FaLinkedin, FaEnvelope, FaInstagram, FaFacebookF, FaTwitter, FaLinkedinIn, FaArrowDown, FaRegLightbulb, FaBook, FaPenNib } from 'react-icons/fa'
+import { BsPen, BsBook} from 'react-icons/bs'
 import Layout from '../components/Layout'
 import ServicesSlider from '../components/ServicesSlider'
 import Link from 'next/link'
@@ -88,7 +88,7 @@ export default function Home() {
     if (jokeVisible) {
       window.addEventListener('scroll', hideJoke)
     }
-  },[jokeVisible]);
+  }, [jokeVisible]);
 
   const [activeService, setActiveService] = useState(services[0])
 
@@ -128,28 +128,31 @@ export default function Home() {
       console.log(response)
     })
   }
-
+  
   const aboutParas = [
     {
       title: 'Read',
       para: <p className={styles.aboutParaText}>
         Emerging trends, policy changes, market research, and the latest technological advancements make for a lengthy reading list. By staying on top of our research, we are able to provide our clients with valuable insights on all digital aspects of their business.
       </p>,
-      colour: 'txtBlue'
+      colour: 'txtBlue',
+      icon: <BsBook />
     },
     {
       title: 'Write',
       para: <p className={styles.aboutParaText}>
         Mark Twain said to write what you know, and for us that means code, copy, and <span className='jokeQuestion' onClick={toggleJokeVisibility} onFocus={() => console.log('blur')} >corny jokes<span className={`jokePunch ${jokeVisible ? 'jokePunchShow' : ''}`}>What&apos;s the difference between cookies and biscuits? No one rejects all biscuits!</span></span>. We help businesses tell their story online in such a way that invites their customers to be a supporting character instead of just an audience member.
       </p>,
-      colour: 'txtBlue'
+      colour: 'txtBlue',
+      icon: <BsPen />
     },
     {
       title: 'Innovate',
       para: <p className={styles.aboutParaText}>
         In a constantly evolving world, businesses must include change as part of their strategy. We are always working on ways to make our websites faster, create marketing campaigns that excite their target audiences, and adapt online strategies to accomodate new legeslation and policy updates.
       </p>,
-      colour: 'txtRed'
+      colour: 'txtRed',
+      icon: <FaRegLightbulb />
     }
   ]
 
@@ -203,7 +206,12 @@ export default function Home() {
                 <h2 className={`${styles.aboutParaHeading} ${data.colour}`}>
                   {data.title}
                 </h2>
-                {data.para}
+                <div className={styles.aboutParaBox} >
+                  <div className={`${styles.aboutIcon} ${data.colour}`}>
+                    {data.icon}
+                  </div>
+                  {data.para}
+                </div>
               </div>
             )
           })}
@@ -262,9 +270,9 @@ export default function Home() {
           {team.map(person => {
             return (
               <div key={person.name} className={styles.teamCard}>
-                <div className={styles.teamImg}>
+                {/* <div className={styles.teamImg}>
 
-                </div>
+                </div> */}
                 <div className={styles.teamInfo}>
                   <h4 className={`${styles.teamName} txtBlue`}>
                     {person.name}

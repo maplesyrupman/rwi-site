@@ -72,6 +72,14 @@
   line-height: 7.2rem;
 }
 
+.aboutParaBox {
+  display: flex;
+}
+
+.aboutIcon {
+  font-size: 7rem;
+}
+
 .aboutParaText {
   max-width: 85%;
   margin: 0 auto;
@@ -143,6 +151,7 @@
 .teamCon {
   display: flex;
   justify-content: space-evenly;
+  padding-top: 3rem;
 }
 
 .teamCard {
