@@ -11,7 +11,7 @@ const transporter = nodemailer.createTransport({
         // clientSecret: process.env.CLIENT_SECRET,
         // refreshToken: process.env.REFRESH_TOKEN,
         user: 'contact@rwilabs.io',
-        pass: 'RsdfWsdfI2RF!',
+        pass: process.env.PASSWORD,
     },
 });
 
