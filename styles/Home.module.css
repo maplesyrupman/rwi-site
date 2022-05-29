@@ -10,7 +10,6 @@
 
 .heroText {
   max-width: 50rem;
-  padding-left: 7rem;
 }
 
 .heroHeading {
@@ -45,31 +44,47 @@
 /* ------- about ------- */
 
 .aboutIntroCon {
-  position: relative;
-  box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.15);
-  padding: 2.5rem;
-  top: 160px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 14rem;
+}
+
+.aboutIntroImg {
+  width: 55%;
+}
+
+.aboutIntroTxt {
+  width: 40%;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+
+.aboutIntroHeading {
+  font-size: 2.25rem;
+  line-height: 3.25rem;
 }
 
 .aboutIntroPara {
-  font-size: 2.25rem;
-  line-height: 3.75rem;
-  text-align: center;
-  font-weight: 700;
+  font-size: 1.15rem;
+  line-height: 2rem;
+  margin-bottom: 0;
 }
 
 .aboutParaCon {
   display: flex;
   flex-direction: column;
   gap: 86px;
-  padding-top: 246px;
+  padding-top: 14rem;
 }
 
 .aboutParaHeading {
   font-size: 6rem;
   font-weight: 800;
   font-style: oblique;
-  line-height: 7.2rem;
+  line-height: 5rem;
 }
 
 .aboutParaBox {
@@ -81,9 +96,8 @@
 }
 
 .aboutParaText {
-  max-width: 85%;
-  margin: 0 auto;
-  font-size: 2.25rem;
+  padding-left: 5rem;
+  font-size: 1.75rem;
   line-height: 3rem;
   font-weight: 600;
 }
@@ -94,7 +108,6 @@
   display: grid;
   grid-template-columns: 5fr 7fr;
   color: white;
-  height: 71vh;
 }
 
 .servicesMenu {
@@ -103,8 +116,9 @@
 }
 
 .serviceHeading {
-  padding: 3.2rem 0 3.2rem 9.25rem;
-  font-size: 2.5rem;
+  width: 100%;
+  padding-left: 20%;
+  font-size: 2.25rem;
   font-weight: 600;
   line-height: 3rem;
   background-color: #28284A;
@@ -123,7 +137,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0 9.25rem 0 8.5rem;
+  padding: 0 20% 0 10%;
 }
 
 .sericeBlurb {
@@ -137,20 +151,21 @@
 }
 
 .servicePara {
-  font-size: 2rem;
+  font-size: 1.75rem;
   font-weight: 600;
-  line-height: 3.5rem;
+  line-height: 3rem;
+  padding-bottom: 2rem;
 }
 
 /* ------- team ------- */
 
 .team {
-  padding-bottom: 9.75rem !important;
+  padding-bottom: 10rem !important;
 }
 
 .teamCon {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   padding-top: 3rem;
 }
 
@@ -161,7 +176,7 @@
   gap: 3.5rem;
   text-align: center;
   box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.1);
-  max-width: 34.75rem;
+  max-width: 45%;
   padding: 3rem 3.75rem;
 }
 
@@ -191,7 +206,7 @@
 }
 
 .teamBio {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   line-height: 2.25rem;
   font-weight: 600;
 }
@@ -229,8 +244,8 @@
 
 .contactCta {
   font-weight: 800;
-  font-size: 3rem;
-  line-height: 3.75rem;
+  font-size: 2.5rem;
+  line-height: 3.5rem;
 }
 
 .contactEmailCon {
@@ -252,7 +267,7 @@
   flex-direction: column;
   justify-content: center;
   font-weight: 600;
-  font-size: 2rem;
+  font-size: 1.75rem;
   line-height: 2.25rem;
   padding: 0 1rem;
   border: 1px solid #CC2C12;
@@ -263,24 +278,24 @@
 }
 
 .socialCta {
-  font-size: 2.25rem;
+  font-size: 2rem;
   font-weight: 600;
   white-space: nowrap;
 }
 
 .socialIconCon {
   display: flex;
-  gap: 7%;
+  gap: 10%;
   margin-top: .5rem
 }
 
 .socialLink {
-  font-size: 2.7rem;
+  font-size: 2rem;
 }
 
 .contactForm {
   width: 100%;
-  max-width: 40%;
+  max-width: 45%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -292,7 +307,7 @@
   display: flex;
   flex-direction: column;
   gap: 1.75rem;
-  font-size: 1.7rem;
+  font-size: 1rem;
   line-height: 1.625rem;
 }
 
@@ -303,7 +318,7 @@
 }
 
 .contactBtn {
-  font-size: 2rem;
+  font-size: 1.75rem;
   font-family: Gilmer;
   border: none;
   border-radius: 0px;
@@ -333,33 +348,38 @@
     line-height: 5rem;
   }
 
-  .aboutIntroPara {
-    font-size: 1.75rem;
+  .aboutIntroHeading {
+    font-size: 2.2rem;
     line-height: 3rem;
+  }
+  
+  .aboutIntroPara {
+    font-size: 1.15rem;
+    line-height: 2rem;
   }
 
   .aboutParaText {
-    max-width: 95%;
-    font-size: 1.75rem;
-    line-height: 2rem;
-    margin: 0 0 0 auto;
+    font-size: 1.5rem;
+    line-height: 2;
   }
 
   .serviceHeading {
-    font-size: 2rem;
-    padding: 3rem 0 3rem 3rem;
-  }
-
-  .serviceBlurbCon {
-    padding: 0 3rem 1rem 3.3rem;
-  }
-
-  .servicePara {
     font-size: 1.75rem;
   }
 
+  .serviceIcon {
+    font-size: 10rem;
+    height: 10rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .servicePara {
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+  }
+
   .teamCard {
-    max-width: 25.75rem;
+    max-width: 50%;
     margin: 0 .5rem;
     padding: 2.75rem 3rem;
     gap: 3rem;
@@ -386,42 +406,48 @@
   }
 
   .aboutIntroCon {
-    padding: 2.25rem;
+    padding-top: 10rem;
+    flex-direction: column;
+    gap: 2.75rem;
+    align-items: center;
   }
 
-  .aboutIntroPara {
-    font-size: 1.5rem;
-    line-height: 2.5rem;
+  .aboutIntroImg {
+    width: 100%;
+  }
+
+  .aboutIntroTxt {
     margin: 0.5rem 0;
+    width: 90%;
+  }
+
+  .aboutParaCon {
+    padding-top: 10rem;
   }
 
   .aboutParaHeading {
     font-size: 4.25rem;
+    line-height: 3.75rem;
   }
 
   .aboutParaText {
-    font-size: 1.5rem;
-  }
-
-  .serviceBlurbCon {
-    padding: 0 2rem 1rem 2.25rem;
+    font-size: 1.25rem;
   }
 
   .serviceHeading {
     font-size: 1.5rem;
     line-height: 2.5rem;
-    padding: 2.5rem 1rem 2.5rem 2.5rem;
   }
 
   .serviceIcon {
-    font-size: 10rem;
-    height: 10rem;
+    font-size: 8rem;
+    height: 8rem;
     margin-bottom: 3rem;
   }
 
   .servicePara {
-    font-size: 1.5rem;
-    line-height: 2.75rem;
+    font-size: 1.25rem;
+    line-height: 2.25rem;
   }
 
   .teamCon {
@@ -446,7 +472,7 @@
   }
 
   .email {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
   }
 
   .emailIcon {
@@ -454,19 +480,15 @@
   }
 
   .socialCta {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
   }
 
   .socialLink {
-    font-size: 2.25rem;
+    font-size: 1.75rem;
   }
 
   .contactForm {
     max-width: 50%;
-  }
-
-  .inputContainer {
-    font-size: 1.25rem;
   }
 
   .contactField {
@@ -474,7 +496,7 @@
   }
 
   .contactBtn {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
   }
 }
 
@@ -489,19 +511,24 @@
   .aboutArrow {
     font-size: 2.3rem;
   }
-  
-  .aboutIntroCon {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-  }
 
+  .aboutIntroTxt {
+    width: 100%;
+  }
+  
+  .aboutIntroHeading {
+    font-size: 1.75rem;
+    line-height: 2.75rem;
+  }
+  
   .aboutIntroPara {
-    font-size: 1.25rem;
+    font-size: 1rem;
+    line-height: 1.75rem;
   }
 
   .aboutParaHeading {
     font-size: 3.5rem;
-    line-height: 6rem;
+    line-height: 3rem;
   }
 
   .aboutParaText {
@@ -509,13 +536,9 @@
     line-height: 2.25rem;
   }
 
-  .serviceBlurbCon {
-    padding: 0 1.5rem 1rem 2rem
-  }
-
   .serviceIcon {
-    font-size: 8rem;
-    height: 8rem;
+    font-size: 6rem;
+    height: 6rem;
     margin-bottom: 2rem;
   }
 
@@ -525,16 +548,24 @@
   }
 
   .servicePara {
-    font-size: 1.25rem;
-    line-height: 2.25rem;
+    font-size: 1rem;
+    line-height: 1.75rem;
   }
 
   .teamCard {
     padding: 2.5rem 2.75rem;
   }
 
+  .teamName {
+    font-size: 2rem;
+  }
+
+  .teamTitle {
+    font-size: 1.15rem;
+  }
+
   .teamBio {
-    font-size: 1.25rem;
+    font-size: 1.15rem;
   }
 
   .contactCon {
@@ -564,7 +595,9 @@
   .socialIconCon {
     justify-content: center;
     gap: 25%;
+    margin-top: 1.5rem;
   }
+  
 }
 
 /* LG Mobile */
@@ -579,18 +612,46 @@
     padding-bottom: 1.75rem;
   }
 
-  .aboutIntroCon {
-    top: 100px;
+  .aboutIntroImg {
+    width: 100%;
+  }
+
+  .aboutIntroTxt {
+    width: 90%;
   }
 
   .aboutParaCon {
     gap: 3rem;
-    padding-top: 200px;
+    padding-top: 10rem;
+  }
+
+  .aboutParaText {
+    font-size: 1rem;
+    line-height: 1.75rem;
+    padding-left: 3.5rem;
   }
 
   .teamCard {
-    padding: 2.25rem 1.25rem;
+    padding: 2rem 1.75rem;
     margin: 0;
+    gap: 2.5rem;
+  }
+
+  .teamInfo {
+    gap: 1rem;
+  }
+
+  .teamName {
+    font-size: 1.75rem;
+  }
+
+  .teamTitle {
+    font-size: 1rem;
+  }
+
+  .teamBio {
+    font-size: 1rem;
+    line-height: 2rem;
   }
 
   .contactCon {
@@ -599,7 +660,8 @@
   }
 
   .contactCta {
-    font-size: 1.75rem
+    font-size: 1.75rem;
+    line-height: 2.25rem;
   }
 
   .contactInfoCon {
@@ -611,9 +673,6 @@
     gap: 20%;
   }
 
-  .socialLink {
-    font-size: 1.75rem;
-  }
 }
 
 /* SM Mobile */
@@ -623,15 +682,18 @@
     line-height: 2.25rem;
   }
 
-  .aboutIntroPara {
-    font-size: 1.25rem;
+  .aboutIntroHeading {
+    font-size: 1.5rem;
     line-height: 2rem;
   }
 
-  .aboutIntroCon {
-    padding: 1.9rem;
+  .aboutParaText {
+    padding-left: 0;
   }
 
+  .teamCard {
+    padding: 1.25rem 1rem;
+  }
   .teamName {
     font-size: 2rem;
   }
@@ -645,7 +707,7 @@
   }
 
   .email {
-    font-size: 1.25rem;
+    font-size: 1rem;
   }
 
   .inputContainer {

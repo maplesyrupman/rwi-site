@@ -148,12 +148,12 @@ h1,h2,h3,h4,h5,h6,p,div {
 }
 
 .gutters {
-  padding: 0 8% !important;
+  padding: 0 15% !important;
 }
 
 .btn {
   padding: 1rem 3rem;
-  font-size: 2rem;
+  font-size: 1.5rem;
   text-decoration: none;
   font-weight: 800;
 }
@@ -170,6 +170,7 @@ h1,h2,h3,h4,h5,h6,p,div {
 .swiper-pagination-bullet {
   background-color: #F3F5F7 !important;
 }
+
 
 .jokeQuestion {
   position: relative;

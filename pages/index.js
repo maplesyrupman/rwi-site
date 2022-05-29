@@ -8,12 +8,13 @@ import { BsPen, BsBook } from 'react-icons/bs'
 import Layout from '../components/Layout'
 import ServicesSlider from '../components/ServicesSlider'
 import Link from 'next/link'
+import illustration from '../public/RWI_Labs-Digital_Agency-Illustration.png';
 
 import axios from 'axios'
 
 const services = [
   {
-    title: 'Web Design and Development',
+    title: 'Web Development',
     para: 'A company\'s website is often the first place customers go when researching a business. They expect the pages to load quickly (under 2 seconds), have an appealing design, and to function accross a variety of different screen sizes.',
     icon: <FaLaptopCode />
   },
@@ -23,7 +24,7 @@ const services = [
     icon: <FaUsers />
   },
   {
-    title: 'Brand Development',
+    title: 'Design',
     para: 'A brand is more than just a logo, it\'s a company\'s personality. From the colours on a website to the tone of voice of a sales representative, every interaction a customer has with a business impacts their brand identity.',
     icon: <FaFingerprint />
   },
@@ -46,7 +47,7 @@ const team = [
     name: 'Samantha Urwin',
     title: 'Co-Founder | Design, Development',
     img: '/',
-    bio: 'Samantha is a developer and designer who merges creativity with strategic thinking in her work. She has a passion for online brand development, is dedicated to designing seamless user experiences and bringing brands to life!',
+    bio: 'Samantha is a developer and designer who merges creativity with strategic thinking in her work. She has a passion for online brand development, and is dedicated bringing brands to life through seamless online experiences!',
     linkedIn: 'https://www.linkedin.com/in/samanthaurwin'
   }
 ]
@@ -190,13 +191,27 @@ export default function Home() {
       <section
         id='about'
         className={`${styles.about} gutters bgWhite`}>
-        <div className={`${styles.aboutIntroCon} bgWhite ${styles.aboutIntroPara}`}>
-          <p className='txtBlue'>
-            In a rapidly evolving technological world, online presence has never been more important to a business&apos;s success. Between managing multiple Social Media platforms, maintaining a user and SEO friendly website, and running successful advertising campaigns, all while portraying a cohesive brand identity, there&apos;s a lot to consider.
-          </p>
-          <p className='txtRed'>
-            We&apos;re here to help.
-          </p>
+        <div className={`${styles.aboutIntroCon} bgWhite`}>
+          <div className={styles.aboutIntroImg}>
+            <Image 
+            src={illustration} 
+            alt='' 
+            width={1400}
+            height={900}
+            />
+          </div>
+
+          <div className={styles.aboutIntroTxt}>
+            <h2 className={`${styles.aboutIntroHeading} txtBlue`}>
+              Got an audience you'd like to reach? 
+              <span className='txtRed'> We can help.</span>
+            </h2>
+            <p className={styles.aboutIntroPara}>
+            Today’s digital world provides businesses with more opportunity and competition than ever before. 
+            At RWI Labs we are dedicated to helping create meaningful connections between you and your customers, 
+            while delivering a comprehensive digital strategy that drives results in line with your business goals.
+            </p>
+          </div>
         </div>
         <div className={styles.aboutParaCon}>
           {aboutParas.map((data, idx) => {
