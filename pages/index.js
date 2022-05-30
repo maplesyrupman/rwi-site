@@ -231,9 +231,6 @@ export default function Home() {
                   {data.title}
                 </h2>
                 <div className={styles.aboutParaBox} >
-                  {/* <div className={`${styles.aboutIcon} ${data.colour}`}>
-                    {data.icon}
-                  </div> */}
                   {data.para}
                 </div>
               </div>

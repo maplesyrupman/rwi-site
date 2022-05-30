@@ -183,19 +183,23 @@ h1,h2,h3,h4,h5,h6,p,div {
   color: white;
   opacity: 0.9;
   font-size: 1rem;
+  line-height: 1.5rem;
   height: 0px;
   overflow: hidden;
   border-radius: 15px;
-  border-bottom-left-radius: 0px;
-  padding: 0 2rem;
+  padding: 1rem;
+  display: none;
 }
 
 .jokePunchShow {
   height: fit-content;
-  width: max-content;
-  max-width: 80vw;
+  /* width: max-content; */
+  width: 300px;
   background-color: #222349;
-  bottom: 25px;
+  bottom: 30px;
+  right: 25%; 
+  display: flex;
+
 }
 
 @media screen and (max-width: 1200px) {
@@ -211,10 +215,10 @@ h1,h2,h3,h4,h5,h6,p,div {
   }
 
   .jokePunchShow {
-    bottom: 25px;
-    right: 10px;
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 0px;
+    /* position: fixed; */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 }
 
