@@ -47,7 +47,7 @@ export default function Header() {
                     <li className={styles.navLink}>
                         <Link href='#services'>
                             <a className={styles.navLink} onClick={toggleDropdown} >
-                                Services
+                                Solutions
                             </a>
                         </Link>
                     </li>

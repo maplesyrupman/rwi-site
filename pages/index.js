@@ -14,6 +14,11 @@ import axios from 'axios'
 
 const services = [
   {
+    title: 'Design',
+    para: 'A brand is more than just a logo, it\'s a company\'s personality. From the colours on a website to the tone of voice of a sales representative, every interaction a customer has with a business impacts their brand identity.',
+    icon: <FaFingerprint />
+  },
+  {
     title: 'Web Development',
     para: 'A company\'s website is often the first place customers go when researching a business. They expect the pages to load quickly (under 2 seconds), have an appealing design, and to function accross a variety of different screen sizes.',
     icon: <FaLaptopCode />
@@ -22,11 +27,6 @@ const services = [
     title: 'Digital Marketing',
     para: 'Determining a target audience as well as the most appropriate platforms to engage with is only one part of the marketing equation. The real challenge lays in crafting a campaign that is both persuasive and representative of the company\'s brand.',
     icon: <FaUsers />
-  },
-  {
-    title: 'Design',
-    para: 'A brand is more than just a logo, it\'s a company\'s personality. From the colours on a website to the tone of voice of a sales representative, every interaction a customer has with a business impacts their brand identity.',
-    icon: <FaFingerprint />
   },
   {
     title: 'Consulting',
@@ -174,7 +174,7 @@ export default function Home() {
       <section className={`${styles.hero} gutters`}>
         <div className={`${styles.heroText} txtWhite`} >
           <h1 className={styles.heroHeading}>
-            A Digital Solutions Provider
+            A Digital Solutions Agency
           </h1>
           <p className={styles.heroPara}>
             Providing custom digital solutions that help businesses <span className='txtRed'>succeed</span> online.
@@ -245,7 +245,7 @@ export default function Home() {
       <section
         id='services'
         className={`${styles.services}`}>
-        <h2 className={`sectionHeading bgWhite`}>Our Solutions</h2>
+        <h2 className={`sectionHeading bgWhite`}>Solutions</h2>
         <div className={`bgBlue`}>
 
           {!isMobile ?
