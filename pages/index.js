@@ -313,7 +313,7 @@ export default function Home() {
 
       <section
         id='contact'
-        className={`${styles.contact} gutters bgBlue`}
+        className={`${styles.contact} bgBlue`}
       >
         <h2 className={`sectionHeading ${styles.contactHeading}`}>Contact Us</h2>
         <div className={styles.contactCon}>
