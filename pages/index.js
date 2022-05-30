@@ -210,11 +210,11 @@ export default function Home() {
 
           <div className={styles.aboutIntroTxt}>
             <h2 className={`${styles.aboutIntroHeading} txtBlue`}>
-              Got an audience you'd like to reach? 
+              Got an audience you&apos;d like to reach? 
               <span className='txtRed'> We can help.</span>
             </h2>
             <p className={styles.aboutIntroPara}>
-            Today’s digital world provides businesses with more opportunity and competition than ever before. 
+            Today&apos;s digital world provides businesses with more opportunity and competition than ever before. 
             At RWI Labs we are dedicated to helping create meaningful connections between you and your customers, 
             while delivering a comprehensive digital strategy that drives results in line with your business goals.
             </p>
