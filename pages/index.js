@@ -161,16 +161,23 @@ export default function Home() {
     <Layout onScroll={() => jokeVisible ? setJokeVisible(fasle) : null}>
       <Head>
         <title>RWI Labs - Digital Marketing Services</title>
-        <meta name='description' content='RWI Labs is a digital marketing and web development agency that services small and medium sized businesses' />
-        <meta name='keywords' content='digital marketing, social media marketing, advertising, facebook ads, seo, sem, search engine optimization' />
+        <meta name='description' 
+          content='RWI Labs is a digital marketing and web development agency that services small and medium sized businesses.' 
+        />
+        <meta name='keywords' 
+          content='digital marketing, social media marketing, advertising, facebook ads, seo, sem, search engine optimization' 
+        />
+        <meta name='og:description'
+          content='RWI Labs is a digital marketing and web development agency that services small and medium sized businesses.'
+        />
       </Head>
       <section className={`${styles.hero} gutters`}>
         <div className={`${styles.heroText} txtWhite`} >
           <h1 className={styles.heroHeading}>
-            A Digital Solutions Agency
+            A Digital Solutions Provider
           </h1>
           <p className={styles.heroPara}>
-            Providing custom tailored digital solutions that help businesses <span className='txtRed'>succeed</span> online.
+            Providing custom digital solutions that help businesses <span className='txtRed'>succeed</span> online.
           </p>
           <Link href='#contact'>
             <a className='btn txtWhite bgRed'>
