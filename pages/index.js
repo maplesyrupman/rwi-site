@@ -3,12 +3,12 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import { useState, useEffect } from 'react'
 
-import { FaLaptopCode, FaUsers, FaFingerprint, FaRegHandshake, FaLinkedin, FaEnvelope, FaInstagram, FaFacebookF, FaTwitter, FaLinkedinIn, FaArrowDown, FaRegLightbulb, FaBook, FaPenNib } from 'react-icons/fa'
-import { BsPen, BsBook } from 'react-icons/bs'
+import { FaLaptopCode, FaUsers, FaFingerprint, FaRegHandshake, FaLinkedin, FaEnvelope, FaInstagram, FaFacebookF, FaTwitter, FaLinkedinIn, FaArrowDown, FaTimes } from 'react-icons/fa'
 import Layout from '../components/Layout'
 import ServicesSlider from '../components/ServicesSlider'
 import Link from 'next/link'
 import illustration from '../public/RWI_Labs-Digital_Agency-Illustration.png';
+import ShakeySpan from '../components/ShakeySpan'
 
 import axios from 'axios'
 
@@ -76,20 +76,22 @@ export default function Home() {
 
   const [jokeVisible, setJokeVisible] = useState(false)
   function toggleJokeVisibility(e) {
-    setJokeVisible(!jokeVisible)
+    if (jokeVisible) {
+      setJokeVisible(false)
+    } else {
+      setJokeVisible(true)
+      setAnswer(false)
+    }
   }
-
-  function hideJoke() {
-    setJokeVisible(false)
+  const [answer, setAnswer] = useState(false)
+  function toggleAnswer() {
+    setAnswer(true)
   }
 
   useEffect(() => {
     setIsMobile(window.matchMedia('(max-width: 810px)').matches)
     window.onresize = () => setIsMobile(window.matchMedia('(max-width: 600px)').matches)
-    if (jokeVisible) {
-      window.addEventListener('scroll', hideJoke)
-    }
-  }, [jokeVisible]);
+  }, []);
 
   const [activeService, setActiveService] = useState(services[0])
 
@@ -136,24 +138,21 @@ export default function Home() {
       para: <p className={styles.aboutParaText}>
         Emerging trends, policy changes, market research, and the latest technological advancements make for a lengthy reading list. By staying on top of our research, we are able to provide our clients with valuable insights on all digital aspects of their business.
       </p>,
-      colour: 'txtBlue',
-      icon: <BsBook />
+      colour: 'txtBlue'
     },
     {
       title: 'Write',
       para: <p className={styles.aboutParaText}>
-        Mark Twain said to write what you know, and for us that means code, copy, and <span className='jokeQuestion' onClick={toggleJokeVisibility} onFocus={() => console.log('blur')} >corny jokes<span className={`jokePunch ${jokeVisible ? 'jokePunchShow' : ''}`}>What&apos;s the difference between cookies and biscuits? No one rejects all biscuits!</span></span>. We help businesses tell their story online in such a way that invites their customers to be a supporting character instead of just an audience member.
+        Mark Twain said to write what you know, and for us that means code, copy, and <ShakeySpan content={'corney jokes'} click={toggleJokeVisibility}/>. We help businesses tell their story online in such a way that invites their customers to be a supporting character instead of just an audience member.
       </p>,
-      colour: 'txtBlue',
-      icon: <BsPen />
+      colour: 'txtBlue'
     },
     {
       title: 'Innovate',
       para: <p className={styles.aboutParaText}>
         The digital world is changing rapdily, and along with it, how businesses operate online. That&apos;s why we&apos;re always working on new ways to make faster websites, create exciting marketing campaigns that appeal to their target audience, and implement online strategies that help our clients achieve their goals.
       </p>,
-      colour: 'txtRed',
-      icon: <FaRegLightbulb />
+      colour: 'txtRed'
     }
   ]
 
@@ -161,11 +160,11 @@ export default function Home() {
     <Layout onScroll={() => jokeVisible ? setJokeVisible(fasle) : null}>
       <Head>
         <title>RWI Labs - Digital Marketing Services</title>
-        <meta name='description' 
-          content='RWI Labs is a digital marketing and web development agency that services small and medium sized businesses.' 
+        <meta name='description'
+          content='RWI Labs is a digital marketing and web development agency that services small and medium sized businesses.'
         />
-        <meta name='keywords' 
-          content='digital marketing, social media marketing, advertising, facebook ads, seo, sem, search engine optimization' 
+        <meta name='keywords'
+          content='digital marketing, social media marketing, advertising, facebook ads, seo, sem, search engine optimization'
         />
         <meta name='og:description'
           content='RWI Labs is a digital marketing and web development agency that services small and medium sized businesses.'
@@ -200,23 +199,23 @@ export default function Home() {
         className={`${styles.about} gutters bgWhite`}>
         <div className={`${styles.aboutIntroCon} bgWhite`}>
           <div className={styles.aboutIntroImg}>
-            <Image 
-            src={illustration} 
-            alt='' 
-            width={1400}
-            height={900}
+            <Image
+              src={illustration}
+              alt=''
+              width={1400}
+              height={900}
             />
           </div>
 
           <div className={styles.aboutIntroTxt}>
             <h2 className={`${styles.aboutIntroHeading} txtBlue`}>
-              Got an audience you&apos;d like to reach? 
+              Got an audience you&apos;d like to reach?
               <span className='txtRed'> We can help.</span>
             </h2>
             <p className={styles.aboutIntroPara}>
-            Today&apos;s digital world provides businesses with more opportunity and competition than ever before. 
-            At RWI Labs we are dedicated to helping create meaningful connections between you and your customers, 
-            while delivering a comprehensive digital strategy that drives results in line with your business goals.
+              Today&apos;s digital world provides businesses with more opportunity and competition than ever before.
+              At RWI Labs we are dedicated to helping create meaningful connections between you and your customers,
+              while delivering a comprehensive digital strategy that drives results in line with your business goals.
             </p>
           </div>
         </div>
@@ -236,6 +235,33 @@ export default function Home() {
               </div>
             )
           })}
+        </div>
+        <div className={`${styles.jokeModal} ${jokeVisible ? styles.jokeVisible : styles.jokeHidden}`}>
+          {/* <span className='jokeContainer'><span className={`jokePunch ${jokeVisible ? 'jokePunchShow' : ''}`}> */}
+          <div className={styles.joke}>
+            <div className={styles.jokeClose} onClick={toggleJokeVisibility}>
+              <FaTimes />
+            </div>
+            <p>
+              What&apos;s the difference between cookies and biscuits?
+            </p>
+            {!answer && (
+              <>
+
+                <button
+                  className={`btn bgRed txtWhite ${styles.answerBtn}`}
+                  onClick={() => toggleAnswer()}
+                >
+                  Answer
+                </button>
+              </>
+            )}
+            {answer && (
+              <p>
+                No one rejects all biscuits!
+              </p>
+            )}
+          </div>
         </div>
       </section>
 

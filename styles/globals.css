@@ -156,6 +156,8 @@ h1,h2,h3,h4,h5,h6,p,div {
   font-size: 1.5rem;
   text-decoration: none;
   font-weight: 800;
+  border: none;
+  cursor: pointer;
 }
 
 .sectionHeading {
@@ -171,37 +173,6 @@ h1,h2,h3,h4,h5,h6,p,div {
   background-color: #F3F5F7 !important;
 }
 
-
-.jokeQuestion {
-  position: relative;
-  color:#CC2C12;
-  cursor: pointer;
-}
-
-.jokePunch {
-  position: absolute;
-  color: white;
-  opacity: 0.9;
-  font-size: 1rem;
-  line-height: 1.5rem;
-  height: 0px;
-  overflow: hidden;
-  border-radius: 15px;
-  padding: 1rem;
-  display: none;
-}
-
-.jokePunchShow {
-  height: fit-content;
-  /* width: max-content; */
-  width: 300px;
-  background-color: #222349;
-  bottom: 30px;
-  right: 25%; 
-  display: flex;
-
-}
-
 @media screen and (max-width: 1200px) {
   .btn {
     font-size: 1.5rem;
@@ -214,15 +185,13 @@ h1,h2,h3,h4,h5,h6,p,div {
     padding: 5rem 0 1rem 0 !important;
   }
 
-  .jokePunchShow {
-    /* position: fixed; */
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  .gutters {
+    padding: 0 7% !important;
   }
 }
 
 @media screen and (max-width: 380px) {
+
   .btn {
     font-size: 1.25rem;
   }
