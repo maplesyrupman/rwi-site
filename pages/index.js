@@ -20,12 +20,12 @@ const services = [
   },
   {
     title: 'Web Development',
-    para: 'A company\'s website is often the first place customers go when researching a business. They expect the pages to load quickly (under 2 seconds), have an appealing design, and to function accross a variety of different screen sizes and devices.',
+    para: 'A company\'s website is often the first place customers go when researching a business. They expect the pages to load quickly (under 2 seconds), have an appealing design, and to function across a variety of different screen sizes and devices.',
     icon: <FaLaptopCode />
   },
   {
     title: 'Digital Marketing',
-    para: 'Determining a target audience as well as the most appropriate platforms to engage with is only one part of the marketing equation. The real challenge lays in crafting a campaign that is both persuasive and representative of the company\'s brand.',
+    para: 'Determining a target audience as well as the most appropriate platforms to engage with is only one part of the marketing equation. The real challenge lies in crafting a campaign that is both persuasive and representative of the company\'s brand.',
     icon: <FaUsers />
   },
   {
@@ -47,7 +47,7 @@ const team = [
     name: 'Samantha Urwin',
     title: 'Co-Founder | Design, Development',
     img: '/',
-    bio: 'Samantha is a developer and designer who merges creativity with strategic thinking in her work. She has a passion for online brand development, and is dedicated bringing brands to life through seamless online experiences!',
+    bio: 'Samantha is a developer and designer who merges creativity with strategic thinking in her work. She has a passion for online brand development, and is dedicated to bringing brands to life through seamless online experiences.',
     linkedIn: 'https://www.linkedin.com/in/samanthaurwin'
   }
 ]
@@ -143,14 +143,14 @@ export default function Home() {
     {
       title: 'Write',
       para: <p className={styles.aboutParaText}>
-        Mark Twain said to write what you know, and for us that means code, copy, and <ShakeySpan content={'corney jokes'} click={toggleJokeVisibility}/>. We help businesses tell their story online in such a way that invites their customers to be a supporting character instead of just an audience member.
+        Mark Twain said to write what you know, and for us that means code, copy, and <ShakeySpan content={'corny jokes'} click={toggleJokeVisibility}/>. We help businesses tell their story online in such a way that invites their customers to be a supporting character instead of just an audience member.
       </p>,
       colour: 'txtBlue'
     },
     {
       title: 'Innovate',
       para: <p className={styles.aboutParaText}>
-        The digital world is changing rapdily, and along with it, how businesses operate online. That&apos;s why we&apos;re always working on new ways to make faster websites, create exciting marketing campaigns that appeal to their target audience, and implement online strategies that help our clients achieve their goals.
+        The digital world is changing rapidly, and along with it, how businesses operate online. That&apos;s why we&apos;re always working on new ways to make faster websites, create exciting marketing campaigns that appeal to their target audience, and implement online strategies that help our clients achieve their goals.
       </p>,
       colour: 'txtRed'
     }
