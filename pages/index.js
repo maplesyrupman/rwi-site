@@ -143,7 +143,7 @@ export default function Home() {
     {
       title: 'Write',
       para: <p className={styles.aboutParaText}>
-        Mark Twain said to write what you know, and for us that means code, copy, and <ShakeySpan content={'corny jokes'} click={toggleJokeVisibility}/>. We help businesses tell their story online in such a way that invites their customers to be a supporting character instead of just an audience member.
+        Mark Twain said to write what you know, and for us that means code, copy, and <ShakeySpan content={'corny jokes'} click={toggleJokeVisibility}/>. We help businesses tell their story online in such a way that invites customers to be a supporting character instead of just an audience member.
       </p>,
       colour: 'txtBlue'
     },
