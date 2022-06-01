@@ -20,7 +20,7 @@ const services = [
   },
   {
     title: 'Web Development',
-    para: 'A company\'s website is often the first place customers go when researching a business. They expect the pages to load quickly (under 2 seconds), have an appealing design, and to function accross a variety of different screen sizes.',
+    para: 'A company\'s website is often the first place customers go when researching a business. They expect the pages to load quickly (under 2 seconds), have an appealing design, and to function accross a variety of different screen sizes and devices.',
     icon: <FaLaptopCode />
   },
   {
