@@ -1,0 +1,21 @@
+.headingLogo {
+    width: 10%;
+    max-width: 177px;
+}
+
+.max1200 {
+    max-width: 1200px;
+}
+
+.mxAuto {
+    margin: 0 auto;
+}
+
+.py3rem {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.txt56 {
+    font-size: 56px;
+}

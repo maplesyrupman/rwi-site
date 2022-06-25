@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
-import { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 
 import { FaLaptopCode, FaUsers, FaFingerprint, FaRegHandshake, FaLinkedin, FaEnvelope, FaInstagram, FaFacebookF, FaTwitter, FaLinkedinIn, FaArrowDown, FaTimes } from 'react-icons/fa'
 import Layout from '../components/Layout'
@@ -75,7 +75,7 @@ export default function Home() {
   const [isMobile, setIsMobile] = useState(false)
 
   const [jokeVisible, setJokeVisible] = useState(false)
-  function toggleJokeVisibility(e) {
+  function toggleJokeVisibility(): void {
     if (jokeVisible) {
       setJokeVisible(false)
     } else {
@@ -95,13 +95,14 @@ export default function Home() {
 
   const [activeService, setActiveService] = useState(services[0])
 
-  function selectService(e) {
+  function selectService(e: React.MouseEvent<HTMLDivElement>) {
+    console.log(e.target)
     setActiveService(services[e.target.dataset.idx])
   }
 
   const [formState, updateForm] = useState({ name: '', company: '', email: '', phone: '', message: '' })
 
-  function handleChange(e) {
+  function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
     switch (e.target.name) {
       case 'name':
         updateForm({ ...formState, name: e.target.value })
@@ -121,7 +122,7 @@ export default function Home() {
     }
   }
 
-  function handleSubmit(e) {
+  function handleSubmit(e: Event) {
     e.preventDefault()
     axios({
       method: 'post',
@@ -157,7 +158,7 @@ export default function Home() {
   ]
 
   return (
-    <Layout onScroll={() => jokeVisible ? setJokeVisible(fasle) : null}>
+    <Layout>
       <Head>
         <title>RWI Labs - Digital Marketing Services</title>
         <meta name='description'
