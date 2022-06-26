@@ -1,4 +1,27 @@
 /* ------- colours ------- */
+:root {
+  /* brand colours */
+  --rwi-blue: #03053E;
+  --rwi-blue-two: #67688A;
+  --rwi-blue-three: #CCCDD8; 
+  --rwi-red: #CC2C12;
+  --rwi-red-two: #E08071;
+  --rwi-red-three: #F5D5D0;
+  --secondary-one: #5C5C99;
+  --secondary-two: #E6E9F4;
+  /* greyscale */
+  --light: #F3F5F7;
+  --grey-one: #D3D4D5;
+  --grey-two: #B6B8B9;
+  --grey-three: #6D6D6D;
+  --grey-four: #484848;
+  --dark: #1A1A1A;
+  /* utility */
+  --danger: #99210E;
+  --danger-bg: #F5D5D0;
+  --success: #225835;
+  --success-bg: #D3DED7;
+}
 
 .bgBlue {
   background-color: #03053E !important;
