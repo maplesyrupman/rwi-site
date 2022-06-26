@@ -25,7 +25,7 @@ export default function DiscoveryQuestionnaire() {
     ]
 
     const testShortQs: any[] = rawTestShortQs.map((q, id) => {
-        return <ShortAnswer key={id} id={q.id} label={q.label} />
+        return <ShortAnswer key={id} id={q.id} label={q.label} placeholder={q.label} changeHandler={() => console.log('change!')} validation={() => console.log('validation!')} />
     })
 
     return (

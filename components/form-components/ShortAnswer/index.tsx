@@ -3,12 +3,14 @@ import styles from './styles.module.css'
 interface Props {
     id: string;
     label: string;
+    placeholder: string;
     changeHandler?: (
         e: React.ChangeEvent
     ) => void;
+    validation: () => void;
 }
 
-export default function ShortAnswer({id, label, changeHandler}: Props) {
+export default function ShortAnswer({id, label, placeholder, changeHandler, validation}: Props) {
 
     return (
         <div className={styles.container}>
