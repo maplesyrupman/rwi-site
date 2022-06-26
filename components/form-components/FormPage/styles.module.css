@@ -1,0 +1,18 @@
+.pageContainer {
+    width: 100%;
+    background: #F3F5F7;
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.questions {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
