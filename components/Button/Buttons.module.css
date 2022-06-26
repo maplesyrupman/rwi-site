@@ -1,0 +1,97 @@
+.btn {
+    font-size: 18px;
+    font-family: Gilmer;
+    font-weight: 700;
+    padding: 1rem 2.5rem;
+    text-decoration: none;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+}
+
+.btnPrimary {
+    background-color: #02033C;
+    color: #F3F5F7
+}
+
+.btnPrimary:hover {
+    background-color: #67688A;
+}
+
+.btnSecondary {
+    background-color: #F3F5F7;
+    color: #02033C;
+    border: 4px #02033C !important;
+}
+
+.btnSecondary:hover {
+    color: #67688A;
+    border: 4px #67688A;
+}
+
+.btnImportant {
+    background-color: #CC2C12;
+    color: #F3F5F7;
+}
+
+.btnImportant:hover {
+    background-color: #E08071;
+}
+
+.btnDanger {
+    background-color: #99210E;
+    color: #F3F5F7;
+}
+
+.btnDanger:hover {
+    background-color: #F5D5D0;
+    color: #99210E;
+}
+
+.btnConfirm {
+    background-color: #225835;
+    color: #F3F5F7;
+}
+
+.btnConfirm:hover {
+    background-color: #D3DED7;
+    color: #F3F5F7;
+}
+
+.linkDefault {
+    font-size: 18px;
+    font-weight: 600;
+    color: #02033C;
+}
+
+.linkDefault:hover {
+    color: #67688A;
+}
+
+.linkDefault:focus {
+    color: #CCCDD8;
+}
+
+.linkBold {
+    font-size: 18px;
+    font-weight: 800;
+    color: #02033C
+}
+
+.linkBold:hover {
+    color: #67688A;
+}
+
+.linkBold:focus {
+    color: #CCCDD8;
+}
+
+.linkDanger {
+    font-size: 18px;
+    font-weight: 600;
+    color: #99210E;
+}
+
+.linkDanger:hover {
+    color: #F5D5D0;
+}

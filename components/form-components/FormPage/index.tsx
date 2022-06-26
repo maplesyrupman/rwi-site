@@ -1,5 +1,7 @@
 import styles from './styles.module.css'
 
+import Button from '../../Button'
+
 interface Props {
     questions: React.ReactNode[]
 }
@@ -13,7 +15,9 @@ export default function FormPage({ questions }: Props) {
                     {questions}
                 </div>
                 <div className={styles.navigation}>
-                    button bar
+                    <div>
+                        <Button type='button' text='Next' func={() => console.log('button!')} btnStyle='primary' />
+                    </div>
                 </div>
             </div>
         </div>
