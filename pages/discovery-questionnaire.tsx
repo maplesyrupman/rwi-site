@@ -1,7 +1,9 @@
 import FormPage from '../components/form-components/FormPage'
 import ShortAnswer from '../components/form-components/ShortAnswer'
+import styles from '../styles/utils.module.css'
 
 import Heading from '../components/form-components/Heading'
+import Image from 'next/image'
 
 export default function DiscoveryQuestionnaire() {
     const rawTestShortQs: any[] = [
@@ -28,8 +30,8 @@ export default function DiscoveryQuestionnaire() {
     })
 
     return (
-        <div>
-            <Heading pageNumber={0} />
+        <div className={`${styles.container} bgWhite`}>
+                <Heading pageNumber={0} />
             <FormPage questions={testShortQs} />
         </div>
     )

@@ -125,8 +125,13 @@ p, div, a, li, span {
   line-height: 22px;
 }
 
+.txtCenter {
+  text-align: center;
+}
+
 
 /* ------- random shit from site 1.0 ------- */
+
 
 .gutters {
   padding: 0 15% !important;

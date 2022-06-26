@@ -4,19 +4,15 @@ import styles from '../../styles/utils.module.css'
 const pageDescriptions = [
     {
         title: "Company Profile",
-        description: "This questionnaire helps develop a foundational understanding of your business; what you do, who you are, and who your customers are. The more accurately you fill out this short survey, the better equipped we will be to help your business optimize its digital presence and achieve success online."
     },
     {
-        title: "Customer Profile",
-        description: "This questionnaire helps develop a foundational understanding of your business; what you do, who you are, and who your customers are. The more accurately you fill out this short survey, the better equipped we will be to help your business optimize its digital presence and achieve success online."
+        title: "Customer Profile"
     },
     {
         title: "Brand Identity",
-        description: "This questionnaire helps develop a foundational understanding of your business; what you do, who you are, and who your customers are. The more accurately you fill out this short survey, the better equipped we will be to help your business optimize its digital presence and achieve success online."
     },
     {
         title: "Company Goals",
-        description: "This questionnaire helps develop a foundational understanding of your business; what you do, who you are, and who your customers are. The more accurately you fill out this short survey, the better equipped we will be to help your business optimize its digital presence and achieve success online."
     },
 ]
 
@@ -35,13 +31,10 @@ export default function Heading({ pageNumber }) {
             </div>
             <div>
                 <div className={`${styles.max1200} ${styles.mxAuto} ${styles.py3rem}`}>
-                    <h2 className={`txtBlue ${styles.txt56}`}>
+                    <h1 className={`txtBlue txtCenter ${styles.mb3p5}`}>
                         {currentPage.title}
-                    </h2>
-                    <br/>
-                    <p className="txtLg">
-                        {currentPage.description}
-                    </p>
+                    </h1>
+                    <Image src='/progress-bar-png' width={1200} height={48} layout='fixed' alt='dev' />
                 </div>
             </div>
         </div>
