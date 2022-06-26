@@ -1,0 +1,20 @@
+.inputLongContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.inputLong {
+    max-width: 32.5rem;
+    height: 10rem;
+    background-color: var(--light);
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    border: solid 1px var(--grey-one);
+    color: var(--dark);
+    resize: none;
+}
+
+.inputLong:focus {
+    outline: solid 2px var(--secondary-one);
+}
