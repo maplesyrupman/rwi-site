@@ -1,7 +1,7 @@
 import styles from '../styles/Buttons.module.css';
 import Link from 'next/link';
 
-export default function Link({ text, href, linkStyle }) {
+export default function Link({ text, href, linkStyle, destination }) {
 
     switch(linkStyle) {
         case 'default':
@@ -17,11 +17,22 @@ export default function Link({ text, href, linkStyle }) {
     
     return (
         <>
-        <Link
-        href={href}
-        >
-            <a style={`${linkStyle}`}>{text}</a>
-        </Link>
+        {destination === 'local' && (
+            <Link
+            href={href}
+            >
+                    <a style={`${linkStyle}`}>{text}</a>
+            </Link>
+        )}
+
+        {destination === 'external' && (
+            <Link
+            href={href}
+            target= '_blank'
+            >
+                <a style={`${linkStyle}`}>{text}</a>
+            </Link>
+        )}
         </>
     )
 }
