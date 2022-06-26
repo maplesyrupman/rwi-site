@@ -3,7 +3,6 @@ import ShortAnswer from '../components/form-components/ShortAnswer'
 import styles from '../styles/utils.module.css'
 
 import Heading from '../components/form-components/Heading'
-import Image from 'next/image'
 
 export default function DiscoveryQuestionnaire() {
     const rawTestShortQs: any[] = [

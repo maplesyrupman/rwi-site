@@ -1,37 +1,38 @@
-import React, { ButtonHTMLAttributes } from 'react';
+// import React, { ButtonHTMLAttributes } from 'react';
 import styles from './Buttons.module.css';
 
 type Props = {
     text: string,
     type: 'submit' | 'button' | 'reset' | undefined,
-    btnStyle: string,
+    btnStyle: 'primary' | 'secondary' | 'important' | 'danger' | 'confirm',
     func: () => void
 }
 
 export default function Button({ text, type, btnStyle, func }: Props) {
+    let btnClass: string = '';
 
     switch(btnStyle) {
         case 'primary':
-            btnStyle = styles.btnPrimary;
+            btnClass = styles.btnPrimary;
             break;
         case 'secondary':
-            btnStyle = styles.btnSecondary;
+            btnClass = styles.btnSecondary;
             break;
         case 'important':
-            btnStyle = styles.btnImportant;
+            btnClass = styles.btnImportant;
             break;
         case 'danger':
-            btnStyle = styles.btnDanger;
+            btnClass = styles.btnDanger;
             break;
         case 'confirm':
-            btnStyle = styles.btnConfirm;
+            btnClass = styles.btnConfirm;
             break;
     }
 
     return (
             <button
                 type={type}
-                className={`${styles.btn} ${btnStyle}`}
+                className={`${styles.btn} ${btnClass}`}
                 onClick={func}
             >
                 {text}
