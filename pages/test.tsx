@@ -1,25 +1,13 @@
-import Picklist from "../components/form-components/Picklist"
-import LongAnswer from "../components/form-components/LongAnswer";
+
+import DatePick from "../components/form-components/Date"
 
 export default function Test() {
+    function change(id: string, value: any) {
+        console.log(value)
+    }
     return (
         <div>
-            <Picklist 
-                id='id'
-                label='month'
-                placeholder='month'
-                options={['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']}
-                size='small'
-                change={() => console.log('date!')}
-            />
-
-            <LongAnswer 
-                id='123' 
-                label='Message'
-                placeholder='Message'
-                change={() => console.log('hello')}
-                validate={() => {return true}}
-            />
+            <DatePick id='1-0' day month year change={change} />
         </div>
     )
 }

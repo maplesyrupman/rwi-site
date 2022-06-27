@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import styles from './Picklist.module.css'
 
 type Props = {
@@ -9,12 +9,13 @@ type Props = {
     other?: boolean,
     size: 'small' | 'medium' | 'large',
     multi?: boolean,
-    change: () => void
+    change: (id: string, value: string) => void
 }
 
 export default function Picklist({ id, label, options, other, size, placeholder, multi, change }: Props) {
     const [selected, setSelected] = useState(placeholder)
     const [dropdownOpen, setDropdownOpen] = useState(false)
+
 
     let selectStyle: string = ''
     switch (size) {
@@ -31,6 +32,7 @@ export default function Picklist({ id, label, options, other, size, placeholder,
     function handleSelect(e: React.MouseEvent<HTMLDivElement, MouseEvent>):void {
         const choice = e.target as HTMLDivElement
         setSelected(choice.dataset.value || placeholder)
+        change(id, choice.dataset.value || placeholder)
         setDropdownOpen(!dropdownOpen)
     }
     
