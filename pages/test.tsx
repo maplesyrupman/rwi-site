@@ -1,6 +1,7 @@
 import Picklist from "../components/form-components/Picklist"
 import LongAnswer from "../components/form-components/LongAnswer";
 import ShortAnswer from "../components/form-components/ShortAnswer";
+import Radio from "../components/form-components/Radio";
 
 export default function Test() {
     return (
@@ -29,6 +30,15 @@ export default function Test() {
                 changeHandler={() => console.log('hello')}
                 validation={() => {return true}}
             />
+
+            <Radio
+                id='456'
+                label='Choose One'
+                options={['Yes', 'No', 'Maybe']}
+                change={() => console.log('radio')}
+                required={true}
+            />
+
         </div>
     )
 }
