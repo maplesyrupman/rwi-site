@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import stylesMain from '../styles.module.css';
 import styles from './styles.module.css';
 
@@ -6,7 +6,7 @@ type Props = {
     id: string,
     label: string,
     options: string[],
-    change: () => void,
+    change: (id: string, value: any) => void,
     required: boolean
 }
 
@@ -14,9 +14,13 @@ export default function RadioScale({ id, label, options, change, required }:Prop
 
     const [selected, setSelected] = useState('');
 
-    function click(id:string):void {
-        setSelected(id);
+    function click(option:string):void {
+        setSelected(option);
     }
+
+    useEffect(() => {
+        change(id, selected)
+    }, [selected, change])
 
     return (
         <div className={stylesMain.container}>
@@ -36,7 +40,6 @@ export default function RadioScale({ id, label, options, change, required }:Prop
                             <label key={o}>
                             <input
                             type='radio'
-                            onChange={change}
                             name={id}
                             className={styles.radio}
                             />
