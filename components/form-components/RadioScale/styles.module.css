@@ -1,0 +1,34 @@
+.scaleGroup {
+    display: flex;
+    background: var(--light);
+    width: fit-content;
+    border: 1px solid var(--grey-one);
+    border-radius: 10px;
+    height: 50px;
+    overflow: hidden;
+}
+
+.option {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100px;
+    text-align: center;
+    color: var(--rwi-blue);
+    border-left: 1px solid var(--grey-one);
+}
+
+.selected {
+    color: var(--light);
+    background: var(--rwi-blue);
+}
+
+.optionTxt {
+    font-weight: 800;
+    font-size: 1.5rem;
+}
+
+.radio {
+    appearance: none;
+}
