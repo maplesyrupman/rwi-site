@@ -1,4 +1,5 @@
-import styles from '../styles.module.css';
+import stylesMain from '../styles.module.css';
+import styles from './styles.module.css';
 
 type Props = {
     id: string,
@@ -11,7 +12,7 @@ type Props = {
 export default function Radio({ id, label, options, change, required }:Props) {
 
     return (
-        <div className={styles.container}>
+        <div className={stylesMain.container}>
             <span
             className='txtBlue bold'
             >

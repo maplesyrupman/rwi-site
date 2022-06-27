@@ -119,33 +119,3 @@
 .option:hover {
     background-color: var(--secondary-two)
 }
-
-/* Radio */
-
-.radioGroup {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-}
-
-.radioCon {
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
-    justify-content: flex-end;
-    gap: 1.5rem;
-}
-
-.radio {
-    appearance: none;
-    border-radius: 50%;
-    background: var(--light);
-    border: 1px solid var(--grey-one);
-    height: 1rem;
-    width: 1rem;
-}
-
-.radio:checked {
-    border: 5px solid var(--rwi-blue);
-    color: var(--secondary-one);
-}
