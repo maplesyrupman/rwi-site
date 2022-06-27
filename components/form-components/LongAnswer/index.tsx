@@ -1,14 +1,19 @@
+import React from 'react';
 import styles from '../styles.module.css';
 
 type Props = {
     placeholder: string,
     label: string,
     id: string,
-    change: () => void,
+    change: (id: string, value: any) => void,
     validate: () => boolean
 }
 
 export default function LongAnswer({ placeholder, label, id, change, validate }: Props) {
+    function handleChange(e: React.ChangeEvent) {
+        const el = e.target as HTMLInputElement 
+        change(id, el.value)
+    }   
 
     return (
         <div className={styles.container}>
@@ -17,8 +22,7 @@ export default function LongAnswer({ placeholder, label, id, change, validate }:
                 id={id}
                 placeholder={placeholder}
                 className={`${styles.input} ${styles.long}`}
-                onChange={change}
-                onBlur={validate}
+                onChange={handleChange}
             ></textarea>
         </div>
     )

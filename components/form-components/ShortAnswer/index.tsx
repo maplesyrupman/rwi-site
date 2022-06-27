@@ -1,16 +1,22 @@
+import React from 'react';
 import styles from '../styles.module.css';
 
 interface Props {
     id: string;
     label: string;
     placeholder: string;
-    changeHandler?: (
-        e: React.ChangeEvent
+    change: (
+        id: string,
+        value: any
     ) => void;
-    validation: () => void;
+    validation?: () => void;
 }
 
-export default function ShortAnswer({id, label, placeholder, changeHandler, validation}: Props) {
+export default function ShortAnswer({id, label, placeholder, change, validation}: Props) {
+    function handleChange(e: React.ChangeEvent) {
+        const el = e.target as HTMLInputElement 
+        change(id, el.value)
+    }   
 
     return (
         <div className={styles.container}>
@@ -24,7 +30,7 @@ export default function ShortAnswer({id, label, placeholder, changeHandler, vali
             id={id} 
             className={styles.input}
             type='text' 
-            onChange={changeHandler} />
+            onChange={handleChange} />
         </div>
     )
 }
