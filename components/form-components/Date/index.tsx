@@ -3,6 +3,7 @@ import Picklist from '../Picklist'
 
 type Props = {
     id: string,
+    label: string,
     year?: boolean,
     month?: boolean,
     day?: boolean,
@@ -12,12 +13,20 @@ type Props = {
 function getPastYears(): string[] {
     const years: string[] = []
     for (let i = 1900; i <= new Date().getFullYear(); i++) {
-        years.push(i + '')
+        years.unshift(i + '')
     }
     return years
 }
 
-export default function DatePick({ id, year, month, day, change }: Props) {
+function getDays(): string[] {
+    let days: string[] = []
+    for (let i=1; i<=31;i++) {
+        days.unshift(i + '')
+    }
+    return days
+}
+
+export default function DatePick({ id, label, year, month, day, change }: Props) {
     const [date, setDate] = useState({ year: '', month: '', day: '' })
     function updateDate(id: string, value: string) {
         switch (id) {
@@ -39,19 +48,19 @@ export default function DatePick({ id, year, month, day, change }: Props) {
 
     return (
         <div>
-            {day && (
-                <Picklist label='' id={'day'} placeholder='dd' size='small' options={[...Array(31).keys()]} change={updateDate} />
-
-            )}
-            {month && (
-                <Picklist label='' id={'month'} placeholder='mm' size='small' options={['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12']} change={updateDate} />
-
-            )}
-            {year && (
-                <Picklist label='' id={'year'} placeholder='yyyy' size='small' options={getPastYears()} change={updateDate} />
-            )}
-            <div onClick={() => console.log(date)}>
-                button
+            <div className='txtBlue bold'>
+                {label}
+            </div>
+            <div style={{ "display": 'flex', 'gap': '0.5rem' }}>
+                {day && (
+                    <Picklist label='' id={'day'} placeholder='dd' size='small' options={getDays()} change={updateDate} />
+                )}
+                {month && (
+                    <Picklist label='' id={'month'} placeholder='mm' size='small' options={['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12']} change={updateDate} />
+                )}
+                {year && (
+                    <Picklist label='' id={'year'} placeholder='yyyy' size='small' options={getPastYears()} change={updateDate} />
+                )}
             </div>
         </div>
     )

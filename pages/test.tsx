@@ -7,7 +7,7 @@ export default function Test() {
     }
     return (
         <div>
-            <DatePick id='1-0' day month year change={change} />
+            <DatePick id='1-0' label='Date' day month year change={change} />
         </div>
     )
 }
