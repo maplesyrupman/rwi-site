@@ -3,8 +3,12 @@ import LongAnswer from "../components/form-components/LongAnswer";
 import ShortAnswer from "../components/form-components/ShortAnswer";
 import Radio from "../components/form-components/Radio";
 import RadioScale from "../components/form-components/RadioScale";
+import DatePick from "../components/form-components/Date"
 
 export default function Test() {
+    function change(id: string, value: any) {
+        console.log(value)
+    }
     return (
         <div>
             <Picklist 
@@ -55,7 +59,7 @@ export default function Test() {
                 change={() => console.log('hello')}
                 required={true}
             />
-
+            <DatePick id='1-0' label='Date' day month year change={change} />
         </div>
     )
 }
