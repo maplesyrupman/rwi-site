@@ -1,4 +1,4 @@
-import styles from './styles.module.css'
+import styles from '../styles.module.css';
 
 interface Props {
     id: string;
@@ -15,7 +15,7 @@ export default function ShortAnswer({id, label, placeholder, changeHandler, vali
     return (
         <div className={styles.container}>
            <label
-            className={`txtBlue ${styles.label}`}
+            className={`txtBlue bold`}
             htmlFor={id}
             >
                {label}

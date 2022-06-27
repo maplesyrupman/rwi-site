@@ -1,4 +1,4 @@
-import styles from './styles.module.css'
+import styles from '../styles.module.css';
 
 type Props = {
     placeholder: string,
@@ -11,12 +11,12 @@ type Props = {
 export default function LongAnswer({ placeholder, label, id, change, validate }: Props) {
 
     return (
-        <div className={styles.inputLongContainer}>
+        <div className={styles.container}>
             <label htmlFor={id} className='txtBlue bold'>{label}</label>
             <textarea
                 id={id}
                 placeholder={placeholder}
-                className={styles.inputLong}
+                className={`${styles.input} ${styles.long}`}
                 onChange={change}
                 onBlur={validate}
             ></textarea>

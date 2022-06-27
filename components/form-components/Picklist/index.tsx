@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
-import styles from './Picklist.module.css'
+import styles from '../styles.module.css';
+
 
 type Props = {
     id: string,

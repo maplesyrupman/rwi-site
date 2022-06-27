@@ -1,5 +1,6 @@
 import Picklist from "../components/form-components/Picklist"
 import LongAnswer from "../components/form-components/LongAnswer";
+import ShortAnswer from "../components/form-components/ShortAnswer";
 
 export default function Test() {
     return (
@@ -19,6 +20,14 @@ export default function Test() {
                 placeholder='Message'
                 change={() => console.log('hello')}
                 validate={() => {return true}}
+            />
+
+            <ShortAnswer
+                id='321'
+                label='Name'
+                placeholder='Name'
+                changeHandler={() => console.log('hello')}
+                validation={() => {return true}}
             />
         </div>
     )
