@@ -1,0 +1,119 @@
+/* Form Page */
+.pageContainer {
+    width: 100%;
+    background: #F3F5F7;
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.questions {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navigation {
+    display: flex;
+    gap: 2.5rem;
+    align-items: center;
+}
+
+/* Individual Form Elements */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.input {
+    padding: 1rem 1.5rem;
+    margin-top: 0.5rem;
+    max-width: 500px;
+    background:var(--light);
+    border: 1px solid var(--grey-one);
+    color: var(--dark);
+    border-radius: 10px;
+}
+
+.input:focus {
+    outline: 2px solid var(--secondary-one);
+} 
+
+.long {
+    height: 10rem;
+    resize: none;
+}
+
+.sm {
+    max-width: 125px;
+    width: 100%;
+}
+
+.md {
+    max-width: 250px;
+    width: 100%
+}
+
+.lg {
+    max-width: 500px;
+    width: 100%
+}
+
+.select {
+    padding: 0.5rem 1rem;
+    color: var(--grey-three);
+    background: var(--light);
+    border: 1px solid var(--grey-one);
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.selectOpen {
+    outline: 2px solid var(--secondary-one);
+}
+
+.selected {
+    user-select: none;
+}
+
+.carrot {}
+
+.options {
+    position: absolute;
+    background: var(--light);
+    border-radius: 10px;
+    width: 100%;
+    height: 0px;
+    overflow-y: hidden;
+    scrollbar-color: var(--rwi-blue) var(--grey-one);
+}
+
+.optionsOpen {
+    height: 7.5rem;
+    border: 1px solid var(--grey-one);
+    overflow-y: scroll;
+}
+
+.option {
+    padding: 0.5rem 1rem;
+    width: 100%;
+    user-select: none;
+}
+
+.option:hover {
+    background-color: var(--secondary-two)
+}
