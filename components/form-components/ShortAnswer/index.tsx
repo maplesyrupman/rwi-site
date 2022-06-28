@@ -5,7 +5,7 @@ interface Props {
     id: string;
     label: string;
     placeholder: string;
-    change: (
+    change?: (
         id: string,
         value: any
     ) => void;
@@ -15,7 +15,10 @@ interface Props {
 export default function ShortAnswer({id, label, placeholder, change, validation}: Props) {
     function handleChange(e: React.ChangeEvent) {
         const el = e.target as HTMLInputElement 
-        change(id, el.value)
+
+        if (change) {
+            change(id, el.value)
+        }
     }   
 
     return (
@@ -30,6 +33,7 @@ export default function ShortAnswer({id, label, placeholder, change, validation}
             id={id} 
             className={styles.input}
             type='text' 
+            placeholder={placeholder}
             onChange={handleChange} />
         </div>
     )

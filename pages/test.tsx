@@ -1,43 +1,16 @@
-
-import { useState } from "react"
-import GrowingList from "../components/form-components/GrowingList"
+import TagsInput from "../components/form-components/TagsInput"
 
 const tq = {
-    label: 'Contacts',
-    type: 'growing-list',
-    id: '0-2',
-    min: 1,
-    value: [],
-    fields: [
-        {
-            label: 'First name',
-            type: 'short',
-            id: '0-2-0',
-            value: ''
-        }, {
-            label: 'Last name',
-            type: 'short',
-            id: '0-2-1',
-            value: ''
-        }, {
-            label: 'Email',
-            type: 'email',
-            id: '0-2-2',
-            value: ''
-        }, {
-            label: 'Phone',
-            type: 'short',
-            id: '0-2-3',
-            value: ''
-        }, {
-            label: 'Position',
-            type: 'short',
-            id: '0-2-4',
-            value: ''
-        }
-    ]
-}
-
+                label: 'Seasonal',
+                type: 'radio',
+                id: '0-7',
+                options: [
+                    'yes',
+                    'no'
+                ],
+                value: undefined
+            }
+    
 export default function Test() {
     function change(id:string, value:any) {
         console.log(value)
@@ -45,7 +18,7 @@ export default function Test() {
     
     return (
         <div>
-            <GrowingList label={tq.label} id={tq.id} fields={tq.fields} change={change} validate={() => true} />
+            <TagsInput id='123' label='hobbies' placeholder='Enter a hobby' change={change} required={true} />
         </div>
     )
 }
