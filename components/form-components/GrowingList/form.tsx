@@ -2,14 +2,16 @@ import React, { useEffect, useState } from 'react'
 
 import ShortAnswer from '../ShortAnswer'
 import LongAnswer from '../LongAnswer'
+import Button from '../../Button'
 
 type Props = {
     fields: any[],
     initState?:any,
-    submit: (idx:number,  value: any) => void
+    idx?: number,
+    submit: (entry: any, idx:number|undefined,  option: any) => void
 }
 
-export default function GLForm({fields, initState, submit}: Props) {
+export default function GLForm({fields, initState, submit, idx}: Props) {
     const initialState: any = initState || {}
     for(let i=0;i<fields.length;i++) {
         let field = fields[i]
@@ -26,12 +28,24 @@ export default function GLForm({fields, initState, submit}: Props) {
         })
     }
 
-    useEffect(() => {
-        console.log(entry)
-    }, [entry])
+    function handleSubmit(e: React.FormEvent) {
+        e.preventDefault()
+        if (!initState) {
+            submit(entry, undefined, 'add')
+        } else {
+            submit(entry, idx, 'edit')
+        }
+    }
+
+    // useEffect(() => {
+    //     console.log(entry)
+    // }, [entry])
 
     return (
-        <div>
+        <form
+        style={{"maxWidth":"500px"}}
+        onSubmit={handleSubmit}
+        >
             {fields.map((field, idx) => {
 
                 return (
@@ -43,6 +57,10 @@ export default function GLForm({fields, initState, submit}: Props) {
                 )
 
             })}
-        </div>
+            <div style={{'display':'flex','justifyContent':'flex-end', 'padding':'1rem 0rem', 'gap':'0.5rem'}}>
+                <Button type='submit' text='✓' btnStyle='primary' func={() => 'blah'} />
+                <Button type='reset' text='X' btnStyle='danger' func={() => 'blah'} />
+            </div>
+        </form>
     )
 }

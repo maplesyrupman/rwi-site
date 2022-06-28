@@ -44,7 +44,7 @@ export default function Test() {
     }
     
     return (
-        <div>
+        <div style={{'maxWidth':'500px'}}>
             <GrowingList label={tq.label} id={tq.id} fields={tq.fields} change={change} validate={() => true} />
         </div>
     )

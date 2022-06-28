@@ -119,3 +119,7 @@
 .option:hover {
     background-color: var(--secondary-two)
 }
+
+.hidden {
+    display: none;
+}

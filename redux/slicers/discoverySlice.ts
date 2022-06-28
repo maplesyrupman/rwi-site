@@ -47,39 +47,39 @@ const initialState: DiscoveryQuestionnaireState = {
                 }, {
                     label: 'Year Established',
                     type: 'date-my',
-                    id: '0-3',
+                    id: '0-2',
                     value: undefined
                 }, {
                     label: 'Contacts',
                     type: 'growing-list',
-                    id: '0-2',
+                    id: '0-3',
                     min: 1,
                     value: [],
                     fields: [
                         {
                             label: 'First name',
                             type: 'short',
-                            id: '0-2-0',
+                            id: '0-3-0',
                             value: ''
                         }, {
                             label: 'Last name',
                             type: 'short',
-                            id: '0-2-1',
+                            id: '0-3-1',
                             value: ''
                         }, {
                             label: 'Email',
                             type: 'email',
-                            id: '0-2-2',
+                            id: '0-3-2',
                             value: ''
                         }, {
                             label: 'Phone',
                             type: 'short',
-                            id: '0-2-3',
+                            id: '0-3-3',
                             value: ''
                         }, {
                             label: 'Position',
                             type: 'short',
-                            id: '0-2-4',
+                            id: '0-3-4',
                             value: ''
                         }
                     ]
@@ -255,7 +255,7 @@ const initialState: DiscoveryQuestionnaireState = {
                         }, {
                             id: '2-3-5',
                             label: 'Analytics',
-                            type: 'revealing-checkbox',
+                            type: 'conditional-question',
                             value: false,
                             revealed: {
                                 id: '2-3-5R',
