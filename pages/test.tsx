@@ -1,3 +1,4 @@
+import RangeSlider from "../components/form-components/RangeSlider"
 import TagsInput from "../components/form-components/TagsInput"
 
 const tq = {
@@ -18,7 +19,7 @@ export default function Test() {
     
     return (
         <div>
-            <TagsInput id='123' label='hobbies' placeholder='Enter a hobby' change={change} required={true} />
+            <RangeSlider id='123' label='Age Range' steps='85' change={change} validate={() => {return true}} />
         </div>
     )
 }
