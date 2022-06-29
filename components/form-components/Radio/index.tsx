@@ -5,7 +5,7 @@ type Props = {
     id: string,
     label: string,
     options: string[],
-    change: () => void,
+    change: (id: string, value: any) => void,
     required: boolean
 }
 
@@ -34,7 +34,7 @@ export default function Radio({ id, label, options, change, required }:Props) {
                             <input
                             type='radio'
                             id={o}
-                            onChange={change}
+                            onChange={() => change(id, o)}
                             className={styles.radio}
                             name={id}
                             />

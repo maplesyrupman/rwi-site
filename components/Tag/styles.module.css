@@ -1,0 +1,34 @@
+.tag {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    width: fit-content;
+    border: none;
+    border-radius: 10px;
+    text-align: center;
+    color: var(--light);
+    font-weight: 800;
+}
+
+.tag > svg {
+    display: none;
+    transition: display 1s ease-in-out;
+}
+
+.tag:hover > svg {
+    display: block;
+}
+
+.blueTag {
+    background: var(--rwi-blue);
+}
+
+.redTag {
+    background: var(--rwi-red);
+}
+
+.secondaryTag {
+    border: 4px solid var(--rwi-blue);
+    color: var(--rwi-blue);
+}

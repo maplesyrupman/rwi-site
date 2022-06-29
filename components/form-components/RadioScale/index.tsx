@@ -36,8 +36,9 @@ export default function RadioScale({ id, label, options, change, required }:Prop
                         <div 
                         className={`${styles.option} ${selected == o ? styles.selected : ''}`}
                         onClick={() => click(o)}
+                        key={o}
                         >
-                            <label key={o}>
+                            <label>
                             <input
                             type='radio'
                             name={id}
