@@ -8,10 +8,12 @@ type Props = {
     fields: any[],
     initState?:any,
     idx?: number,
+    id: string,
     submit: (entry: any, idx:number|undefined,  option: any) => void
 }
 
-export default function GLForm({fields, initState, submit, idx}: Props) {
+export default function GLForm({fields, initState, submit, idx, id}: Props) {
+    console.log(idx)
     const initialState: any = initState || {}
     // for(let i=0;i<fields.length;i++) {
     //     let field = fields[i]
@@ -24,8 +26,14 @@ export default function GLForm({fields, initState, submit, idx}: Props) {
 
     const formId: string = idx ? `edit${idx}` : 'mainForm'
     function resetForm(id: string) {
+        console.log(id)
         const form = document.getElementById(id) as HTMLFormElement
-        console.log(form.reset)
+        for (let i=0;i<form.children.length;i++) {
+            if (form.children[i].querySelector('input')?.value) {
+                form.children[i].querySelector('input').value = ''
+            }
+            console.log(form.children[i].querySelector('input')?.value)
+        }
     }
 
     function change(id: string, value: any) {

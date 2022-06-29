@@ -61,14 +61,14 @@ export default function GrowingList({ id, label, fields, change, validate }: Pro
                                 <Button type='button' btnStyle='danger' text='delete' func={() => handleEntry(ent, idx, 'delete')} />
                             </div>
                             <div id={`form${idx}`} className={styles.hidden}>
-                                <GLForm fields={fields} submit={handleEntry} initState={ent} idx={idx}/>
+                                <GLForm fields={fields} submit={handleEntry} initState={ent} idx={idx} id={`edit${idx}`}/>
                             </div>
                         </div>
                     )
                 })}
             </div>
             <div>
-                <GLForm fields={fields} submit={handleEntry} />
+                <GLForm fields={fields} submit={handleEntry} id='mainForm' />
             </div>
         </div>
     )
