@@ -3,44 +3,34 @@ import React, { useEffect, useState } from 'react'
 import ShortAnswer from '../ShortAnswer'
 import LongAnswer from '../LongAnswer'
 import Button from '../../Button'
+import { EventEmitter } from 'stream'
 
 type Props = {
     fields: any[],
-    initState?:any,
+    initState?: any,
     idx?: number,
     id: string,
-    submit: (entry: any, idx:number|undefined,  option: any) => void
+    submit: (entry: any, idx: number | undefined, option: any) => void
 }
 
-export default function GLForm({fields, initState, submit, idx, id}: Props) {
-    console.log(idx)
-    const initialState: any = initState || {}
-    // for(let i=0;i<fields.length;i++) {
-    //     let field = fields[i]
-    //     initialState[field.id] = field
-    // }
-    const [entry, editEntry] = useState(initialState)
-    if (initState) {
-        console.log(entry)
-    }
+export default function GLForm({ fields, initState, submit, idx, id }: Props) {
 
-    const formId: string = idx ? `edit${idx}` : 'mainForm'
+    const formStateTemplate: any = {}
+    fields.forEach(field => {
+        formStateTemplate[field.id] = ''
+    })
+
+    const [entry, editEntry] = useState(initState)
+
     function resetForm(id: string) {
-        console.log(id)
-        const form = document.getElementById(id) as HTMLFormElement
-        for (let i=0;i<form.children.length;i++) {
-            if (form.children[i].querySelector('input')?.value) {
-                form.children[i].querySelector('input').value = ''
-            }
-            console.log(form.children[i].querySelector('input')?.value)
-        }
+        editEntry(initState)
     }
 
     function change(id: string, value: any) {
         editEntry(state => {
             return {
                 ...state,
-                [id]:value
+                [id]: value
             }
         })
     }
@@ -48,27 +38,23 @@ export default function GLForm({fields, initState, submit, idx, id}: Props) {
     function handleSubmit(e: React.FormEvent) {
         e.preventDefault()
         const form = e.target as HTMLFormElement
-        form.onreset = () => console.log('reset')
-        form.reset()
-        if (!initState) {
+        resetForm(id)
+        const reset = new Event('reset')
+        form.dispatchEvent(reset)
+        if (initState !== formStateTemplate) {
             submit(entry, undefined, 'add')
         } else {
-            submit(entry, idx, 'edit')
         }
     }
 
-    // useEffect(() => {
-    //     console.log(entry)
-    // }, [entry])
-
     return (
-        <form 
-        id={formId}
-        style={{"maxWidth":"500px"}}
-        onSubmit={handleSubmit}
+        <form
+            id={id}
+            style={{ "maxWidth": "500px" }}
+            onSubmit={handleSubmit}
         >
             {fields.map((field, idx) => {
-                const initialValue: string | undefined = entry[Object.keys(entry)[idx]] || undefined
+                const initialValue: string = entry[Object.keys(entry)[idx]] || ''
                 return (
                     <div key={idx}>
                         {(field.type === 'short' || field.type === 'email') && (
@@ -77,9 +63,9 @@ export default function GLForm({fields, initState, submit, idx, id}: Props) {
                     </div>
                 )
             })}
-            <div style={{'display':'flex','justifyContent':'flex-end', 'padding':'1rem 0rem', 'gap':'0.5rem'}}>
+            <div style={{ 'display': 'flex', 'justifyContent': 'flex-end', 'padding': '1rem 0rem', 'gap': '0.5rem' }}>
                 <Button type='submit' text='✓' btnStyle='primary' func={() => 'blah'} />
-                <Button type='reset' text='X' btnStyle='danger' func={() => resetForm(formId)} />
+                <Button type='reset' text='X' btnStyle='danger' func={() => resetForm(id)} />
             </div>
         </form>
     )

@@ -10,7 +10,7 @@ interface Props {
         value: any
     ) => void;
     validation?: () => void;
-    initValue?: string | undefined
+    initValue: string
 }
 
 export default function ShortAnswer({id, label, placeholder, change, validation, initValue}: Props) {
