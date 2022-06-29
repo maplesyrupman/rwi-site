@@ -3,7 +3,7 @@ import ShortAnswer from '../ShortAnswer';
 import stylesMain from '../styles.module.css'
 import styles from './styles.module.css'
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 type Props = {
     id: string,
@@ -27,20 +27,19 @@ export default function TagsInput({ id, label, placeholder, change, required }:P
         const value = input.value;
         
         setTags([ ...tags, value]);
-
-        change(id, tags);
     }
 
     function handleDelete(idx: number) {
         const newArr = tags;
         const deleted = tags.splice(idx, 1);
 
-        console.log(newArr);
-
         setTags(newArr);
-
-        change(id, tags);
+        console.log(tags);
     }
+
+    useEffect(() => {
+        change(id, tags);
+    }, [tags, change])
 
     return (
         <div className={stylesMain.container}>
