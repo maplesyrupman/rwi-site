@@ -5,13 +5,13 @@ type Props = {
     text: string,
     type: 'submit' | 'button' | 'reset' | undefined,
     btnStyle: 'primary' | 'secondary' | 'important' | 'danger' | 'confirm',
-    func: () => void
+    func?: () => void
 }
 
 export default function Button({ text, type, btnStyle, func }: Props) {
     let btnClass: string = '';
 
-    switch(btnStyle) {
+    switch (btnStyle) {
         case 'primary':
             btnClass = styles.btnPrimary;
             break;
@@ -29,13 +29,20 @@ export default function Button({ text, type, btnStyle, func }: Props) {
             break;
     }
 
-    return (
-            <button
-                type={type}
-                className={`${styles.btn} ${btnClass}`}
-                onClick={func}
-            >
-                {text}
-            </button>
+    return func ? (
+        <button
+            type={type}
+            className={`${styles.btn} ${btnClass}`}
+            onClick={func}
+        >
+            {text}
+        </button>
+    ) : (
+        <button
+            type={type}
+            className={`${styles.btn} ${btnClass}`}
+        >
+            {text}
+        </button>
     )
 }
