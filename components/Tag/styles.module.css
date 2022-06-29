@@ -11,6 +11,15 @@
     font-weight: 800;
 }
 
+.tag > svg {
+    display: none;
+    transition: display 1s ease-in-out;
+}
+
+.tag:hover > svg {
+    display: block;
+}
+
 .blueTag {
     background: var(--rwi-blue);
 }

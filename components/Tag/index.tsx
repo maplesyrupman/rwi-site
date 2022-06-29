@@ -25,11 +25,17 @@ export default function Tag({ text, colour, canDelete, onClick }:Props) {
     }
 
     return (
-        <div className={`${styles.tag} ${tagClass}`}>
-            <span>{text}</span>
-            {canDelete && (
-                <CgClose onClick={onClick}/>
-            )}
-        </div>
+        <>
+        {canDelete ? 
+            <div className={`${styles.tag} ${tagClass}`} onClick={onClick}>
+                <span>{text}</span>
+                <CgClose />
+            </div>
+         :
+            <div className={`${styles.tag} ${tagClass}`}>
+                <span>{text}</span>
+            </div>
+        }
+        </>
     )
 }
