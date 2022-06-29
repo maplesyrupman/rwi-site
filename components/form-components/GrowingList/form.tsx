@@ -2,47 +2,71 @@ import React, { useEffect, useState } from 'react'
 
 import ShortAnswer from '../ShortAnswer'
 import LongAnswer from '../LongAnswer'
+import Button from '../../Button'
+import { EventEmitter } from 'stream'
 
 type Props = {
     fields: any[],
-    initState?:any,
-    submit: (idx:number,  value: any) => void
+    initState?: any,
+    idx?: number,
+    id: string,
+    submit: (entry: any, idx: number | undefined, option: any) => void
 }
 
-export default function GLForm({fields, initState, submit}: Props) {
-    const initialState: any = initState || {}
-    for(let i=0;i<fields.length;i++) {
-        let field = fields[i]
-        initialState[field.id] = field
+export default function GLForm({ fields, initState, submit, idx, id }: Props) {
+
+    const formStateTemplate: any = {}
+    fields.forEach(field => {
+        formStateTemplate[field.id] = ''
+    })
+
+    const [entry, editEntry] = useState(initState)
+
+    function resetForm(id: string) {
+        editEntry(initState)
     }
-    const [entry, editEntry] = useState(initialState)
 
     function change(id: string, value: any) {
         editEntry(state => {
             return {
                 ...state,
-                [id]:value
+                [id]: value
             }
         })
     }
 
-    useEffect(() => {
-        console.log(entry)
-    }, [entry])
+    function handleSubmit(e: React.FormEvent) {
+        e.preventDefault()
+        const form = e.target as HTMLFormElement
+        resetForm(id)
+        const reset = new Event('reset')
+        form.dispatchEvent(reset)
+        if (initState !== formStateTemplate) {
+            submit(entry, undefined, 'add')
+        } else {
+        }
+    }
 
     return (
-        <div>
+        <form
+            id={id}
+            style={{ "maxWidth": "500px" }}
+            onSubmit={handleSubmit}
+        >
             {fields.map((field, idx) => {
-
+                const initialValue: string = entry[Object.keys(entry)[idx]] || ''
                 return (
                     <div key={idx}>
                         {(field.type === 'short' || field.type === 'email') && (
-                            <ShortAnswer label={field.label} id={field.id} placeholder={field.label} change={change} />
+                            <ShortAnswer label={field.label} id={field.id} placeholder={field.label} initValue={initialValue} change={change} />
                         )}
                     </div>
                 )
-
             })}
-        </div>
+            <div style={{ 'display': 'flex', 'justifyContent': 'flex-end', 'padding': '1rem 0rem', 'gap': '0.5rem' }}>
+                <Button type='submit' text='✓' btnStyle='primary' func={() => 'blah'} />
+                <Button type='reset' text='X' btnStyle='danger' func={() => resetForm(id)} />
+            </div>
+        </form>
     )
 }

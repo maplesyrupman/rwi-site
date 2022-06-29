@@ -10,9 +10,10 @@ interface Props {
         value: any
     ) => void;
     validation?: () => void;
+    initValue: string
 }
 
-export default function ShortAnswer({id, label, placeholder, change, validation}: Props) {
+export default function ShortAnswer({id, label, placeholder, change, validation, initValue}: Props) {
     function handleChange(e: React.ChangeEvent) {
         const el = e.target as HTMLInputElement 
 
@@ -32,9 +33,12 @@ export default function ShortAnswer({id, label, placeholder, change, validation}
             <input 
             id={id} 
             className={styles.input}
+            placeholder={placeholder}
             type='text' 
             placeholder={placeholder}
-            onChange={handleChange} />
+            onChange={handleChange} 
+            value={initValue}
+            />
         </div>
     )
 }

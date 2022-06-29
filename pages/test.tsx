@@ -18,8 +18,9 @@ export default function Test() {
     }
     
     return (
-        <div>
+            <div>
             <RangeSlider id='123' label='Age Range' steps='85' change={change} validate={() => {return true}} />
+            <GrowingList label={tq.label} id={tq.id} fields={tq.fields} change={change} validate={() => true} />
         </div>
     )
 }
