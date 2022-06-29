@@ -27,11 +27,12 @@ export default function TagsInput({ id, label, placeholder, change, required }:P
         const value = input.value;
         
         setTags([ ...tags, value]);
+        form.reset()
     }
 
     function handleDelete(idx: number) {
-        const newArr = tags;
-        const deleted = tags.splice(idx, 1);
+        const newArr = [...tags];
+        const deleted = newArr.splice(idx, 1);
 
         setTags(newArr);
         console.log(tags);
@@ -39,7 +40,7 @@ export default function TagsInput({ id, label, placeholder, change, required }:P
 
     useEffect(() => {
         change(id, tags);
-    }, [tags, change])
+    }, [tags, change, id])
 
     return (
         <div className={stylesMain.container}>
