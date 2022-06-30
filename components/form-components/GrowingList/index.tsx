@@ -31,7 +31,7 @@ export default function GrowingList({ id, label, fields, change, validate, requi
         hideForm()
         switch (option) {
             case 'add':
-                mutateList(state => [...state, entry]);
+                mutateList((state: any) => [...state, entry]);
                 break
             case 'delete':
                 const newState = [...list]
@@ -39,7 +39,7 @@ export default function GrowingList({ id, label, fields, change, validate, requi
                 mutateList(newState)
                 break
             case 'edit':
-                mutateList(state => {
+                mutateList((state: any) => {
                     const newState = [...state]
                     newState.splice(idx, 1, entry)
                     return newState

@@ -27,7 +27,7 @@ export default function GLForm({ fields, initState, submit, idx, id,  }: Props) 
     }
 
     function change(id: string, value: any) {
-        editEntry(state => {
+        editEntry((state: any) => {
             return {
                 ...state,
                 [id]: value
