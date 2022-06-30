@@ -4,6 +4,7 @@ import Button from '../../Button'
 import GLForm from './form'
 
 import styles from '../styles.module.css'
+import glStyles from './growingList.module.css'
 
 type Props = {
     idx: number;
@@ -21,23 +22,25 @@ export default function ListEntry({ idx, fields, ent, handleEdit }: Props) {
 
     return (
         <div key={idx}
+        style={{'display':'flex', 'flexDirection':'column', 'padding':'1rem', 'gap':'1rem', 'border':'3px solid #03053E', 'borderRadius':'10px'}}
         >
             <div id={`entry${idx}`}
-                style={{ 'display': 'flex', 'flexWrap': 'wrap', 'padding': '1rem 1.5rem', 'justifyContent': 'space-evenly' }}>
-                {Object.keys(ent).map((f, idx) => {
+                className={glStyles.listEntry}
+            >
+                {!editView && Object.keys(ent).map((f, idx) => {
                     return (
                         <div key={`f${idx}`}>
                             <span className={`txtBlue bold`}>{fields[idx].label}:</span><span>{ent[f]}</span>
                         </div>
                     )
                 })}
-                {!editView && (
-                    <div>
+            </div>
+            {!editView && (
+                    <div style={{'display':'flex', 'gap':'0.5rem','maxWidth':'fit-content'}}>
                         <Button type='button' btnStyle='secondary' text='edit' func={toggleEdit} />
                         <Button type='button' btnStyle='danger' text='delete' func={() => handleEdit(ent, idx, 'delete')} />
                     </div>
                 )}
-            </div>
             {editView && (
                 <div id={`form${idx}`}
                     onResetCapture={() => toggleEdit()}

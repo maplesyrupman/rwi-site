@@ -9,13 +9,15 @@ type Question = {
     type: string,
     id: string,
     value: any,
+growing
     range?: [number, number],
     options?: string[],
     min?: number,
     fields?: Question[],
     list?: Question[],
     revealed?: Question,
-    rangeType?: string
+    rangeType?: string,
+    validator?: (value:any, options: string[]) => boolean
 }
 
 type Section = {
