@@ -55,8 +55,8 @@ export default function GrowingList({ id, label, fields, change, validate }: Pro
     })
 
     return (
-        <div>
-            <div>
+        <div style={{'maxWidth':'500px'}}>
+            <div style={{'display':'flex','flexDirection':'column', 'gap':'1rem'}}>
                 {list.map((ent: any, idx: number) => {
                     return (
                         <ListEntry key={`$editForm${idx}`} ent={list[idx]} idx={idx} fields={fields} handleEdit={handleEntry} />
@@ -70,7 +70,7 @@ export default function GrowingList({ id, label, fields, change, validate }: Pro
                     <GLForm fields={fields} submit={handleEntry} id='mainForm' initState={formStateTemplate} />
                 </div>
             ) : (
-                <div>
+                <div style={{'maxWidth':'fit-content','margin':'1rem 0 0 0'}}>
                     <Button text='+' func={() => showForm()} type='button' btnStyle='secondary' />
                 </div>
             )}
