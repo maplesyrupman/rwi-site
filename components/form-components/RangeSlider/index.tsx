@@ -17,10 +17,18 @@ export default function RangeSlider({ id, label, steps, change, validate }:Props
 
     function handleChange(id: string, value: string) {
         if (id === 'slider1') {
+            if (value >= value2) {
+                setValue1(value2);
+                return;
+            }
             setValue1(value);
         }
 
         if (id === 'slider2') {
+            if (value <= value1) {
+                setValue2(value1);
+                return;
+            }
             setValue2(value);
         }
     }
