@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import ToolTip from '../../ToolTip'
 import styles from '../styles.module.css'
 
 type Props = {
@@ -10,9 +11,11 @@ type Props = {
     size: 'small' | 'medium' | 'large',
     multi?: boolean,
     change: (id: string, value: string) => void
+    required: boolean,
+    toolTip?: string
 }
 
-export default function Picklist({ id, label, options, other, size, placeholder, multi, change }: Props) {
+export default function Picklist({ id, label, options, other, size, placeholder, multi, change, required, toolTip }: Props) {
     const [selected, setSelected] = useState(placeholder)
     const [dropdownOpen, setDropdownOpen] = useState(false)
 
@@ -38,8 +41,16 @@ export default function Picklist({ id, label, options, other, size, placeholder,
     
     return (
         <div className={`${styles.container} ${selectStyle}`}>
-            <div className={`txtBlue bold`}>
-                {label}
+            <div className={styles.labelCon}>
+                <span className='txtBlue bold'>
+                    {label}
+                    {required && (
+                        <span className='txtRed bold'>*</span>
+                    )}
+                </span>
+                {toolTip && (
+                    <ToolTip text={toolTip} />
+                )}
             </div>
             <div className={`${styles.select} ${selectStyle} ${dropdownOpen ? styles.selectOpen : ''}`}
                 onClick={function() {

@@ -1,6 +1,7 @@
 import RangeSlider from "../components/form-components/RangeSlider"
 import TagsInput from "../components/form-components/TagsInput"
 import GrowingList from "../components/form-components/GrowingList"
+import ShortAnswer from "../components/form-components/ShortAnswer"
 
 const tq = {
         label: 'Contacts',
@@ -44,8 +45,8 @@ export default function Test() {
     }
     
     return (
-            <div>
-                <GrowingList label={tq.label} id={tq.id} fields={tq.fields} change={change} validate={() => true} />
+            <div style={{'maxWidth': '500px'}}>
+                <ShortAnswer id='123' label='Test Question' placeholder='Testing 123' change={change} required={true} toolTip='Please specify what the answer to this question is.' />
             </div>
     )
 }

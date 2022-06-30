@@ -3,16 +3,19 @@ import GLForm from './form'
 import styles from '../styles.module.css'
 import Button from '../../Button'
 import ListEntry from './listEntry'
+import ToolTip from '../../ToolTip'
 
 type Props = {
     id: string,
     label: string,
     fields: any[],
     change: (id: string, value: any[]) => void,
-    validate: () => boolean
+    validate: () => boolean,
+    required: boolean,
+    toolTip?: string
 }
 
-export default function GrowingList({ id, label, fields, change, validate }: Props) {
+export default function GrowingList({ id, label, fields, change, validate, required, toolTip }: Props) {
     const [list, mutateList] = useState<any>([])
     const [displayForm, setFormDisplay] = useState(false)
 
@@ -56,6 +59,17 @@ export default function GrowingList({ id, label, fields, change, validate }: Pro
 
     return (
         <div>
+            <div className={styles.labelCon}>
+                <p className='txtBlue bold'>
+                    {label}
+                    {required && (
+                        <span className='txtRed bold'>*</span>
+                    )}
+                </p>
+                {toolTip && (
+                    <ToolTip text={toolTip} />
+                )}
+            </div>
             <div>
                 {list.map((ent: any, idx: number) => {
                     return (
