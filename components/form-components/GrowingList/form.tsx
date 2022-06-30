@@ -38,13 +38,14 @@ export default function GLForm({ fields, initState, submit, idx, id }: Props) {
     function handleSubmit(e: React.FormEvent) {
         e.preventDefault()
         const form = e.target as HTMLFormElement
-        resetForm(id)
         const reset = new Event('reset')
         form.dispatchEvent(reset)
-        if (initState !== formStateTemplate) {
-            submit(entry, undefined, 'add')
+        if (typeof idx == 'number') {
+            submit(entry, idx, 'edit')
         } else {
+            submit(entry, undefined, 'add')
         }
+        resetForm(id)
     }
 
     return (
@@ -64,7 +65,7 @@ export default function GLForm({ fields, initState, submit, idx, id }: Props) {
                 )
             })}
             <div style={{ 'display': 'flex', 'justifyContent': 'flex-end', 'padding': '1rem 0rem', 'gap': '0.5rem' }}>
-                <Button type='submit' text='✓' btnStyle='primary' func={() => 'blah'} />
+                <Button type='submit' text='✓' btnStyle='primary' func={() => console.log(idx)} />
                 <Button type='reset' text='X' btnStyle='danger' func={() => resetForm(id)} />
             </div>
         </form>
