@@ -461,8 +461,10 @@ export const discoverySlice = createSlice({
     // In this example, 'increment', 'decrement' and 'incrementByAmount' are actions. They can be triggered from outside this slice, anywhere in the app. 
     // So for example, if we make a dispatch to the 'increment' action here from the index page, it will get triggered and change the value of the state from 0 to 1.
     reducers: {
-        answerQuestion: (state, action: PayloadAction<string>) => {
-
+        answerQuestion: (state, action: PayloadAction<string[]>) => {
+            const [id, value] = action.payload
+            console.log('id:',id)
+            console.log('value:', value)
         },
         setPage: (state, action: PayloadAction<number>) => {
             state.currentPage = action.payload;
