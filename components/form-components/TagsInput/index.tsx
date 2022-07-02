@@ -10,10 +10,11 @@ type Props = {
     label: string,
     placeholder: string,
     change: (id: string, value: any) => void;
-    required: boolean
+    required: boolean,
+    toolTip?: string
 }
 
-export default function TagsInput({ id, label, placeholder, change, required }:Props) {
+export default function TagsInput({ id, label, placeholder, change, required, toolTip }:Props) {
 
     const [tags, setTags] = useState<string[]>([]);
 
@@ -45,7 +46,7 @@ export default function TagsInput({ id, label, placeholder, change, required }:P
     return (
         <div className={stylesMain.container}>
             <form onSubmit={handleSubmit}>
-                <ShortAnswer id={id} label={label} placeholder={placeholder} />
+                <ShortAnswer id={id} label={label} placeholder={placeholder} required={required} toolTip={toolTip} />
             </form>
             <div className={styles.tagCon}>
                 {tags.map((t, idx) => {

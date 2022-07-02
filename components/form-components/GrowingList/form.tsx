@@ -13,7 +13,7 @@ type Props = {
     submit: (entry: any, idx: number | undefined, option: any) => void
 }
 
-export default function GLForm({ fields, initState, submit, idx, id }: Props) {
+export default function GLForm({ fields, initState, submit, idx, id,  }: Props) {
 
     const formStateTemplate: any = {}
     fields.forEach(field => {
@@ -59,7 +59,7 @@ export default function GLForm({ fields, initState, submit, idx, id }: Props) {
                 return (
                     <div key={idx}>
                         {(field.type === 'short' || field.type === 'email') && (
-                            <ShortAnswer label={field.label} id={field.id} placeholder={field.label} initValue={initialValue} change={change} />
+                            <ShortAnswer label={field.label} id={field.id} placeholder={field.label} initValue={initialValue} change={change} required={field.required} />
                         )}
                     </div>
                 )

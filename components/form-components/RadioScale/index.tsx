@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import ToolTip from '../../ToolTip';
 import stylesMain from '../styles.module.css';
 import styles from './styles.module.css';
 
@@ -7,10 +8,11 @@ type Props = {
     label: string,
     options: string[],
     change: (id: string, value: any) => void,
-    required: boolean
+    required: boolean,
+    toolTip?: string
 }
 
-export default function RadioScale({ id, label, options, change, required }:Props) {
+export default function RadioScale({ id, label, options, change, required, toolTip }:Props) {
 
     const [selected, setSelected] = useState('');
 
@@ -24,12 +26,18 @@ export default function RadioScale({ id, label, options, change, required }:Prop
 
     return (
         <div className={stylesMain.container}>
-            <span className='txtBlue bold'>
-                {label}
-                {required && (
-                    <span className='txtRed bold'>*</span>
+            <div className={stylesMain.labelCon}>
+                <span className='txtBlue bold'>
+                    {label}
+                    {required && (
+                        <span className='txtRed bold'>*</span>
+                    )}
+                </span>
+                {toolTip && (
+                    <ToolTip text={toolTip} />
                 )}
-            </span>
+            </div>
+
             <div id={id} className={styles.scaleGroup}>
                 {options.map(o => {
                     return (

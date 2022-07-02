@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import ToolTip from '../../ToolTip'
 import stylesMain from '../styles.module.css'
 import styles from './styles.module.css'
 
@@ -7,10 +8,12 @@ type Props = {
     label: string,
     steps: string,
     change: (id: string, value: any) => void,
-    validate: () => boolean
+    validate: () => boolean,
+    required: boolean,
+    toolTip?: string
 }
 
-export default function RangeSlider({ id, label, steps, change, validate }:Props) {
+export default function RangeSlider({ id, label, steps, change, validate, required, toolTip }:Props) {
 
     const [value1, setValue1] = useState('0');
     const [value2, setValue2] = useState(steps);
@@ -35,7 +38,18 @@ export default function RangeSlider({ id, label, steps, change, validate }:Props
 
     return (
         <div id={id} className={stylesMain.container}>
-            <span className='txtBlue bold'>{label}</span>
+            <div className={stylesMain.labelCon}>
+                <span className='txtBlue bold'>
+                    {label}
+                    {required && (
+                        <span className='txtRed bold'>*</span>
+                    )}
+                </span>
+                {toolTip && (
+                    <ToolTip text={toolTip}/>
+                )}
+            </div>
+
             <div className={styles.counterCon}>
                 <span>{value1}</span>
                 <span>{value2}</span>
