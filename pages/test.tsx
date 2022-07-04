@@ -6,6 +6,7 @@ import Picklist from "../components/form-components/Picklist"
 import ShortAnswer from "../components/form-components/ShortAnswer"
 import Radio from '../components/form-components/Radio'
 import RadioScale from "../components/form-components/RadioScale"
+import TagsInput from "../components/form-components/TagsInput"
 
 const tq = {
     label: 'Contacts',
@@ -51,7 +52,7 @@ export default function Test() {
     return (
             <div style={{'maxWidth': '500px','margin': '3rem'}}>
                 {/* <ShortAnswer id='123' label='Test Question' placeholder='Testing 123' change={change} required={true} toolTip='Please specify what the answer to this question is.' /> */}
-                <RadioScale id='1223' label='How happy are you?' options={['1', '2', '3', '4', '5']} change={change} required={true} />
+                <TagsInput id='123' label='Hobbies' placeholder='Enter a hobby' change={change} required={true} toolTip='Hobbies are activities you like to do in your free time.' />
             </div>
     )
 }

@@ -17,7 +17,8 @@ export default function ToolTip({ text }: Props) {
         }
 
         if(!isVisible) {
-            setIsVisible(false);
+            setIsVisible(true);
+            console.log('visible!')
         }
     }
 

@@ -1,7 +1,19 @@
 .toolTip {
-
+    width: 120px;
+    background-color: var(--rwi-blue);
+    color: var(--light);
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+    transition: opacity 0.3s;
 }
 
 .icon {
     margin-top: 0.5rem;
+    cursor: pointer;
 }
