@@ -22,7 +22,7 @@ export default function ListEntry({ idx, fields, ent, handleEdit }: Props) {
 
     return (
         <div key={idx}
-        style={{'display':'flex', 'flexDirection':'column', 'padding':'1rem', 'gap':'1rem', 'border':'3px solid #03053E', 'borderRadius':'10px'}}
+        className={glStyles.entry}
         >
             <div id={`entry${idx}`}
                 className={glStyles.listEntry}
@@ -30,15 +30,15 @@ export default function ListEntry({ idx, fields, ent, handleEdit }: Props) {
                 {!editView && Object.keys(ent).map((f, idx) => {
                     return (
                         <div key={`f${idx}`}>
-                            <span className={`txtBlue bold`}>{fields[idx].label}:</span><span>{ent[f]}</span>
+                            <span className={`txtBlue bold`}>{fields[idx].label}:</span><span className={glStyles.answer}>{ent[f]}</span>
                         </div>
                     )
                 })}
             </div>
             {!editView && (
-                    <div style={{'display':'flex', 'gap':'0.5rem','maxWidth':'fit-content'}}>
-                        <Button type='button' btnStyle='secondary' text='edit' func={toggleEdit} />
-                        <Button type='button' btnStyle='danger' text='delete' func={() => handleEdit(ent, idx, 'delete')} />
+                    <div className={glStyles.btnCon}>
+                        <Button type='button' btnStyle='primary' text='Edit' func={toggleEdit} />
+                        <Button type='button' btnStyle='danger' text='Delete' func={() => handleEdit(ent, idx, 'delete')} />
                     </div>
                 )}
             {editView && (

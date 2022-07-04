@@ -4,6 +4,7 @@ import ShortAnswer from '../ShortAnswer'
 import LongAnswer from '../LongAnswer'
 import Button from '../../Button'
 import { EventEmitter } from 'stream'
+import styles from './growingList.module.css';
 
 type Props = {
     fields: any[],
@@ -51,7 +52,7 @@ export default function GLForm({ fields, initState, submit, idx, id,  }: Props) 
     return (
         <form
             id={id}
-            style={{ "maxWidth": "500px" }}
+            className={styles.mainForm}
             onSubmit={handleSubmit}
         >
             {fields.map((field, idx) => {
@@ -64,9 +65,9 @@ export default function GLForm({ fields, initState, submit, idx, id,  }: Props) 
                     </div>
                 )
             })}
-            <div style={{ 'display': 'flex', 'justifyContent': 'flex-end', 'padding': '1rem 0rem', 'gap': '0.5rem' }}>
-                <Button type='submit' text='✓' btnStyle='primary' func={() => console.log(idx)} />
-                <Button type='reset' text='X' btnStyle='danger' func={() => resetForm(id)} />
+            <div className={styles.btnCon}>
+                <Button type='submit' text='Submit' btnStyle='primary' func={() => console.log(idx)} />
+                <Button type='reset' text='Cancel' btnStyle='danger' func={() => resetForm(id)} />
             </div>
         </form>
     )

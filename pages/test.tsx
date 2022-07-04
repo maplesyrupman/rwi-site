@@ -47,7 +47,7 @@ export default function Test() {
     return (
             <div style={{'maxWidth': '500px','margin': '3rem'}}>
                 {/* <ShortAnswer id='123' label='Test Question' placeholder='Testing 123' change={change} required={true} toolTip='Please specify what the answer to this question is.' /> */}
-                <Link text='Learn More' href='https://rwilabs.io' linkStyle='danger' destination='internal' />
+                <GrowingList id={tq.id} label={tq.label} fields={tq.fields} change={change} validate={() => {return true}} required={true} />
             </div>
     )
 }
