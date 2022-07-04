@@ -1,3 +1,5 @@
+import Button from "../components/Button"
+import Link from "../components/Button/link"
 import GrowingList from "../components/form-components/GrowingList"
 import ShortAnswer from "../components/form-components/ShortAnswer"
 
@@ -43,8 +45,9 @@ export default function Test() {
     }
 
     return (
-            <div style={{'maxWidth': '500px'}}>
-                <ShortAnswer id='123' label='Test Question' placeholder='Testing 123' change={change} required={true} toolTip='Please specify what the answer to this question is.' />
+            <div style={{'maxWidth': '500px','margin': '3rem'}}>
+                {/* <ShortAnswer id='123' label='Test Question' placeholder='Testing 123' change={change} required={true} toolTip='Please specify what the answer to this question is.' /> */}
+                <Link text='Learn More' href='https://rwilabs.io' linkStyle='danger' destination='internal' />
             </div>
     )
 }
