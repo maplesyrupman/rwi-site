@@ -14,6 +14,7 @@ export default function ToolTip({ text }: Props) {
     function handleClick() {
         if(isVisible) {
             setIsVisible(false);
+            return;
         }
 
         if(!isVisible) {
@@ -23,14 +24,15 @@ export default function ToolTip({ text }: Props) {
     }
 
     return (
-        <div>
-            <MdInfo className={styles.icon} onClick={handleClick} />
-            {isVisible && (
-                <div className={styles.toolTip}>
-                    <CgClose className={styles.icon} onClick={handleClick}/>
-                    <p>{text}</p>
-                </div>
-            )}
-        </div>
+        <>
+            <button type='button' className={styles.toolTipBtn} onBlur={() => setIsVisible(false)} onClick={handleClick}>
+                <MdInfo />
+                {isVisible && (
+                    <div className={styles.toolTip}>
+                        <p>{text}</p>
+                    </div>
+                )}
+            </button>
+        </>
     )
 }
