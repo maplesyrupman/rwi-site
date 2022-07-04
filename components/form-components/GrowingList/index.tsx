@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import GLForm from './form'
-import styles from '../styles.module.css'
+import stylesMain from '../styles.module.css'
+import styles from './growingList.module.css';
 import Button from '../../Button'
 import ListEntry from './listEntry'
 import ToolTip from '../../ToolTip'
@@ -58,24 +59,19 @@ export default function GrowingList({ id, label, fields, change, validate, requi
     })
 
     return (
-<<<<<<< HEAD
         <div>
-            <div className={styles.labelCon}>
-                <p className='txtBlue bold'>
+            <div className={stylesMain.labelCon}>
+                <span className='txtBlue bold'>
                     {label}
                     {required && (
                         <span className='txtRed bold'>*</span>
                     )}
-                </p>
+                </span>
                 {toolTip && (
                     <ToolTip text={toolTip} />
                 )}
             </div>
-            <div>
-=======
-        <div style={{'maxWidth':'500px'}}>
-            <div style={{'display':'flex','flexDirection':'column', 'gap':'1rem'}}>
->>>>>>> 728d122641e9250b02726b7618619eaf928cc5ea
+            <div className={styles.entryCon}>
                 {list.map((ent: any, idx: number) => {
                     return (
                         <ListEntry key={`$editForm${idx}`} ent={list[idx]} idx={idx} fields={fields} handleEdit={handleEntry} />
@@ -89,8 +85,8 @@ export default function GrowingList({ id, label, fields, change, validate, requi
                     <GLForm fields={fields} submit={handleEntry} id='mainForm' initState={formStateTemplate} />
                 </div>
             ) : (
-                <div style={{'maxWidth':'fit-content','margin':'1rem 0 0 0'}}>
-                    <Button text='+' func={() => showForm()} type='button' btnStyle='secondary' />
+                <div>
+                    <Button text='Add Contact' func={() => showForm()} type='button' btnStyle='secondary' />
                 </div>
             )}
         </div>

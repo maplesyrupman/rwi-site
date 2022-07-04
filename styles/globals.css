@@ -65,7 +65,7 @@
   font-family: Gilmer;
   src: url('../public/fonts/Gilmer/Gilmer-Bold.otf');
   font-style: normal;
-  font-weight: 800;
+  font-weight: 700;
   font-display: swap;
 }
 
@@ -73,7 +73,7 @@
   font-family: Gilmer;
   src: url('../public/fonts/Gilmer/Gilmer-Heavy.otf');
   font-style: normal;
-  font-weight: 700;
+  font-weight: 800;
   font-display: swap;
 }
 

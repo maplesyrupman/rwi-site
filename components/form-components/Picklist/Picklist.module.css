@@ -1,9 +1,3 @@
-.container {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-}
-
 .sm {
     max-width: 125px;
     width: 100%;
@@ -39,7 +33,6 @@
 
 .options {
     position: absolute;
-
     background: #F3F5F7;
     border-radius: 10px;
     width: 100%;
@@ -54,6 +47,15 @@
     overflow-y: scroll;
 }
 
+.optionsOpen::-webkit-scrollbar {
+    width: 4px;
+}
+
+.optionsOpen::-webkit-scrollbar-thumb {
+    background-color: var(--secondary-one);
+    border-radius: 5px;
+}
+
 .option {
     padding: 0.5rem 1rem;
     width: 100%;
@@ -62,4 +64,9 @@
 
 .option:hover {
     background-color: var(--secondary-two)
+}
+
+.arrow {
+    display: flex;
+    align-items: center;
 }

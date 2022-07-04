@@ -1,5 +1,12 @@
+import Button from "../components/Button"
+import Link from "../components/Button/link"
 import GrowingList from "../components/form-components/GrowingList"
+import LongAnswer from "../components/form-components/LongAnswer"
+import Picklist from "../components/form-components/Picklist"
 import ShortAnswer from "../components/form-components/ShortAnswer"
+import Radio from '../components/form-components/Radio'
+import RadioScale from "../components/form-components/RadioScale"
+import TagsInput from "../components/form-components/TagsInput"
 
 const tq = {
     label: 'Contacts',
@@ -43,8 +50,9 @@ export default function Test() {
     }
 
     return (
-            <div style={{'maxWidth': '500px'}}>
-                <ShortAnswer id='123' label='Test Question' placeholder='Testing 123' change={change} required={true} toolTip='Please specify what the answer to this question is.' />
+            <div style={{'maxWidth': '500px','margin': '3rem'}}>
+                {/* <ShortAnswer id='123' label='Test Question' placeholder='Testing 123' change={change} required={true} toolTip='Please specify what the answer to this question is.' /> */}
+                <TagsInput id='123' label='Hobbies' placeholder='Enter a hobby' change={change} required={true} toolTip='Hobbies are activities you like to do in your free time.' />
             </div>
     )
 }
