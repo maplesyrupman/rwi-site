@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "test": "jest ./__tests__",
+    "test:watch": "npm run test -- --watch ./__tests__"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.2",
@@ -21,10 +23,14 @@
     "swiper": "^8.1.5"
   },
   "devDependencies": {
+    "@testing-library/react": "^13.3.0",
+    "@types/jest": "^28.1.4",
     "@types/node": "^18.0.0",
     "@types/react": "^18.0.14",
     "eslint": "8.15.0",
     "eslint-config-next": "12.1.6",
+    "jest": "^28.1.2",
+    "ts-jest": "^28.0.5",
     "typescript": "^4.7.4"
   }
 }

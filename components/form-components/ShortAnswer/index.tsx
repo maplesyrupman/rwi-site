@@ -12,7 +12,7 @@ interface Props {
     ) => void;
     validation?: () => void;
     initValue?: string,
-    required: boolean
+    required?: boolean
     toolTip?: string
 }
 
