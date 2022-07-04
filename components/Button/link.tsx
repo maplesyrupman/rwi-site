@@ -4,12 +4,13 @@ import NextLink from 'next/link';
 type Props = {
     text: string,
     href: string,
-    linkStyle: 'default' | 'bold' | 'danger',
+    linkStyle: 'default' | 'bold' | 'danger' | 'btnPrimary' | 'btnSecondary' | 'btnImportant' | 'btnDanger' | 'btnConfirm',
     destination: 'internal' | 'external'
 }
 
 export default function Link({ text, href, linkStyle, destination }: Props) {
     let aStyle: string = ''
+    let aStyle2: string = ''
 
     switch(linkStyle) {
         case 'default':
@@ -21,6 +22,26 @@ export default function Link({ text, href, linkStyle, destination }: Props) {
         case 'danger':
             aStyle = styles.linkDanger;
             break;
+        case 'btnPrimary':
+            aStyle = styles.btnPrimary;
+            aStyle2= styles.btn;
+            break;
+        case 'btnSecondary':
+            aStyle = styles.btnSecondary;
+            aStyle2 = styles.btn;
+            break;
+        case 'btnImportant':
+            aStyle = styles.btnImportant;
+            aStyle2 = styles.btn;
+            break;
+        case 'btnDanger':
+            aStyle = styles.btnImportant;
+            aStyle2 = styles.btn;
+            break;
+        case 'btnConfirm':
+            aStyle = styles.btnConfirm;
+            aStyle2 = styles.btn;
+            break;
     }
     
     return (
@@ -29,7 +50,7 @@ export default function Link({ text, href, linkStyle, destination }: Props) {
             <NextLink
             href={href}
             >
-                    <a className={`${aStyle}`}>{text}</a>
+                <a className={`${aStyle2} ${aStyle}`}>{text}</a>
             </NextLink>
         )}
 
@@ -38,7 +59,7 @@ export default function Link({ text, href, linkStyle, destination }: Props) {
             href={href}
             target= '_blank'
             >
-                <a className={`${aStyle}`}>{text}</a>
+                <a className={`${aStyle2} ${aStyle}`}>{text}</a>
             </NextLink>
         )}
         </>

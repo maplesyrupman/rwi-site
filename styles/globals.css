@@ -23,6 +23,10 @@
   --success-bg: #D3DED7;
 }
 
+body {
+  background: var(--light);
+}
+
 .bgBlue {
   background-color: #03053E !important;
 }
@@ -98,6 +102,10 @@ h1, h2, h3, h4, h5, h6, p, div, input, label {
   font-style: oblique;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 800;
+}
+
 h1 {
   font-size: 48px;
   line-height: 56px;
@@ -152,13 +160,19 @@ p, div, a, li, span, select, option {
   text-align: center;
 }
 
+/* Page and Section Spacing */
+
+.pageGutters {
+  max-width: 1200px;
+  margin: 0 7.5rem;
+}
+
+.sectionSM {
+  margin-top: 2.5rem;
+}
 
 /* ------- random shit from site 1.0 ------- */
 
-
-.gutters {
-  padding: 0 15% !important;
-}
 
 .btn {
   padding: 1rem 3rem;
