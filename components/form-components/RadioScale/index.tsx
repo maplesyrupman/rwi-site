@@ -2,27 +2,20 @@ import { useState, useEffect } from 'react';
 import ToolTip from '../../ToolTip';
 import stylesMain from '../styles.module.css';
 import styles from './styles.module.css';
+import {FormQuestionProps} from '../../../types'
 
-type Props = {
-    id: string,
-    label: string,
-    options: string[],
-    change: (id: string, value: any) => void,
-    required: boolean,
-    toolTip?: string
-}
+export default function RadioScale({ question, change, validate}:FormQuestionProps) {
+    const {id, label, options, required, toolTip, initValue} = question
+    if (!options) {
+        throw new Error('Options are required for RadioScale component')
+    }
 
-export default function RadioScale({ id, label, options, change, required, toolTip }:Props) {
-
-    const [selected, setSelected] = useState('');
+    const [selected, setSelected] = useState(initValue);
 
     function click(option:string):void {
         setSelected(option);
+        change(id, option)
     }
-
-    useEffect(() => {
-        change(id, selected)
-    }, [selected, change, id])
 
     return (
         <div className={stylesMain.container}>

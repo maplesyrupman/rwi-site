@@ -3,6 +3,8 @@ export type Question = {
     type: string,
     id: string,
     value: any,
+    initValue?: any,
+    placeholder?: string,
     required?: boolean,
     range?: [number, number],
     year?: boolean,
@@ -31,4 +33,13 @@ export interface Date {
     year: string
     month: string
     day: string
+}
+
+export type FormQuestionProps = {
+    question: Question
+    change: (
+        id: string,
+        value: any
+    ) => void;
+    validate?: () => void;
 }

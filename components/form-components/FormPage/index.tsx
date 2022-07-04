@@ -2,13 +2,16 @@ import styles from './styles.module.css';
 
 import Button from '../../Button'
 import Link from '../../Button/link'
+
 import ShortAnswer from '../ShortAnswer'
 import LongAnswer from '../LongAnswer'
 import Radio from '../Radio'
 import DatePick from '../Date'
 import Picklist from '../Picklist'
+import GrowingList from '../GrowingList'
+import ConditionalQuestion from '../ConditionalQuestion'
 
-import { Question } from '../../../types';
+import { Question } from '../../../types'
 
 interface Props {
     questions: Question[]
@@ -17,7 +20,9 @@ interface Props {
 function getQuestionComponent(question: Question): React.ReactNode {
     switch(question.type) {
         case ('short'):
-            return 
+            return <ShortAnswer question={question} change={() => console.log(question.label)} />
+        case 'long':
+            return <LongAnswer question={question} change={() => console.log(question.label)} />
     }
 }
 

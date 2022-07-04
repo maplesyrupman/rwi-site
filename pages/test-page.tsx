@@ -1,30 +1,29 @@
-import { useEffect } from 'react'
-import {
-    useAppDispatch,
-    useAppSelector
-} from '../redux/hooks'
-import {
-    answerQuestion,
-    setSection,
-    selectSections,
-    selectCurrentPage
-} from '../redux/slicers/discoverySlice'
+import { ConditionalQuestion } from '../components/form-components'
+import { Question } from '../types'
+
+const tq:Question = {
+    id: '0-4',
+    label: 'Do you have a Mission Statement?',
+    type: 'conditional-question',
+    value: false,
+    options: ['Yes', 'No'],
+    initValue: 'No',
+    revealed: {
+        label: 'Company Mission Statement',
+        type: 'long',
+        id: '0-4-R',
+        value: '',
+        required: false,
+        validatorOptions: [],
+        toolTip: 'Beyond making a profit, what does your company strive to achieve?'
+    }
+}
 
 export default function Test() {
-    const dispatch = useAppDispatch()
-
-    const questionnaireState = useAppSelector(selectSections)
-
-    // useEffect(() => {
-    //     console.log(questionnaireState)
-    // }, [questionnaireState])
 
     return (
         <div style={{ 'maxWidth': '500px' }}>
-            <button
-                onClick={() => dispatch(answerQuestion(['2-0', ['professional', 'happy']]))}>
-                update form
-            </button>
+            <ConditionalQuestion question={tq} change={() => console.log('condit quest chage')} validate={() => console.log('validate')} />
         </div>
     )
 }

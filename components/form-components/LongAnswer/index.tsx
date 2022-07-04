@@ -1,18 +1,10 @@
 import React from 'react';
 import ToolTip from '../../ToolTip';
 import styles from '../styles.module.css';
+import {FormQuestionProps} from '../../../types'
 
-type Props = {
-    placeholder: string,
-    label: string,
-    id: string,
-    change: (id: string, value: any) => void,
-    validate: () => boolean,
-    required: boolean,
-    toolTip?: string
-}
-
-export default function LongAnswer({ placeholder, label, id, change, validate, required, toolTip }: Props) {
+export default function LongAnswer({ question, change, validate}: FormQuestionProps) {
+    const {placeholder, label, id, required, toolTip} = question
     function handleChange(e: React.ChangeEvent) {
         const el = e.target as HTMLInputElement 
         change(id, el.value)

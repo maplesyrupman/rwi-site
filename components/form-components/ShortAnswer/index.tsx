@@ -1,22 +1,10 @@
 import React from 'react';
+import { FormQuestionProps } from '../../../types';
 import ToolTip from '../../ToolTip';
 import styles from '../styles.module.css';
 
-interface Props {
-    id: string;
-    label: string;
-    placeholder: string;
-    change?: (
-        id: string,
-        value: any
-    ) => void;
-    validation?: () => void;
-    initValue?: string,
-    required?: boolean
-    toolTip?: string
-}
-
-export default function ShortAnswer({ id, label, placeholder, change, validation, initValue, required, toolTip }: Props) {
+export default function ShortAnswer({ question, change, validate}: FormQuestionProps) {
+    const {id, label, placeholder, initValue, required, toolTip} = question
     function handleChange(e: React.ChangeEvent) {
         const el = e.target as HTMLInputElement 
 

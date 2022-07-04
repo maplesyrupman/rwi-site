@@ -121,10 +121,10 @@ describe('dispatch(answerQuestion) changes value of all question types at top le
 })
 
 describe('dispatch(answerQuestion) updates questions in top-level list', () => {
-    it('revealing-checkbox', () => {
-        const checkboxValue = true
+    it('conditional-question', () => {
+        const conditionalValue = true
         const questionValue = 3
-        const value = { checkboxValue, questionValue }
+        const value = { conditionalValue, questionValue }
         const unchangedQuestion = store.getState().discovery.sections[2].questions[3].value[5]
         console.log('unchanged', unchangedQuestion)
         store.dispatch(answerQuestion(['2-3-5', value]))
@@ -134,10 +134,10 @@ describe('dispatch(answerQuestion) updates questions in top-level list', () => {
         expect(changedQuestion.value).toBe(value)
     })
 
-    it('multiple revealing-checkbox', () => {
-        const checkboxValue = true
+    it('multiple conditional-question', () => {
+        const conditionalValue = true
         const questionValue = 3
-        const value = { checkboxValue, questionValue }
+        const value = { conditionalValue, questionValue }
         const unchangedQuestion = store.getState().discovery.sections[2].questions[3].value[5]
         console.log('unchanged', unchangedQuestion)
         store.dispatch(answerQuestion(['2-3-5', value]))
@@ -146,9 +146,9 @@ describe('dispatch(answerQuestion) updates questions in top-level list', () => {
         expect(unchangedQuestion.value).not.toEqual(changedQuestion.value)
         expect(changedQuestion.value).toBe(value)
 
-        const secondCheckboxValue = true
+        const secondConditionalValue = true
         const secondQuestionValue = 3
-        const secondValue = { secondCheckboxValue, secondQuestionValue }
+        const secondValue = { secondConditionalValue, secondQuestionValue }
         const secondUnchangedQuestion = store.getState().discovery.sections[2].questions[3].value[5]
         console.log('unchanged', secondUnchangedQuestion)
         store.dispatch(answerQuestion(['2-3-5', secondValue]))

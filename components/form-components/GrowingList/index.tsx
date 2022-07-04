@@ -36,13 +36,13 @@ export default function GrowingList({ id, label, fields, change, validate, requi
                 break
             case 'delete':
                 const newState = [...list]
-                newState.splice(idx, 1)
+                idx && newState.splice(idx, 1)
                 mutateList(newState)
                 break
             case 'edit':
                 mutateList((state: any) => {
                     const newState = [...state]
-                    newState.splice(idx, 1, entry)
+                    idx && newState.splice(idx, 1, entry)
                     return newState
                 })
                 break;

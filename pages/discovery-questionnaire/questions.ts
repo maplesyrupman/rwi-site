@@ -24,7 +24,7 @@ const questions: DiscoveryQuestionnaire = {
                     toolTip: 'The name of your company as reported to the government'
                 }, {
                     label: 'Year Established',
-                    type: 'date',
+                    type: 'datePick',
                     year: true,
                     month: true,
                     day: false,
@@ -70,7 +70,8 @@ const questions: DiscoveryQuestionnaire = {
                 }, {
                     id: '0-4',
                     label: 'Do you have a Mission Statement?',
-                    type: 'revealing-checkbox',
+                    type: 'conditional-question',
+                    options: ['Yes', 'No'],
                     value: false,
                     revealed: {
                         label: 'Company Mission Statement',
@@ -224,7 +225,7 @@ const questions: DiscoveryQuestionnaire = {
                         {
                             id: '2-3-0',
                             label: 'Logo Package',
-                            type: 'revealing-checkbox',
+                            type: 'conditional-question',
                             value: false,
                             required: true,
                             validatorOptions: [],
@@ -243,7 +244,7 @@ const questions: DiscoveryQuestionnaire = {
                         }, {
                             id: '2-3-1',
                             label: 'Website',
-                            type: 'revealing-checkbox',
+                            type: 'conditional-question',
                             value: false,
                             required: true,
                             validatorOptions: [],
@@ -262,7 +263,7 @@ const questions: DiscoveryQuestionnaire = {
                         }, {
                             id: '2-3-2',
                             label: 'Social Media',
-                            type: 'revealing-checkbox',
+                            type: 'conditional-question',
                             value: false,
                             required: true,
                             validatorOptions: [],
@@ -281,7 +282,7 @@ const questions: DiscoveryQuestionnaire = {
                         }, {
                             id: '2-3-3',
                             label: 'Email List',
-                            type: 'revealing-checkbox',
+                            type: 'conditional-question',
                             value: false,
                             required: false,
                             validatorOptions: [],
@@ -300,7 +301,7 @@ const questions: DiscoveryQuestionnaire = {
                         }, {
                             id: '2-3-4',
                             label: 'Digital Marketing Strategy',
-                            type: 'revealing-checkbox',
+                            type: 'conditional-question',
                             value: false,
                             required: true,
                             validatorOptions: [],
