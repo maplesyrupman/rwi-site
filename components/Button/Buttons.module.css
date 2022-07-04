@@ -1,97 +1,127 @@
 .btn {
-    font-size: 18px;
+    font-size: 1rem;
     font-family: Gilmer;
     font-weight: 700;
-    padding: 1rem 2.5rem;
+    padding: 0.5rem 1.5rem;
     text-decoration: none;
-    border-radius: 15px;
-    border: none;
+    border-radius: 10px;
     cursor: pointer;
+    transition: all 0.2s ease-in-out;
 }
 
 .btnPrimary {
-    background-color: #02033C;
-    color: #F3F5F7
+    background-color: var(--rwi-blue);
+    color: var(--light);
+    border: none;
 }
 
 .btnPrimary:hover {
-    background-color: #67688A;
+    background-color: var(--rwi-blue-two);
+}
+
+.btnPrimary:disabled {
+    background-color: var(--rwi-blue-three);
 }
 
 .btnSecondary {
-    background-color: #F3F5F7;
-    color: #02033C;
-    border: 4px #02033C !important;
+    background-color: inherit;
+    color: var(--rwi-blue);
+    border: 4px solid var(--rwi-blue);
 }
 
 .btnSecondary:hover {
-    color: #67688A;
-    border: 4px #67688A;
+    color: var(--rwi-blue-two);
+    border: 4px solid var(--rwi-blue-two);
+}
+
+.btnSecondary:disabled {
+    color: var(--rwi-blue-three);
+    border: 4px solid var(--rwi-blue-three);
 }
 
 .btnImportant {
-    background-color: #CC2C12;
-    color: #F3F5F7;
+    background-color: var(--rwi-red);
+    color: var(--light);
+    border: none;
 }
 
 .btnImportant:hover {
-    background-color: #E08071;
+    background-color: var(--rwi-red-two);
+}
+
+.btnImportant:disabled {
+    background-color: var(--rwi-red-three);
 }
 
 .btnDanger {
-    background-color: #99210E;
-    color: #F3F5F7;
+    background-color: var(--danger);
+    color: var(--light);
+    border: none;
 }
 
 .btnDanger:hover {
-    background-color: #F5D5D0;
-    color: #99210E;
+    background-color: var(--danger-bg);
+    color: var(--danger);
+}
+
+.btnDanger:disabled {
+    background-color: var(--danger-bg);
+    color: var(--light);
 }
 
 .btnConfirm {
-    background-color: #225835;
-    color: #F3F5F7;
+    background-color: var(--success);
+    color: var(--light);
+    border: none;
 }
 
 .btnConfirm:hover {
-    background-color: #D3DED7;
-    color: #F3F5F7;
+    background-color: var(--success-bg);
+    color: var(--success);
+}
+
+.btnConfirm:disabled {
+    background-color: var(--success-bg);
+    color: var(--light);
 }
 
 .linkDefault {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 600;
-    color: #02033C;
+    color: var(--rwi-blue);
+    transition: all 0.2s ease-in-out;
 }
 
 .linkDefault:hover {
-    color: #67688A;
+    color: var(--rwi-blue-two);
 }
 
 .linkDefault:focus {
-    color: #CCCDD8;
+    color: var(--rwi-blue-three);
 }
 
 .linkBold {
-    font-size: 18px;
-    font-weight: 800;
-    color: #02033C
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--rwi-blue);
+    transition: all 0.2s ease-in-out;
 }
 
 .linkBold:hover {
-    color: #67688A;
+    color: var(--rwi-blue-two);
 }
 
 .linkBold:focus {
-    color: #CCCDD8;
+    color: var(--rwi-blue-three);
 }
 
 .linkDanger {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 600;
-    color: #99210E;
+    color: var(--danger);
+    transition: all 0.2s ease-in-out;
 }
 
 .linkDanger:hover {
-    color: #F5D5D0;
+    color: var(--danger-bg);
 }
