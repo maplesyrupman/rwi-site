@@ -5,6 +5,9 @@ export type Question = {
     value: any,
     required?: boolean,
     range?: [number, number],
+    year?: boolean,
+    month?: boolean,
+    day?: boolean,
     options?: string[],
     fields?: Question[],
     list?: Question[],
@@ -20,6 +23,12 @@ export type Section = {
 }
 
 export type DiscoveryQuestionnaire = {
-    currentPage: number,
+    currentSection: number,
     sections: Section[]
 };
+
+export interface Date {
+    year: string
+    month: string
+    day: string
+}

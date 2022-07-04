@@ -1,8 +1,8 @@
-import FormPage from '../components/form-components/FormPage'
-import ShortAnswer from '../components/form-components/ShortAnswer'
+import FormPage from '../../components/form-components/FormPage'
+import ShortAnswer from '../../components/form-components/ShortAnswer'
 import styles from '../styles/utils.module.css'
 
-import Heading from '../components/form-components/Heading'
+import Heading from '../../components/form-components/Heading'
 
 
 

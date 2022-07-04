@@ -22,7 +22,7 @@ export default function RadioScale({ id, label, options, change, required, toolT
 
     useEffect(() => {
         change(id, selected)
-    }, [selected, change])
+    }, [selected, change, id])
 
     return (
         <div className={stylesMain.container}>

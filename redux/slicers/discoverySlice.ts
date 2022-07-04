@@ -30,42 +30,28 @@ export const discoverySlice = createSlice({
             let question: Question;
             if (state.sections) {
                 question = state?.sections?.at(idArray[0] as number)?.questions?.at(idArray[1] as number) as Question
-
                 if (idArray.length <=2) {
                     question.value = value
                 } else if (question.type === 'list') {
                     question = question.value.at(idArray[2])
-                    if (question.type === 'revealing-checkbox') {
-                        if (typeof idArray[-1] === 'string') {
-                            question = question.revealed as Question
-                            question.value = value
-                        } else {
-                            question.value = value
-                        }
-                    }
-                } else if (question.type === 'revealing-checkbox') {
-                    if (idArray[-1] === 'R' && question.revealed) {
-                            question.revealed.value = value
-                    } else {
-                        question.value = value
-                    }
+                    question.value = value
                 }
             }
         },
-        setPage: (state, action: PayloadAction<number>) => {
-            state.currentPage = action.payload;
+        setSection: (state, action: PayloadAction<number>) => {
+            state.currentSection = action.payload;
         }
     },
 });
 // Here we are just exporting the actions from this slice, so that we can call them anywhere in our app.
 export const {
     answerQuestion,
-    setPage,
+    setSection,
 } = discoverySlice.actions;
 
 // calling the above actions would be useless if we could not access the data in the state. So, we use something called a selector which allows us to select a value from the state.
 export const selectSections = (state: RootState) => state.discovery.sections
-export const selectCurrentPage = (state: RootState) => state.discovery.currentPage
+export const selectCurrentPage = (state: RootState) => state.discovery.currentSection
 
 // exporting the reducer here, as we need to add this to the store
 export default discoverySlice.reducer;

@@ -5,7 +5,7 @@ import {
 } from '../redux/hooks'
 import {
     answerQuestion,
-    setPage,
+    setSection,
     selectSections,
     selectCurrentPage
 } from '../redux/slicers/discoverySlice'
@@ -14,7 +14,6 @@ export default function Test() {
     const dispatch = useAppDispatch()
 
     const questionnaireState = useAppSelector(selectSections)
-    console.log(questionnaireState[2].questions[0].value)
 
     // useEffect(() => {
     //     console.log(questionnaireState)

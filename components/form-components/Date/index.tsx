@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import Picklist from '../Picklist'
+import {Date} from '../../../types'
 
 type Props = {
     id: string,
@@ -7,7 +8,7 @@ type Props = {
     year?: boolean,
     month?: boolean,
     day?: boolean,
-    change: (id: string, value: any) => void
+    change: (id: string, value: Date) => void
 }
 
 function getPastYears(): string[] {
@@ -53,13 +54,13 @@ export default function DatePick({ id, label, year, month, day, change }: Props)
             </div>
             <div style={{ "display": 'flex', 'gap': '0.5rem' }}>
                 {day && (
-                    <Picklist label='' id={'day'} placeholder='dd' size='small' options={getDays()} change={updateDate} />
+                    <Picklist label='' id={'day'} placeholder='dd' size='small' options={getDays()} change={updateDate} required={false} />
                 )}
                 {month && (
-                    <Picklist label='' id={'month'} placeholder='mm' size='small' options={['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12']} change={updateDate} />
+                    <Picklist label='' id={'month'} placeholder='mm' size='small' options={['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12']} change={updateDate} required={false} />
                 )}
                 {year && (
-                    <Picklist label='' id={'year'} placeholder='yyyy' size='small' options={getPastYears()} change={updateDate} />
+                    <Picklist label='' id={'year'} placeholder='yyyy' size='small' options={getPastYears()} change={updateDate} required={false} />
                 )}
             </div>
         </div>

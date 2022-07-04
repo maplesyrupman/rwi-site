@@ -1,7 +1,7 @@
 import { DiscoveryQuestionnaire } from "../../types"
 
 const questions: DiscoveryQuestionnaire = {
-    currentPage: 0,
+    currentSection: 0,
     sections: [
         {
             title: 'Company Profile',
@@ -24,7 +24,10 @@ const questions: DiscoveryQuestionnaire = {
                     toolTip: 'The name of your company as reported to the government'
                 }, {
                     label: 'Year Established',
-                    type: 'date-my',
+                    type: 'date',
+                    year: true,
+                    month: true,
+                    day: false,
                     id: '0-2',
                     value: undefined,
                     required: false,
@@ -138,7 +141,7 @@ const questions: DiscoveryQuestionnaire = {
                 }, {
                     id: '1-2',
                     label: 'Location',
-                    type: 'address',
+                    type: 'short',
                     value: undefined,
                     required: false,
                     validatorOptions: [],
@@ -338,7 +341,7 @@ const questions: DiscoveryQuestionnaire = {
             ]
         },
         {
-            title: 'Company Goals',
+            title: 'Marketing Goals',
             questions: [
                 {
                     id: '3-0',
@@ -365,7 +368,7 @@ const questions: DiscoveryQuestionnaire = {
                     value: [],
                     required: false,
                     validatorOptions: [],
-                    toolTip: 'What are your company\'s short-term goals? (0-6 months)',
+                    toolTip: 'What are your company\'s short-term marketing goals? (0-6 months)',
                 }, {
                     id: '3-1',
                     label: 'Mid-term Goals',
@@ -391,7 +394,7 @@ const questions: DiscoveryQuestionnaire = {
                     value: [],
                     required: false,
                     validatorOptions: [],
-                    toolTip: 'What are your company\'s mid-term goals? (6-18)',
+                    toolTip: 'What are your company\'s mid-term marketing goals? (6-18)',
                 },{
                     id: '3-2',
                     label: 'Long-term Goals',
@@ -417,7 +420,7 @@ const questions: DiscoveryQuestionnaire = {
                     value: [],
                     required: false,
                     validatorOptions: [],
-                    toolTip: 'What are your company\'s long-term goals? (18+ months)',
+                    toolTip: 'What are your company\'s long-term marketing goals? (18+ months)',
                 }
             ]
         }
