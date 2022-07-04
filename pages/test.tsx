@@ -4,6 +4,8 @@ import GrowingList from "../components/form-components/GrowingList"
 import LongAnswer from "../components/form-components/LongAnswer"
 import Picklist from "../components/form-components/Picklist"
 import ShortAnswer from "../components/form-components/ShortAnswer"
+import Radio from '../components/form-components/Radio'
+import RadioScale from "../components/form-components/RadioScale"
 
 const tq = {
     label: 'Contacts',
@@ -49,7 +51,7 @@ export default function Test() {
     return (
             <div style={{'maxWidth': '500px','margin': '3rem'}}>
                 {/* <ShortAnswer id='123' label='Test Question' placeholder='Testing 123' change={change} required={true} toolTip='Please specify what the answer to this question is.' /> */}
-                <Picklist id='123' label='Choose a month' options={['Jan', 'Feb', 'Mar', 'Apr', 'May']} size='small' placeholder='Month' change={change} required={true} />
+                <RadioScale id='1223' label='How happy are you?' options={['1', '2', '3', '4', '5']} change={change} required={true} />
             </div>
     )
 }
