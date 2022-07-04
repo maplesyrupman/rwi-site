@@ -1,6 +1,8 @@
 import Button from "../components/Button"
 import Link from "../components/Button/link"
 import GrowingList from "../components/form-components/GrowingList"
+import LongAnswer from "../components/form-components/LongAnswer"
+import Picklist from "../components/form-components/Picklist"
 import ShortAnswer from "../components/form-components/ShortAnswer"
 
 const tq = {
@@ -47,7 +49,7 @@ export default function Test() {
     return (
             <div style={{'maxWidth': '500px','margin': '3rem'}}>
                 {/* <ShortAnswer id='123' label='Test Question' placeholder='Testing 123' change={change} required={true} toolTip='Please specify what the answer to this question is.' /> */}
-                <GrowingList id={tq.id} label={tq.label} fields={tq.fields} change={change} validate={() => {return true}} required={true} />
+                <Picklist id='123' label='Choose a month' options={['Jan', 'Feb', 'Mar', 'Apr', 'May']} size='small' placeholder='Month' change={change} required={true} />
             </div>
     )
 }

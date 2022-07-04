@@ -56,69 +56,6 @@
     resize: none;
 }
 
-/* Picklist */
-
-.sm {
-    max-width: 125px;
-    width: 100%;
-}
-
-.md {
-    max-width: 250px;
-    width: 100%
-}
-
-.lg {
-    max-width: 500px;
-    width: 100%
-}
-
-.select {
-    padding: 0.5rem 1rem;
-    color: var(--grey-three);
-    background: var(--light);
-    border: 1px solid var(--grey-one);
-    border-radius: 10px;
-    display: flex;
-    justify-content: space-between;
-}
-
-.selectOpen {
-    outline: 2px solid var(--secondary-one);
-}
-
-.selected {
-    user-select: none;
-}
-
-.carrot {}
-
-.options {
-    position: absolute;
-    background: var(--light);
-    border-radius: 10px;
-    width: 100%;
-    height: 0px;
-    overflow-y: hidden;
-    scrollbar-color: var(--rwi-blue) var(--grey-one);
-}
-
-.optionsOpen {
-    height: 7.5rem;
-    border: 1px solid var(--grey-one);
-    overflow-y: scroll;
-}
-
-.option {
-    padding: 0.5rem 1rem;
-    width: 100%;
-    user-select: none;
-}
-
-.option:hover {
-    background-color: var(--secondary-two)
-}
-
 .hidden {
     display: none;
 }
