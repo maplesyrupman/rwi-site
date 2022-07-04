@@ -44,7 +44,7 @@ body {
 }
 
 .txtWhite {
-  color: #E5E5E5;
+  color: #F3F5F7;
 }
 
 .txtBlue {
@@ -98,7 +98,8 @@ h1, h2, h3, h4, h5, h6, p, div, input, label {
   line-height: 64px !important;
 }
 
-.decorative {
+.decorativeOne {
+  font-size: 72px;
   font-style: oblique;
 }
 
@@ -167,8 +168,44 @@ p, div, a, li, span, select, option {
   margin: 0 7.5rem;
 }
 
+.sectionTitle {
+  margin-bottom: 4rem;
+}
+
 .sectionSM {
   margin-top: 2.5rem;
+}
+
+.sectionLG {
+  margin-top: 12.5rem;
+}
+
+.contentMD {
+  max-width: 1000px;
+}
+
+.noMargin {
+  margin: 0;
+}
+
+/* Flex Utilities */
+
+.flexRow {
+  display: flex;
+  flex-direction: row;
+}
+
+.flexRowReverse {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.alignCenter {
+  align-items: center;
+}
+
+.justifyCenter {
+  justify-content: center;
 }
 
 /* ------- random shit from site 1.0 ------- */

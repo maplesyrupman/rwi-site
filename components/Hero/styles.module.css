@@ -9,14 +9,6 @@
     padding: 5rem 7rem;
 }
 
-.flexRow {
-    flex-direction: row;
-}
-
-.flexRowReverse {
-    flex-direction: row-reverse;
-}
-
 .heroTxt {
     display: flex;
     flex-direction: column;

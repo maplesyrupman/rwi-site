@@ -24,10 +24,10 @@ export default function Hero({ image, direction, title, para, buttons }:Props) {
 
     switch(direction) {
         case 'row':
-            flexDirection = styles.flexRow;
+            flexDirection = 'flexRow';
             break;
         case 'row-reverse':
-            flexDirection = styles.flexRowReverse;
+            flexDirection = 'flexRowReverse';
             break;
     }
 
@@ -44,7 +44,7 @@ export default function Hero({ image, direction, title, para, buttons }:Props) {
                     <div className={styles.btnGroup}>
                         {buttons?.map(b => {
                             return (
-                                <Link text={b.text} href={b.href} linkStyle={b.linkStyle} destination={b.destination} />
+                                <Link key={b.text} text={b.text} href={b.href} linkStyle={b.linkStyle} destination={b.destination} />
                             )
                         })}
                     </div>

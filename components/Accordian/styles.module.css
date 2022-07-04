@@ -1,0 +1,33 @@
+.accordian {
+    width: 1000px;
+    background: linear-gradient(105.37deg, #02033C 0%, #5C5C99 100%);
+    border-radius: 10px;
+    border: none;
+    padding: 3rem;
+}
+
+.titleCon {
+    display: flex;
+    justify-content: space-between;
+    color: var(--light);
+}
+
+.txt {
+    display: none;
+    margin-top: 1.5rem;
+    margin-bottom: 0;
+}
+
+.radio {
+    appearance: none;
+}
+
+.titleCon > .radio:checked ~ .txt {
+    display: block;
+}
+
+.arrow {
+    margin-top: 5px;
+    width: 2rem;
+    height: 2rem;
+}
