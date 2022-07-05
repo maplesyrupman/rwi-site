@@ -5,20 +5,16 @@ import styles from './growingList.module.css';
 import Button from '../../Button'
 import ListEntry from './listEntry'
 import ToolTip from '../../ToolTip'
+import { FormQuestionProps } from '../../../types'
 
-type Props = {
-    id: string,
-    label: string,
-    fields: any[],
-    change: (id: string, value: any[]) => void,
-    validate: () => boolean,
-    required: boolean,
-    toolTip?: string
-}
-
-export default function GrowingList({ id, label, fields, change, validate, required, toolTip }: Props) {
+export default function GrowingList({question, change, validate}: FormQuestionProps) {
+    const { id, label, fields, required, toolTip } = question
     const [list, mutateList] = useState<any>([])
     const [displayForm, setFormDisplay] = useState(false)
+
+    if (!fields) {
+        throw new Error('fields prop is required for growing-list question type')
+    }
 
     function showForm() {
         setFormDisplay(true)

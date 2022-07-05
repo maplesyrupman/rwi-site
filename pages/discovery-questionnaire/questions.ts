@@ -24,7 +24,7 @@ const questions: DiscoveryQuestionnaire = {
                     toolTip: 'The name of your company as reported to the government'
                 }, {
                     label: 'Year Established',
-                    type: 'datePick',
+                    type: 'date-pick',
                     year: true,
                     month: true,
                     day: false,
@@ -123,8 +123,7 @@ const questions: DiscoveryQuestionnaire = {
                 {
                     id: '1-0',
                     label: 'Age',
-                    type: 'range',
-                    rangeType: 'sliding',
+                    type: 'range-slider',
                     range: [0, 99],
                     value: [undefined, undefined],
                     required: false,

@@ -3,13 +3,19 @@ import styles from './styles.module.css';
 import Button from '../../Button'
 import Link from '../../Button/link'
 
-import ShortAnswer from '../ShortAnswer'
-import LongAnswer from '../LongAnswer'
-import Radio from '../Radio'
-import DatePick from '../Date'
-import Picklist from '../Picklist'
-import GrowingList from '../GrowingList'
-import ConditionalQuestion from '../ConditionalQuestion'
+import {
+    ShortAnswer,
+    LongAnswer,
+    Radio, 
+    DatePick,
+    Picklist,
+    GrowingList,
+    ConditionalQuestion,
+    RadioScale,
+    RangeSlider, 
+    TagsInput,
+    Number
+} from '../.'
 
 import { Question } from '../../../types'
 
@@ -19,10 +25,24 @@ interface Props {
 
 function getQuestionComponent(question: Question): React.ReactNode {
     switch(question.type) {
-        case ('short'):
+        case 'short':
             return <ShortAnswer question={question} change={() => console.log(question.label)} />
         case 'long':
             return <LongAnswer question={question} change={() => console.log(question.label)} />
+        case 'date-pick':
+            return <DatePick question={question} change={() => console.log(question.label)} />
+        case 'growing-list':
+            return <GrowingList question={question} change={() => console.log(question.label)} />
+        case 'conditional-Question':
+            return <ConditionalQuestion question={question} change={() => console.log(question.label)} />
+        case 'picklist':
+            return <Picklist question={question} change={() => console.log(question.label)} />
+        case 'radio':
+            return <Radio question={question} change={() => console.log(question.label)} />
+        case 'range-slider':
+            return <RangeSlider question={question} change={() => console.log(question.label)} />
+        case 'number':
+            return <Number question={question} change={() => console.log(question.label)} />
     }
 }
 

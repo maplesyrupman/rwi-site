@@ -1,15 +1,7 @@
 import { useEffect, useState } from 'react'
 import Picklist from '../Picklist'
 import {Date} from '../../../types'
-
-type Props = {
-    id: string,
-    label: string,
-    year?: boolean,
-    month?: boolean,
-    day?: boolean,
-    change: (id: string, value: Date) => void
-}
+import {FormQuestionProps} from '../../../types'
 
 function getPastYears(): string[] {
     const years: string[] = []
@@ -27,7 +19,8 @@ function getDays(): string[] {
     return days
 }
 
-export default function DatePick({ id, label, year, month, day, change }: Props) {
+export default function DatePick({ question, change, validate }: FormQuestionProps) {
+    const {id, label, year, month, day} = question
     const [date, setDate] = useState({ year: '', month: '', day: '' })
     function updateDate(id: string, value: string) {
         switch (id) {

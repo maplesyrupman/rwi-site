@@ -8,7 +8,7 @@ export default function LongAnswer({ question, change, validate}: FormQuestionPr
     function handleChange(e: React.ChangeEvent) {
         const el = e.target as HTMLInputElement 
         change(id, el.value)
-    }   
+    }
 
     return (
         <div className={styles.container}>

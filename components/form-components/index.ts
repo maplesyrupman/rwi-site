@@ -1,10 +1,16 @@
 import ShortAnswer from './ShortAnswer'
 import LongAnswer from './LongAnswer'
 import Radio from './Radio'
-import DatePick from './Date'
+import DatePick from './DatePick'
 import Picklist from './Picklist'
 import GrowingList from './GrowingList'
 import ConditionalQuestion from './ConditionalQuestion'
+import RadioScale from './RadioScale'
+import RangeSlider from './RangeSlider'
+import TagsInput from './TagsInput'
+import Number from './Number'
+
+import FormPage from './FormPage'
 
 export {
     ShortAnswer,
@@ -13,5 +19,10 @@ export {
     DatePick,
     Picklist,
     GrowingList,
-    ConditionalQuestion
+    ConditionalQuestion,
+    RadioScale,
+    RangeSlider,
+    TagsInput,
+    Number,
+    FormPage
 }
