@@ -43,6 +43,10 @@ function getQuestionComponent(question: Question): React.ReactNode {
             return <RangeSlider question={question} change={() => console.log(question.label)} />
         case 'number':
             return <Number question={question} change={() => console.log(question.label)} />
+        case 'radio-scale':
+            return <RadioScale question={question} change={() => {console.log(question.label)}} />
+        case 'tags':
+            return <TagsInput question={question} change={() => {console.log(question.label)}} />
     }
 }
 

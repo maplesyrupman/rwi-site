@@ -232,9 +232,8 @@ const questions: DiscoveryQuestionnaire = {
                             revealed: {
                                 id: '2-3-0-R',
                                 label: 'Satisfaction',
-                                type: 'range',
+                                type: 'radio-scale',
                                 range: [0, 5],
-                                rangeType: 'checkbox',
                                 value: 0,
                                 required: false,
                                 validatorOptions: [],
@@ -251,8 +250,7 @@ const questions: DiscoveryQuestionnaire = {
                             revealed: {
                                 id: '2-3-1-R',
                                 label: 'Satisfaction',
-                                type: 'range',
-                                rangeType: 'checkbox',
+                                type: 'radio-scale',
                                 range: [0, 5],
                                 value: 0,
                                 required: false,
@@ -270,8 +268,7 @@ const questions: DiscoveryQuestionnaire = {
                             revealed: {
                                 id: '2-3-2-R',
                                 label: 'Satisfaction',
-                                type: 'range',
-                                rangeType: 'checkbox',
+                                type: 'radio-scale',
                                 range: [0, 5],
                                 value: 0,
                                 required: false,
@@ -289,9 +286,8 @@ const questions: DiscoveryQuestionnaire = {
                             revealed: {
                                 id: '2-3-3-R',
                                 label: 'Satisfaction',
-                                type: 'range',
+                                type: 'radio-scale',
                                 range: [0, 5],
-                                rangeType: 'checkbox',
                                 value: 0,
                                 required: false,
                                 validatorOptions: [],
@@ -308,8 +304,7 @@ const questions: DiscoveryQuestionnaire = {
                             revealed: {
                                 id: '2-3-4-R',
                                 label: 'Satisfaction',
-                                type: 'range',
-                                rangeType: 'checkbox',
+                                type: 'radio-scale',
                                 range: [0, 5],
                                 value: 0,
                                 required: false,
@@ -327,8 +322,7 @@ const questions: DiscoveryQuestionnaire = {
                             revealed: {
                                 id: '2-3-5-R',
                                 label: 'Satisfaction',
-                                type: 'range',
-                                rangeType: 'checkbox',
+                                type: 'radio-scale',
                                 range: [0, 5],
                                 value: 0,
                                 required: false,

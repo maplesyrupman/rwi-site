@@ -10,7 +10,10 @@ export type Question = {
     year?: boolean,
     month?: boolean,
     day?: boolean,
-    options?: string[],
+    options?: string[],    
+    other?: boolean,
+    size?: 'small' | 'medium' | 'large',
+    multi?: boolean
     fields?: Question[],
     list?: Question[],
     revealed?: Question,

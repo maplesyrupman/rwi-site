@@ -5,20 +5,10 @@ import styles from './Picklist.module.css'
 
 import { IoIosArrowDown } from 'react-icons/io'
 
-type Props = {
-    id: string,
-    label: string,
-    placeholder: string,
-    options: string[],
-    other?: boolean,
-    size: 'small' | 'medium' | 'large',
-    multi?: boolean,
-    change: (id: string, value: string) => void
-    required: boolean,
-    toolTip?: string
-}
+import { FormQuestionProps } from '../../../types'
 
-export default function Picklist({ id, label, options, other, size, placeholder, multi, change, required, toolTip }: Props) {
+export default function Picklist({ question, change, validate }: FormQuestionProps) {
+    const {id, label, options, other, size, placeholder, multi, required, toolTip} = question
     const [selected, setSelected] = useState(placeholder)
     const [dropdownOpen, setDropdownOpen] = useState(false)
 
