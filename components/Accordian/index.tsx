@@ -28,7 +28,7 @@ export default function Accordian({ title, text }:Props) {
                 <h3 className='txtWhite'>{title}</h3>
                 <IoIosArrowDown className={styles.arrow} />
             </div>
-            <p className={`txtWhite ${styles.txt} ${isOpen && styles.active}`}>
+            <p className={`txtWhite ${styles.accordianTxt} ${isOpen && styles.active}`}>
                 {text}
             </p>
         </button>

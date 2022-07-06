@@ -165,7 +165,7 @@ p, div, a, li, span, select, option {
 
 .pageGutters {
   max-width: 1200px;
-  margin: 0 7.5rem;
+  margin: auto;
 }
 
 .sectionTitle {
@@ -182,6 +182,7 @@ p, div, a, li, span, select, option {
 
 .contentMD {
   max-width: 1000px;
+  margin: auto;
 }
 
 .noMargin {
