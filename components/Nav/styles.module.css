@@ -1,12 +1,7 @@
 .header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
     position: sticky;
     top: 0;
     width: 100%;
-    max-width: 1200px;
     margin: auto;
     z-index: 100;
     padding: 1.5rem 0;

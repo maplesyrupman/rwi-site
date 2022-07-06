@@ -1,6 +1,7 @@
 import Nav from "../components/Nav"
 import Hero from "../components/Hero"
 import Link from '../components/Button/link'
+import Footer from "../components/Footer"
 
 import Image from 'next/image'
 import samImg from '../public/Samantha-RWI-Labs-Digital-Marketing.jpg'
@@ -10,7 +11,6 @@ import styles from '../styles/About.module.css'
 import heroImage from '../public/Founders-RWI-Labs.png'
 import Accordian from "../components/Accordian"
 import { FaLinkedin } from 'react-icons/fa'
-import Footer from "../components/Footer"
 
 type ButtonObj = {
     text: string,

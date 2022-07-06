@@ -293,6 +293,10 @@ p, div, a, li, span, select, option {
   justify-content: space-between;
 }
 
+.justifyEnd {
+  justify-content: flex-end;
+}
+
 /* ------- random shit from site 1.0 ------- */
 
 
