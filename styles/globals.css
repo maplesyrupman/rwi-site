@@ -217,7 +217,7 @@ p, div, a, li, span, select, option {
 }
 
 .sectionSM {
-  margin-top: var(--spacing-five);
+  margin-top: var(--spacing-ten);
 }
 
 .sectionLG {
