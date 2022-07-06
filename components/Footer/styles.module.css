@@ -1,0 +1,4 @@
+.footerCon {
+    border-top: 2px solid var(--grey-one);
+    padding: var(--spacing-three) 0;
+}

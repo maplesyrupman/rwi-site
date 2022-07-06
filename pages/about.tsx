@@ -10,6 +10,7 @@ import styles from '../styles/About.module.css'
 import heroImage from '../public/Founders-RWI-Labs.png'
 import Accordian from "../components/Accordian"
 import { FaLinkedin } from 'react-icons/fa'
+import Footer from "../components/Footer"
 
 type ButtonObj = {
     text: string,
@@ -145,6 +146,7 @@ export default function About() {
                     <Link text='Get Started' href='/contact' linkStyle='btnImportant' destination='internal' />
                 </div>
             </section>
+            <Footer />
         </div>
     )
 }
