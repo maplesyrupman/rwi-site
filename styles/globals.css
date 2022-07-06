@@ -28,31 +28,35 @@ body {
 }
 
 .bgBlue {
-  background-color: #03053E !important;
+  background-color: var(--rwi-blue) !important;
 }
 
 .bgRed {
-  background-color: #CC2C12;
+  background-color: var(--rwi-red);
 }
 
 .bgWhite {
-  background-color: #F3F5F7;
+  background-color: var(--light);
+}
+
+.bgSecondaryTwo {
+  background-color: var(--secondary-two);
 }
 
 .txtRed {
-  color: #CC2C12
+  color: var(--rwi-red);
 }
 
 .txtWhite {
-  color: #F3F5F7;
+  color: var(--light);
 }
 
 .txtBlue {
-  color: #03053E;
+  color: var(--rwi-blue);
 }
 
 .txtBlack {
-  color: #1A1A1A;
+  color: var(--dark);
 }
 
 /* ------- text ------- */
@@ -161,7 +165,38 @@ p, div, a, li, span, select, option {
   text-align: center;
 }
 
-/* Page and Section Spacing */
+.svgIcon {
+  font-size: 28px;
+}
+
+/* Spacing */
+
+:root {
+  --spacing-one: 0.5rem;
+  --spacing-two: 1rem;
+  --spacing-three: 1.5rem;
+  --spacing-four: 2rem;
+  --spacing-five: 2.5rem;
+  --spacing-six: 3rem;
+  --spacing-seven: 3.5rem;
+  --spacing-eight: 4rem;
+  --spacing-nine: 4.5rem;
+  --spacing-ten: 5rem;
+  --spacing-eleven: 6rem;
+  --spacing-twelve: 6.5rem;
+  --spacing-thirteen: 7rem;
+  --spacing-fourteen: 7.5rem;
+  --spacing-fifteen: 8rem;
+  --spacing-sixteen: 8.5rem;
+  --spacing-seventeen: 9rem;
+  --spacing-eighteen: 9.5rem;
+  --spacing-twenty: 10rem;
+  --spacing-twentyone: 10.5rem;
+  --spacing-twentytwo: 11rem;
+  --spacing-twentythree: 11.5rem;
+  --spacing-twentyfour: 12rem;
+  --spacing-twentyfive: 12.5rem;
+}
 
 .pageGutters {
   max-width: 1200px;
@@ -169,15 +204,7 @@ p, div, a, li, span, select, option {
 }
 
 .sectionTitle {
-  margin-bottom: 4rem;
-}
-
-.sectionSM {
-  margin-top: 2.5rem;
-}
-
-.sectionLG {
-  margin-top: 12.5rem;
+  margin-bottom: var(--spacing-eight);
 }
 
 .contentMD {
@@ -185,8 +212,36 @@ p, div, a, li, span, select, option {
   margin: auto;
 }
 
+.sectionSM {
+  margin-top: var(--spacing-five);
+}
+
+.sectionLG {
+  margin-top: var(--spacing-twentyfive);
+}
+
 .noMargin {
   margin: 0;
+}
+
+.sectionWithBg {
+  padding: var(--spacing-twelve) 0;
+}
+
+.paddingXs {
+  padding: var(--spacing-one);
+}
+
+.paddingSm {
+  padding: var(--spacing-three);
+}
+
+.paddingMd {
+  padding: var(--spacing-five);
+}
+
+.paddingLg {
+  padding: var(--spacing-seven);
 }
 
 /* Flex Utilities */
@@ -201,12 +256,37 @@ p, div, a, li, span, select, option {
   flex-direction: row-reverse;
 }
 
+.flexColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+.gapSM {
+  gap: var(--spacing-one);
+}
+
+.gapMD {
+  gap: var(--spacing-three);
+}
+
+.gapLG {
+  gap: var(--spacing-five);
+}
+
+.gapXL {
+  gap: var(--spacing-seven);
+}
+
 .alignCenter {
   align-items: center;
 }
 
 .justifyCenter {
   justify-content: center;
+}
+
+.justifyBetween {
+  justify-content: space-between;
 }
 
 /* ------- random shit from site 1.0 ------- */

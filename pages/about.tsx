@@ -1,9 +1,15 @@
 import Nav from "../components/Nav"
 import Hero from "../components/Hero"
+import Link from '../components/Button/link'
+
+import Image from 'next/image'
+import samImg from '../public/Samantha-RWI-Labs-Digital-Marketing.jpg'
+import willImg from '../public/William-RWI-Labs-Digital-Marketing.jpg'
 
 import styles from '../styles/About.module.css'
 import heroImage from '../public/Founders-RWI-Labs.png'
 import Accordian from "../components/Accordian"
+import { FaLinkedin } from 'react-icons/fa'
 
 type ButtonObj = {
     text: string,
@@ -47,12 +53,14 @@ export default function About() {
         <div>
             <Nav />
             <Hero image={heroContent.image} direction={heroContent.direction} title={heroContent.title} para={heroContent.para} buttons={heroContent.buttons} />
+
+            {/* Mission Statement */}
             <section className='sectionLG pageGutters'>
-                <div className={`${styles.misson} contentMD`}>
+                <div className={`contentMD flexRow alignCenter justifyBetween`}>
                     <svg width="112" height="350" viewBox="0 0 112 350" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M72.8102 66.6259V82.1746C72.8102 101.61 72.1883 116.304 71.0221 126.255C69.856 136.128 66.3575 145.302 60.6823 153.698C54.9293 162.095 45.6001 169.169 32.617 174.922C47.8546 180.908 58.35 190.004 64.103 202.055C69.856 214.183 72.8102 230.897 72.8102 252.432V286.251C72.8102 295.346 73.5099 302.266 74.8315 306.93C76.1532 311.673 79.1074 315.249 83.5388 317.659C87.9701 320.069 95.0448 321.313 104.685 321.313H111.604V350H96.0554C76.6974 350 62.5481 344.48 53.6854 333.518C44.7449 322.557 40.3135 303.743 40.3135 277.077V250.722C40.3135 229.731 37.437 214.571 31.7618 205.242C26.0088 195.913 15.5912 190.782 0.353516 189.849V160.151C12.4815 159.451 21.4219 156.342 27.0972 150.744C32.7724 145.224 36.4264 138.15 37.9812 129.52C39.5361 120.891 40.3913 109.851 40.3913 96.2461V78.9094C40.3913 58.6184 41.9461 42.992 45.0559 32.0302C48.1656 21.0684 54.2296 12.9831 63.17 7.77432C72.1105 2.56553 85.1714 0 102.275 0H111.682V28.5318H107.795C98.3877 28.5318 91.1576 29.3869 86.182 31.0973C81.2065 32.8076 77.7858 36.2283 75.8422 41.4371C73.8209 46.4904 72.8102 54.8867 72.8102 66.6259Z" fill="#02033C"/>
                     </svg>
-                    <div className={styles.missionTxt}>
+                    <div className={`txtCenter flexColumn alignCenter justifyCenter gapMD ${styles.mission}`}>
                         <h1 className='decorativeOne txtRed'>Bridge the Gap</h1>
                         <p className='bold'>A really interesting and insightful mission statement. One that tells people what we do, what motivates us and is flexible enough to stay relevant as we evolve.</p>
                     </div>
@@ -61,10 +69,74 @@ export default function About() {
                     </svg>
                 </div>
             </section>
+
+            {/* Our Values */}
             <section className='sectionLG pageGutters'>
                 <h2 className='txtRed txtCenter sectionTitle'>Our Values</h2>
-                <div className={styles.accordianCon}>
+                <div className='flexColumn alignCenter justifyCenter gapLG'>
                     <Accordian title='Abstraction' text='Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur aliquet quam id dui posuere blandit. Nulla quis lorem ut libero malesuada feugiat.' />
+                    <Accordian title='Accessiblity' text='Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur aliquet quam id dui posuere blandit. Nulla quis lorem ut libero malesuada feugiat.' />
+                    <Accordian title='Communication' text='Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur aliquet quam id dui posuere blandit. Nulla quis lorem ut libero malesuada feugiat.' />
+                    <Accordian title='Understanding' text='Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur aliquet quam id dui posuere blandit. Nulla quis lorem ut libero malesuada feugiat.' />
+                </div>
+            </section>
+
+            {/* Our Process */}
+            <section className='sectionLG pageGutters'>
+                    <h2 className='txtRed txtCenter sectionTitle'>Our Process</h2>
+                    <div className='contentMD'>
+                        <div>
+                            <h3>Read</h3>
+                        </div>
+                        <div>
+                            <h3>Write</h3>
+                        </div>
+                        <div>
+                            <h3>Innovate</h3>
+                        </div>
+                </div>
+            </section>
+
+            {/* Meet the Founders */}
+            <section className='sectionLG bgSecondaryTwo'>
+                <div className='contentMD sectionWithBg'>
+                    <h2 className='txtRed txtCenter sectionTitle'>
+                        Meet the Founders
+                    </h2>
+                    <div className='flexRow justifyBetween'>
+                        <div className='flexColumn gapMD'>
+                            <Image 
+                            alt='Portrait of Samantha, co-founder of RWI Labs Digital Marketing Agency.'
+                            width='345px'
+                            height='520'
+                            src={samImg}
+                            />
+                            <div className='flexColumn alignCenter gapSM'>
+                                <h3 className='txtBlue'>Samantha Urwin</h3>
+                                <FaLinkedin className='txtRed svgIcon' />
+                            </div>
+                        </div>
+                        <div className='flexColumn gapMD'>
+                            <Image 
+                            alt='Portrait of William, co-founder of RWI Labs Digital Marketing Agency.'
+                            width='345px'
+                            height='520'
+                            src={willImg}
+                            />
+                            <div className='flexColumn alignCenter gapSM'>
+                                <h3 className='txtBlue'>William Weiland</h3>
+                                <FaLinkedin className='txtRed svgIcon' />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* CTA */}
+            <section className='sectionLG contentMD'>
+                <div className={`bgBlue flexColumn alignCenter gapLG paddingLg ${styles.cta}`}>
+                    <h1 className='txtWhite'>Got an idea? Let's hear it!</h1>
+                    <Link text='Get Started' href='/contact' linkStyle='btnImportant' destination='internal' />
                 </div>
             </section>
         </div>

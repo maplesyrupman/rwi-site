@@ -24,9 +24,9 @@ export default function Accordian({ title, text }:Props) {
 
     return (
         <button className={styles.accordian} onBlur={() => setIsOpen(false)} onClick={handleClick}>
-            <div className={styles.titleCon}>
-                <h3 className='txtWhite'>{title}</h3>
-                <IoIosArrowDown className={styles.arrow} />
+            <div className='flexRow justifyBetween txtWhite'>
+                <h3>{title}</h3>
+                <IoIosArrowDown className={`${styles.arrow} ${isOpen && styles.rotate}`} />
             </div>
             <p className={`txtWhite ${styles.accordianTxt} ${isOpen && styles.active}`}>
                 {text}

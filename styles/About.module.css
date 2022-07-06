@@ -1,26 +1,9 @@
-.misson {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    margin: auto;
-}
-
-.missionTxt {
-    display: flex;
-    flex-direction: column;
+.mission {
     width: 70%;
-    align-items: center;
-    justify-content: center;
-    gap: 2rem;
-    text-align: center;
-    margin: auto;
 }
 
-.accordianCon {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 1.5rem;
+.cta {
+    border: none;
+    border-radius: 10px;
+    background-image: url('../public/circut-board.png');
 }
