@@ -32,8 +32,8 @@ export default function Hero({ image, direction, title, para, buttons }:Props) {
     }
 
     return (
-        <div className={`pageGutters sectionSM ${styles.heroCon} ${flexDirection}`}>
-            <div className={styles.heroTxt}>
+        <div className={`pageGutters sectionSM alignCenter justifyBetween gapSM bgSecondaryTwo ${styles.heroCon} ${flexDirection}`}>
+            <div className={` flexColumn gapMD ${styles.heroTxt}`}>
                 <h1 className='txtBlue'>{title}</h1>
                 
                 {para && (
@@ -41,7 +41,7 @@ export default function Hero({ image, direction, title, para, buttons }:Props) {
                 )}
 
                 {buttons && (
-                    <div className={styles.btnGroup}>
+                    <div className={`flexRow justifyBetween ${styles.btnGroup}`}>
                         {buttons?.map(b => {
                             return (
                                 <Link key={b.text} text={b.text} href={b.href} linkStyle={b.linkStyle} destination={b.destination} />
@@ -50,7 +50,7 @@ export default function Hero({ image, direction, title, para, buttons }:Props) {
                     </div>
                 )}
             </div>
-            <Image src={image} height='345px' width='450px'/>
+            <Image src={image.src} alt={image.alt} height={image.height} width={image.width} />
         </div>
     )
-}
+} 

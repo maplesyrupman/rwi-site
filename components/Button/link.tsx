@@ -4,11 +4,12 @@ import NextLink from 'next/link';
 type Props = {
     text: string,
     href: string,
-    linkStyle: 'default' | 'bold' | 'danger' | 'btnPrimary' | 'btnSecondary' | 'btnImportant' | 'btnDanger' | 'btnConfirm',
-    destination: 'internal' | 'external'
+    linkStyle: 'default' | 'bold' | 'danger' | 'btnPrimary' | 'btnSecondary' | 'btnImportant' | 'btnDanger' | 'btnConfirm' | 'iconRed' | 'iconBlue' | 'iconWhite',
+    destination: 'internal' | 'external',
+    icon?: any
 }
 
-export default function Link({ text, href, linkStyle, destination }: Props) {
+export default function Link({ text, href, linkStyle, destination, icon }: Props) {
     let aStyle: string = ''
     let aStyle2: string = ''
 
@@ -42,6 +43,17 @@ export default function Link({ text, href, linkStyle, destination }: Props) {
             aStyle = styles.btnConfirm;
             aStyle2 = styles.btn;
             break;
+        case 'iconRed':
+            aStyle = 'txtRed';
+            aStyle2 = 'svgIcon';
+            break;
+        case 'iconBlue':
+            aStyle = 'txtBlue';
+            aStyle2 = 'svgIcon';
+            break;
+        case 'iconWhite':
+            aStyle = 'txtWhite';
+            aStyle2 = 'svgIcon';
     }
     
     return (
@@ -50,7 +62,14 @@ export default function Link({ text, href, linkStyle, destination }: Props) {
             <NextLink
             href={href}
             >
-                <a className={`${aStyle2} ${aStyle}`}>{text}</a>
+                {icon ? (
+                    <a className={`${aStyle2} ${aStyle}`}>
+                        {icon}
+                        <span className='hidden'>{text}</span>
+                    </a>
+                ) : (
+                    <a className={`${aStyle2} ${aStyle}`}>{text}</a>
+                )}
             </NextLink>
         )}
 
@@ -59,7 +78,14 @@ export default function Link({ text, href, linkStyle, destination }: Props) {
             href={href}
             target= '_blank'
             >
-                <a className={`${aStyle2} ${aStyle}`}>{text}</a>
+                {icon ? (
+                    <a className={`${aStyle2} ${aStyle}`}>
+                        {icon}
+                        <span className='hidden'>{text}</span>
+                    </a>
+                ) : (
+                    <a className={`${aStyle2} ${aStyle}`}>{text}</a>
+                )}
             </NextLink>
         )}
         </>

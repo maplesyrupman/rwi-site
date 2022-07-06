@@ -29,7 +29,12 @@ type HeroContent = {
 export default function About() {
 
     let heroContent: HeroContent = {
-        image: heroImage,
+        image: {
+            src: heroImage,
+            alt: 'The founders of RWI Labs Digital Marketing Agency working on a computer.',
+            width: '450px',
+            height: '345px'
+        },
         direction: 'row',
         title: 'Let Us Introduce Ourselves',
         para: 'Making digital marketing our full-time jobs so you can get back to yours!',
@@ -113,7 +118,8 @@ export default function About() {
                             />
                             <div className='flexColumn alignCenter gapSM'>
                                 <h3 className='txtBlue'>Samantha Urwin</h3>
-                                <FaLinkedin className='txtRed svgIcon' />
+                                <Link text='LinkedIn' href='https://www.linkedin.com/in/samanthaurwin/' linkStyle='iconRed' destination='external' icon={<FaLinkedin aria-hidden={true}/>} />
+
                             </div>
                         </div>
                         <div className='flexColumn gapMD'>
@@ -125,7 +131,7 @@ export default function About() {
                             />
                             <div className='flexColumn alignCenter gapSM'>
                                 <h3 className='txtBlue'>William Weiland</h3>
-                                <FaLinkedin className='txtRed svgIcon' />
+                                <Link text='LinkedIn' href='https://www.linkedin.com/in/william-weiland/' linkStyle='iconRed' destination='external' icon={<FaLinkedin aria-hidden={true}/>} />
                             </div>
                         </div>
                     </div>
