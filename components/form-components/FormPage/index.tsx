@@ -13,7 +13,7 @@ import {
     ConditionalQuestion,
     RadioScale,
     RangeSlider, 
-    TagsInput,
+    Tags,
     Number
 } from '../.'
 
@@ -46,7 +46,7 @@ function getQuestionComponent(question: Question): React.ReactNode {
         case 'radio-scale':
             return <RadioScale question={question} change={() => {console.log(question.label)}} />
         case 'tags':
-            return <TagsInput question={question} change={() => {console.log(question.label)}} />
+            return <Tags question={question} change={() => {console.log(question.label)}} />
     }
 }
 

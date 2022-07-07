@@ -2,16 +2,13 @@ import ToolTip from '../../ToolTip';
 import stylesMain from '../styles.module.css';
 import styles from './styles.module.css';
 
-type Props = {
-    id: string,
-    label: string,
-    options: string[],
-    change: (id: string, value: any) => void,
-    required: boolean,
-    toolTip?: string
-}
+import { FormQuestionProps } from '../../../types'
 
-export default function Radio({ id, label, options, change, required, toolTip }:Props) {
+export default function Radio({ question, change, validate}:FormQuestionProps) {
+    const {id, label, options, required, toolTip } = question
+    if (!options) {
+        throw new Error('Radio must be provided with options')
+    }
 
     return (
         <div className={stylesMain.container}>

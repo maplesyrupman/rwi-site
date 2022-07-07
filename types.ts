@@ -7,6 +7,8 @@ export type Question = {
     placeholder?: string,
     required?: boolean,
     range?: [number, number],
+    max?: number,
+    min?: number
     year?: boolean,
     month?: boolean,
     day?: boolean,

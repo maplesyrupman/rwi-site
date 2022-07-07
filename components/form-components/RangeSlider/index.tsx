@@ -3,22 +3,18 @@ import ToolTip from '../../ToolTip'
 import stylesMain from '../styles.module.css'
 import styles from './styles.module.css'
 
-type Props = {
-    id: string,
-    label: string,
-    steps: string,
-    change: (id: string, value: any) => void,
-    validate: () => boolean,
-    required: boolean,
-    toolTip?: string
-}
+import { FormQuestionProps } from '../../../types'
 
-export default function RangeSlider({ id, label, steps, change, validate, required, toolTip }:Props) {
+export default function RangeSlider({ question, change, validate }:FormQuestionProps) {
+    const {id, label, range, required, toolTip} = question
+    if(!range) {
+        throw new Error('Range must be provided to range-slider')
+    }
 
-    const [value1, setValue1] = useState('0');
-    const [value2, setValue2] = useState(steps);
+    const [value1, setValue1] = useState(range[0]);
+    const [value2, setValue2] = useState(range[1]);
 
-    function handleChange(id: string, value: string) {
+    function handleChange(id: string, value: number) {
         if (id === 'slider1') {
             if (value >= value2) {
                 setValue1(value2);
@@ -59,22 +55,22 @@ export default function RangeSlider({ id, label, steps, change, validate, requir
                     <input 
                     id='slider1'
                     type='range' 
-                    min='0' 
-                    max={steps}
+                    min={range[0]}
+                    max={range[1]}
                     value={value1}
                     onChange={({ target: { value: radius }}) => {
-                        handleChange('slider1', radius);
+                        handleChange('slider1', parseInt(radius));
                     }}
                     className={styles.slider}
                     />
                     <input
                     id='slider2'
                     type='range'
-                    min='0'
-                    max={steps}
+                    min={range[0]}
+                    max={range[1]}
                     value={value2}
                     onChange={({ target: { value: radius }}) => {
-                        handleChange('slider2', radius);
+                        handleChange('slider2', parseInt(radius));
                     }}
                     className={styles.slider}
                     />

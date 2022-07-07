@@ -9,6 +9,11 @@ import { FormQuestionProps } from '../../../types'
 
 export default function Picklist({ question, change, validate }: FormQuestionProps) {
     const {id, label, options, other, size, placeholder, multi, required, toolTip} = question
+
+    if (!options) {
+        throw new Error('Picklist must be provided with options')
+    }
+
     const [selected, setSelected] = useState(placeholder)
     const [dropdownOpen, setDropdownOpen] = useState(false)
 
