@@ -10,6 +10,8 @@ import RangeSlider from './RangeSlider'
 import Tags from './Tags'
 import Number from './Number'
 
+import List from './List'   
+
 import FormPage from './FormPage'
 
 export {
@@ -24,5 +26,6 @@ export {
     RangeSlider,
     Tags,
     Number,
+    List,
     FormPage
 }

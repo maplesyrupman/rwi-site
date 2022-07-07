@@ -11,6 +11,7 @@ import {
     RadioScale,
     RangeSlider, 
     Tags,
+    List,
     Number
 } from '../components/form-components'
 
@@ -24,7 +25,7 @@ export default function getFormComponent(question: Question): React.ReactNode {
             return <DatePick question={question} key={question.id} change={() => console.log(question.label)} />
         case 'growing-list':
             return <GrowingList question={question} key={question.id} change={() => console.log(question.label)} />
-        case 'conditional-Question':
+        case 'conditional-question':
             return <ConditionalQuestion question={question} key={question.id} change={() => console.log(question.label)} />
         case 'picklist':
             return <Picklist question={question} key={question.id} change={() => console.log(question.label)} />
@@ -38,5 +39,9 @@ export default function getFormComponent(question: Question): React.ReactNode {
             return <RadioScale question={question} key={question.id} change={() => {console.log(question.label)}} />
         case 'tags':
             return <Tags question={question} key={question.id} change={() => {console.log(question.label)}} />
+        case 'list':
+            return <List question={question} key={question.id} change={() => {console.log(question.label)}} />
+        default:
+            console.log('invalid question format provided')
     }
 }

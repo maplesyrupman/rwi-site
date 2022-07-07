@@ -2,7 +2,7 @@ export type Question = {
     label: string,
     type: string,
     id: string,
-    value: any,
+    value?: any,
     initValue?: any,
     placeholder?: string,
     required?: boolean,

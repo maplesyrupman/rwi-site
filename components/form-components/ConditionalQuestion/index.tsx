@@ -3,17 +3,8 @@ import { useEffect, useState } from "react"
 import { Question, FormQuestionProps } from "../../../types"
 import {LongAnswer} from "../."
 import RadioScale from '../RadioScale'
+import getFormComponent from "../../../lib/getFormComponent"
 
-function getQuestionComponent(question: Question, change:(id:string, value:any) => void) {
-    switch(question.type) {
-        case 'long':
-            return <LongAnswer 
-                        question={{...question, id: 'question'}}
-                        change={change}
-                        validate={() => true}
-                    />        
-    }
-}
 
 export default function ConditionalQuestion({question, change, validate }:FormQuestionProps) {
     const {id, label, revealed, required, toolTip, initValue} = question
@@ -48,11 +39,11 @@ export default function ConditionalQuestion({question, change, validate }:FormQu
     return (
         <div>
             <RadioScale 
-            question={{...question, id:'conditional'}}
+            question={{id:'conditional', type:'radio-scale', label, required, toolTip, options:['Yes', 'No']}}
             change={handleChange} 
             />
             {value.conditionalValue === 'Yes' && (
-                getQuestionComponent(revealed, handleChange)
+                getFormComponent(revealed)
             )}
         </div>
     )
