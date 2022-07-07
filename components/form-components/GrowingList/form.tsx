@@ -57,16 +57,17 @@ export default function GLForm({ fields, initState, submit, idx, id,  }: Props) 
         >
             {fields.map((field, idx) => {
                 const initialValue: string = entry[Object.keys(entry)[idx]] || ''
+                field.initValue = initialValue
                 return (
                     <div key={idx}>
                         {(field.type === 'short' || field.type === 'email') && (
-                            <ShortAnswer label={field.label} id={field.id} placeholder={field.label} initValue={initialValue} change={change} required={field.required} />
+                            <ShortAnswer question={field} change={change} />
                         )}
                     </div>
                 )
             })}
             <div className={styles.btnCon}>
-                <Button type='submit' text='Submit' btnStyle='primary' func={() => console.log(idx)} />
+                <Button type='submit' text='Submit' btnStyle='primary' func={() => console.log('submit')} />
                 <Button type='reset' text='Cancel' btnStyle='danger' func={() => resetForm(id)} />
             </div>
         </form>

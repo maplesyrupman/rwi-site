@@ -48,3 +48,9 @@ export type FormQuestionProps = {
     ) => void;
     validate?: () => void;
 }
+
+export type FormPageProps = {
+    title: string,
+    questions: Question[],
+    changePage:(direction: 'next'|'previous') => void
+}
