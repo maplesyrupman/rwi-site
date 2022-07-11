@@ -20,7 +20,8 @@ function getDays(): string[] {
 }
 
 export default function DatePick({ question, change, validate }: FormQuestionProps) {
-    const {id, label, year, month, day, initValue: initialValue} = question
+    const {id, label, year, month, day, value} = question
+    const {day:vDay,month:vMonth,year:vYear} = value
     
     const [date, setDate] = useState({ year: '', month: '', day: '' })
     function updateDate(unit: string, value: string) {
@@ -53,8 +54,7 @@ export default function DatePick({ question, change, validate }: FormQuestionPro
         size:'small',
         options:getDays(),
         required:false,
-        value:'',
-        initValue: initialValue?.day || undefined
+        value:vDay
     }
 
     const monthQuestion:Question = {
@@ -65,8 +65,7 @@ export default function DatePick({ question, change, validate }: FormQuestionPro
         size:'small',
         options:['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12'],
         required:false,
-        value:'',
-        initValue: initialValue?.month || undefined
+        value:vMonth
     }
 
     const yearQuestion:Question = {
@@ -77,8 +76,7 @@ export default function DatePick({ question, change, validate }: FormQuestionPro
         size:'small',
         options:getPastYears(),
         required:false,
-        value:'',
-        initValue: initialValue?.year || undefined
+        value:vYear
     }
 
     return (

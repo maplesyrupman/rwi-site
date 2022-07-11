@@ -1,5 +1,5 @@
 
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { Question, FormQuestionProps } from "../../../types"
 import RadioScale from '../RadioScale'
 import getFormComponent from "../../../lib/getFormComponent"
@@ -12,6 +12,10 @@ export default function ConditionalQuestion({question, change, validate }:FormQu
     }
     const [qValue, setqValue] = useState(value)
 
+    useEffect(() => {
+        change(id, qValue)
+    }, [id, change, qValue])
+
     function handleChange(sId:string, value: string) {
         if (sId === 'conditional') {
             setqValue((state:any) => {
@@ -19,7 +23,6 @@ export default function ConditionalQuestion({question, change, validate }:FormQu
                     ...state,
                     conditionalValue: value
                 }
-                change(id, newState)
                 return newState
             })
         } else {
@@ -28,7 +31,6 @@ export default function ConditionalQuestion({question, change, validate }:FormQu
                     ...state,
                     questionValue: value
                 }
-                change(id, newState)
                 return newState
             })
         }

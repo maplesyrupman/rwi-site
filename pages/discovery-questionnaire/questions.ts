@@ -28,7 +28,7 @@ const questions: DiscoveryQuestionnaire = {
                     month: true,
                     day: false,
                     id: '0-2',
-                    value: undefined,
+                    value: {year:'yyyy', month:'mm',day:'dd'},
                     required: false,
                     validatorOptions: []
                 }, {
