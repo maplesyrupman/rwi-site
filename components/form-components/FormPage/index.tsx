@@ -4,10 +4,11 @@ import Button from '../../Button'
 import Link from '../../Button/link'
 
 import { FormPageProps } from '../../../types'
-import getFormComponent from '../../../lib/getFormComponent';
+import getFormComponent from '../../../lib/getFormComponent'
+import { Question } from '../../../types';
 
 
-export default function FormPage({ questions, title }: FormPageProps) {
+export default function FormPage({ questions, title, change }: FormPageProps) {
 
     return (
         <div className={styles.pageContainer}>
@@ -18,7 +19,7 @@ export default function FormPage({ questions, title }: FormPageProps) {
             </div>
             <div className={styles.page}>
                 <div className={styles.questions}>
-                    {questions.map(getFormComponent)}
+                    {questions.map((question:Question) => getFormComponent(question, change))}
                 </div>
                 <div className={styles.buttons}>
                     <div className={styles.navigation}>

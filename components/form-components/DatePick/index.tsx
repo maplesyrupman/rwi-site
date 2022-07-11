@@ -5,7 +5,6 @@ import {FormQuestionProps, Question} from '../../../types'
 function getPastYears(): string[] {
     const years: string[] = []
     let currentYear:any = new Date().getFullYear()
-    console.log(currentYear)
     for (let i = 1900; i <= currentYear; i++) {
         years.unshift(i + '')
     }
@@ -21,25 +20,30 @@ function getDays(): string[] {
 }
 
 export default function DatePick({ question, change, validate }: FormQuestionProps) {
-    const {id, label, year, month, day} = question
+    const {id, label, year, month, day, initValue: initialValue} = question
+    
     const [date, setDate] = useState({ year: '', month: '', day: '' })
-    function updateDate(id: string, value: string) {
-        switch (id) {
+    function updateDate(unit: string, value: string) {
+        let newDate:{year:string, month:string, day:string}
+        switch (unit) {
             case 'day':
-                setDate({ ...date, day: value })
+                newDate = { ...date, day: value }
+                setDate(newDate)
+                change(id, newDate)
                 break
             case 'month':
-                setDate({ ...date, month: value })
+                newDate = { ...date, month: value }
+                setDate(newDate)
+                change(id, newDate)
                 break
             case 'year':
-                setDate({ ...date, year: value })
+                newDate = { ...date, year: value }
+                setDate(newDate)
+                change(id, newDate)
                 break
         }
-    }
 
-    useEffect(() => {
-        change(id, date)
-    }, [date, change, id])
+    }
 
     const dayQuestion:Question = {
         id:'day',
@@ -49,7 +53,8 @@ export default function DatePick({ question, change, validate }: FormQuestionPro
         size:'small',
         options:getDays(),
         required:false,
-        value:''
+        value:'',
+        initValue: initialValue?.day || undefined
     }
 
     const monthQuestion:Question = {
@@ -60,18 +65,20 @@ export default function DatePick({ question, change, validate }: FormQuestionPro
         size:'small',
         options:['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12'],
         required:false,
-        value:''
+        value:'',
+        initValue: initialValue?.month || undefined
     }
 
     const yearQuestion:Question = {
-        id:'day',
+        id:'year',
         type:'picklist',
         label:'',
         placeholder:'yyyy',
         size:'small',
         options:getPastYears(),
         required:false,
-        value:''
+        value:'',
+        initValue: initialValue?.year || undefined
     }
 
     return (

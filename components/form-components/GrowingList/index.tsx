@@ -1,7 +1,7 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import GLForm from './form'
 import stylesMain from '../styles.module.css'
-import styles from './growingList.module.css';
+import styles from './growingList.module.css'
 import Button from '../../Button'
 import ListEntry from './listEntry'
 import ToolTip from '../../ToolTip'
@@ -28,26 +28,29 @@ export default function GrowingList({question, change, validate}: FormQuestionPr
         hideForm()
         switch (option) {
             case 'add':
-                mutateList((state: any) => [...state, entry]);
+                mutateList((state: any) => {
+                    const newState = [...state, entry]
+                    change(id, newState)
+                    return newState
+                });
                 break
             case 'delete':
                 const newState = [...list]
-                idx && newState.splice(idx, 1)
+                idx !== undefined && newState.splice(idx, 1)
+                change(id, newState)
                 mutateList(newState)
                 break
             case 'edit':
+                if(idx === undefined) return
+
                 mutateList((state: any) => {
                     const newState = [...state]
-                    idx && newState.splice(idx, 1, entry)
+                    newState.splice(idx, 1, entry)
+                    change(id, newState)
                     return newState
                 })
-                break;
         }
     }
-
-    useEffect(() => {
-
-    }, [list])
 
     const formStateTemplate: any = {}
     fields.forEach(field => {
@@ -82,7 +85,7 @@ export default function GrowingList({question, change, validate}: FormQuestionPr
                 </div>
             ) : (
                 <div>
-                    <Button text='Add Contact' func={() => showForm()} type='button' btnStyle='secondary' />
+                    <Button text='New Entry' func={() => showForm()} type='button' btnStyle='secondary' />
                 </div>
             )}
         </div>

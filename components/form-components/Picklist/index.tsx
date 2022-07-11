@@ -8,13 +8,13 @@ import { IoIosArrowDown } from 'react-icons/io'
 import { FormQuestionProps } from '../../../types'
 
 export default function Picklist({ question, change, validate }: FormQuestionProps) {
-    const {id, label, options, other, size, placeholder, multi, required, toolTip} = question
+    const {id, label, options, other, size, placeholder, multi, required, toolTip, initValue} = question
 
     if (!options) {
         throw new Error('Picklist must be provided with options')
     }
 
-    const [selected, setSelected] = useState(placeholder)
+    const [selected, setSelected] = useState(initValue || placeholder)
     const [dropdownOpen, setDropdownOpen] = useState(false)
 
 

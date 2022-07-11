@@ -42,27 +42,32 @@ const questions: DiscoveryQuestionnaire = {
                             label: 'First name',
                             type: 'short',
                             id: '0-3-0',
-                            value: ''
+                            value: '',
+                            initValue: undefined
                         }, {
                             label: 'Last name',
                             type: 'short',
                             id: '0-3-1',
-                            value: ''
+                            value: '',
+                            initValue: undefined
                         }, {
                             label: 'Email',
                             type: 'email',
                             id: '0-3-2',
-                            value: ''
+                            value: '',
+                            initValue: undefined
                         }, {
                             label: 'Phone',
                             type: 'short',
                             id: '0-3-3',
-                            value: ''
+                            value: '',
+                            initValue: undefined
                         }, {
                             label: 'Position',
                             type: 'short',
                             id: '0-3-4',
-                            value: ''
+                            value: '',
+                            initValue: undefined
                         }
                     ],
                     required: true,
@@ -346,17 +351,24 @@ const questions: DiscoveryQuestionnaire = {
                             id: '3-0-0',
                             label: 'Acievement',
                             type: 'short',
-                            value: ''
+                            value: '',
+                            initValue: undefined
                         }, {
                             id: '3-0-1',
                             label: 'Measurement',
                             type: 'short',
-                            value: ''
+                            value: '',
+                            initValue: undefined
                         }, {
                             id: '3-0-2',
                             label: 'Timeline',
-                            type: 'date',
-                            value: undefined
+                            type: 'date-pick',
+                            value: undefined,
+                            day: true,
+                            month: true,
+                            year: true,
+                            required:false,
+                            initValue: undefined
                         }
                     ],
                     value: [],
@@ -372,17 +384,24 @@ const questions: DiscoveryQuestionnaire = {
                             id: '3-1-0',
                             label: 'Acievement',
                             type: 'short',
-                            value: ''
+                            value: '',
+                            initValue: undefined
                         }, {
                             id: '3-1-1',
                             label: 'Measurement',
                             type: 'short',
-                            value: ''
+                            value: '',
+                            initValue: undefined
                         }, {
                             id: '3-1-2',
                             label: 'Timeline',
-                            type: 'date',
-                            value: undefined
+                            type: 'date-pick',
+                            value: undefined,
+                            day: true,
+                            month: true,
+                            year: true,
+                            required: false,
+                            initValue: undefined
                         }
                     ],
                     value: [],
@@ -398,17 +417,24 @@ const questions: DiscoveryQuestionnaire = {
                             id: '3-2-0',
                             label: 'Acievement',
                             type: 'short',
-                            value: ''
+                            value: '',
+                            initValue: undefined
                         }, {
                             id: '3-2-1',
                             label: 'Measurement',
                             type: 'short',
-                            value: ''
+                            value: '',
+                            initValue: undefined
                         }, {
                             id: '3-2-2',
                             label: 'Timeline',
-                            type: 'date',
-                            value: undefined
+                            type: 'date-pick',
+                            value: undefined,
+                            day: true,
+                            month: true,
+                            year: true,
+                            required: false,
+                            initValue: undefined
                         }
                     ],
                     value: [],

@@ -1,10 +1,8 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
+import getFormComponent from '../../../lib/getFormComponent'
 
-import ShortAnswer from '../ShortAnswer'
-import LongAnswer from '../LongAnswer'
 import Button from '../../Button'
-import { EventEmitter } from 'stream'
-import styles from './growingList.module.css';
+import styles from './growingList.module.css'
 
 type Props = {
     fields: any[],
@@ -14,7 +12,7 @@ type Props = {
     submit: (entry: any, idx: number | undefined, option: any) => void
 }
 
-export default function GLForm({ fields, initState, submit, idx, id,  }: Props) {
+export default function GLForm({ fields, initState, submit, idx, id, }: Props) {
 
     const formStateTemplate: any = {}
     fields.forEach(field => {
@@ -42,6 +40,7 @@ export default function GLForm({ fields, initState, submit, idx, id,  }: Props) 
         const reset = new Event('reset')
         form.dispatchEvent(reset)
         if (typeof idx == 'number') {
+            console.log('edit!!', entry)
             submit(entry, idx, 'edit')
         } else {
             submit(entry, undefined, 'add')
@@ -57,14 +56,9 @@ export default function GLForm({ fields, initState, submit, idx, id,  }: Props) 
         >
             {fields.map((field, idx) => {
                 const initialValue: string = entry[Object.keys(entry)[idx]] || ''
-                field.initValue = initialValue
-                return (
-                    <div key={idx}>
-                        {(field.type === 'short' || field.type === 'email') && (
-                            <ShortAnswer question={field} change={change} />
-                        )}
-                    </div>
-                )
+                const updatedField = {...field}
+                updatedField.initValue = initialValue
+                return getFormComponent(updatedField, change)
             })}
             <div className={styles.btnCon}>
                 <Button type='submit' text='Submit' btnStyle='primary' func={() => console.log('submit')} />

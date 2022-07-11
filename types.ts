@@ -52,5 +52,6 @@ export type FormQuestionProps = {
 export type FormPageProps = {
     title: string,
     questions: Question[],
-    changePage:(direction: 'next'|'previous') => void
+    changePage:(direction: 'next'|'previous') => void, 
+    change:(id:string, value:any) => void
 }

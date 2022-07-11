@@ -13,6 +13,15 @@ type Props = {
     handleEdit: (entry: any, idx: number | undefined, option: 'add' | 'edit' | 'delete') => void
 }
 
+function getAnswerSpan(response:any):any {
+    if(typeof response === 'string' || typeof response === 'number') {
+        return response
+    } else if(Object.keys(response).includes('day')) {
+        const values = Object.values(response).reverse()
+            return values.join('/')
+    }
+}
+
 export default function ListEntry({ idx, fields, ent, handleEdit }: Props) {
     const [editView, setEditView] = useState(false)
 
@@ -30,7 +39,7 @@ export default function ListEntry({ idx, fields, ent, handleEdit }: Props) {
                 {!editView && Object.keys(ent).map((f, idx) => {
                     return (
                         <div key={`f${idx}`}>
-                            <span className={`txtBlue bold`}>{fields[idx].label}:</span><span className={glStyles.answer}>{ent[f]}</span>
+                            <span className={`txtBlue bold`}>{fields[idx].label}:</span><span className={glStyles.answer}>{getAnswerSpan(ent[f])}</span>
                         </div>
                     )
                 })}
