@@ -43,7 +43,7 @@ export default function ConditionalQuestion({question, change, validate }:FormQu
             change={handleChange} 
             />
             {value.conditionalValue === 'Yes' && (
-                getFormComponent(revealed)
+                getFormComponent(revealed, handleChange)
             )}
         </div>
     )

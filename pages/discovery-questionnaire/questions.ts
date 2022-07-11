@@ -52,7 +52,7 @@ const questions: DiscoveryQuestionnaire = {
                             initValue: undefined
                         }, {
                             label: 'Email',
-                            type: 'email',
+                            type: 'short',
                             id: '0-3-2',
                             value: '',
                             initValue: undefined
