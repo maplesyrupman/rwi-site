@@ -4,7 +4,7 @@ import styles from '../styles.module.css';
 import {FormQuestionProps} from '../../../types'
 
 export default function LongAnswer({ question, change, validate}: FormQuestionProps) {
-    const {placeholder, label, id, required, toolTip} = question
+    const {placeholder, label, id, required, value, toolTip} = question
     function handleChange(e: React.ChangeEvent) {
         const el = e.target as HTMLInputElement 
         change(id, el.value)
@@ -29,6 +29,7 @@ export default function LongAnswer({ question, change, validate}: FormQuestionPr
                 placeholder={placeholder}
                 className={`${styles.input} ${styles.long}`}
                 onChange={handleChange}
+                value={value}
             ></textarea>
         </div>
     )

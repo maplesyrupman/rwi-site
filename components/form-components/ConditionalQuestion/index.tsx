@@ -1,32 +1,35 @@
 
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import { Question, FormQuestionProps } from "../../../types"
-import {LongAnswer} from "../."
 import RadioScale from '../RadioScale'
 import getFormComponent from "../../../lib/getFormComponent"
 
 
 export default function ConditionalQuestion({question, change, validate }:FormQuestionProps) {
-    const {id, label, revealed, required, toolTip, initValue} = question
+    const {id, label, revealed, required, toolTip, value} = question
     if (!revealed) {
         throw new Error('conditional question must have revealed attribute')
     }
-    const [value, setValue] = useState({conditionalValue: 'No', questionValue: ''})
+    const [qValue, setqValue] = useState(value)
 
-    function handleChange(id:string, value: string) {
-        if (id === 'conditional') {
-            setValue((state:any) => {
-                return {
+    function handleChange(sId:string, value: string) {
+        if (sId === 'conditional') {
+            setqValue((state:any) => {
+                const newState = {
                     ...state,
                     conditionalValue: value
                 }
+                change(id, newState)
+                return newState
             })
         } else {
-            setValue((state:any) => {
-                return {
+            setqValue((state:any) => {
+                const newState = {
                     ...state,
                     questionValue: value
                 }
+                change(id, newState)
+                return newState
             })
         }
     }
@@ -34,11 +37,11 @@ export default function ConditionalQuestion({question, change, validate }:FormQu
     return (
         <div>
             <RadioScale 
-            question={{id:'conditional', type:'radio-scale', label, required, toolTip, options:['Yes', 'No']}}
+            question={{id:'conditional', value:qValue.conditionalValue, type:'radio-scale', label, required, toolTip, options:['Yes', 'No']}}
             change={handleChange} 
             />
-            {value.conditionalValue === 'Yes' && (
-                getFormComponent(revealed, handleChange)
+            {qValue.conditionalValue === 'Yes' && (
+                getFormComponent({...revealed, value:qValue.questionValue}, handleChange)
             )}
         </div>
     )

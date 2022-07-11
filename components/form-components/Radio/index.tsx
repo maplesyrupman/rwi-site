@@ -5,7 +5,7 @@ import styles from './styles.module.css';
 import { FormQuestionProps } from '../../../types'
 
 export default function Radio({ question, change, validate}:FormQuestionProps) {
-    const {id, label, options, required, toolTip } = question
+    const {id, label, options, required, toolTip, value } = question
     if (!options) {
         throw new Error('Radio must be provided with options')
     }
@@ -39,6 +39,7 @@ export default function Radio({ question, change, validate}:FormQuestionProps) {
                             <input
                             type='radio'
                             id={o}
+                            checked={o === value}
                             onChange={() => change(id, o)}
                             className={styles.radio}
                             name={id}

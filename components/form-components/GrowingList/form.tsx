@@ -26,6 +26,7 @@ export default function GLForm({ fields, initState, submit, idx, id, }: Props) {
     }
 
     function change(id: string, value: any) {
+        console.log(entry)
         editEntry((state: any) => {
             return {
                 ...state,
@@ -40,7 +41,6 @@ export default function GLForm({ fields, initState, submit, idx, id, }: Props) {
         const reset = new Event('reset')
         form.dispatchEvent(reset)
         if (typeof idx == 'number') {
-            console.log('edit!!', entry)
             submit(entry, idx, 'edit')
         } else {
             submit(entry, undefined, 'add')
@@ -55,10 +55,10 @@ export default function GLForm({ fields, initState, submit, idx, id, }: Props) {
             onSubmit={handleSubmit}
         >
             {fields.map((field, idx) => {
-                const initialValue: string = entry[Object.keys(entry)[idx]] || ''
-                const updatedField = {...field}
-                updatedField.initValue = initialValue
-                return getFormComponent(updatedField, change)
+                // const initialValue: string = entry[Object.keys(entry)[idx]] || ''
+                // const updatedField = {...field}
+                // updatedField.initValue = initialValue
+                return getFormComponent({...field, value:entry[field.label]}, change)
             })}
             <div className={styles.btnCon}>
                 <Button type='submit' text='Submit' btnStyle='primary' func={() => console.log('submit')} />

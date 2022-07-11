@@ -5,12 +5,12 @@ import styles from './styles.module.css';
 import {FormQuestionProps} from '../../../types'
 
 export default function RadioScale({ question, change, validate}:FormQuestionProps) {
-    const {id, label, options, required, toolTip, initValue} = question
+    const {id, label, options, required, toolTip, value} = question
     if (!options) {
         throw new Error('Options are required for RadioScale component')
     }
 
-    const [selected, setSelected] = useState(initValue);
+    const [selected, setSelected] = useState(value);
 
     function click(option:string):void {
         setSelected(option);

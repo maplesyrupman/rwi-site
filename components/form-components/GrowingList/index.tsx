@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import GLForm from './form'
 import stylesMain from '../styles.module.css'
 import styles from './growingList.module.css'
@@ -8,9 +8,13 @@ import ToolTip from '../../ToolTip'
 import { FormQuestionProps } from '../../../types'
 
 export default function GrowingList({question, change, validate}: FormQuestionProps) {
-    const { id, label, fields, required, toolTip } = question
-    const [list, mutateList] = useState<any>([])
+    const { id, label, fields, required, toolTip, value } = question
+    const [list, mutateList] = useState<any>(value)
     const [displayForm, setFormDisplay] = useState(false)
+
+    useEffect(() => {
+        change(id, list)
+    }, [list, change, id])
 
     if (!fields) {
         throw new Error('fields prop is required for growing-list question type')
@@ -29,15 +33,12 @@ export default function GrowingList({question, change, validate}: FormQuestionPr
         switch (option) {
             case 'add':
                 mutateList((state: any) => {
-                    const newState = [...state, entry]
-                    change(id, newState)
-                    return newState
+                    return [...state, entry]
                 });
                 break
             case 'delete':
                 const newState = [...list]
                 idx !== undefined && newState.splice(idx, 1)
-                change(id, newState)
                 mutateList(newState)
                 break
             case 'edit':
@@ -46,7 +47,6 @@ export default function GrowingList({question, change, validate}: FormQuestionPr
                 mutateList((state: any) => {
                     const newState = [...state]
                     newState.splice(idx, 1, entry)
-                    change(id, newState)
                     return newState
                 })
         }

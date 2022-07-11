@@ -42,31 +42,26 @@ const questions: DiscoveryQuestionnaire = {
                             type: 'short',
                             id: '0-3-0',
                             value: '',
-                            initValue: undefined
                         }, {
                             label: 'Last name',
                             type: 'short',
                             id: '0-3-1',
                             value: '',
-                            initValue: undefined
                         }, {
                             label: 'Email',
                             type: 'short',
                             id: '0-3-2',
                             value: '',
-                            initValue: undefined
                         }, {
                             label: 'Phone',
                             type: 'short',
                             id: '0-3-3',
                             value: '',
-                            initValue: undefined
                         }, {
                             label: 'Position',
                             type: 'short',
                             id: '0-3-4',
                             value: '',
-                            initValue: undefined
                         }
                     ],
                     required: true,
@@ -76,7 +71,7 @@ const questions: DiscoveryQuestionnaire = {
                     label: 'Do you have a Mission Statement?',
                     type: 'conditional-question',
                     options: ['Yes', 'No'],
-                    value: false,
+                    value: {conditionalValue: false, questionValue: '' },
                     revealed: {
                         label: 'Company Mission Statement',
                         type: 'long',
@@ -114,7 +109,7 @@ const questions: DiscoveryQuestionnaire = {
                         'yes',
                         'no'
                     ],
-                    value: 'no',
+                    value: '',
                     required: false,
                     validatorOptions: [],
                     toolTip: 'Are most or all services/goods sold by your company season specific?'
@@ -146,7 +141,7 @@ const questions: DiscoveryQuestionnaire = {
                     id: '1-2',
                     label: 'Location',
                     type: 'short',
-                    value: undefined,
+                    value: '',
                     required: false,
                     validatorOptions: [],
                     toolTip: 'In which geographical regions do your customers tend to reside?'
@@ -351,13 +346,11 @@ const questions: DiscoveryQuestionnaire = {
                             label: 'Acievement',
                             type: 'short',
                             value: '',
-                            initValue: undefined
                         }, {
                             id: '3-0-1',
                             label: 'Measurement',
                             type: 'short',
                             value: '',
-                            initValue: undefined
                         }, {
                             id: '3-0-2',
                             label: 'Timeline',
@@ -367,7 +360,6 @@ const questions: DiscoveryQuestionnaire = {
                             month: true,
                             year: true,
                             required:false,
-                            initValue: undefined
                         }
                     ],
                     value: [],
@@ -384,13 +376,11 @@ const questions: DiscoveryQuestionnaire = {
                             label: 'Acievement',
                             type: 'short',
                             value: '',
-                            initValue: undefined
                         }, {
                             id: '3-1-1',
                             label: 'Measurement',
                             type: 'short',
                             value: '',
-                            initValue: undefined
                         }, {
                             id: '3-1-2',
                             label: 'Timeline',
@@ -400,7 +390,6 @@ const questions: DiscoveryQuestionnaire = {
                             month: true,
                             year: true,
                             required: false,
-                            initValue: undefined
                         }
                     ],
                     value: [],
@@ -417,13 +406,11 @@ const questions: DiscoveryQuestionnaire = {
                             label: 'Acievement',
                             type: 'short',
                             value: '',
-                            initValue: undefined
                         }, {
                             id: '3-2-1',
                             label: 'Measurement',
                             type: 'short',
                             value: '',
-                            initValue: undefined
                         }, {
                             id: '3-2-2',
                             label: 'Timeline',
@@ -433,7 +420,6 @@ const questions: DiscoveryQuestionnaire = {
                             month: true,
                             year: true,
                             required: false,
-                            initValue: undefined
                         }
                     ],
                     value: [],

@@ -1,5 +1,7 @@
 import styles from './styles.module.css';
 
+import { useEffect } from 'react'
+
 import Button from '../../Button'
 import Link from '../../Button/link'
 
@@ -11,7 +13,7 @@ import { useAppSelector } from '../../../redux/hooks'
 
 
 export default function FormPage({ pageNum, change, changePage }: FormPageProps) {
-    const {questions, title} = useAppSelector(selectSection(pageNum))
+    let {questions, title} = useAppSelector(selectSection(pageNum))
 
     return (
         <div className={styles.pageContainer}>
