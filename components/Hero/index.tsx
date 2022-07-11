@@ -41,7 +41,7 @@ export default function Hero({ image, direction, title, para, buttons }:Props) {
                 )}
 
                 {buttons && (
-                    <div className={`flexRow justifyBetween ${styles.btnGroup}`}>
+                    <div className={`flexRow gapMD ${styles.btnGroup}`}>
                         {buttons?.map(b => {
                             return (
                                 <Link key={b.text} text={b.text} href={b.href} linkStyle={b.linkStyle} destination={b.destination} />

@@ -1,8 +1,7 @@
 .heroCon {
     border: none;
     border-radius: 10px;
-    width: 100%;
-    padding: 5rem 7rem;
+    padding: var(--spacing-ten) var(--spacing-fourteen);
 }
 
 .heroTxt {
@@ -14,6 +13,12 @@
     margin: 0;
 }
 
-.btnGroup {
-    width: 70%;
+@media screen and (max-width: 1200px) {
+    .heroCon {
+        padding: var(--spacing-ten) var(--spacing-twelve);
+    }
+
+    .heroPara {
+        width: 80%;
+    }
 }

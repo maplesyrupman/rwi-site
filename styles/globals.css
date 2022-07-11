@@ -25,6 +25,7 @@
 
 body {
   background: var(--light);
+  color: var(--dark);
 }
 
 .bgBlue {
@@ -203,6 +204,7 @@ p, div, a, li, span, select, option {
 }
 
 .pageGutters {
+  width: 90%;
   max-width: 1200px;
   margin: auto;
 }
@@ -212,12 +214,17 @@ p, div, a, li, span, select, option {
 }
 
 .contentMD {
+  width: 80%;
   max-width: 1000px;
   margin: auto;
 }
 
 .sectionSM {
   margin-top: var(--spacing-ten);
+}
+
+.sectionMD {
+  margin-top: var(--spacing-fifteen);
 }
 
 .sectionLG {
@@ -246,6 +253,16 @@ p, div, a, li, span, select, option {
 
 .paddingLg {
   padding: var(--spacing-seven);
+}
+
+.width50 {
+  max-width: 50%;
+}
+
+@media screen and (max-width: 1200px) {
+  .contentMD {
+    max-width: 800px;
+  }
 }
 
 /* Flex Utilities */

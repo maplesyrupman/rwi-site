@@ -1,5 +1,5 @@
 .accordian {
-    width: 1000px;
+    width: 100%;
     background: linear-gradient(105.37deg, #02033C 0%, #5C5C99 100%);
     border-radius: 10px;
     border: none;
@@ -21,7 +21,7 @@
 }
 
 .active {
-    height: 2rem;
+    height: var(--spacing-five);
     opacity: 1;
     margin-top: 1.5rem;
 }
@@ -35,4 +35,10 @@
 
 .rotate {
     transform: rotate(180deg);
+}
+
+@media screen and (max-width: 1200px) {
+    .active {
+        height: var(--spacing-seven);
+    }
 }
