@@ -31,11 +31,6 @@ export default function ConditionalQuestion({question, change, validate }:FormQu
         }
     }
 
-    useEffect(() => {
-        console.log(value)
-    }, [value])
-
-
     return (
         <div>
             <RadioScale 

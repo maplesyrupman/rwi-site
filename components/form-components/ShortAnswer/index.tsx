@@ -4,7 +4,7 @@ import ToolTip from '../../ToolTip';
 import styles from '../styles.module.css';
 
 export default function ShortAnswer({ question, change, validate}: FormQuestionProps) {
-    const {id, label, placeholder, initValue, required, toolTip} = question
+    const {id, label, placeholder, value, required, toolTip} = question
     function handleChange(e: React.ChangeEvent) {
         const el = e.target as HTMLInputElement 
 
@@ -36,7 +36,7 @@ export default function ShortAnswer({ question, change, validate}: FormQuestionP
             placeholder={placeholder}
             type='text' 
             onChange={handleChange} 
-            value={initValue}
+            value={value}
             />
         </div>
     )

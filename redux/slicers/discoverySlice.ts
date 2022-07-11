@@ -1,5 +1,6 @@
 import {
     createSlice,
+    createSelector,
     PayloadAction,
 } from '@reduxjs/toolkit';
 import type { RootState } from '../store';
@@ -37,21 +38,17 @@ export const discoverySlice = createSlice({
                     question.value = value
                 }
             }
-        },
-        setSection: (state, action: PayloadAction<number>) => {
-            state.currentSection = action.payload;
         }
     },
 });
 // Here we are just exporting the actions from this slice, so that we can call them anywhere in our app.
 export const {
     answerQuestion,
-    setSection,
 } = discoverySlice.actions;
 
 // calling the above actions would be useless if we could not access the data in the state. So, we use something called a selector which allows us to select a value from the state.
-export const selectSections = (state: RootState) => state.discovery.sections
-export const selectCurrentPage = (state: RootState) => state.discovery.currentSection
+export const selectSection = (idx:number) => (state: RootState) => state.discovery.sections[idx]
+export const selectQuestions = (state: RootState) => state.discovery
 
 // exporting the reducer here, as we need to add this to the store
 export default discoverySlice.reducer;

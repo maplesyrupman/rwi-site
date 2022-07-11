@@ -1,7 +1,6 @@
 import { DiscoveryQuestionnaire } from "../../types"
 
 const questions: DiscoveryQuestionnaire = {
-    currentSection: 0,
     sections: [
         {
             title: 'Company Profile',

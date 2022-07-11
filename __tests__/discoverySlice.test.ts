@@ -1,6 +1,6 @@
 // import { store as OGstore } from "../redux/store"
 import { DiscoveryQuestionnaire } from "../types"
-import { answerQuestion, setSection, selectSections, selectCurrentPage, discoverySlice } from "../redux/slicers/discoverySlice"
+import { answerQuestion, selectSection, discoverySlice } from "../redux/slicers/discoverySlice"
 import questions from '../pages/discovery-questionnaire/questions'
 import { Date } from '../types'
 import {configureStore} from '@reduxjs/toolkit'
@@ -126,10 +126,8 @@ describe('dispatch(answerQuestion) updates questions in top-level list', () => {
         const questionValue = 3
         const value = { conditionalValue, questionValue }
         const unchangedQuestion = store.getState().discovery.sections[2].questions[3].value[5]
-        console.log('unchanged', unchangedQuestion)
         store.dispatch(answerQuestion(['2-3-5', value]))
         const changedQuestion = store.getState().discovery.sections[2].questions[3].value[5]
-        console.log('changed', changedQuestion)
         expect(unchangedQuestion.value).not.toEqual(changedQuestion.value)
         expect(changedQuestion.value).toBe(value)
     })
@@ -139,10 +137,8 @@ describe('dispatch(answerQuestion) updates questions in top-level list', () => {
         const questionValue = 3
         const value = { conditionalValue, questionValue }
         const unchangedQuestion = store.getState().discovery.sections[2].questions[3].value[5]
-        console.log('unchanged', unchangedQuestion)
         store.dispatch(answerQuestion(['2-3-5', value]))
         const changedQuestion = store.getState().discovery.sections[2].questions[3].value[5]
-        console.log('changed', changedQuestion)
         expect(unchangedQuestion.value).not.toEqual(changedQuestion.value)
         expect(changedQuestion.value).toBe(value)
 
@@ -150,10 +146,8 @@ describe('dispatch(answerQuestion) updates questions in top-level list', () => {
         const secondQuestionValue = 3
         const secondValue = { secondConditionalValue, secondQuestionValue }
         const secondUnchangedQuestion = store.getState().discovery.sections[2].questions[3].value[5]
-        console.log('unchanged', secondUnchangedQuestion)
         store.dispatch(answerQuestion(['2-3-5', secondValue]))
         const secondChangedQuestion = store.getState().discovery.sections[2].questions[3].value[5]
-        console.log('changed', secondChangedQuestion)
         expect(secondUnchangedQuestion.value).not.toEqual(secondChangedQuestion.value)
         expect(secondChangedQuestion.value).toBe(secondValue)
     })

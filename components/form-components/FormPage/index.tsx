@@ -3,12 +3,15 @@ import styles from './styles.module.css';
 import Button from '../../Button'
 import Link from '../../Button/link'
 
-import { FormPageProps } from '../../../types'
+import { FormPageProps,Question } from '../../../types'
 import getFormComponent from '../../../lib/getFormComponent'
-import { Question } from '../../../types';
+import { selectSection } from '../../../redux/slicers/discoverySlice'
+import { useAppSelector } from '../../../redux/hooks'
 
 
-export default function FormPage({ questions, title, change }: FormPageProps) {
+
+export default function FormPage({ pageNum, change, changePage }: FormPageProps) {
+    const {questions, title} = useAppSelector(selectSection(pageNum))
 
     return (
         <div className={styles.pageContainer}>
@@ -23,8 +26,8 @@ export default function FormPage({ questions, title, change }: FormPageProps) {
                 </div>
                 <div className={styles.buttons}>
                     <div className={styles.navigation}>
-                        <Button type='button' text='Next' func={() => console.log('button!')} btnStyle='primary' />
-                        <Button type='button' text='Previous' func={() => console.log('button!')} btnStyle='secondary' />
+                        <Button type='button' text='Next' func={() => changePage('next')} btnStyle='primary' />
+                        <Button type='button' text='Previous' func={() => changePage('previous')} btnStyle='secondary' />
                     </div>
                     <Link text='Exit Form' linkStyle='danger' href='/' destination='internal' />
                 </div>

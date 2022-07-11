@@ -30,7 +30,6 @@ export type Section = {
 }
 
 export type DiscoveryQuestionnaire = {
-    currentSection: number,
     sections: Section[]
 };
 
@@ -50,8 +49,7 @@ export type FormQuestionProps = {
 }
 
 export type FormPageProps = {
-    title: string,
-    questions: Question[],
+    pageNum: number,
     changePage:(direction: 'next'|'previous') => void, 
     change:(id:string, value:any) => void
 }
