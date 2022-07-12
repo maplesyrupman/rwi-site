@@ -66,8 +66,8 @@ export default function About() {
 
             {/* Mission Statement */}
             <section className='sectionLG contentMD'>
-                <div className='flexRow alignCenter justifyBetween'>
-                    <svg width="112" height="350" viewBox="0 0 112 350" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <div className='flexRow alignCenter gapMD'>
+                    <svg className={styles.bracket} width="112" height="350" viewBox="0 0 112 350" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M72.8102 66.6259V82.1746C72.8102 101.61 72.1883 116.304 71.0221 126.255C69.856 136.128 
                         66.3575 145.302 60.6823 153.698C54.9293 162.095 45.6001 169.169 32.617 174.922C47.8546 180.908 
                         58.35 190.004 64.103 202.055C69.856 214.183 72.8102 230.897 72.8102 252.432V286.251C72.8102 
@@ -81,14 +81,14 @@ export default function About() {
                         28.5318 91.1576 29.3869 86.182 31.0973C81.2065 32.8076 77.7858 36.2283 75.8422 41.4371C73.8209 
                         46.4904 72.8102 54.8867 72.8102 66.6259Z" fill="#02033C"/>
                     </svg>
-                    <div className={`txtCenter flexColumn alignCenter justifyCenter gapMD ${styles.mission}`}>
+                    <div className={`txtCenter flexColumn alignCenter justifyCenter gapLG ${styles.mission}`}>
                         <h1 className='decorativeOne txtRed'>Bridge the Gap</h1>
                         <p className='bold'>
                         A really interesting and insightful mission statement. One that tells people what we do, 
                         what motivates us and is flexible enough to stay relevant as we evolve.
                         </p>
                     </div>
-                    <svg width="113" height="352" viewBox="0 0 113 352" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg className={styles.bracket} width="113" height="352" viewBox="0 0 113 352" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M39.7754 67.0067V82.6442C39.7754 102.191 40.4009 116.968 41.5737 126.976C42.7465 136.906 
                         46.2649 146.132 51.9726 154.577C57.7585 163.021 67.141 170.136 80.1983 175.922C64.8736 181.942 
                         54.3183 191.09 48.5324 203.209C42.7465 215.406 39.7754 232.217 39.7754 253.875V287.886C39.7754 
@@ -117,12 +117,12 @@ export default function About() {
             </section>
 
             {/* Our Process */}
-            <section className='sectionLG pageGutters'>
+            <section className='sectionLG contentMD'>
                     <h2 className='txtRed txtCenter sectionTitle'>Our Process</h2>
 
-                    <div className='contentMD flexColumn'>
-                        <div className='flexRow alignCenter justifyBetween gapLG'>
-                            <div className='width50'>
+                    <div className='flexColumn'>
+                        <div className='flexRow alignCenter justifyBetween gapLG flexColumnReverseMD'>
+                            <div className={styles.processTxt}>
                                 <h3 className='txtBlue'>Read</h3>
                                 <p>
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
@@ -131,16 +131,18 @@ export default function About() {
                                     libero malesuada feugiat. Donec rutrum congue leo eget malesuada.
                                 </p>
                             </div>
-                            <Image
-                            alt=''
-                            width='500px'
-                            height='500px'
-                            src={readImg}
-                            />
+                            <div className={styles.processImg}>
+                                <Image
+                                alt=''
+                                width='500px'
+                                height='500px'
+                                src={readImg}
+                                />
+                            </div>
                         </div>
 
-                        <div className='flexRowReverse alignCenter justifyBetween gapLG sectionMD'>
-                            <div className='width50'>
+                        <div className='flexRowReverse alignCenter justifyBetween gapLG sectionMD flexColumnReverseMD'>
+                            <div className={styles.processTxt}>
                                 <h3 className='txtBlue'>Write</h3>
                                 <p>
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
@@ -149,16 +151,18 @@ export default function About() {
                                     libero malesuada feugiat. Donec rutrum congue leo eget malesuada.
                                 </p>
                             </div>
-                            <Image
-                            alt=''
-                            width='500px'
-                            height='500px'
-                            src={writeImg}
-                            />
+                            <div className={styles.processImg}>
+                                <Image
+                                alt=''
+                                width='500px'
+                                height='500px'
+                                src={writeImg}
+                                />
+                            </div>
                         </div>
 
-                        <div className='flexRow alignCenter justifyBetween gapLG sectionMD'>
-                            <div className='width50'>
+                        <div className='flexRow alignCenter justifyBetween gapLG sectionMD flexColumnReverseMD'>
+                            <div className={styles.processTxt}>
                                 <h3 className='txtBlue'>Innovate</h3>
                                 <p>
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
@@ -167,12 +171,14 @@ export default function About() {
                                     libero malesuada feugiat. Donec rutrum congue leo eget malesuada.
                                 </p>
                             </div>
-                            <Image
-                            alt=''
-                            width='500px'
-                            height='500px'
-                            src={innovateImg}
-                            />
+                            <div className={styles.processImg}>
+                                <Image
+                                alt=''
+                                width='500px'
+                                height='500px'
+                                src={innovateImg}
+                                />
+                            </div>
                         </div>
                 </div>
             </section>
@@ -183,14 +189,17 @@ export default function About() {
                     <h2 className='txtRed txtCenter sectionTitle'>
                         Meet the Founders
                     </h2>
-                    <div className='flexRow justifyBetween'>
+                    <div className='flexRow justifyBetween alignCenter flexColumnMD gapLG'>
                         <div className='flexColumn gapMD'>
-                            <Image 
-                            alt='Portrait of Samantha, co-founder of RWI Labs Digital Marketing Agency.'
-                            width='345px'
-                            height='520'
-                            src={samImg}
-                            />
+                            <div>
+                                <Image 
+                                alt='Portrait of Samantha, co-founder of RWI Labs Digital Marketing Agency.'
+                                width='345px'
+                                height='520'
+                                src={samImg}
+                                />
+                            </div>
+
                             <div className='flexColumn alignCenter gapSM'>
                                 <h3 className='txtBlue'>Samantha Urwin</h3>
                                 <Link text='LinkedIn' href='https://www.linkedin.com/in/samanthaurwin/' linkStyle='iconRed' destination='external' icon={<FaLinkedin aria-hidden={true}/>} />
@@ -198,12 +207,15 @@ export default function About() {
                             </div>
                         </div>
                         <div className='flexColumn gapMD'>
-                            <Image 
-                            alt='Portrait of William, co-founder of RWI Labs Digital Marketing Agency.'
-                            width='345px'
-                            height='520'
-                            src={willImg}
-                            />
+                            <div>
+                                <Image 
+                                alt='Portrait of Samantha, co-founder of RWI Labs Digital Marketing Agency.'
+                                width='345px'
+                                height='520'
+                                src={willImg}
+                                />
+                            </div>
+
                             <div className='flexColumn alignCenter gapSM'>
                                 <h3 className='txtBlue'>William Weiland</h3>
                                 <Link text='LinkedIn' href='https://www.linkedin.com/in/william-weiland/' linkStyle='iconRed' destination='external' icon={<FaLinkedin aria-hidden={true}/>} />

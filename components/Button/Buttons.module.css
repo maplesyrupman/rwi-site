@@ -9,6 +9,7 @@
     border-radius: 10px;
     cursor: pointer;
     transition: all 0.2s ease-in-out;
+    white-space: nowrap;
 }
 
 .btnPrimary {
@@ -92,6 +93,7 @@
     font-weight: 600;
     color: var(--rwi-blue);
     transition: all 0.2s ease-in-out;
+    white-space: nowrap;
 }
 
 .linkDefault:hover {
@@ -107,6 +109,7 @@
     font-weight: 700;
     color: var(--rwi-blue);
     transition: all 0.2s ease-in-out;
+    white-space: nowrap;
 }
 
 .linkBold:hover {
@@ -122,6 +125,7 @@
     font-weight: 600;
     color: var(--danger);
     transition: all 0.2s ease-in-out;
+    white-space: nowrap;
 }
 
 .linkDanger:hover {

@@ -19,6 +19,44 @@
     }
 
     .heroPara {
-        width: 80%;
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .heroCon {
+        padding: var(--spacing-ten);
+    }
+
+    .heroTxt {
+        width: 75%;
+    }
+}
+
+@media screen and (max-width: 860px) {
+    .heroCon {
+        flex-direction: column-reverse;
+        justify-content: center;
+        gap: var(--spacing-seven);
+    }
+
+    .heroTxt {
+        text-align: center;
+        width: 100%;
+    }
+
+    .heroPara {
+        width: 100%;
+    }
+
+    .btnGroup {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .heroCon {
+        padding: var(--spacing-eight) var(--spacing-six);
     }
 }

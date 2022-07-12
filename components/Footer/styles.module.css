@@ -2,3 +2,11 @@
     border-top: 2px solid var(--grey-one);
     padding: var(--spacing-three) 0;
 }
+
+@media screen and (max-width: 600px) {
+    .footerCon {
+        flex-direction: column-reverse;
+        gap: var(--spacing-five);
+        padding: var(--spacing-five) 0;
+    }
+}

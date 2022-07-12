@@ -1,3 +1,40 @@
 .mission {
-    width: 70%;
+    width: 75%;
+}
+
+.processTxt {
+    width: 50%;
+}
+
+.processTxt > p {
+    margin-top: 0.5rem;
+}
+
+@media screen and (max-width: 860px) {
+    .mission {
+        gap: var(--spacing-three);
+    }
+
+    .processTxt {
+        width: 100%;
+        text-align: center;
+    }
+
+    .processImg {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .mission {
+        width: 100%;
+    }
+
+    .bracket {
+        display: none;
+    }
+
+    .processImg {
+        width: 75%;
+    }
 }

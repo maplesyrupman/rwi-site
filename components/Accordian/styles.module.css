@@ -3,7 +3,7 @@
     background: linear-gradient(105.37deg, #02033C 0%, #5C5C99 100%);
     border-radius: 10px;
     border: none;
-    padding: 3rem;
+    padding: var(--spacing-six);
 }
 
 .titleCon {
@@ -23,7 +23,7 @@
 .active {
     height: var(--spacing-five);
     opacity: 1;
-    margin-top: 1.5rem;
+    margin-top: var(--spacing-three);
 }
 
 .arrow {
@@ -40,5 +40,22 @@
 @media screen and (max-width: 1200px) {
     .active {
         height: var(--spacing-seven);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .active {
+        height: var(--spacing-nine);
+        overflow: scroll;
+    }
+
+    .arrow {
+        margin-top: 0;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .accordian {
+        padding: var(--spacing-five);
     }
 }
