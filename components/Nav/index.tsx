@@ -33,7 +33,7 @@ export default function Nav() {
                     </Link>
                     <nav className={styles.nav}>
                         <button className={styles.hamburger} onClick={toggleDropdown}>
-                            <HiMenu className='txtWhite' />
+                            <HiMenu className='txtBlue' />
                         </button>
                         <ul className={`${styles.dropdownMenu} ${menuOpen ? styles.menuOpen : ''}`}>
                             <li>

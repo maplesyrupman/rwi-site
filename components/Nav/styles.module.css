@@ -56,14 +56,11 @@
     background: var(--rwi-red-two);
 }
 
-@media screen and (max-width: 1024px) {
-    .logo {
-        width: 12rem;
-        padding: 1rem 0;
+@media screen and (max-width: 768px) {
+    .header > div {
+        align-items: flex-start;
     }
-}
 
-@media screen and (max-width: 900px) {
     .nav {
         align-items: flex-end;
         justify-content: center;
@@ -72,7 +69,6 @@
 
     .hamburger {
         display: inline-block;
-        position: absolute;
         top: 1.3rem;
         background: none;
         border: none;
@@ -87,7 +83,7 @@
         flex-direction: column;
         align-items: flex-end;
         padding-top: 0rem;
-        gap: 2.3rem;
+        gap: 2rem;
         font-size: 1.5rem;
         transition: all .4s ease-in-out !important;
         max-height: 0px;
@@ -97,7 +93,7 @@
 
     .dropdownMenu.menuOpen {
         max-height: 325px !important;
-        padding-top: 4rem;
+        padding-top: 2rem;
         opacity: 1;
         overflow: visible;
     }
