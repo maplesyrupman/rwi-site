@@ -22,8 +22,7 @@ export default function Tags({ question, change, validate }:FormQuestionProps) {
         e.preventDefault()
         const form = e.target as HTMLFormElement
         const input = (form[1] as HTMLInputElement)
-        addTag(input.value)
-        input.value = '';
+        addTag(newTag)
     }
 
     function addTag(value:string) {

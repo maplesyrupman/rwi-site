@@ -4,7 +4,7 @@ import styles from '../styles.module.css'
 
 
 export default function Number({ question, change, validate }: FormQuestionProps) {
-    const { id, label, required, toolTip } = question
+    const { id, label, required, toolTip, value } = question
 
     function handleChange(e: React.ChangeEvent) {
         const value = (e.target as HTMLInputElement).value
@@ -33,7 +33,8 @@ export default function Number({ question, change, validate }: FormQuestionProps
                 className={`${styles.input}`}
                 style={{'width':'4rem'}}
                 onChange={handleChange}
+                value={value}
             />
         </div>
     )
-}
+} 
