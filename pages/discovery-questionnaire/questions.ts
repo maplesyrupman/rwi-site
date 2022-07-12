@@ -124,7 +124,7 @@ const questions: DiscoveryQuestionnaire = {
                     label: 'Age',
                     type: 'range-slider',
                     range: [0, 99],
-                    value: [undefined, undefined],
+                    value: [0, 99],
                     required: false,
                     validatorOptions: [],
                     toolTip: 'What is the average age range of your typical customer?'

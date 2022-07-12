@@ -11,27 +11,28 @@ export default function RangeSlider({ question, change, validate }:FormQuestionP
         throw new Error('Range must be provided to range-slider')
     }
 
-    const [value1, setValue1] = useState(value[0] || range[0]);
-    const [value2, setValue2] = useState(value[1] || range[1]);
+    const [value1, setValue1] = useState(value[0]);
+    const [value2, setValue2] = useState(value[1]);
 
-    useEffect(() => {
-        if (value1 === range[0] && value2 === range[1]) return;
-        change(id, [value1, value2])
-    })
+    // useEffect(() => {
+    //     change(id, [value1, value2])
+    // }, [change,id,value1, value2])
 
-    function handleChange(id: string, value: number) {
-        if (id === 'slider1') {
+    function handleChange(sId: string, value: number) {
+        if (sId === 'slider1') {
             if (value >= value2) {
                 setValue1(value2);
                 return;
             }
             setValue1(value);
-        }else if (id === 'slider2') {
+            change(id, [value, value2])
+        }else if (sId === 'slider2') {
             if (value <= value1) {
                 setValue2(value1);
                 return;
             }
             setValue2(value);
+            change(id, [value1, value])
         }
     }
 

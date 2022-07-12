@@ -22,7 +22,7 @@ export const discoverySlice = createSlice({
 
             let idArray: (number | string)[] = id.split('-').map((d:string) => {
                 if (parseInt(d).toString() === d) {
-                    return parseInt(d)
+                return parseInt(d)
                 } else {
                     return d
                 }
@@ -32,10 +32,14 @@ export const discoverySlice = createSlice({
             if (state.sections) {
                 question = state?.sections?.at(idArray[0] as number)?.questions?.at(idArray[1] as number) as Question
                 if (idArray.length <=2) {
-                    question.value = value
+                    if(question.value !== value) {
+                        question.value = value
+                    }
                 } else if (question.type === 'list') {
                     question = question.value.at(idArray[2])
-                    question.value = value
+                    if(question.value !== value) {
+                        question.value = value
+                    }
                 }
             }
         }
@@ -48,6 +52,26 @@ export const {
 
 // calling the above actions would be useless if we could not access the data in the state. So, we use something called a selector which allows us to select a value from the state.
 export const selectSection = (idx:number) => (state: RootState) => state.discovery.sections[idx]
+export const selectQuestion = (id:string) => (state: RootState) => {
+    let idArray: (number | string)[] = id.split('-').map((d:string) => {
+        if (parseInt(d).toString() === d) {
+            return parseInt(d)
+        } else {
+            return d
+        }
+    })
+
+    let question: Question;
+    if (state.discovery.sections) {
+        question = state?.discovery.sections?.at(idArray[0] as number)?.questions?.at(idArray[1] as number) as Question
+        if (idArray.length <=2) {
+            return question
+        } else if (question.type === 'list') {
+            question = question.value.at(idArray[2])
+            return question
+        }
+    }
+}
 export const selectQuestions = (state: RootState) => state.discovery
 
 // exporting the reducer here, as we need to add this to the store
