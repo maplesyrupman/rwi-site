@@ -12,7 +12,7 @@ type ButtonObj = {
 
 type Props = {
     image: any,
-    direction: 'row' | 'row-reverse',
+    direction: 'row' | 'row-reverse' | 'home',
     title: string,
     para?: string,
     buttons?: ButtonObj[] 
@@ -29,12 +29,15 @@ export default function Hero({ image, direction, title, para, buttons }:Props) {
         case 'row-reverse':
             flexDirection = 'flexRowReverse';
             break;
+        case 'home':
+            flexDirection = styles.homeHero;
+            break;
     }
 
     return (
         <div className={`pageGutters sectionSM alignCenter justifyBetween gapMD bgSecondaryTwo ${styles.heroCon} ${flexDirection}`}>
             <div className={` flexColumn gapMD ${styles.heroTxt}`}>
-                <h1 className='txtBlue'>{title}</h1>
+                <h1 className={`txtBlue ${styles.heroTitle}`}>{title}</h1>
                 
                 {para && (
                     <p className={`txtBlue bold ${styles.heroPara}`}>{para}</p>

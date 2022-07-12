@@ -13,6 +13,29 @@
     margin: 0;
 }
 
+.btnGroup {
+    min-height: var(--spacing-six);
+}
+
+.homeHero {
+    background-color: var(--rwi-blue);
+    background-image: url('../../public/circut-board.png');
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    gap: var(--spacing-seven);
+}
+
+.homeHero, .heroTxt, .heroPara, .heroTitle {
+    color: var(--light) !important;
+    align-items: center;
+    text-align: center;
+}
+
+.homeHero > .heroTxt {
+    width: 100%;
+}
+
 @media screen and (max-width: 1200px) {
     .heroCon {
         padding: var(--spacing-ten) var(--spacing-twelve);
