@@ -23,24 +23,26 @@ export default function DatePick({ question, change, validate }: FormQuestionPro
     const {id, label, year, month, day, value} = question
     const {day:vDay,month:vMonth,year:vYear} = value
     
-    const [date, setDate] = useState({ year: '', month: '', day: '' })
+    const [date, setDate] = useState(value)
+
+    useEffect(() => {
+        change(id, date)
+    }, [date, change, id])
+
     function updateDate(unit: string, value: string) {
         let newDate:{year:string, month:string, day:string}
         switch (unit) {
             case 'day':
                 newDate = { ...date, day: value }
                 setDate(newDate)
-                change(id, newDate)
                 break
             case 'month':
                 newDate = { ...date, month: value }
                 setDate(newDate)
-                change(id, newDate)
                 break
             case 'year':
                 newDate = { ...date, year: value }
                 setDate(newDate)
-                change(id, newDate)
                 break
         }
 

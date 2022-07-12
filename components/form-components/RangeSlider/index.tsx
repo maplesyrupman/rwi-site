@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import ToolTip from '../../ToolTip'
 import stylesMain from '../styles.module.css'
 import styles from './styles.module.css'
@@ -6,13 +6,18 @@ import styles from './styles.module.css'
 import { FormQuestionProps } from '../../../types'
 
 export default function RangeSlider({ question, change, validate }:FormQuestionProps) {
-    const {id, label, range, required, toolTip} = question
+    const {id, label, range, required, toolTip, value} = question
     if(!range) {
         throw new Error('Range must be provided to range-slider')
     }
 
-    const [value1, setValue1] = useState(range[0]);
-    const [value2, setValue2] = useState(range[1]);
+    const [value1, setValue1] = useState(value[0] || range[0]);
+    const [value2, setValue2] = useState(value[1] || range[1]);
+
+    useEffect(() => {
+        if (value1 === range[0] && value2 === range[1]) return;
+        change(id, [value1, value2])
+    })
 
     function handleChange(id: string, value: number) {
         if (id === 'slider1') {
@@ -21,9 +26,7 @@ export default function RangeSlider({ question, change, validate }:FormQuestionP
                 return;
             }
             setValue1(value);
-        }
-
-        if (id === 'slider2') {
+        }else if (id === 'slider2') {
             if (value <= value1) {
                 setValue2(value1);
                 return;

@@ -17,8 +17,7 @@
     width: 100%;
     position: absolute;
     background: transparent;
-    top: 0;
-    bottom: 0;
+    top: -0.5rem;
     pointer-events: none;
 }
 
@@ -45,6 +44,7 @@
     cursor: pointer;
     border-radius: 50%;
     pointer-events: auto;
+    top: -0.65rem;
 }
 
 .slider::-moz-range-thumb {
@@ -54,7 +54,9 @@
     background: var(--rwi-red);
     cursor: pointer;
     border-radius: 50%;
+    border: none;
     pointer-events: auto;
+    margin-bottom: 0.5rem;
 }
 
 .slider::-ms-thumb {
@@ -64,6 +66,7 @@
     background: var(--rwi-red);
     cursor: pointer;
     border-radius: 50%;
+    border: none;
     pointer-events: auto;
 }
 

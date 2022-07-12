@@ -5,6 +5,7 @@ import {answerQuestion, selectQuestions} from '../../redux/slicers/discoverySlic
 
 export default function DiscoveryQuestionnaire() {
     const questions = useAppSelector(selectQuestions) 
+    
     const dispatch = useAppDispatch()
     function testChange(id:string, value:any) {
         dispatch(answerQuestion([id, value]))

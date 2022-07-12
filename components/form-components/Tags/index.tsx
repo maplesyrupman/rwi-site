@@ -7,10 +7,15 @@ import React, { useEffect, useState } from 'react'
 
 import { FormQuestionProps } from '../../../types'
 
-export default function TagsInput({ question, change, validate }:FormQuestionProps) {
-    const {id, label, placeholder, required, toolTip} = question
+export default function Tags({ question, change, validate }:FormQuestionProps) {
+    const {id, label, placeholder, required, toolTip, value} = question
 
-    const [tags, setTags] = useState<string[]>([]);
+    const [tags, setTags] = useState<string[]>(value);
+    const [newTag, updateNewTag] = useState<string>('')
+
+    function changeInput(id:string, value:any) {
+        updateNewTag(value)
+    }
 
 
     function handleSubmit(e: React.FormEvent) {
@@ -27,10 +32,9 @@ export default function TagsInput({ question, change, validate }:FormQuestionPro
 
     function deleteTag(idx: number) {
         const newArr = [...tags];
-        const deleted = newArr.splice(idx, 1);
+        newArr.splice(idx, 1);
 
         setTags(newArr);
-        console.log(tags);
     }
 
     useEffect(() => {
@@ -40,7 +44,7 @@ export default function TagsInput({ question, change, validate }:FormQuestionPro
     return (
         <div className={stylesMain.container}>
             <form onSubmit={handleSubmit}>
-                <ShortAnswer question={question} change={() => null} />
+                <ShortAnswer question={{...question, value:newTag}} change={changeInput} />
             </form>
             <div className={styles.tagCon}>
                 {tags.map((t, idx) => {

@@ -7,10 +7,7 @@ export default function ShortAnswer({ question, change, validate}: FormQuestionP
     const {id, label, placeholder, value, required, toolTip} = question
     function handleChange(e: React.ChangeEvent) {
         const el = e.target as HTMLInputElement 
-
-        if (change) {
             change(id, el.value)
-        }
     }   
 
     return (

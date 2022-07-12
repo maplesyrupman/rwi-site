@@ -11,7 +11,7 @@ export default function List({ question, change }: FormQuestionProps) {
             </h3>
             <div style={{ 'display': 'flex', 'flexDirection': 'column', 'gap': '1rem' }}>
                 {value.map((question: Question) => {
-                    return getFormComponent(question)
+                    return getFormComponent(question, change)
                 })}
             </div>
         </div>

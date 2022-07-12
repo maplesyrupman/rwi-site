@@ -20,13 +20,12 @@ export default function GLForm({ fields, initState, submit, idx, id, }: Props) {
     })
 
     const [entry, editEntry] = useState(initState)
-
-    function resetForm(id: string) {
-        editEntry(initState)
+    
+    function resetForm() {
+        editEntry(formStateTemplate)
     }
 
     function change(id: string, value: any) {
-        console.log(entry)
         editEntry((state: any) => {
             return {
                 ...state,
@@ -45,7 +44,7 @@ export default function GLForm({ fields, initState, submit, idx, id, }: Props) {
         } else {
             submit(entry, undefined, 'add')
         }
-        resetForm(id)
+        resetForm()
     }
 
     return (
@@ -58,11 +57,11 @@ export default function GLForm({ fields, initState, submit, idx, id, }: Props) {
                 // const initialValue: string = entry[Object.keys(entry)[idx]] || ''
                 // const updatedField = {...field}
                 // updatedField.initValue = initialValue
-                return getFormComponent({...field, value:entry[field.label]}, change)
+                return getFormComponent({...field, value:entry[field.id]}, change)
             })}
             <div className={styles.btnCon}>
                 <Button type='submit' text='Submit' btnStyle='primary' func={() => console.log('submit')} />
-                <Button type='reset' text='Cancel' btnStyle='danger' func={() => resetForm(id)} />
+                <Button type='reset' text='Cancel' btnStyle='danger' func={() => resetForm()} />
             </div>
         </form>
     )
