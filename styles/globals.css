@@ -291,8 +291,20 @@ p {
   padding: var(--spacing-seven);
 }
 
+.width60 {
+  max-width: 60%;
+}
+
 .width50 {
   max-width: 50%;
+}
+
+.width40 {
+  max-width: 40%;
+}
+
+.rounded {
+  border-radius: 10px;
 }
 
 @media screen and (max-width: 1200px) {

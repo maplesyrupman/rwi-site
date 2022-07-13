@@ -23,7 +23,7 @@ export default function Accordian({ title, text }:Props) {
     }
 
     return (
-        <button className={styles.accordian} onBlur={() => setIsOpen(false)} onClick={handleClick}>
+        <button className={`rounded ${styles.accordian}`} onBlur={() => setIsOpen(false)} onClick={handleClick}>
             <div className='flexRow justifyBetween txtWhite'>
                 <h3>{title}</h3>
                 <IoIosArrowDown className={`${styles.arrow} ${isOpen && styles.rotate}`} />

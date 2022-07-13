@@ -1,7 +1,6 @@
 .accordian {
     width: 100%;
     background: linear-gradient(105.37deg, #02033C 0%, #5C5C99 100%);
-    border-radius: 10px;
     border: none;
     padding: var(--spacing-six);
 }

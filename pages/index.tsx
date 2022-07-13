@@ -3,9 +3,7 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import React, { useState, useEffect } from 'react'
 
-import { FaLaptopCode, FaUsers, FaFingerprint, FaRegHandshake, FaLinkedin, FaEnvelope, FaInstagram, FaFacebookF, FaTwitter, FaLinkedinIn, FaArrowDown, FaTimes } from 'react-icons/fa'
 import illustration from '../public/RWI_Labs-Digital_Agency-Illustration.png';
-import heroBG from '../public/circut-board.png'
 import heroLogo from '../public/logo-full-whitetext.png'
 import ShakeySpan from '../components/ShakeySpan'
 
@@ -14,6 +12,8 @@ import Nav from '../components/Nav'
 import axios from 'axios'
 import Hero from '../components/Hero'
 import Link from '../components/Button/link'
+import Cta from '../components/Cta';
+import Footer from '../components/Footer';
 
 export default function Home() {
   // const [isMobile, setIsMobile] = useState(false)
@@ -115,8 +115,8 @@ export default function Home() {
       ]}
       />
       
-      <section className='sectionLG contentMD flexRow justifyBetween'>
-        <div className={styles.illustrationImg}>
+      <section className='sectionLG contentMD flexRow alignCenter gapLG'>
+        <div>
           <Image
           alt='Illustration'
           src={illustration}
@@ -124,10 +124,10 @@ export default function Home() {
           height='320px'
           />
         </div>
-        <div className='width50 flexColumn gapSM'>
+        <div className='width40 flexColumn gapSM'>
           <h3 className='txtBlue'>
             Got an audience you'd like to reach? 
-            <span className={styles.redSpan}>We can help.</span>
+            <span className={styles.redSpan}> We can help.</span>
           </h3>
           <p>
           Today's digital world provides businesses with more opportunity and competition than ever before. 
@@ -137,6 +137,55 @@ export default function Home() {
           <Link text='Learn More About Us' href='/about' linkStyle='default' destination='internal' />
         </div>
       </section>
+
+      <section className='sectionLG bgSecondaryTwo sectionWithBg'>
+        <div className='contentMD flexColumn alignCenter gapXL'>
+          {/* Marketing */}
+          <div className='bgWhite paddingLg rounded flexRow alignCenter justifyBetween'>
+            <div className='flexColumn gapMD width60'>
+              <h3 className='txtRed'>Marketing</h3>
+              <p>Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem.</p>
+              <Link text='Learn More' href='/solutions' linkStyle='default' destination='internal' />
+            </div>
+
+            <div 
+            className={`rounded ${styles.marketingImg}`}
+            title='Digital Marketing Experts working with computers, calanders and notebooks.'
+            ></div>
+          </div>
+
+          {/* Development */}
+          <div className='bgWhite paddingLg rounded flexRowReverse alignCenter justifyBetween'>
+            <div className='flexColumn gapMD width60'>
+              <h3 className='txtRed'>Development</h3>
+              <p>Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem.</p>
+              <Link text='Learn More' href='/solutions' linkStyle='default' destination='internal' />
+            </div>
+
+            <div 
+            className={`rounded ${styles.developmentImg}`}
+            title='Web Developers reviewing code.'
+            ></div>
+          </div>
+
+          {/* Strategy */}
+          <div className='bgWhite paddingLg rounded flexRow alignCenter justifyBetween'>
+            <div className='flexColumn gapMD width60'>
+              <h3 className='txtRed'>Strategy</h3>
+              <p>Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem.</p>
+              <Link text='Learn More' href='/solutions' linkStyle='default' destination='internal' />
+            </div>
+
+            <div 
+            className={`rounded ${styles.strategyImg}`}
+            title='A man playing chess.'
+            ></div>
+          </div>
+        </div>
+      </section>
+
+      <Cta />
+      <Footer />
     </div>
   )
 }

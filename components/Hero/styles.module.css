@@ -1,7 +1,6 @@
 .heroCon {
-    border: none;
-    border-radius: 10px;
     padding: var(--spacing-ten) var(--spacing-fourteen);
+    color: var(--rwi-blue);
 }
 
 .heroTxt {
@@ -26,14 +25,14 @@
     gap: var(--spacing-seven);
 }
 
-.homeHero, .heroTxt, .heroPara, .heroTitle {
+.homeHero {
     color: var(--light) !important;
-    align-items: center;
-    text-align: center;
 }
 
 .homeHero > .heroTxt {
     width: 100%;
+    align-items: center;
+    text-align: center;
 }
 
 @media screen and (max-width: 1200px) {
