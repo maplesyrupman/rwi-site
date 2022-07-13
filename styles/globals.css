@@ -307,7 +307,7 @@ p {
   border-radius: 10px;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1024px) {
   .contentMD {
     max-width: 800px;
   }
@@ -360,6 +360,12 @@ p {
 
 .justifyEnd {
   justify-content: flex-end;
+}
+
+@media screen and (max-width: 1024px) {
+  .flexColumnLG {
+    flex-direction: column;
+  }
 }
 
 @media screen and (max-width: 860px) {

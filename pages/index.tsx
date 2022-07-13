@@ -115,7 +115,7 @@ export default function Home() {
       ]}
       />
       
-      <section className='sectionLG contentMD flexRow alignCenter gapLG'>
+      <section className='sectionLG contentMD flexRow alignCenter gapLG flexColumnLG'>
         <div>
           <Image
           alt='Illustration'
@@ -124,7 +124,7 @@ export default function Home() {
           height='320px'
           />
         </div>
-        <div className='width40 flexColumn gapSM'>
+        <div className={`width40 flexColumn gapSM ${styles.introBlurb}`}>
           <h3 className='txtBlue'>
             Got an audience you'd like to reach? 
             <span className={styles.redSpan}> We can help.</span>
@@ -141,8 +141,8 @@ export default function Home() {
       <section className='sectionLG bgSecondaryTwo sectionWithBg'>
         <div className='contentMD flexColumn alignCenter gapXL'>
           {/* Marketing */}
-          <div className='bgWhite paddingLg rounded flexRow alignCenter justifyBetween'>
-            <div className='flexColumn gapMD width60'>
+          <div className='bgWhite paddingLg rounded flexRow alignCenter justifyBetween gapLG flexColumnReverseMD'>
+            <div className={`flexColumn gapMD width60 ${styles.solutionTxt}`}>
               <h3 className='txtRed'>Marketing</h3>
               <p>Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem.</p>
               <Link text='Learn More' href='/solutions' linkStyle='default' destination='internal' />
@@ -155,8 +155,8 @@ export default function Home() {
           </div>
 
           {/* Development */}
-          <div className='bgWhite paddingLg rounded flexRowReverse alignCenter justifyBetween'>
-            <div className='flexColumn gapMD width60'>
+          <div className='bgWhite paddingLg rounded flexRowReverse alignCenter justifyBetween gapLG flexColumnReverseMD'>
+            <div className={`flexColumn gapMD width60 ${styles.solutionTxt}`}>
               <h3 className='txtRed'>Development</h3>
               <p>Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem.</p>
               <Link text='Learn More' href='/solutions' linkStyle='default' destination='internal' />
@@ -169,8 +169,8 @@ export default function Home() {
           </div>
 
           {/* Strategy */}
-          <div className='bgWhite paddingLg rounded flexRow alignCenter justifyBetween'>
-            <div className='flexColumn gapMD width60'>
+          <div className='bgWhite paddingLg rounded flexRow alignCenter justifyBetween gapLG flexColumnReverseMD'>
+            <div className={`flexColumn gapMD width60 ${styles.solutionTxt}`}>
               <h3 className='txtRed'>Strategy</h3>
               <p>Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem.</p>
               <Link text='Learn More' href='/solutions' linkStyle='default' destination='internal' />
