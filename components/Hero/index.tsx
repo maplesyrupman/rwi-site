@@ -35,7 +35,7 @@ export default function Hero({ image, direction, title, para, buttons }:Props) {
     }
 
     return (
-        <div className={`pageGutters sectionSM alignCenter justifyBetween gapMD bgSecondaryTwo rounded ${styles.heroCon} ${flexDirection}`}>
+        <div className={`pageGutters sectionSM alignCenter justifyBetween gapXL bgSecondaryTwo rounded ${styles.heroCon} ${flexDirection}`}>
             <div className={` flexColumn gapMD ${styles.heroTxt}`}>
                 <h1 className={styles.heroTitle}>{title}</h1>
                 

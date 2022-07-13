@@ -4,11 +4,10 @@
 }
 
 .heroTxt {
-    width: 50%;
+    max-width: 28rem;
 }
 
 .heroPara {
-    width: 70%;
     margin: 0;
 }
 
@@ -31,6 +30,7 @@
 
 .homeHero > .heroTxt {
     width: 100%;
+    max-width: 100%;
     align-items: center;
     text-align: center;
 }
