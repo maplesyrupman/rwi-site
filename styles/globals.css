@@ -317,6 +317,10 @@ p {
   border-radius: 10px;
 }
 
+.formCon {
+  width: 500px;
+}
+
 @media screen and (max-width: 1024px) {
   .contentMD {
     max-width: 800px;
