@@ -364,6 +364,10 @@ p {
   align-items: center;
 }
 
+.alignStart {
+  align-items: flex-start;
+}
+
 .justifyCenter {
   justify-content: center;
 }

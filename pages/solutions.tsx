@@ -6,6 +6,7 @@ import Image from "next/image";
 import heroImg from '../public/Our-Solutions.png'
 import Footer from "../components/Footer";
 import Nav from "../components/Nav";
+import { useState, useEffect } from "react";
 
 export default function Solution() {
 
@@ -107,9 +108,9 @@ export default function Solution() {
                 </p>
             </section>
 
-            <section className='contentMD sectionLG flexRow justifyBetween alignCenter gapXL'>
+            <section className={`contentMD sectionLG flexRow justifyBetween alignStart ${styles.serviceCon}`}>
                 {/* Images */}
-                <div className='flexColumn justifyCenter alignCenter gapXXL'>
+                <div className={`flexColumn justifyCenter alignCenter gapXXL ${styles.hidden}`}>
                     <div title='Digital Marketing experts working with computers, calanders and notebooks.' className={styles.marketingImg}></div>
                     <div title='Web developers looking at code.' className={styles.developmentImg}></div>
                     <div title='A man playing chess.' className={styles.strategyImg}></div>

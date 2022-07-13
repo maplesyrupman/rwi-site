@@ -25,3 +25,15 @@
 .serviceList {
     height: 350px;
 }
+
+@media screen and (max-width: 860px) {
+    .hidden {
+        display: none;
+    }
+
+    .serviceCon {
+        justify-content: center;
+        text-align: center;
+    }
+}
+
