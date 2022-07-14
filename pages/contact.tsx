@@ -23,11 +23,11 @@ export default function Contact() {
                     <div className='flexColumn gapLG'>
                         <h2 className='txtBlue'>Got an idea? Let us know!</h2>
                         <div className='flexRow alignCenter gapSM'>
-                            <FaEnvelopeSquare className='txtRed'/>
+                            <FaEnvelopeSquare className='txtRed svgIcon'/>
                             <Link text='contact@rwilabs.io' href='mailto:contact@rwilabs.io' linkStyle='bold' destination='external'/>
                         </div>
                         <div className='flexRow alignCenter gapSM'>
-                            <FaWhatsappSquare className='txtRed' />
+                            <FaWhatsappSquare className='txtRed svgIcon' />
                             <p className='txtBlue bold'>(416) 579-7681</p>
                         </div>
 

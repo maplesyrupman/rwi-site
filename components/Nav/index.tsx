@@ -37,7 +37,7 @@ export default function Nav() {
                         </button>
                         <ul className={`${styles.dropdownMenu} ${menuOpen ? styles.menuOpen : ''}`}>
                             <li>
-                                <Link href='#about'>
+                                <Link href='/about'>
                                     <a 
                                         className={styles.navLink} 
                                         onClick={toggleDropdown}
@@ -47,14 +47,14 @@ export default function Nav() {
                                 </Link>
                             </li>
                             <li>
-                                <Link href='#services'>
+                                <Link href='/solutions'>
                                     <a className={styles.navLink} onClick={toggleDropdown} >
                                         Solutions
                                     </a>
                                 </Link>
                             </li>
                             <li>
-                                <Link href='#contact'>
+                                <Link href='/contact'>
                                     <a className={styles.contactLink} onClick={toggleDropdown} >
                                         Contact
                                     </a>
