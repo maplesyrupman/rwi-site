@@ -6,6 +6,7 @@ import Link from "../components/Button/link";
 import Footer from "../components/Footer";
 
 import { FaEnvelopeSquare, FaWhatsappSquare, FaTwitterSquare, FaInstagramSquare, FaFacebookSquare, FaLinkedin } from 'react-icons/fa'
+import styles from '../styles/Contact.module.css'
 
 export default function Contact() {
     return (
@@ -17,10 +18,10 @@ export default function Contact() {
             </div>
 
             <section className='sectionSM bgSecondaryTwo sectionWithBg'>
-                <div className='contentMD flexRow alignStart justifyBetween gapXL'>
+                <div className='contentMD flexRow alignStart justifyBetween gapXL flexColumnMD alignCenterMD'>
 
                     {/* Info */}
-                    <div className='flexColumn gapLG'>
+                    <div className='flexColumn gapLG alignCenterMD textCenterMD'>
                         <h2 className='txtBlue'>Got an idea? Let us know!</h2>
                         <div className='flexRow alignCenter gapSM'>
                             <FaEnvelopeSquare className='txtRed svgIcon'/>
@@ -31,7 +32,7 @@ export default function Contact() {
                             <p className='txtBlue bold'>(416) 579-7681</p>
                         </div>
 
-                        <div className='flexColumn gapMD'>
+                        <div className='flexColumn gapMD alignCenterMD'>
                             <h4 className='txtBlue'>We'll keep you posted!</h4>
                             <div className='flexRow gapMD alignCenter'>
                             <Link text='Twitter' href='https://twitter.com/rwi_labs' linkStyle='iconRed' destination='external' icon={<FaTwitterSquare aria-hidden={true} />} />

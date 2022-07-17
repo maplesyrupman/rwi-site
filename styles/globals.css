@@ -202,6 +202,10 @@ p {
     font-size: 48px;
     line-height: 56px;
   }
+
+  .textCenterMD {
+    text-align: center;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -319,7 +323,8 @@ p {
 }
 
 .formCon {
-  width: 500px;
+  width: 100%;
+  max-width: 500px;
 }
 
 @media screen and (max-width: 1024px) {
@@ -398,6 +403,10 @@ p {
 
   .flexColumnReverseMD {
     flex-direction: column-reverse;
+  }
+
+  .alignCenterMD {
+    align-items: center;
   }
 }
 

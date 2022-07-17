@@ -93,7 +93,7 @@
 
     .dropdownMenu.menuOpen {
         max-height: 325px !important;
-        padding-top: 2rem;
+        padding: 2rem 0;
         opacity: 1;
         overflow: visible;
     }
