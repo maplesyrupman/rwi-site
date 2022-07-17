@@ -1,5 +1,5 @@
-/* Form Page */
-.pageContainer {
+/* Question Page */
+.questionPageContainer {
     width: 100%;
     background: #F3F5F7;
 }
@@ -28,6 +28,23 @@
     display: flex;
     gap: 2.5rem;
     align-items: center;
+}
+
+/* Info Page */
+
+.pageContainer {
+    min-height: 100vh;
+    max-height: 100vh;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contentContainer {
+    max-width: fit-content;
+    padding-bottom: 5rem;
 }
 
 /* Individual Form Elements */

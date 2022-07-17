@@ -5,7 +5,7 @@ type Props = {
     text: string,
     type: 'submit' | 'button' | 'reset' | undefined,
     btnStyle: 'primary' | 'secondary' | 'important' | 'danger' | 'confirm',
-    func?: () => void
+    func?: (a?:any, b?:any, c?:any) => void
 }
 
 export default function Button({ text, type, btnStyle, func }: Props) {

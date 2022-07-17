@@ -1,7 +1,5 @@
 import styles from './styles.module.css';
 
-import { useEffect } from 'react'
-
 import Button from '../../Button'
 import Link from '../../Button/link'
 
@@ -12,11 +10,11 @@ import { useAppSelector } from '../../../redux/hooks'
 
 
 
-export default function FormPage({ pageNum, change, changePage }: FormPageProps) {
+export default function FormPage({ pageNum, change, changePage, isReview }: FormPageProps) {
     let {questions, title} = useAppSelector(selectSection(pageNum))
 
     return (
-        <div className={styles.pageContainer}>
+        <div className={styles.questionPageContainer}>
             <div>
                 <h2 className={`txtBlue txtCenter`}>
                     {title}
@@ -26,13 +24,15 @@ export default function FormPage({ pageNum, change, changePage }: FormPageProps)
                 <div className={styles.questions}>
                     {questions.map((question:Question) => getFormComponent(question, change))}
                 </div>
-                <div className={styles.buttons}>
-                    <div className={styles.navigation}>
-                        <Button type='button' text='Next' func={() => changePage('next')} btnStyle='primary' />
-                        <Button type='button' text='Previous' func={() => changePage('previous')} btnStyle='secondary' />
-                    </div>
-                    <Link text='Exit Form' linkStyle='danger' href='/' destination='internal' />
-                </div>
+                {!isReview && (
+                                    <div className={styles.buttons}>
+                                    <div className={styles.navigation}>
+                                        <Button type='button' text='Next' func={() => changePage('next')} btnStyle='primary' />
+                                        <Button type='button' text='Previous' func={() => changePage('previous')} btnStyle='secondary' />
+                                    </div>
+                                    <Link text='Exit Form' linkStyle='danger' href='/' destination='internal' />
+                                </div>
+                )}
             </div>
         </div>
     )

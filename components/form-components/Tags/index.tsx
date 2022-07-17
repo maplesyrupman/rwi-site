@@ -7,7 +7,7 @@ import React, { useEffect, useState } from 'react'
 
 import { FormQuestionProps } from '../../../types'
 
-export default function Tags({ question, change, validate }:FormQuestionProps) {
+export default function TagInput({ question, change, validate }:FormQuestionProps) {
     const {id, label, placeholder, required, toolTip, value} = question
 
     const [tags, setTags] = useState<string[]>(value);
@@ -16,7 +16,6 @@ export default function Tags({ question, change, validate }:FormQuestionProps) {
     function changeInput(id:string, value:any) {
         updateNewTag(value)
     }
-
 
     function handleSubmit(e: React.FormEvent) {
         e.preventDefault()

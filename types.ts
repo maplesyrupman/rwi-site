@@ -51,5 +51,6 @@ export type FormQuestionProps = {
 export type FormPageProps = {
     pageNum: number,
     changePage:(direction: 'next'|'previous') => void, 
-    change:(id:string, value:any) => void
+    change:(id:string, value:any) => void,
+    isReview: boolean
 }

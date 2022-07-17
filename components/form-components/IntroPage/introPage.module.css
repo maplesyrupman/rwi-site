@@ -1,0 +1,14 @@
+.pageContainer {
+    min-height: 100vh;
+    max-height: 100vh;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contentContainer {
+    max-width: fit-content;
+    padding-bottom: 5rem;
+}
