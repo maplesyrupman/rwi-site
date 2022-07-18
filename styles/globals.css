@@ -152,6 +152,10 @@ p, div, a, li, span, select, option {
   text-align: center;
 }
 
+.fullPage {
+  min-height: 100vh;
+}
+
 
 /* ------- random shit from site 1.0 ------- */
 

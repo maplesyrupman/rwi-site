@@ -1,15 +1,10 @@
-/* Question Page */
-.questionPageContainer {
-    width: 100%;
-    background: #F3F5F7;
-}
-
 .page {
     display: flex;
     flex-direction: column;
     gap: 2.5rem;
     width: fit-content;
     margin: 0 auto;
+    width: 500px;
 }
 
 .questions {
@@ -30,22 +25,20 @@
     align-items: center;
 }
 
-/* Info Page */
-
 .pageContainer {
-    min-height: 100vh;
-    max-height: 100vh;
-    height: 100vh;
-
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    background: #F3F5F7;
+    align-self: center;
 }
 
-.contentContainer {
+/* .contentContainer {
     max-width: fit-content;
     padding-bottom: 5rem;
-}
+} */
 
 /* Individual Form Elements */
 
@@ -58,7 +51,7 @@
 .input {
     padding: 0.5rem 1rem;
     max-width: 500px;
-    background:var(--light);
+    background: var(--light);
     border: 1px solid var(--grey-one);
     color: var(--dark);
     border-radius: 10px;
@@ -66,7 +59,7 @@
 
 .input:focus {
     outline: 2px solid var(--secondary-one);
-} 
+}
 
 .long {
     height: 10rem;

@@ -1,12 +1,12 @@
 import styles from './styles.module.css';
 
-import Button from '../../Button'
-import Link from '../../Button/link'
+import Button from '../Button'
+import Link from '../Button/link'
 
-import { FormPageProps,Question } from '../../../types'
-import getFormComponent from '../../../lib/getFormComponent'
-import { selectSection } from '../../../redux/slicers/discoverySlice'
-import { useAppSelector } from '../../../redux/hooks'
+import { FormPageProps,Question } from '../../types'
+import getFormComponent from '../../lib/getFormComponent'
+import { selectSection } from '../../redux/slicers/discoverySlice'
+import { useAppSelector } from '../../redux/hooks'
 
 
 
@@ -14,8 +14,8 @@ export default function FormPage({ pageNum, change, changePage, isReview }: Form
     let {questions, title} = useAppSelector(selectSection(pageNum))
 
     return (
-        <div className={styles.questionPageContainer}>
-            <div>
+        <div className={styles.pageContainer}>
+            <div style={{'paddingBottom':'3.5rem'}}>
                 <h2 className={`txtBlue txtCenter`}>
                     {title}
                 </h2>

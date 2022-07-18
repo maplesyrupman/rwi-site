@@ -1,5 +1,5 @@
-import Button from '../../Button'
-import styles from '../styles.module.css'
+import Button from '../Button'
+import styles from './styles.module.css'
 import Image from 'next/image'
 
 type Props = {
@@ -14,7 +14,7 @@ type Props = {
 export default function IntroPage({title, paras, image, imgW, imgH, changePage}: Props) {
 
     return (
-        <div className={styles.pageContainer}>
+        <div className={`${styles.pageContainer}`}>
             <div className={`${styles.contentContainer} txtCenter`}>
                 {/* <div>
                     <Image src={image} layout='responsive' width={imgW} height={height} alt='logo' />
