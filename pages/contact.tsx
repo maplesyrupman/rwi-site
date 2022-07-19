@@ -7,6 +7,7 @@ import Footer from "../components/Footer";
 
 import { FaEnvelopeSquare, FaWhatsappSquare, FaTwitterSquare, FaInstagramSquare, FaFacebookSquare, FaLinkedin } from 'react-icons/fa'
 import styles from '../styles/Contact.module.css'
+import ContactForm from "../components/ContactForm";
 
 export default function Contact() {
     return (
@@ -44,14 +45,7 @@ export default function Contact() {
                     </div>
 
                     {/* Form */}
-                    <div className='formCon flexColumn gapMD'>
-                        <ShortAnswer id='name' label='Name' placeholder='Name' required={true} />
-                        <ShortAnswer id='email' label='Email' placeholder='example@email.com' required={true} />
-                        <LongAnswer id='message' label='Message' placeholder='Message...' required={true} change={()=> console.log('hi')} validate={() => {return true}} />
-                        <div>
-                            <Button text='Submit Inquiry' type='submit' btnStyle='primary' />
-                        </div>
-                    </div>
+                    <ContactForm/>
                 </div>
             </section>
 

@@ -1,3 +1,4 @@
+import ContactForm from '../../components/ContactForm';
 import Footer from '../../components/Footer';
 import Hero from '../../components/Hero';
 import Nav from '../../components/Nav';
@@ -81,8 +82,10 @@ export default function Service ({ serviceData }:any) {
             </section>
 
             <section className='sectionLG sectionWithBG bgSecondaryTwo'>
-                <h2 className='txtRed textCenter'>Got an idea? Lets hear it!</h2>
-                
+                <div className='contentMD flexColumn alignCenter justifyCenter'>
+                    <h2 className='txtRed textCenter sectionTitle'>Got an idea? Lets hear it!</h2>
+                    <ContactForm/>
+                </div>
             </section>
 
             <Footer/>
