@@ -1,12 +1,10 @@
-import Hero from "../components/Hero";
-import Link from "../components/Button/link";
-import Cta from "../components/Cta";
-import styles from '../styles/Solutions.module.css'
-import Image from "next/image";
-import heroImg from '../public/Our-Solutions.png'
-import Footer from "../components/Footer";
-import Nav from "../components/Nav";
-import { useState, useEffect } from "react";
+import Hero from "../../components/Hero";
+import Link from "../../components/Button/link";
+import Cta from "../../components/Cta";
+import styles from '../../styles/Solutions.module.css'
+import heroImg from '../../public/Our-Solutions.png'
+import Footer from "../../components/Footer";
+import Nav from "../../components/Nav";
 
 export default function Solution() {
 
