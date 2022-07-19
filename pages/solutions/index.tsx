@@ -11,57 +11,57 @@ export default function Solution() {
     const marketingServices = [
         {
             name: 'Brand Design',
-            href: '/brand-design'
+            href: '/solutions/brand-design'
         },
         {
             name: 'Social Media Advertising',
-            href: '/social-media-advertising'
+            href: '/solutions/social-media-advertising'
         },
         {
             name: 'Search Engine Optimization (SEO)',
-            href: '/seo'
+            href: '/solutions/seo'
         },
         {
             name: 'Search Engine Marketing (SEM)',
-            href: '/sem'
+            href: '/solutions/sem'
         },
         {
             name: 'Social Media Management (SMM)',
-            href: '/social-media-management'
+            href: '/solutions/social-media-management'
         }
     ]
 
     const developmentServices = [
         {
             name: 'Web Design',
-            href: '/web-design'
+            href: '/solutions/web-design'
         },
         {
             name: 'Custom Web Application (Full Stack)',
-            href: '/custom-web-app'
+            href: '/solutions/custom-web-app'
         },
         {
             name: 'Shopify Websites',
-            href: '/shopify-websites'
+            href: '/solutions/shopify'
         },
         {
             name: 'Wordpress Websites',
-            href: '/wordpress-websites'
+            href: '/solutions/wordpress'
         }
     ]
 
     const strategyServices = [
         {
             name: 'Brand Strategy',
-            href: '/brand-strategy'
+            href: '/solutions/brand-strategy'
         },
         {
             name: 'Ecommerce Strategy',
-            href: '/ecommerce-strategy'
+            href: '/solutions/ecommerce-strategy'
         },
         {
             name: 'Digital Marketing Strategy',
-            href: '/digital-marketing-strategy'
+            href: '/solutions/digital-marketing-strategy'
         }
     ]
 

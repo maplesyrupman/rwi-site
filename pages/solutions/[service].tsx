@@ -4,6 +4,8 @@ import Hero from '../../components/Hero';
 import Nav from '../../components/Nav';
 import { getServicePaths, getServiceData } from '../../lib/services'
 
+import image from '../../public/Innovate_Illustration.png'
+
 export async function getStaticPaths() {
     const paths = getServicePaths();
 
@@ -32,7 +34,7 @@ export default function Service ({ serviceData }:any) {
             <Hero
             image={
                 {
-                    src: serviceData.image,
+                    src: image,
                     alt: '',
                     width: '345px',
                     height: '345px'
@@ -73,15 +75,14 @@ export default function Service ({ serviceData }:any) {
                 </svg>
                 <div className='flexColumn gapMD'>
                     <h3 className='txtBlue'>{serviceData.heading}</h3>
-                    {serviceData.paragraphs.map((p: string) => {
-                        return (
-                            <p>{p}</p>
-                        )
-                    })}
+                    <div className='flexColumn gapSm'>
+                        <p>{serviceData.paraOne}</p>
+                        <p>{serviceData.paraTwo}</p>
+                    </div>
                 </div>
             </section>
 
-            <section className='sectionLG sectionWithBG bgSecondaryTwo'>
+            <section className='sectionLG sectionWithBg bgSecondaryTwo'>
                 <div className='contentMD flexColumn alignCenter justifyCenter'>
                     <h2 className='txtRed textCenter sectionTitle'>Got an idea? Lets hear it!</h2>
                     <ContactForm/>
