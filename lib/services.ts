@@ -1,7 +1,6 @@
 import data from './services.json'
 
 export function getServicePaths() {
-
     return data.services.map(service => {
         return {
             params: {
@@ -13,7 +12,7 @@ export function getServicePaths() {
 
 export function getServiceData(service:string) {
     const serviceData =  data.services.filter(s => {
-        return s.path = service;
+        return s.path == service;
     } )
 
     return {

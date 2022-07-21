@@ -26,8 +26,9 @@ export async function getStaticProps({ params }:any) {
     }
 }
 
-export default function Service ({ serviceData }:any) {
-
+export default function Service ({ serviceData: data }:any) {
+    console.log(data)
+    const serviceData = data.serviceData[0]
     return (
         <div>
             <Nav/>
@@ -58,8 +59,8 @@ export default function Service ({ serviceData }:any) {
             ]}
             />
 
-            <section className='sectionLG contentMD flexColumn alignCenter justifyCenter gapMD'>
-                <svg width="112" height="350" viewBox="0 0 112 350" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <section className='sectionLG contentMD flexRow alignCenter justifyCenter gapMD'>
+                <svg className='bracket' width="112" height="350" viewBox="0 0 112 350" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M72.8102 66.6259V82.1746C72.8102 101.61 72.1883 116.304 71.0221 126.255C69.856 136.128 
                         66.3575 145.302 60.6823 153.698C54.9293 162.095 45.6001 169.169 32.617 174.922C47.8546 180.908 
                         58.35 190.004 64.103 202.055C69.856 214.183 72.8102 230.897 72.8102 252.432V286.251C72.8102 
@@ -73,11 +74,11 @@ export default function Service ({ serviceData }:any) {
                         28.5318 91.1576 29.3869 86.182 31.0973C81.2065 32.8076 77.7858 36.2283 75.8422 41.4371C73.8209 
                         46.4904 72.8102 54.8867 72.8102 66.6259Z" fill="#CC2C12"/>
                 </svg>
-                <div className='flexColumn gapMD'>
-                    <h3 className='txtBlue'>{serviceData.heading}</h3>
-                    <div className='flexColumn gapSm'>
-                        <p>{serviceData.paraOne}</p>
-                        <p>{serviceData.paraTwo}</p>
+                <div className='flexColumn gapMD width90'>
+                    <h3 className='txtBlue textCenter'>{serviceData.heading}</h3>
+                    <div className='flexColumn gapSM'>
+                        <p>{serviceData.paragraphs.paraOne}</p>
+                        <p>{serviceData.paragraphs.paraTwo}</p>
                     </div>
                 </div>
             </section>
