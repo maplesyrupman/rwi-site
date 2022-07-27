@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import Picklist from '../Picklist'
 import {FormQuestionProps, Question} from '../../../types'
 
@@ -25,27 +25,25 @@ export default function DatePick({ question, change, validate }: FormQuestionPro
     
     const [date, setDate] = useState(value)
 
-    useEffect(() => {
-        change(id, date)
-    }, [date, change, id])
-
     function updateDate(unit: string, value: string) {
         let newDate:{year:string, month:string, day:string}
         switch (unit) {
             case 'day':
                 newDate = { ...date, day: value }
                 setDate(newDate)
+                change(id, newDate)
                 break
             case 'month':
                 newDate = { ...date, month: value }
                 setDate(newDate)
+                change(id, newDate)
                 break
             case 'year':
                 newDate = { ...date, year: value }
                 setDate(newDate)
+                change(id, newDate)
                 break
         }
-
     }
 
     const dayQuestion:Question = {
