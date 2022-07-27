@@ -279,7 +279,7 @@ p {
 }
 
 .sectionLG {
-  margin-top: var(--spacing-twentyfive);
+  margin-top: var(--spacing-twenty);
 }
 
 .noMargin {
@@ -310,6 +310,18 @@ p {
   width: 100%;
 }
 
+.width90 {
+  width: 90%;
+}
+
+.width80 {
+  width: 80%;
+}
+
+.width70 {
+  width: 70%;
+}
+
 .width60 {
   max-width: 60%;
 }
@@ -334,6 +346,12 @@ p {
 @media screen and (max-width: 1024px) {
   .contentMD {
     max-width: 800px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .bracket {
+      display: none;
   }
 }
 
