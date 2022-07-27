@@ -86,7 +86,7 @@ export default function Service ({ serviceData: data }:any) {
             <section className='sectionLG sectionWithBg bgSecondaryTwo'>
                 <div className='contentMD flexColumn alignCenter justifyCenter'>
                     <h2 className='txtRed textCenter sectionTitle'>Got an idea? Lets hear it!</h2>
-                    <ContactForm/>
+                    {/* <ContactForm/> */}
                 </div>
             </section>
 
