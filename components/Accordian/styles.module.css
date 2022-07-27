@@ -1,0 +1,60 @@
+.accordian {
+    width: 100%;
+    background: linear-gradient(105.37deg, #02033C 0%, #5C5C99 100%);
+    border: none;
+    padding: var(--spacing-six);
+}
+
+.titleCon {
+    display: flex;
+    justify-content: space-between;
+    color: var(--light);
+}
+
+.accordianTxt {
+    height: 0;
+    opacity: 0;
+    text-align: left;
+    margin: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.active {
+    height: var(--spacing-five);
+    opacity: 1;
+    margin-top: var(--spacing-three);
+}
+
+.arrow {
+    margin-top: 5px;
+    width: 2rem;
+    height: 2rem;
+    transition: all 0.3s ease-in;
+}
+
+.rotate {
+    transform: rotate(180deg);
+}
+
+@media screen and (max-width: 1200px) {
+    .active {
+        height: var(--spacing-seven);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .active {
+        height: var(--spacing-nine);
+        overflow: scroll;
+    }
+
+    .arrow {
+        margin-top: 0;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .accordian {
+        padding: var(--spacing-five);
+    }
+}

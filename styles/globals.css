@@ -23,32 +23,41 @@
   --success-bg: #D3DED7;
 }
 
+body {
+  background: var(--light);
+  color: var(--dark);
+}
+
 .bgBlue {
-  background-color: #03053E !important;
+  background-color: var(--rwi-blue) !important;
 }
 
 .bgRed {
-  background-color: #CC2C12;
+  background-color: var(--rwi-red);
 }
 
 .bgWhite {
-  background-color: #F3F5F7;
+  background-color: var(--light);
+}
+
+.bgSecondaryTwo {
+  background-color: var(--secondary-two);
 }
 
 .txtRed {
-  color: #CC2C12
+  color: var(--rwi-red);
 }
 
 .txtWhite {
-  color: #E5E5E5;
+  color: var(--light);
 }
 
 .txtBlue {
-  color: #03053E;
+  color: var(--rwi-blue);
 }
 
 .txtBlack {
-  color: #1A1A1A;
+  color: var(--dark);
 }
 
 /* ------- text ------- */
@@ -94,8 +103,20 @@ h1, h2, h3, h4, h5, h6, p, div, input, label {
   line-height: 64px !important;
 }
 
-.decorative {
+.decorativeOne {
+  font-size: 72px;
   font-style: oblique;
+  line-height: 80px;
+}
+
+.decorativeTwo {
+  font-size: 48px;
+  line-height: 56px;
+  font-style: oblique;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 800;
 }
 
 h1 {
@@ -134,6 +155,10 @@ p, div, a, li, span, select, option {
   line-height: 24px;
 }
 
+p {
+  margin: 0;
+}
+
 .bold {
   font-weight: 700;
 }
@@ -156,13 +181,241 @@ p, div, a, li, span, select, option {
   min-height: 100vh;
 }
 
+.svgIcon {
+  font-size: 28px;
+}
+
+.hidden {
+  display: none;
+}
+
+@media screen and (max-width: 1024px) {
+  .decorativeOne {
+    font-size: 64px;
+    line-height: 72px;
+  }
+
+  h1 {
+    font-size: 40px;
+    line-height: 48px;
+  }
+}
+
+@media screen and (max-width: 860px) {
+  .decorativeOne {
+    font-size: 48px;
+    line-height: 56px;
+  }
+
+  .textCenterMD {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  h3 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  h2 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+}
+
+
+/* Spacing */
+
+:root {
+  --spacing-one: 0.5rem;
+  --spacing-two: 1rem;
+  --spacing-three: 1.5rem;
+  --spacing-four: 2rem;
+  --spacing-five: 2.5rem;
+  --spacing-six: 3rem;
+  --spacing-seven: 3.5rem;
+  --spacing-eight: 4rem;
+  --spacing-nine: 4.5rem;
+  --spacing-ten: 5rem;
+  --spacing-eleven: 6rem;
+  --spacing-twelve: 6.5rem;
+  --spacing-thirteen: 7rem;
+  --spacing-fourteen: 7.5rem;
+  --spacing-fifteen: 8rem;
+  --spacing-sixteen: 8.5rem;
+  --spacing-seventeen: 9rem;
+  --spacing-eighteen: 9.5rem;
+  --spacing-twenty: 10rem;
+  --spacing-twentyone: 10.5rem;
+  --spacing-twentytwo: 11rem;
+  --spacing-twentythree: 11.5rem;
+  --spacing-twentyfour: 12rem;
+  --spacing-twentyfive: 12.5rem;
+}
+
+.pageGutters {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.sectionTitle {
+  margin-bottom: var(--spacing-eight);
+}
+
+.contentMD {
+  width: 80%;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.sectionSM {
+  margin-top: var(--spacing-ten);
+}
+
+.sectionMD {
+  margin-top: var(--spacing-fifteen);
+}
+
+.sectionLG {
+  margin-top: var(--spacing-twentyfive);
+}
+
+.noMargin {
+  margin: 0;
+}
+
+.sectionWithBg {
+  padding: var(--spacing-twelve) 0;
+}
+
+.paddingXs {
+  padding: var(--spacing-one);
+}
+
+.paddingSm {
+  padding: var(--spacing-three);
+}
+
+.paddingMd {
+  padding: var(--spacing-five);
+}
+
+.paddingLg {
+  padding: var(--spacing-seven);
+}
+
+.width100 {
+  width: 100%;
+}
+
+.width60 {
+  max-width: 60%;
+}
+
+.width50 {
+  max-width: 50%;
+}
+
+.width40 {
+  max-width: 40%;
+}
+
+.rounded {
+  border-radius: 10px;
+}
+
+.formCon {
+  width: 100%;
+  max-width: 500px;
+}
+
+@media screen and (max-width: 1024px) {
+  .contentMD {
+    max-width: 800px;
+  }
+}
+
+/* Flex Utilities */
+
+.flexRow {
+  display: flex;
+  flex-direction: row;
+}
+
+.flexRowReverse {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.flexColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+.gapSM {
+  gap: var(--spacing-one);
+}
+
+.gapMD {
+  gap: var(--spacing-three);
+}
+
+.gapLG {
+  gap: var(--spacing-five);
+}
+
+.gapXL {
+  gap: var(--spacing-seven);
+}
+
+.gapXXL {
+  gap: var(--spacing-fifteen);
+}
+
+.alignCenter {
+  align-items: center;
+}
+
+.alignStart {
+  align-items: flex-start;
+}
+
+.justifyCenter {
+  justify-content: center;
+}
+
+.justifyBetween {
+  justify-content: space-between;
+}
+
+.justifyEnd {
+  justify-content: flex-end;
+}
+
+@media screen and (max-width: 1024px) {
+  .flexColumnLG {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 860px) {
+  .flexColumnMD {
+    flex-direction: column;
+  }
+
+  .flexColumnReverseMD {
+    flex-direction: column-reverse;
+  }
+
+  .alignCenterMD {
+    align-items: center;
+  }
+}
 
 /* ------- random shit from site 1.0 ------- */
 
-
-.gutters {
-  padding: 0 15% !important;
-}
 
 .btn {
   padding: 1rem 3rem;
