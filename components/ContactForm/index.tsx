@@ -17,8 +17,7 @@ export default function ContactForm() {
     }
 
     return (
-        <form>
-            <div className='formCon flexColumn gapMD'>
+        <form className='formCon flexColumn gapMD'>
                 <ShortAnswer
                     question={{ id: 'name', placeholder: 'Name', label: 'Name', type: 'short', required: true }}
                     change={handleChange}
@@ -34,7 +33,6 @@ export default function ContactForm() {
                 <div>
                     <Button text='Submit Inquiry' type='submit' btnStyle='primary' />
                 </div>
-            </div>
         </form>
     )
 }
