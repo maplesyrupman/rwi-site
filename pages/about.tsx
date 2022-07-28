@@ -28,7 +28,7 @@ type HeroContent = {
     direction: 'row' | 'row-reverse',
     title: string,
     para?: string,
-    buttons?: ButtonObj[] 
+    buttons?: ButtonObj[]
 }
 
 export default function About() {
@@ -79,13 +79,12 @@ export default function About() {
                         109.851 40.3913 96.2461V78.9094C40.3913 58.6184 41.9461 42.992 45.0559 32.0302C48.1656 21.0684 
                         54.2296 12.9831 63.17 7.77432C72.1105 2.56553 85.1714 0 102.275 0H111.682V28.5318H107.795C98.3877 
                         28.5318 91.1576 29.3869 86.182 31.0973C81.2065 32.8076 77.7858 36.2283 75.8422 41.4371C73.8209 
-                        46.4904 72.8102 54.8867 72.8102 66.6259Z" fill="#02033C"/>
+                        46.4904 72.8102 54.8867 72.8102 66.6259Z" fill="#02033C" />
                     </svg>
                     <div className={`txtCenter flexColumn alignCenter justifyCenter gapLG ${styles.mission}`}>
-                        <h1 className='decorativeOne txtRed'>Bridge the Gap</h1>
+                        <h1 className='decorativeOne txtRed'>Our Mission</h1>
                         <p className='bold'>
-                        A really interesting and insightful mission statement. One that tells people what we do, 
-                        what motivates us and is flexible enough to stay relevant as we evolve.
+                            To provide businesses with the technologies and digital strategies necessary to convert their target audience into loyal, paying customers.
                         </p>
                     </div>
                     <svg className={styles.bracket} width="113" height="352" viewBox="0 0 113 352" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -100,7 +99,7 @@ export default function About() {
                         110.479 72.3796 96.7961V79.3603C72.3796 58.9534 70.8158 43.2377 67.6883 32.2132C64.5608 21.1888 
                         58.4622 13.0573 49.4706 7.81875C40.479 2.58019 27.3435 0 10.1423 0H0.681641V28.6948H4.59101C14.0517 
                         28.6948 21.3231 29.5549 26.3271 31.275C31.3311 32.9951 34.7714 36.4354 36.726 41.6739C38.7589 
-                        46.7561 39.7754 55.2004 39.7754 67.0067Z" fill="#CC2C12"/>
+                        46.7561 39.7754 55.2004 39.7754 67.0067Z" fill="#CC2C12" />
                     </svg>
                 </div>
             </section>
@@ -109,77 +108,78 @@ export default function About() {
             <section className='sectionLG contentMD'>
                 <h2 className='txtRed txtCenter sectionTitle'>Our Values</h2>
                 <div className='flexColumn alignCenter justifyCenter gapLG'>
-                    <Accordian title='Abstraction' text='Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur aliquet quam id dui posuere blandit. Nulla quis lorem ut libero malesuada feugiat.' />
-                    <Accordian title='Accessiblity' text='Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur aliquet quam id dui posuere blandit. Nulla quis lorem ut libero malesuada feugiat.' />
-                    <Accordian title='Communication' text='Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur aliquet quam id dui posuere blandit. Nulla quis lorem ut libero malesuada feugiat.' />
-                    <Accordian title='Understanding' text='Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur aliquet quam id dui posuere blandit. Nulla quis lorem ut libero malesuada feugiat.' />
+                    <Accordian title='Transparency' text='No one likes to be left in the dark, especially when it comes to decisions that significantly impact their business. While you may not need (or want) to know about the nitty gritty details of SEO or how HTTPS requests work, you deserve to be informed on the tactics and strategies we employ and why we&apos;ve chosen them.' />
+                    <Accordian title='Collaboration' text='A partnership between your business and RWI Labs brings together two distinct but complementary groups of experts. You and your staff know the ins and outs of your industry, while we have extensive experience in the world of Web Development and Digital Marketing. By working together, we are able to devise and implement strategies that are both efficient and inline with your business goals.' />
+                    <Accordian title='Inclusivity' text='At RWI Labs, we believe that everybody deserves to be included in marketing. That&apos;s why we bake accessibility into our web design and keep diverse representation at the forefront of our minds when developing marketing materials. This way, the minority groups in your target audience are not made to feel excluded or unimportant.' />
                 </div>
             </section>
 
             {/* Our Process */}
             <section className='sectionLG contentMD'>
-                    <h2 className='txtRed txtCenter sectionTitle'>Our Process</h2>
+                <h2 className='txtRed txtCenter sectionTitle'>Our Process</h2>
 
-                    <div className='flexColumn'>
-                        <div className='flexRow alignCenter justifyBetween gapLG flexColumnReverseMD'>
-                            <div className={styles.processTxt}>
-                                <h3 className='txtBlue'>Read</h3>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                                    Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor 
-                                    sit amet aliquam vel, ullamcorper sit amet ligula. Donec sollicitudin molestie malesuada. Nulla quis lorem ut 
-                                    libero malesuada feugiat. Donec rutrum congue leo eget malesuada.
-                                </p>
-                            </div>
-                            <div className={styles.processImg}>
-                                <Image
+                <div className='flexColumn'>
+                    <div className='flexRow alignCenter justifyBetween gapLG flexColumnReverseMD'>
+                        <div className={styles.processTxt}>
+                            <h3 className='txtBlue'>Read</h3>
+                            <p>
+                                Our team is always reading ahead to stay informed on the ever evolving
+                                digital world. From consumer and competitor analysis to legislative
+                                developments affecting how companies operate online, we keep up to date
+                                with our research to prevent blindspots in our digital strategies. This
+                                way, you can rest assured that your business is both competitive and compliant.
+                            </p>
+                        </div>
+                        <div className={styles.processImg}>
+                            <Image
                                 alt=''
                                 width='500px'
                                 height='500px'
                                 src={readImg}
-                                />
-                            </div>
+                            />
                         </div>
+                    </div>
 
-                        <div className='flexRowReverse alignCenter justifyBetween gapLG sectionMD flexColumnReverseMD'>
-                            <div className={styles.processTxt}>
-                                <h3 className='txtBlue'>Write</h3>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                                    Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor 
-                                    sit amet aliquam vel, ullamcorper sit amet ligula. Donec sollicitudin molestie malesuada. Nulla quis lorem ut 
-                                    libero malesuada feugiat. Donec rutrum congue leo eget malesuada.
-                                </p>
-                            </div>
-                            <div className={styles.processImg}>
-                                <Image
+                    <div className='flexRowReverse alignCenter justifyBetween gapLG sectionMD flexColumnReverseMD'>
+                        <div className={styles.processTxt}>
+                            <h3 className='txtBlue'>Write</h3>
+                            <p>
+                                We write to connect your business with its customers in a way that persuasively
+                                conveys information while providing a positive user experience. Code, copy, and
+                                data driven reports that outline the progress of your business&apos;s digital marketing
+                                endeavors are our specialties.
+                            </p>
+                        </div>
+                        <div className={styles.processImg}>
+                            <Image
                                 alt=''
                                 width='500px'
                                 height='500px'
                                 src={writeImg}
-                                />
-                            </div>
+                            />
                         </div>
+                    </div>
 
-                        <div className='flexRow alignCenter justifyBetween gapLG sectionMD flexColumnReverseMD'>
-                            <div className={styles.processTxt}>
-                                <h3 className='txtBlue'>Innovate</h3>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                                    Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor 
-                                    sit amet aliquam vel, ullamcorper sit amet ligula. Donec sollicitudin molestie malesuada. Nulla quis lorem ut 
-                                    libero malesuada feugiat. Donec rutrum congue leo eget malesuada.
-                                </p>
-                            </div>
-                            <div className={styles.processImg}>
-                                <Image
+                    <div className='flexRow alignCenter justifyBetween gapLG sectionMD flexColumnReverseMD'>
+                        <div className={styles.processTxt}>
+                            <h3 className='txtBlue'>Innovate</h3>
+                            <p>
+                                “Creativity is thinking up new things. Innovation is doing new things” - Theodore Levitt
+                            </p>
+                            <p>
+                                A strategy combining research and creativity, powered by digital assets developed with your target audience in mind, empowers your business to explore new horizons with confidence.
+
+                            </p>
+                        </div>
+                        <div className={styles.processImg}>
+                            <Image
                                 alt=''
                                 width='500px'
                                 height='500px'
                                 src={innovateImg}
-                                />
-                            </div>
+                            />
                         </div>
+                    </div>
                 </div>
             </section>
 
@@ -192,33 +192,33 @@ export default function About() {
                     <div className='flexRow justifyBetween alignCenter flexColumnMD gapLG'>
                         <div className='flexColumn gapMD'>
                             <div>
-                                <Image 
-                                alt='Portrait of Samantha, co-founder of RWI Labs Digital Marketing Agency.'
-                                width='345px'
-                                height='520'
-                                src={samImg}
+                                <Image
+                                    alt='Portrait of Samantha, co-founder of RWI Labs Digital Marketing Agency.'
+                                    width='345px'
+                                    height='520'
+                                    src={samImg}
                                 />
                             </div>
 
                             <div className='flexColumn alignCenter gapSM'>
                                 <h3 className='txtBlue'>Samantha Urwin</h3>
-                                <Link text='LinkedIn' href='https://www.linkedin.com/in/samanthaurwin/' linkStyle='iconRed' destination='external' icon={<FaLinkedin aria-hidden={true}/>} />
+                                <Link text='LinkedIn' href='https://www.linkedin.com/in/samanthaurwin/' linkStyle='iconRed' destination='external' icon={<FaLinkedin aria-hidden={true} />} />
 
                             </div>
                         </div>
                         <div className='flexColumn gapMD'>
                             <div>
-                                <Image 
-                                alt='Portrait of Samantha, co-founder of RWI Labs Digital Marketing Agency.'
-                                width='345px'
-                                height='520'
-                                src={willImg}
+                                <Image
+                                    alt='Portrait of Samantha, co-founder of RWI Labs Digital Marketing Agency.'
+                                    width='345px'
+                                    height='520'
+                                    src={willImg}
                                 />
                             </div>
 
                             <div className='flexColumn alignCenter gapSM'>
                                 <h3 className='txtBlue'>William Weiland</h3>
-                                <Link text='LinkedIn' href='https://www.linkedin.com/in/william-weiland/' linkStyle='iconRed' destination='external' icon={<FaLinkedin aria-hidden={true}/>} />
+                                <Link text='LinkedIn' href='https://www.linkedin.com/in/william-weiland/' linkStyle='iconRed' destination='external' icon={<FaLinkedin aria-hidden={true} />} />
                             </div>
                         </div>
                     </div>
