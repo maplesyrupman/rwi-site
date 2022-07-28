@@ -34,7 +34,7 @@ export default function Contact() {
                         </div>
 
                         <div className='flexColumn gapMD alignCenterMD'>
-                            <h4 className='txtBlue'>We'll keep you posted!</h4>
+                            <h4 className='txtBlue'>We&apos;ll keep you posted!</h4>
                             <div className='flexRow gapMD alignCenter'>
                             <Link text='Twitter' href='https://twitter.com/rwi_labs' linkStyle='iconRed' destination='external' icon={<FaTwitterSquare aria-hidden={true} />} />
                             <Link text='Instagram' href='https://www.instagram.com/rwilabs.io/' linkStyle='iconRed' destination='external' icon={<FaInstagramSquare aria-hidden={true} />} />
@@ -48,9 +48,7 @@ export default function Contact() {
                     <ContactForm/>
                 </div>
             </section>
-
             <Footer />
-
         </div>
     )
 }
