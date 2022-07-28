@@ -67,7 +67,7 @@ export default function About() {
             {/* Mission Statement */}
             <section className='sectionLG contentMD'>
                 <div className='flexRow alignCenter gapMD'>
-                    <svg className={styles.bracket} width="112" height="350" viewBox="0 0 112 350" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg className='bracket' width="112" height="350" viewBox="0 0 112 350" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M72.8102 66.6259V82.1746C72.8102 101.61 72.1883 116.304 71.0221 126.255C69.856 136.128 
                         66.3575 145.302 60.6823 153.698C54.9293 162.095 45.6001 169.169 32.617 174.922C47.8546 180.908 
                         58.35 190.004 64.103 202.055C69.856 214.183 72.8102 230.897 72.8102 252.432V286.251C72.8102 
@@ -87,7 +87,7 @@ export default function About() {
                             To provide businesses with the technologies and digital strategies necessary to convert their target audience into loyal, paying customers.
                         </p>
                     </div>
-                    <svg className={styles.bracket} width="113" height="352" viewBox="0 0 113 352" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg className='bracket' width="113" height="352" viewBox="0 0 113 352" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M39.7754 67.0067V82.6442C39.7754 102.191 40.4009 116.968 41.5737 126.976C42.7465 136.906 
                         46.2649 146.132 51.9726 154.577C57.7585 163.021 67.141 170.136 80.1983 175.922C64.8736 181.942 
                         54.3183 191.09 48.5324 203.209C42.7465 215.406 39.7754 232.217 39.7754 253.875V287.886C39.7754 

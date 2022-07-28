@@ -1,0 +1,123 @@
+{
+    "services": [
+        {
+            "path": "brand-design",
+            "title": "Brand Design",
+            "image": "",
+            "heading": "Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Proin eget tortor risus.",
+            "paragraphs": {
+                "paraOne": "Quisque velit nisi, pretium ut lacinia in, elementum id enim. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Donec rutrum congue leo eget malesuada. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Vivamus suscipit tortor eget felis porttitor volutpat.",
+                "paraTwo": "Quisque velit nisi, pretium ut lacinia in, elementum id enim. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Donec rutrum congue leo eget malesuada. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Vivamus suscipit tortor eget felis porttitor volutpat."
+            }
+        },
+        {
+            "path": "social-media-advertising",
+            "title": "Social Media Advertising",
+            "image": "",
+            "heading": "Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Proin eget tortor risus.",
+            "paragraphs": {
+                "paraOne": "Quisque velit nisi, pretium ut lacinia in, elementum id enim. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Donec rutrum congue leo eget malesuada. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Vivamus suscipit tortor eget felis porttitor volutpat.",
+                "paraTwo": "Quisque velit nisi, pretium ut lacinia in, elementum id enim. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Donec rutrum congue leo eget malesuada. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Vivamus suscipit tortor eget felis porttitor volutpat."
+            }
+        },
+        {
+            "path": "seo",
+            "title": "Search Engine Optimization",
+            "image": "",
+            "heading": "Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Proin eget tortor risus.",
+            "paragraphs": {
+                "paraOne": "Quisque velit nisi, pretium ut lacinia in, elementum id enim. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Donec rutrum congue leo eget malesuada. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Vivamus suscipit tortor eget felis porttitor volutpat.",
+                "paraTwo": "Quisque velit nisi, pretium ut lacinia in, elementum id enim. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Donec rutrum congue leo eget malesuada. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Vivamus suscipit tortor eget felis porttitor volutpat."
+            }
+        },
+        {
+            "path": "sem",
+            "title": "Search Engine Marketing",
+            "image": "",
+            "heading": "Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Proin eget tortor risus.",
+            "paragraphs": {
+                "paraOne": "Quisque velit nisi, pretium ut lacinia in, elementum id enim. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Donec rutrum congue leo eget malesuada. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Vivamus suscipit tortor eget felis porttitor volutpat.",
+                "paraTwo": "Quisque velit nisi, pretium ut lacinia in, elementum id enim. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Donec rutrum congue leo eget malesuada. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Vivamus suscipit tortor eget felis porttitor volutpat."
+            }
+        },
+        {
+            "path": "social-media-management",
+            "title": "Social Media Management",
+            "image": "",
+            "heading": "Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Proin eget tortor risus.",
+            "paragraphs": {
+                "paraOne": "Quisque velit nisi, pretium ut lacinia in, elementum id enim. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Donec rutrum congue leo eget malesuada. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Vivamus suscipit tortor eget felis porttitor volutpat.",
+                "paraTwo": "Quisque velit nisi, pretium ut lacinia in, elementum id enim. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Donec rutrum congue leo eget malesuada. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Vivamus suscipit tortor eget felis porttitor volutpat."
+            }
+        },
+        {
+            "path": "web-design",
+            "title": "Web Design",
+            "image": "",
+            "heading": "Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Proin eget tortor risus.",
+            "paragraphs": {
+                "paraOne": "Quisque velit nisi, pretium ut lacinia in, elementum id enim. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Donec rutrum congue leo eget malesuada. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Vivamus suscipit tortor eget felis porttitor volutpat.",
+                "paraTwo": "Quisque velit nisi, pretium ut lacinia in, elementum id enim. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Donec rutrum congue leo eget malesuada. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Vivamus suscipit tortor eget felis porttitor volutpat."
+            }
+        },
+        {
+            "path": "custom-web-app",
+            "title": "Custom Web Application",
+            "image": "",
+            "heading": "Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Proin eget tortor risus.",
+            "paragraphs": {
+                "paraOne": "Quisque velit nisi, pretium ut lacinia in, elementum id enim. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Donec rutrum congue leo eget malesuada. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Vivamus suscipit tortor eget felis porttitor volutpat.",
+                "paraTwo": "Quisque velit nisi, pretium ut lacinia in, elementum id enim. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Donec rutrum congue leo eget malesuada. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Vivamus suscipit tortor eget felis porttitor volutpat."
+            }
+        },        {
+            "path": "shopify",
+            "title": "Shopify Development",
+            "image": "",
+            "heading": "Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Proin eget tortor risus.",
+            "paragraphs": {
+                "paraOne": "Quisque velit nisi, pretium ut lacinia in, elementum id enim. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Donec rutrum congue leo eget malesuada. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Vivamus suscipit tortor eget felis porttitor volutpat.",
+                "paraTwo": "Quisque velit nisi, pretium ut lacinia in, elementum id enim. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Donec rutrum congue leo eget malesuada. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Vivamus suscipit tortor eget felis porttitor volutpat."
+            }
+        },
+        {
+            "path": "wordpress",
+            "title": "Wordpress Development",
+            "image": "",
+            "heading": "Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Proin eget tortor risus.",
+            "paragraphs": {
+                "paraOne": "Quisque velit nisi, pretium ut lacinia in, elementum id enim. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Donec rutrum congue leo eget malesuada. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Vivamus suscipit tortor eget felis porttitor volutpat.",
+                "paraTwo": "Quisque velit nisi, pretium ut lacinia in, elementum id enim. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Donec rutrum congue leo eget malesuada. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Vivamus suscipit tortor eget felis porttitor volutpat."
+            }
+        },
+        {
+            "path": "brand-strategy",
+            "title": "Brand Strategy",
+            "image": "",
+            "heading": "Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Proin eget tortor risus.",
+            "paragraphs": {
+                "paraOne": "Quisque velit nisi, pretium ut lacinia in, elementum id enim. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Donec rutrum congue leo eget malesuada. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Vivamus suscipit tortor eget felis porttitor volutpat.",
+                "paraTwo": "Quisque velit nisi, pretium ut lacinia in, elementum id enim. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Donec rutrum congue leo eget malesuada. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Vivamus suscipit tortor eget felis porttitor volutpat."
+            }
+        },
+        {
+            "path": "ecommerce-strategy",
+            "title": "Ecommerce Strategy",
+            "image": "",
+            "heading": "Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Proin eget tortor risus.",
+            "paragraphs": {
+                "paraOne": "Quisque velit nisi, pretium ut lacinia in, elementum id enim. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Donec rutrum congue leo eget malesuada. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Vivamus suscipit tortor eget felis porttitor volutpat.",
+                "paraTwo": "Quisque velit nisi, pretium ut lacinia in, elementum id enim. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Donec rutrum congue leo eget malesuada. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Vivamus suscipit tortor eget felis porttitor volutpat."
+            }
+        },
+        {
+            "path": "digital-marketing-strategy",
+            "title": "Digital Marketing Strategy",
+            "image": "",
+            "heading": "Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Proin eget tortor risus.",
+            "paragraphs": {
+                "paraOne": "Quisque velit nisi, pretium ut lacinia in, elementum id enim. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Donec rutrum congue leo eget malesuada. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Vivamus suscipit tortor eget felis porttitor volutpat.",
+                "paraTwo": "Quisque velit nisi, pretium ut lacinia in, elementum id enim. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Donec rutrum congue leo eget malesuada. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Vivamus suscipit tortor eget felis porttitor volutpat."
+            }
+        }
+    ]
+}
