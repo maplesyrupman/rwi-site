@@ -41,6 +41,7 @@ export default function Service ({ serviceData: data }:any) {
                     height: '345px'
                 }
             }
+            para={serviceData.hook}
             direction='row'
             title={serviceData.title}
             buttons={[
