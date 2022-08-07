@@ -131,8 +131,8 @@ export default function Home() {
           </h3>
           <p>
           Today&apos;s digital world provides businesses with more opportunity and competition than ever before. 
-          At RWI Labs we are dedicated to helping create meaningful connections between you and your customers, 
-          while delivering a comprehensive digital strategy that drives results in line with your business goals.
+          At RWI Labs we are dedicated to helping you create meaningful connections with your customers 
+          by delivering a comprehensive digital strategy that drives results in line with your business goals.
           </p>
           <Link text='Learn More About Us' href='/about' linkStyle='default' destination='internal' />
         </div>

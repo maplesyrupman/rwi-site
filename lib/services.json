@@ -1,16 +1,6 @@
 {
     "services": [
         {
-            "path": "brand-design",
-            "title": "Brand Design",
-            "image": "",
-            "heading": "Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Proin eget tortor risus.",
-            "paragraphs": {
-                "paraOne": "",
-                "paraTwo": ""
-            }
-        },
-        {
             "path": "social-media-advertising",
             "title": "Social Media Advertising",
             "hook":"Pay to appear in the feeds of your target audience",
@@ -57,11 +47,12 @@
         {
             "path": "web-design",
             "title": "Web Design",
+            "hook":"Beautiful, responsive websites that convert",
             "image": "",
-            "heading": "Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Proin eget tortor risus.",
+            "heading": "75% of web users admit to making judgements about a company's credibility based on their website design.",
             "paragraphs": {
-                "paraOne": "",
-                "paraTwo": ""
+                "paraOne": "Making a positive first impression on potential customers is priceless. Stand out from your competition with a beautiful site design that is easy to navigate and drives conversions.",
+                "paraTwo": "At RWI Labs, our design team works with you to create a site that's unique to your brand while adhering to the best practices that your customers have come to expect from a professionally developed website."
             }
         },
         {
@@ -71,8 +62,8 @@
             "image": "",
             "heading": "Build software to fit your unique business needs - not the other way around.",
             "paragraphs": {
-                "paraOne": "Although platforms such as Shopify and WordPress offer ready to use themes, apps, and plugins, sometimes configuring them to work for your business is more trouble than it’s worth. Working directly with source code allows you to take complete control of the functionality and design of your website, allowing for complex business processes and a truly unique user interface (UI) and experience (UX).",
-                "paraTwo": "Our team of experienced developers uses popular technologies such as Nodejs, React/Nextjs, GraphQL, and MongoDB to build powerful, scalable web applications that satisfy the particular technical requirements of your business. If you have an idea for something that’s never been done before, contact us today to determine if a custom web application is right for you."
+                "paraOne": "Working directly with source code allows you to take complete control of the functionality and design of your website, allowing for complex business processes and a truly unique user interface (UI) and experience (UX).",
+                "paraTwo": "Our development team uses technologies such as Nodejs, React/Nextjs, GraphQL, and MongoDB to build powerful, scalable web applications that satisfy the particular technical requirements of your business."
             }
         },        {
             "path": "shopify",
@@ -81,7 +72,7 @@
             "hook":"Supercharge your ecommerce business",
             "heading": "Get your store up and running fast with one of the world's most popular ecommerce platforms.",
             "paragraphs": {
-                "paraOne": "With out of the box features such as abandoned cart recovery, fraud analysis, and seamless  integration with payment gateways such as PayPal and Apple Pay, Shopify is the increasingly preferred choice among both established ecommerce businesses and startups alike. And with unlimited bandwidth, you can confidently scale your site traffic without worrying about overloading your servers.",
+                "paraOne": "With out of the box features such as abandoned cart recovery, fraud analysis, and seamless  integration with payment gateways such as PayPal and Apple Pay, Shopify is the increasingly preferred choice among both established ecommerce businesses and startups alike.",
                 "paraTwo": "As a Shopify Partner, we have extensive knowledge on all the products and features Shopify has to offer. From selecting the right plan and apps best suited for your business needs, to custom Shopify theme and app development, our team has the technical and strategic understanding necessary to set your online business up for success."
             }
         },
@@ -92,38 +83,41 @@
             "hook":"Streamline the development process",
             "heading": "43.2% of all websites on the internet are powered by WordPress.",
             "paragraphs": {
-                "paraOne": "With thousands of themes to choose from and nearly 60,000 free plugins that address everything from SEO to site security, hosting your website on the WordPress platform enables your business to leverage already built functionality to significantly reduce development time. And with an easy to use admin dashboard for you and your team to manage content, it's no wonder so many companies are choosing WordPress for their Content Management System (CMS).",
+                "paraOne": "Hosting your website on the WordPress platform enables your business to leverage already built functionality to significantly reduce development time. And with an easy to use admin dashboard for you and your team to manage content, it's no wonder so many companies are using WordPress as their Content Management System (CMS).",
                 "paraTwo": "By using existing themes and plugins, our team is able to quickly deliver beautiful websites at a fraction of the cost of a custom web application. However, thanks to the extensive WordPress plugin directory, we are also able to extensively customize the look and functionality of your WordPress site while staying within your budget."
             }
         },
         {
             "path": "brand-strategy",
             "title": "Brand Strategy",
+            "hook":"Define your company's personality",
             "image": "",
-            "heading": "Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Proin eget tortor risus.",
+            "heading": "Brand Strategy is the foundation which separates a brand built to last, from the rest.",
             "paragraphs": {
-                "paraOne": "",
-                "paraTwo": ""
+                "paraOne": "Your brand is more than a logo, slogan or colour pallet; it is everything your customers think of when they think of you. A good brand strategy considers the values, goals, and interests of your target audience, appealing to both their emotions and reason.",
+                "paraTwo": "Having a clearly defined brand strategy gives structure to your marketing endeavors, ensuring all your customers get the same quality of service both online and in person."
             }
         },
         {
             "path": "ecommerce-strategy",
             "title": "Ecommerce Strategy",
+            "hook":"Scale your online store",
             "image": "",
-            "heading": "Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Proin eget tortor risus.",
+            "heading": "Online retail sales totaled at 4.9 Trillion U.S dollars worldwide in 2021.",
             "paragraphs": {
-                "paraOne": "",
-                "paraTwo": ""
+                "paraOne": "With more consumers turning to online channels to purchase products and services each year, having a digital storefront has become an essential aspect of any modern retail strategy. And new features offered by social media platforms means hosting your online store on a website is no longer the only available option to merchants.",
+                "paraTwo": "Our team specializes in delivering ecommerce solutions custom tailored for each of our clients. We consider your budget, target market, and commerce trends to maximize your online sales and develop a loyal customer base that enables you to quickly scale your business."
             }
         },
         {
-            "path": "digital-marketing-strategy",
-            "title": "Digital Marketing Strategy",
+            "path": "digital-strategy",
+            "title": "Digital Strategy",
+            "hook":"Leverage technology to accelerate your business",
             "image": "",
-            "heading": "Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Proin eget tortor risus.",
+            "heading": "Get the most out of the digital tools and channels available to you.",
             "paragraphs": {
-                "paraOne": "",
-                "paraTwo": ""
+                "paraOne": "From the myriad of social media platforms to email marketing tools and Customer Relationship Management (CRM) software, the ever growing list of business and marketing applications available makes it difficult to choose the ones best suited for your business needs.",
+                "paraTwo": "Once you've found the right technologies, successfully integrating them with each other and into your business processes in a way that maximizes return on investment can be challenging, especially if you or your team are not particularly tech savvy. At RWI Labs, we make sure that your company is using the right tools in the right ways, keeping you on track to meet your goals."
             }
         }
     ]
