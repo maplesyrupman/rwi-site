@@ -130,9 +130,10 @@ export default function Home() {
             <span className={styles.redSpan}> We can help.</span>
           </h3>
           <p>
-          Today&apos;s digital world provides businesses with more opportunity and competition than ever before. 
-          At RWI Labs we are dedicated to helping you create meaningful connections with your customers 
-          by delivering a comprehensive digital strategy that drives results in line with your business goals.
+          Today&apos;s digital world provides businesses with more opportunity 
+          and competition than ever before. Our team is dedicated to helping your 
+          brand stand out from the competition and make meaningful connections 
+          with your target audience, resulting in increased revenue and customer loyalty.
           </p>
           <Link text='Learn More About Us' href='/about' linkStyle='default' destination='internal' />
         </div>
@@ -144,7 +145,7 @@ export default function Home() {
           <div className='bgWhite paddingLg rounded flexRow alignCenter justifyBetween gapLG flexColumnReverseMD'>
             <div className={`flexColumn gapMD width60 ${styles.solutionTxt}`}>
               <h3 className='txtRed'>Marketing</h3>
-              <p>Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem.</p>
+              <p>Captivate your target audience and turn online window shoppers into loyal customers.</p>
               <Link text='Learn More' href='/solutions' linkStyle='default' destination='internal' />
             </div>
 
@@ -158,7 +159,7 @@ export default function Home() {
           <div className='bgWhite paddingLg rounded flexRowReverse alignCenter justifyBetween gapLG flexColumnReverseMD'>
             <div className={`flexColumn gapMD width60 ${styles.solutionTxt}`}>
               <h3 className='txtRed'>Development</h3>
-              <p>Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem.</p>
+              <p>We specialize in developing full-stack web applications that both you and your customers will love.</p>
               <Link text='Learn More' href='/solutions' linkStyle='default' destination='internal' />
             </div>
 
@@ -172,7 +173,7 @@ export default function Home() {
           <div className='bgWhite paddingLg rounded flexRow alignCenter justifyBetween gapLG flexColumnReverseMD'>
             <div className={`flexColumn gapMD width60 ${styles.solutionTxt}`}>
               <h3 className='txtRed'>Strategy</h3>
-              <p>Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem.</p>
+              <p>Optimize your daily operations and confidently navigate new opportunities with a digital strategy that considers all aspects of your business.</p>
               <Link text='Learn More' href='/solutions' linkStyle='default' destination='internal' />
             </div>
 

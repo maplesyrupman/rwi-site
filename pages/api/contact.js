@@ -6,11 +6,7 @@ const transporter = nodemailer.createTransport({
     // secure: false,
     service: 'gmail',
     auth: {
-        // type: "OAuth2",
-        // clientId: process.env.CLIENT_ID,
-        // clientSecret: process.env.CLIENT_SECRET,
-        // refreshToken: process.env.REFRESH_TOKEN,
-        user: 'contact@rwilabs.io',
+        user: 'admin@rwilabs.io',
         pass: process.env.PASSWORD,
     },
 });

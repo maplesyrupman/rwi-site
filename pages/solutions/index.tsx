@@ -10,20 +10,16 @@ export default function Solution() {
 
     const marketingServices = [
         {
-            name: 'Brand Design',
-            href: '/solutions/brand-design'
-        },
-        {
-            name: 'Social Media Advertising',
-            href: '/solutions/social-media-advertising'
-        },
-        {
             name: 'Search Engine Optimization (SEO)',
             href: '/solutions/seo'
         },
         {
             name: 'Search Engine Marketing (SEM)',
             href: '/solutions/sem'
+        },
+        {
+            name: 'Social Media Advertising',
+            href: '/solutions/social-media-advertising'
         },
         {
             name: 'Social Media Management (SMM)',
@@ -37,15 +33,15 @@ export default function Solution() {
             href: '/solutions/web-design'
         },
         {
-            name: 'Custom Web Application (Full Stack)',
+            name: 'Custom Web Application',
             href: '/solutions/custom-web-app'
         },
         {
-            name: 'Shopify Websites',
+            name: 'Shopify Development',
             href: '/solutions/shopify'
         },
         {
-            name: 'Wordpress Websites',
+            name: 'Wordpress Development',
             href: '/solutions/wordpress'
         }
     ]
@@ -60,8 +56,8 @@ export default function Solution() {
             href: '/solutions/ecommerce-strategy'
         },
         {
-            name: 'Digital Marketing Strategy',
-            href: '/solutions/digital-marketing-strategy'
+            name: 'Digital Strategy',
+            href: '/solutions/digital-strategy'
         }
     ]
 
@@ -97,12 +93,14 @@ export default function Solution() {
             />
 
             <section className='contentMD sectionLG txtCenter flexColumn gapMD'>
-                <h2 className='txtBlue'>Our digital solutions drive success online.</h2>
-                <p>Quisque velit nisi, pretium ut lacinia in, elementum id enim. Proin eget tortor risus. 
-                    Nulla porttitor accumsan tincidunt. Pellentesque in ipsum id orci porta dapibus. 
-                    Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Vestibulum ac diam sit 
-                    amet quam vehicula elementum sed sit amet dui. Vivamus suscipit tortor eget felis porttitor volutpat. 
-                    Vivamus suscipit tortor eget felis porttitor volutpat.
+                <h2 className='txtBlue'>Providing Digital Solutions That Drive Success Online.</h2>
+                <p>
+                As the owner of a small or medium sized business, you&apos;ve got a lot on your 
+                plate. And although developing your brand&apos;s online presence is essential to success, learning 
+                the ins and outs of digital marketing - social media platforms, web development, 
+                performance analytics - can easily start to feel like a part time job. That&apos;s 
+                why we&apos;ve taken it on full time, allowing you to get back to what you do 
+                best - running your business!
                 </p>
             </section>
 
