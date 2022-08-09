@@ -1,10 +1,20 @@
-import IntroPage from '../components/form-components/IntroPage'
+import axios from "axios"
+import Button from "../components/Button"
 
 export default function Test() {
 
+    function handleTest() {
+        axios({
+            method:'post',
+            url:'/api/testing',
+            data:{message: 'this is a test!'}
+        })
+        .then(response => console.log(response.data))
+    }
+
     return (
         <div>
-            <IntroPage title='Test Title' paras={['This is the first paragraph describing what\'s going on with this form', 'Here\'s another paragraph talking about the form']} changePage={() => console.log('Change page!')} logo/>
+            <Button text='Hit API' type='button' btnStyle="primary" func={handleTest} />
         </div>
     )
 }

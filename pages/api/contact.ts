@@ -1,4 +1,8 @@
+import type { NextApiRequest, NextApiResponse } from "next"
 const nodemailer = require('nodemailer')
+const welcomeTemplate = require('../../email-templates/welcome')
+
+console.log('welcomeTemplate',welcomeTemplate)
 
 const transporter = nodemailer.createTransport({
     // host: "smtp.gmail.com",
@@ -11,63 +15,57 @@ const transporter = nodemailer.createTransport({
     },
 });
 
-function getClientHtml(body) {
+function getAdminHtml(body:any):string {
     return `
-    <p>Hello ${body.name},</p>
-    <p>Thank you for reaching out to us. One of our account managers will be reaching out to you shortly.</p>
-    <p>The next step is to schedule a discovery call to discuss the scope of the project you have in mind.</p>
-    <p>We are looking forward to hearing from you!</p>
-    
-    <p>Thank you, <br>
-    The RWI Labs Team<br>
-    </p>
-    `
-}
-
-function getAdminHtml(body) {
-    return `
-    <p>Tedesco Group,</p>
+    <p>Alrighty Guys,</p>
     <p>You have received a new contact form submission! Congratulations, please see details below.</p>
     <table>
         <tr>
-            <td>Name</td>
-            <td>${body.name}</td>
+            <td>
+                Name:
+            </td>
+            <td>
+                ${body.name}
+            </td>
         </tr>
         <tr>
-            <td>Email</td>
-            <td>${body.email}</td>
+            <td>
+                Email:
+            </td>
+            <td>
+                ${body.email}
+            </td>
         </tr>
         <tr>
-            <td>Phone</td>
-            <td>${body.phone}</td>
-        </tr>
-        <tr>
-            <td>Message</td>
-            <td>${body.message}</td>
+            <td>
+                Message:
+            </td>
+            <td>
+                ${body.message}
+            </td>
         </tr>
     </table>
     `
 }
 
-export default function handler({ body }, res) {
+export default function handler({ body }:NextApiRequest, res:NextApiResponse) {
+    console.log('body',body)
     const clientMailOptions = {
-        from: 'contact@rwilabs.io',
+        from: 'admin@rwilabs.io',
         to: body.email,
-        subject: 'Quote Request Received',
-        html: getClientHtml(body)
+        subject: 'Contact Form Submission Recieved',
+        html: welcomeTemplate.default(body.name)
     }
 
     const adminMailOptions = {
-        from: 'contact@rwilabs.io',
+        from: 'admin@rwilabs.io',
         to: ['william@rwilabs.io', 'samantha@rwilabs.io'],
         subject: 'Quote Request',
         html: getAdminHtml(body)
     }
 
-    console.log('password', process.env)
-
     try {
-        transporter.sendMail(clientMailOptions, function (err, data) {
+        transporter.sendMail(clientMailOptions, function (err:Error, data:JSON) {
             if (err) {
                 console.error('mailer', err);
             } else {
@@ -75,7 +73,7 @@ export default function handler({ body }, res) {
             }
         });
 
-        transporter.sendMail(adminMailOptions, function (err, data) {
+        transporter.sendMail(adminMailOptions, function (err:Error, data:JSON) {
             if (err) {
                 console.log('admin mailer', err)
             } else {
@@ -86,5 +84,6 @@ export default function handler({ body }, res) {
         res.status(200).json({ message: 'Emails sent successfully' })
     } catch (err) {
         res.status(400).json({ message: err })
+        console.error(err)
     }
 }

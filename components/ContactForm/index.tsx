@@ -2,22 +2,32 @@ import ShortAnswer from "../form-components/ShortAnswer"
 import LongAnswer from "../form-components/LongAnswer"
 import Button from "../Button"
 
-import { useState } from "react"
+import React, { useState } from "react"
+import axios from "axios"
 
 export default function ContactForm() {
     const [formState, setFormState] = useState({ name: '', email: '', message: '' })
 
     function handleChange(id: string, value: string) {
-        setFormState((prev: any) => {
-            return {
-                id: value,
-                ...prev
-            }
-        })
+        console.log(formState)
+        setFormState({...formState, [id]: value})
+    }
+
+    function handleSubmit(e:React.FormEvent) {
+        e.preventDefault()
+        axios({
+            method: 'post',
+            url: '/api/contact',
+            data: formState
+          })
+          .then(data => console.log(data))
     }
 
     return (
-        <form className='formCon flexColumn gapMD'>
+        <form 
+        className='formCon flexColumn gapMD'
+        onSubmit={handleSubmit}
+        >
                 <ShortAnswer
                     question={{ id: 'name', placeholder: 'Name', label: 'Name', type: 'short', required: true }}
                     change={handleChange}
