@@ -29,11 +29,11 @@ export default function ContactForm() {
         onSubmit={handleSubmit}
         >
                 <ShortAnswer
-                    question={{ id: 'name', placeholder: 'Name', label: 'Name', type: 'short', required: true }}
+                    question={{ id: 'name', placeholder: 'name', label: 'Name', type: 'short', required: true }}
                     change={handleChange}
                 />
                 <ShortAnswer
-                    question={{ id: 'email', placeholder: 'someone@email.ca', required: true, label: 'Email', type: 'short' }}
+                    question={{ id: 'email', placeholder: 'email address', required: true, label: 'Email', type: 'short' }}
                     change={handleChange}
                 />
                 <LongAnswer
