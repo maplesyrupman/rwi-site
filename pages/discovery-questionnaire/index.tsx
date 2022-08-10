@@ -9,44 +9,44 @@ import { answerQuestion, selectQuestions } from '../../redux/slicers/discoverySl
 import Image from 'next/image'
 
 export default function DiscoveryQuestionnaire() {
-    const questions = useAppSelector(selectQuestions)
+    // const questions = useAppSelector(selectQuestions)
 
-    const dispatch = useAppDispatch()
-    function useTestChange(id: string, value: any) {
-        dispatch(answerQuestion([id, value]))
-    }
-    const [isReview, setIsReview] = useState(false)
-    const [page, setPage] = useState(0)
+    // const dispatch = useAppDispatch()
+    // function useTestChange(id: string, value: any) {
+    //     dispatch(answerQuestion([id, value]))
+    // }
+    // const [isReview, setIsReview] = useState(false)
+    // const [page, setPage] = useState(0)
 
-    const introPage = <IntroPage title='Test Title' paras={['This is the first paragraph describing what\'s going on with this form', 'Here\'s another paragraph talking about the form']} changePage={() => changePage('next')} image=';;' imgH={1} imgW={2} />
-    const questionPages = questions.sections.map((section, idx) => <FormPage key={`page-${idx}`} pageNum={idx} change={useTestChange} changePage={changePage} isReview={isReview} />)
-    const reviewPage = <ReviewPage pages={questionPages} changePage={changePage} />
-    const thankyouPage = <ThankyouPage message='Thank you!' submessage='We will be in touch shortly.' paras={['para1']} logo />
-    const formPages = [introPage, ...questionPages, reviewPage, thankyouPage]
+    // const introPage = <IntroPage title='Test Title' paras={['This is the first paragraph describing what\'s going on with this form', 'Here\'s another paragraph talking about the form']} changePage={() => changePage('next')} image=';;' imgH={1} imgW={2} />
+    // const questionPages = questions.sections.map((section, idx) => <FormPage key={`page-${idx}`} pageNum={idx} change={useTestChange} changePage={changePage} isReview={isReview} />)
+    // const reviewPage = <ReviewPage pages={questionPages} changePage={changePage} />
+    // const thankyouPage = <ThankyouPage message='Thank you!' submessage='We will be in touch shortly.' paras={['para1']} logo />
+    // const formPages = [introPage, ...questionPages, reviewPage, thankyouPage]
 
-    useEffect(() => {
-        if (page === formPages.findIndex((page) => page === reviewPage)) {
-            setIsReview(true)
-        } else {
-            setIsReview(false)
-        }
-    }, [page, setIsReview, formPages, reviewPage])
+    // useEffect(() => {
+    //     if (page === formPages.findIndex((page) => page === reviewPage)) {
+    //         setIsReview(true)
+    //     } else {
+    //         setIsReview(false)
+    //     }
+    // }, [page, setIsReview, formPages, reviewPage])
 
-    function changePage(direction: 'next' | 'previous') {
+    // function changePage(direction: 'next' | 'previous') {
         
-        switch (direction) {
-            case 'next':
-                if (page < formPages.length - 1) {
-                    setPage(page + 1)
-                    console.log(page)
-                }
-                break
-            default:
-                if (page > 0) {
-                    setPage(page - 1)
-                }
-        }
-    }
+    //     switch (direction) {
+    //         case 'next':
+    //             if (page < formPages.length - 1) {
+    //                 setPage(page + 1)
+    //                 console.log(page)
+    //             }
+    //             break
+    //         default:
+    //             if (page > 0) {
+    //                 setPage(page - 1)
+    //             }
+    //     }
+    // }
 
     return (
         <div className={`bgWhite fullPage`}>
@@ -60,7 +60,7 @@ export default function DiscoveryQuestionnaire() {
             </div>
             <div style={{ 'padding': '12.5rem 0' }}>
                 <div id='top' />
-                {formPages[page]}
+                {/* {formPages[page]} */}
             </div>
         </div>
     )
