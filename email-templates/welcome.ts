@@ -103,7 +103,8 @@ export default function welcomeTemplate(name:string) {
                                                     <div
                                                         style="font-family:Helvetica, Arial, sans-serif;font-size:18px;font-weight:400;line-height:24px;text-align:left;color:#434245;">
                                                         We are excited to get started helping your business achieve
-                                                        success online! 
+                                                        success online! A member of our team will be reaching out to 
+                                                        you shortly to schedule a discovery call. 
                                                     </div>
                                                 </td>
                                             </tr>
@@ -112,10 +113,9 @@ export default function welcomeTemplate(name:string) {
                                                     align="left">
                                                     <div
                                                         style="font-family:Helvetica, Arial, sans-serif;font-size:18px;font-weight:400;line-height:24px;text-align:left;color:#434245;">
-                                                        Before we begin, please take 15 minutes to fill out our discovery 
-                                                        questionnaire. Your answers will help us develop a high level understanding 
-                                                        of your business and it's needs, speeding up our discovery process so 
-                                                        that you can start seeing results sooner. 
+                                                        To make the most of our up coming meeting, please write down any 
+                                                        questions you have about our services as well as what your 
+                                                        primary objective is for working with us.
                                                     </div>
                                                 </td>
                                             </tr>
@@ -124,43 +124,10 @@ export default function welcomeTemplate(name:string) {
                                                     align="left">
                                                     <div
                                                         style="font-family:Helvetica, Arial, sans-serif;font-size:18px;font-weight:400;line-height:24px;text-align:left;color:#434245;">
-                                                        Once completed, a member of our team will contact you to schedule a
-                                                        discovery meeting to review your answers and dive deeper into what 
-                                                        you are looking to achieve with your online presence. 
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td vertical-align="middle"
-                                                    style="font-size:0px;padding:10px 25px;word-break:break-word;"
-                                                    align="left">
-                                                    <table role="presentation"
-                                                        style="border-collapse:separate;line-height:100%;" cellspacing="0"
-                                                        cellpadding="0" border="0">
-                                                        <tbody>
-                                                            <tr>
-                                                                <td role="presentation"
-                                                                    style="border:none;border-radius:30px;cursor:auto;mso-padding-alt:10px 25px;background:#cc2c12;"
-                                                                    valign="middle" bgcolor="#cc2c12" align="center">
-                                                                    <a href="https://rwilabs.io" style="display: inline-block; background: #cc2c12; color: #ffffff; font-family: Helvetica, Arial, sans-serif; font-size: 14px; font-weight: bold; line-height: 30px; margin: 0; text-decoration: none; text-transform: uppercase; padding: 10px 
-    25px; mso-padding-alt: 0px; border-radius: 30px;" target="_blank"> Discovery Questionnaire </a>
-                                                                </td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td style="font-size:0px;padding:10px 25px;word-break:break-word;"
-                                                    align="left">
-                                                    <div
-                                                        style="font-family:Helvetica, Arial, sans-serif;font-size:18px;font-weight:400;line-height:24px;text-align:left;color:#434245;">
-                                                        If you need help filling out the questionnaire or have any questions, send us an email at
+                                                        If you need to get in touch with us in the mean time, feel free to send us an email at
                                                         <a href="mailto:contact@rwilabs.io"
                                                             style="color: rgb(2,3,60); text-decoration: none;">
-                                                            contact@rwilabs.io
-                                                        </a>
-                                                        , or start a chat with us on
+                                                            contact@rwilabs.io</a>, or start a chat with us on
                                                         <a style="color: #48c857; text-decoration: none;"
                                                             href="https://api.whatsapp.com/send?phone=14165797681&text=Hello!%20I%27m%20interested%20in%20learning%20more%20about%20how%20RWI%20Labs%20can%20help%20my%20business%20achieve%20success%20online."
                                                             target="_blank">WhatsApp</a>.
@@ -172,8 +139,7 @@ export default function welcomeTemplate(name:string) {
                                                     align="left">
                                                     <div
                                                         style="font-family:Helvetica, Arial, sans-serif;font-size:18px;font-weight:400;line-height:24px;text-align:left;color:#434245;">
-                                                        We are looking forward to getting to know you better!
-                                                        Take care for now, we'll be in touch!
+                                                        We are looking forward to meeting you! Take care until then. 
                                                     </div>
                                                 </td>
                                             </tr>
@@ -391,7 +357,6 @@ export default function welcomeTemplate(name:string) {
                 </table>
             </div>
         </div>
-    
     
     </body>
     
