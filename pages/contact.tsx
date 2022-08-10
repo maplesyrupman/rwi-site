@@ -14,7 +14,7 @@ export default function Contact() {
         <div>
             <Nav />
 
-            <div className='sectionSM'>
+            <div className='sectionMD'>
                 <h1 className='txtRed txtCenter'>Contact</h1>
             </div>
 

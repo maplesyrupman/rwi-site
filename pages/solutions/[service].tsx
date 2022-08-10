@@ -28,16 +28,17 @@ export async function getStaticProps({ params }:any) {
 export default function Service ({ serviceData: data }:any) {
     console.log(data)
     const serviceData = data.serviceData[0]
+
     return (
         <div>
             <Nav/>
             <Hero
             image={
                 {
-                    src: image,
+                    src: `/service-graphics/${serviceData.image}`,
                     alt: '',
-                    width: '345px',
-                    height: '345px'
+                    width: '402px',
+                    height: '335px'
                 }
             }
             para={serviceData.hook}
