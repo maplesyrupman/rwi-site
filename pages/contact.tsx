@@ -28,10 +28,10 @@ export default function Contact() {
                             <FaEnvelopeSquare className='txtRed svgIcon'/>
                             <Link text='contact@rwilabs.io' href='mailto:contact@rwilabs.io' linkStyle='bold' destination='external'/>
                         </div>
-                        <div className='flexRow alignCenter gapSM'>
+                        {/* <div className='flexRow alignCenter gapSM'>
                             <FaWhatsappSquare className='txtRed svgIcon' />
                             <p className='txtBlue bold'>(416) 579-7681</p>
-                        </div>
+                        </div> */}
 
                         <div className='flexColumn gapMD alignCenterMD'>
                             <h4 className='txtBlue'>We&apos;ll keep you posted!</h4>
