@@ -1,4 +1,4 @@
-import { DiscoveryQuestionnaire } from "../../types"
+import { DiscoveryQuestionnaire } from "../types"
 
 const questions: DiscoveryQuestionnaire = {
     sections: [

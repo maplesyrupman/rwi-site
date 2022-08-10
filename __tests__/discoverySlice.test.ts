@@ -1,7 +1,7 @@
 // import { store as OGstore } from "../redux/store"
 import { DiscoveryQuestionnaire } from "../types"
 import { answerQuestion, selectSection, discoverySlice } from "../redux/slicers/discoverySlice"
-import questions from '../pages/discovery-questionnaire/questions'
+import questions from '../lib/questions'
 import { Date } from '../types'
 import {configureStore} from '@reduxjs/toolkit'
 import discoveryReducer from '../redux/slicers/discoverySlice'

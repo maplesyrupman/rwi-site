@@ -6,7 +6,7 @@ import {
 import type { RootState } from '../store';
 
 import { DiscoveryQuestionnaire, Question } from '../../types';
-import questions from '../../pages/discovery-questionnaire/questions';
+import questions from '../../lib/questions';
 
 const initialState: DiscoveryQuestionnaire = questions
 
