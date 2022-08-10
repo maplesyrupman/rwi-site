@@ -4,8 +4,8 @@ import Link from '../components/Button/link'
 import Footer from "../components/Footer"
 
 import Image from 'next/image'
-import samImg from '../public/Samantha-RWI-Labs-Digital-Marketing.jpg'
-import willImg from '../public/William-RWI-Labs-Digital-Marketing.jpg'
+import samImg from '../public/Samantha-RWI-Digital-Marketing.jpg'
+import willImg from '../public/William-RWI-Labs-Marketing.jpg'
 import readImg from '../public/Read_Illustration.png'
 import writeImg from '../public/Write_Illustration.png'
 import innovateImg from '../public/Innovate_Illustration.png'
