@@ -1,70 +1,65 @@
-.illustrationImg {
-  width: 50%;
+.homeHero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    padding: var(--spacing-ten) var(--spacing-fourteen);
+    color: var(--rwi-blue);
 }
 
-.redSpan {
-  font-size: 28px;
-  font-weight: 800;
-  color: var(--rwi-red);
+.homeHero::after {
+    content: '';
+    position: absolute;
+    right: 3rem;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 80%;
+    width: 35%;
+    background-image: url('/red-bracket.svg');
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: contain;
+    opacity: 0.1;
+    pointer-events: none;
 }
 
-.marketingImg, .developmentImg, .strategyImg {
-  width: 300px;
-  height: 300px;
-  background-position: center;
-  background-repeat: no-repeat;
+.heroContent {
+    max-width: 42rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-three);
+    position: relative;
+    z-index: 1;
+    text-align: center;
 }
 
-.marketingImg {
-  background-image: url('../public/social-media-design-digital-marketing.jpg');
-  background-size: 170%;
-}
-
-.developmentImg {
-  background-image: url('../public/web-development-digital-marketing.jpg');
-  background-size: 100%;
-}
-
-.strategyImg {
-  background-image: url('../public/strategy-digital-marketing.jpg');
-  background-size: 150%;
+.heroBtnGroup {
+    display: flex;
+    flex-direction: row;
+    gap: var(--spacing-three);
+    min-height: var(--spacing-six);
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 @media screen and (max-width: 1200px) {
-  .marketingImg, .developmentImg, .strategyImg {
-    width: 250px;
-    height: 250px;
-  }
+    .homeHero {
+        padding: var(--spacing-ten) var(--spacing-twelve);
+    }
 }
 
 @media screen and (max-width: 1024px) {
-  .introBlurb {
-    max-width: 100%;
-    text-align: center;
-  }
-
-  .solutionTxt {
-    max-width: 50%;
-  }
+    .homeHero {
+        padding: var(--spacing-ten);
+    }
 }
 
-@media screen and (max-width: 860px) {
-  .solutionTxt {
-    max-width: 100%;
-    text-align: center;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .redSpan {
-    font-size: 24px;
-    line-height: 32px;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .marketingImg, .developmentImg, .strategyImg {
-    width: 200px;
-    height: 200px;
-  }
+@media screen and (max-width: 480px) {
+    .homeHero {
+        padding: var(--spacing-eight) var(--spacing-six);
+    }
 }

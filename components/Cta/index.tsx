@@ -5,8 +5,8 @@ export default function Cta() {
     return(
     <section className='sectionLG contentMD'>
         <div className={`bgBlue flexColumn alignCenter gapLG paddingLg ${styles.cta}`}>
-            <h1 className='txtWhite txtCenter'>Got an idea? Let&apos;s hear it!</h1>
-            <Link text='Get Started' href='/contact' linkStyle='btnImportant' destination='internal' />
+            <h1 className='txtWhite txtCenter'>What would your team do with more time?</h1>
+            <Link text='Book a Free Audit' href='/contact' linkStyle='btnImportant' destination='internal' />
         </div>
     </section>
     )
