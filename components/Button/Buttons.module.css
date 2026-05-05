@@ -1,0 +1,133 @@
+.btn {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    font-family: Gilmer;
+    font-weight: 700;
+    padding: 0.5rem 1.5rem;
+    text-decoration: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    white-space: nowrap;
+}
+
+.btnPrimary {
+    background-color: var(--rwi-blue);
+    color: var(--light);
+    border: none;
+}
+
+.btnPrimary:hover {
+    background-color: var(--rwi-blue-two);
+}
+
+.btnPrimary:disabled {
+    background-color: var(--rwi-blue-three);
+}
+
+.btnSecondary {
+    background-color: inherit;
+    color: var(--rwi-blue);
+    border: 4px solid var(--rwi-blue);
+}
+
+.btnSecondary:hover {
+    color: var(--rwi-blue-two);
+    border: 4px solid var(--rwi-blue-two);
+}
+
+.btnSecondary:disabled {
+    color: var(--rwi-blue-three);
+    border: 4px solid var(--rwi-blue-three);
+}
+
+.btnImportant {
+    background-color: var(--rwi-red);
+    color: var(--light);
+    border: none;
+}
+
+.btnImportant:hover {
+    background-color: var(--rwi-red-two);
+}
+
+.btnImportant:disabled {
+    background-color: var(--rwi-red-three);
+}
+
+.btnDanger {
+    background-color: var(--danger);
+    color: var(--light);
+    border: none;
+}
+
+.btnDanger:hover {
+    background-color: var(--danger-bg);
+    color: var(--danger);
+}
+
+.btnDanger:disabled {
+    background-color: var(--danger-bg);
+    color: var(--light);
+}
+
+.btnConfirm {
+    background-color: var(--success);
+    color: var(--light);
+    border: none;
+}
+
+.btnConfirm:hover {
+    background-color: var(--success-bg);
+    color: var(--success);
+}
+
+.btnConfirm:disabled {
+    background-color: var(--success-bg);
+    color: var(--light);
+}
+
+.linkDefault {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--rwi-blue);
+    transition: all 0.2s ease-in-out;
+    white-space: nowrap;
+}
+
+.linkDefault:hover {
+    color: var(--rwi-blue-two);
+}
+
+.linkDefault:focus {
+    color: var(--rwi-blue-three);
+}
+
+.linkBold {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--rwi-blue);
+    transition: all 0.2s ease-in-out;
+    white-space: nowrap;
+}
+
+.linkBold:hover {
+    color: var(--rwi-blue-two);
+}
+
+.linkBold:focus {
+    color: var(--rwi-blue-three);
+}
+
+.linkDanger {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--danger);
+    transition: all 0.2s ease-in-out;
+    white-space: nowrap;
+}
+
+.linkDanger:hover {
+    color: var(--danger-bg);
+}

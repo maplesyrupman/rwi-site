@@ -1,0 +1,108 @@
+/* ---- About Hero ---- */
+
+.aboutHero {
+    position: relative;
+    overflow: hidden;
+    padding: var(--spacing-ten) var(--spacing-fourteen);
+    color: var(--rwi-blue);
+}
+
+.aboutHero::after {
+    content: '';
+    position: absolute;
+    right: 3rem;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 80%;
+    width: 35%;
+    background-image: url('/red-bracket.svg');
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: contain;
+    opacity: 0.1;
+    pointer-events: none;
+}
+
+.aboutHeroTxt {
+    max-width: 42rem;
+    position: relative;
+    z-index: 1;
+}
+
+.aboutHeroBtnGroup {
+    min-height: var(--spacing-six);
+}
+
+/* ---- Mission ---- */
+
+.mission {
+    width: 75%;
+}
+
+.processTxt {
+    width: 50%;
+}
+
+.processTxt > p {
+    margin-top: 0.5rem;
+}
+
+@media screen and (max-width: 1200px) {
+    .aboutHero {
+        padding: var(--spacing-ten) var(--spacing-twelve);
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .aboutHero {
+        padding: var(--spacing-ten);
+    }
+
+    .aboutHeroTxt {
+        width: 75%;
+    }
+}
+
+@media screen and (max-width: 860px) {
+    .aboutHeroTxt {
+        text-align: center;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .aboutHeroBtnGroup {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .aboutHero {
+        padding: var(--spacing-eight) var(--spacing-six);
+    }
+}
+
+@media screen and (max-width: 860px) {
+    .mission {
+        gap: var(--spacing-three);
+    }
+
+    .processTxt {
+        width: 100%;
+        text-align: center;
+    }
+
+    .processImg {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .mission {
+        width: 100%;
+    }
+
+    .processImg {
+        width: 75%;
+    }
+}

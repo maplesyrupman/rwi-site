@@ -1,0 +1,70 @@
+.illustrationImg {
+  width: 50%;
+}
+
+.redSpan {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--rwi-red);
+}
+
+.marketingImg, .developmentImg, .strategyImg {
+  width: 300px;
+  height: 300px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.marketingImg {
+  background-image: url('../public/social-media-design-digital-marketing.jpg');
+  background-size: 170%;
+}
+
+.developmentImg {
+  background-image: url('../public/web-development-digital-marketing.jpg');
+  background-size: 100%;
+}
+
+.strategyImg {
+  background-image: url('../public/strategy-digital-marketing.jpg');
+  background-size: 150%;
+}
+
+@media screen and (max-width: 1200px) {
+  .marketingImg, .developmentImg, .strategyImg {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .introBlurb {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .solutionTxt {
+    max-width: 50%;
+  }
+}
+
+@media screen and (max-width: 860px) {
+  .solutionTxt {
+    max-width: 100%;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .redSpan {
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .marketingImg, .developmentImg, .strategyImg {
+    width: 200px;
+    height: 200px;
+  }
+}
