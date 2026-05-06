@@ -1,13 +1,19 @@
 import styles from './styles.module.css'
 import Link from '../Button/link'
+import NextLink from 'next/link'
 
 import { FaLinkedin } from 'react-icons/fa'
 
 export default function Footer() {
 
     return (
-        <div className={`pageGutters sectionLG flexRow justifyBetween alignCenter ${styles.footerCon}`}>
-            <p className='txtSm'>© RWI Labs 2026</p>
+        <div className={`pageGutters flexRow justifyBetween alignCenter ${styles.footerCon}`}>
+            <div className={`flexRow alignCenter gapMD ${styles.footerLeft}`}>
+                <p className='txtSm'>© RWI Labs 2026</p>
+                <NextLink href='/privacy-policy'>
+                    <a className={styles.privacyLink}>Privacy Policy</a>
+                </NextLink>
+            </div>
             <svg width="100" height="47" viewBox="0 0 100 47" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M27.2584 18.0579V21.3988C24.8541 21.0033 23.6988 22.0233 23.6988 24.8231V29.5587H20.1289V18.214H23.6884V19.7544C24.365 18.5262 25.5827 17.8289 27.2584 18.0579Z" fill="#02033C"/>
             <path d="M47.0231 18.2139L43.0993 29.5586H39.8L37.7496 23.1889L35.6888 29.5586H32.3895L28.4761 18.2139H32.1501L34.2213 25.0207L36.2717 18.2139H39.2275L41.2987 25.0207L43.3491 18.2139H47.0231Z" fill="#02033C"/>

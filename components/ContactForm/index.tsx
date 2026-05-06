@@ -1,5 +1,6 @@
 import Button from "../Button"
 import styles from "./styles.module.css"
+import NextLink from 'next/link'
 
 import React, { useState } from "react"
 import axios from "axios"
@@ -64,6 +65,12 @@ export default function ContactForm() {
             <div>
                 <Button text='Submit Inquiry' type='submit' btnStyle='primary' />
             </div>
+            <p className={styles.consent}>
+                By submitting this form you agree to our{' '}
+                <NextLink href='/privacy-policy'>
+                    <a className={styles.consentLink}>Privacy Policy</a>
+                </NextLink>
+            </p>
         </form>
     )
 }

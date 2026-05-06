@@ -42,7 +42,7 @@ export default function About() {
                     <div className={`txtCenter flexColumn alignCenter justifyCenter gapLG ${styles.mission}`}>
                         <h1 className='decorativeOne txtRed'>Our Mission</h1>
                         <p className='bold'>
-                            To provide businesses with the technologies and digital strategies necessary to convert their target audience into loyal, paying customers.
+                            Our mission is to come alongside business owners and their teams to find where time is being lost, and build smart systems that win it back — freeing their people to focus on business instead of admin.
                         </p>
                     </div>
                     <svg className='bracket' width="113" height="352" viewBox="0 0 113 352" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -63,6 +63,24 @@ export default function About() {
             </section>
 
             <section id='what-we-do' className='sectionLG contentMD'>
+                <h2 className='txtRed txtCenter sectionTitle'>What We Do</h2>
+                <div className={`flexRow justifyBetween gapLG flexColumnMD ${styles.pillarRow}`}>
+                    <div className={`bgSecondaryTwo paddingLg rounded flexColumn gapMD ${styles.pillar}`}>
+                        <h3 className='txtBlue'>Strategy</h3>
+                        <p>Every smart system starts with a smart plan. We work with you to assess your current operations, map your workflows, and identify the biggest opportunities for automation. Along the way we&apos;ll surface powerful tools you may not know exist, find new ways to connect the ones you&apos;re already using, and build a roadmap that maximizes the efficiency of your operations and the impact of every person on your team.</p>
+                    </div>
+                    <div className={`bgSecondaryTwo paddingLg rounded flexColumn gapMD ${styles.pillar}`}>
+                        <h3 className='txtBlue'>Automation</h3>
+                        <p>Automation is the engine behind your smart systems. From document generation and client intake to data synchronization, invoicing, scheduling, and reporting — we identify the manual processes slowing your business down and replace them with reliable, always-on workflows that run in the background without lifting a finger.</p>
+                    </div>
+                    <div className={`bgSecondaryTwo paddingLg rounded flexColumn gapMD ${styles.pillar}`}>
+                        <h3 className='txtBlue'>AI Integration</h3>
+                        <p>AI is a powerful tool but not every problem needs it. We take a considered approach to AI integration, recommending it only when it genuinely fits your business and the problem at hand. When it does, the possibilities expand significantly — intelligent document review, natural language client intake, smart scheduling, anomaly detection, and more. The right AI, in the right place, supercharges your business.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section className='sectionLG contentMD'>
                 <h2 className='txtRed txtCenter sectionTitle'>Our Process</h2>
 
                 <div className='flexColumn'>
@@ -70,11 +88,7 @@ export default function About() {
                         <div className={styles.processTxt}>
                             <h3 className='txtBlue'>Read</h3>
                             <p>
-                                Our team is always reading ahead to stay informed on the ever evolving
-                                digital world. From consumer and competitor analysis to legislative
-                                developments affecting how companies operate online, we keep up to date
-                                with our research to prevent blindspots in our digital strategies. This
-                                way, you can rest assured that your business is both competitive and compliant.
+                                Before we build anything, we read up on your business. We take the time to understand how it operates by mapping workflows to identify repetitive, time-consuming tasks so we know exactly where smart systems can have the biggest impact. That means getting to know your team, their roles, the tools already in play, and what matters most to your business.
                             </p>
                         </div>
                         <div className={styles.processImg}>
@@ -91,10 +105,7 @@ export default function About() {
                         <div className={styles.processTxt}>
                             <h3 className='txtBlue'>Write</h3>
                             <p>
-                                We write to connect your business with its customers in a way that persuasively
-                                conveys information while providing a positive user experience. Code, copy, and
-                                data driven reports that outline the progress of your business&apos;s digital marketing
-                                endeavors are our specialties.
+                                With a clear picture of your business in hand, we design and build the smart systems that eliminate the repetitive tasks we identified, custom built around your workflows, your tools, and your team.
                             </p>
                         </div>
                         <div className={styles.processImg}>
@@ -111,11 +122,7 @@ export default function About() {
                         <div className={styles.processTxt}>
                             <h3 className='txtBlue'>Innovate</h3>
                             <p>
-                                “Creativity is thinking up new things. Innovation is doing new things” - Theodore Levitt
-                            </p>
-                            <p>
-                                A strategy combining research and creativity, powered by digital assets developed with your target audience in mind, empowers your business to explore new horizons with confidence.
-
+                                The definition of innovate is to introduce changes and new ideas. Once your smart systems are in place, your business starts to look different — your team takes on more meaningful work, client communications become smoother, data gets updated without delay, manual errors are eliminated, and growth that once felt out of reach quickly becomes inevitable. With all the time you&apos;ve unlocked, now it&apos;s your turn to innovate.
                             </p>
                         </div>
                         <div className={styles.processImg}>

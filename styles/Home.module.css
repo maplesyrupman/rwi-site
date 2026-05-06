@@ -1,5 +1,7 @@
 .homeHero {
     min-height: 100vh;
+    /* Pull up to cancel footer margin-top so footer sits flush below hero */
+    margin-bottom: calc(-1 * var(--spacing-four));
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -13,9 +15,11 @@
 .homeHero::after {
     content: '';
     position: absolute;
-    right: 3rem;
+    /* Align right edge with the hero's horizontal content padding */
+    right: var(--spacing-fourteen);
     top: 50%;
-    transform: translateY(-50%);
+    /* Nudge center down ~3rem so bracket top clears the fixed nav (~6rem tall) */
+    transform: translateY(calc(-50% + 3rem));
     height: 80%;
     width: 35%;
     background-image: url('/red-bracket.svg');
@@ -50,11 +54,30 @@
     .homeHero {
         padding: var(--spacing-ten) var(--spacing-twelve);
     }
+
+    .homeHero::after {
+        right: var(--spacing-twelve);
+    }
 }
 
 @media screen and (max-width: 1024px) {
     .homeHero {
         padding: var(--spacing-ten);
+    }
+
+    .homeHero::after {
+        right: var(--spacing-ten);
+    }
+}
+
+/* Mobile: center bracket horizontally and vertically */
+@media screen and (max-width: 768px) {
+    .homeHero::after {
+        right: auto;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 70%;
+        background-position: center;
     }
 }
 

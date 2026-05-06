@@ -1,0 +1,32 @@
+.content {
+    /* Narrower than contentMD for comfortable line length */
+    max-width: 720px;
+}
+
+.lastUpdated {
+    color: var(--grey-three);
+    font-size: 14px;
+    margin-top: var(--spacing-one);
+    margin-bottom: var(--spacing-six);
+}
+
+.section {
+    margin-top: var(--spacing-six);
+}
+
+.section h3 {
+    color: var(--rwi-blue);
+    margin-bottom: var(--spacing-two);
+}
+
+.link {
+    color: var(--rwi-red);
+    font-weight: 700;
+    text-decoration: none;
+    transition: color 0.15s ease;
+}
+
+.link:hover {
+    color: var(--rwi-red-two);
+    text-decoration: underline;
+}

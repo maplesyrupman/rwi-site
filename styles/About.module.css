@@ -10,9 +10,11 @@
 .aboutHero::after {
     content: '';
     position: absolute;
-    right: 3rem;
+    /* Align right edge with the hero's horizontal content padding */
+    right: var(--spacing-fourteen);
     top: 50%;
-    transform: translateY(-50%);
+    /* Nudge center down ~3rem so bracket top clears the fixed nav (~6rem tall) */
+    transform: translateY(calc(-50% + 3rem));
     height: 80%;
     width: 35%;
     background-image: url('/red-bracket.svg');
@@ -33,6 +35,16 @@
     min-height: var(--spacing-six);
 }
 
+/* ---- What We Do pillars ---- */
+
+.pillarRow {
+    align-items: stretch;
+}
+
+.pillar {
+    flex: 1;
+}
+
 /* ---- Mission ---- */
 
 .mission {
@@ -51,6 +63,10 @@
     .aboutHero {
         padding: var(--spacing-ten) var(--spacing-twelve);
     }
+
+    .aboutHero::after {
+        right: var(--spacing-twelve);
+    }
 }
 
 @media screen and (max-width: 1024px) {
@@ -58,8 +74,23 @@
         padding: var(--spacing-ten);
     }
 
+    .aboutHero::after {
+        right: var(--spacing-ten);
+    }
+
     .aboutHeroTxt {
         width: 75%;
+    }
+}
+
+/* Mobile: center bracket horizontally and vertically */
+@media screen and (max-width: 768px) {
+    .aboutHero::after {
+        right: auto;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 70%;
+        background-position: center;
     }
 }
 

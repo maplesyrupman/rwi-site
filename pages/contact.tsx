@@ -4,11 +4,7 @@ import ContactForm from "../components/ContactForm";
 export default function Contact() {
     return (
         <div>
-            <div className='sectionMD'>
-                <h1 className='txtRed txtCenter'>Contact</h1>
-            </div>
-
-            <section className='sectionSM bgSecondaryTwo sectionWithBg'>
+            <section className='sectionMD bgSecondaryTwo sectionWithBg'>
                 <div className='contentMD flexRow alignStart justifyBetween gapXL flexColumnMD alignCenterMD'>
 
                     {/* Info */}

@@ -1,6 +1,24 @@
 .footerCon {
     border-top: 2px solid var(--grey-one);
     padding: var(--spacing-three) 0;
+    margin-top: var(--spacing-four);
+}
+
+.footerLeft {
+    flex-wrap: wrap;
+}
+
+.privacyLink {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--grey-three);
+    text-decoration: none;
+    transition: color 0.15s ease;
+    white-space: nowrap;
+}
+
+.privacyLink:hover {
+    color: var(--rwi-blue);
 }
 
 @media screen and (max-width: 600px) {

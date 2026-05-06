@@ -32,3 +32,19 @@
     resize: vertical;
     min-height: 8rem;
 }
+
+.consent {
+    font-size: 13px;
+    color: var(--grey-three);
+    margin-top: calc(-1 * var(--spacing-one));
+}
+
+.consentLink {
+    color: var(--grey-three);
+    text-decoration: underline;
+    transition: color 0.15s ease;
+}
+
+.consentLink:hover {
+    color: var(--rwi-blue);
+}
