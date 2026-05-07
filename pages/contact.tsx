@@ -14,7 +14,7 @@ export default function Contact() {
 
             <section className={`sectionLG pageGutters`}>
                 <div className={styles.pageHeader}>
-                    <h1 className='txtBlue'>Let's Talk</h1>
+                    <h1 className='txtBlue'>Let&apos;s Talk</h1>
                     <p>Ready to find out how much time your team can win back? Book a free discovery call or send us a message below.</p>
                 </div>
 
@@ -23,7 +23,7 @@ export default function Contact() {
                     <div className={styles.bookingCol}>
                         <h2 className={`${styles.colHeading} txtRed`}>Book a Discovery Call</h2>
                         <p className={styles.colDescription}>
-                            Book a 20-minute discovery call. We'll ask a few high-level questions about your business, your team, and how you currently operate — enabling us to prepare for your free audit and make the best use of everyone's time.
+                            Book a 20-minute discovery call. We&apos;ll ask a few high-level questions about your business, your team, and how you currently operate — enabling us to prepare for your free audit and make the best use of everyone&apos;s time.
                         </p>
                         <div className={styles.bookingBtn}>
                             <Link text='Book a Discovery Call' href='https://calendly.com/william-rwilabs/30min' linkStyle='btnImportant' destination='external' />
@@ -36,7 +36,7 @@ export default function Contact() {
                     <div className={styles.formCol}>
                         <h2 className={`${styles.colHeading} txtBlue`}>Send Us a Message</h2>
                         <p className={styles.colDescription}>
-                            Not ready to book a call? Send us a message and we'll be in touch within one business day.
+                            Not ready to book a call? Send us a message and we&apos;ll be in touch within one business day.
                         </p>
                         <ContactForm />
                     </div>
