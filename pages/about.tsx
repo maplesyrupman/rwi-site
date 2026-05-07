@@ -17,7 +17,7 @@ export default function About() {
                     <h1>We automate the boring stuff so your team can focus on business.</h1>
                     <p className="bold">AI and automation aren&apos;t here to replace your team — they&apos;re here to free them up for the work that actually matters.</p>
                     <div className={`flexRow gapMD ${styles.aboutHeroBtnGroup}`}>
-                        <Link text="Book a Free Audit" href="/contact" linkStyle="btnPrimary" destination="internal" />
+                        <Link text="Get Your Free Audit" href="/contact" linkStyle="btnPrimary" destination="internal" />
                         <Link text="What We Do" href="#what-we-do" linkStyle="btnSecondary" destination="internal" />
                     </div>
                 </div>

@@ -33,18 +33,27 @@
     min-height: 8rem;
 }
 
-.consent {
-    font-size: 13px;
-    color: var(--grey-three);
-    margin-top: calc(-1 * var(--spacing-one));
+.submitBtn {
+    display: flex;
 }
 
-.consentLink {
-    color: var(--grey-three);
-    text-decoration: underline;
-    transition: color 0.15s ease;
+@media screen and (max-width: 860px) {
+    .submitBtn {
+        justify-content: center;
+    }
 }
 
-.consentLink:hover {
-    color: var(--rwi-blue);
+.inputError {
+    border-color: var(--rwi-red);
+}
+
+.hint {
+    font-size: 12px;
+    color: var(--grey-three);
+}
+
+.error {
+    font-size: 14px;
+    color: var(--rwi-red);
+    margin: 0;
 }

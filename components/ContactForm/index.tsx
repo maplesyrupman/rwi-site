@@ -1,25 +1,29 @@
 import Button from "../Button"
 import styles from "./styles.module.css"
-import NextLink from 'next/link'
 
 import React, { useState } from "react"
-import axios from "axios"
 
 export default function ContactForm() {
-    const [formState, setFormState] = useState({ name: '', email: '', message: '' })
+    const [formState, setFormState] = useState({ name: '', company: '', email: '', phone: '', message: '' })
+    const [contactError, setContactError] = useState(false)
 
     function handleChange(e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) {
         setFormState({ ...formState, [e.target.id]: e.target.value })
+        if (contactError) setContactError(false)
     }
 
     function handleSubmit(e: React.FormEvent) {
         e.preventDefault()
-        axios({
-            method: 'post',
-            url: '/api/contact',
-            data: formState
-        })
-        .then(data => console.log(data))
+        if (!formState.email && !formState.phone) {
+            setContactError(true)
+            return
+        }
+        setContactError(false)
+        fetch('/api/contact', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(formState),
+        }).then(res => console.log(res.status))
     }
 
     return (
@@ -40,16 +44,40 @@ export default function ContactForm() {
                 />
             </div>
             <div className={styles.field}>
+                <label htmlFor="company">Company Name</label>
+                <input
+                    id="company"
+                    type="text"
+                    placeholder="Company Name"
+                    value={formState.company}
+                    onChange={handleChange}
+                    className={styles.input}
+                />
+                <span className={styles.hint}>Optional</span>
+            </div>
+            <div className={styles.field}>
                 <label htmlFor="email">Email</label>
                 <input
                     id="email"
                     type="email"
                     placeholder="Email"
-                    required
                     value={formState.email}
                     onChange={handleChange}
-                    className={styles.input}
+                    className={`${styles.input}${contactError ? ` ${styles.inputError}` : ''}`}
                 />
+                <span className={styles.hint}>At least one of email or phone is required</span>
+            </div>
+            <div className={styles.field}>
+                <label htmlFor="phone">Phone Number</label>
+                <input
+                    id="phone"
+                    type="tel"
+                    placeholder="Phone Number"
+                    value={formState.phone}
+                    onChange={handleChange}
+                    className={`${styles.input}${contactError ? ` ${styles.inputError}` : ''}`}
+                />
+                <span className={styles.hint}>At least one of email or phone is required</span>
             </div>
             <div className={styles.field}>
                 <label htmlFor="message">Message</label>
@@ -62,15 +90,14 @@ export default function ContactForm() {
                     rows={5}
                 />
             </div>
-            <div>
+            {contactError && (
+                <p className={styles.error}>
+                    Please provide either an email address or phone number so we can get back to you.
+                </p>
+            )}
+            <div className={styles.submitBtn}>
                 <Button text='Submit Inquiry' type='submit' btnStyle='primary' />
             </div>
-            <p className={styles.consent}>
-                By submitting this form you agree to our{' '}
-                <NextLink href='/privacy-policy'>
-                    <a className={styles.consentLink}>Privacy Policy</a>
-                </NextLink>
-            </p>
         </form>
     )
 }

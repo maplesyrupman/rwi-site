@@ -20,7 +20,7 @@ export default function Home() {
           <h1>We automate the boring stuff so your team can focus on business.</h1>
           <p className='bold'>Helping professional services firms win back time through automation.</p>
           <div className={styles.heroBtnGroup}>
-            <Link text='Book a Free Audit' href='/contact' linkStyle='btnPrimary' destination='internal' />
+            <Link text='Get Your Free Audit' href='/contact' linkStyle='btnPrimary' destination='internal' />
             <Link text='Learn More' href='/about' linkStyle='btnSecondary' destination='internal' />
           </div>
         </div>

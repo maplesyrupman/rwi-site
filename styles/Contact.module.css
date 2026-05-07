@@ -1,0 +1,103 @@
+.pageHeader {
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-two);
+    margin-bottom: var(--spacing-eight);
+}
+
+.columns {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+}
+
+.bookingCol {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-three);
+    padding-right: var(--spacing-seven);
+}
+
+.divider {
+    width: 1px;
+    background-color: var(--grey-one);
+    flex-shrink: 0;
+    align-self: stretch;
+}
+
+.formCol {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-three);
+    padding-left: var(--spacing-seven);
+}
+
+/* Stretch the form to fill the available column height */
+.formCol form {
+    flex: 1;
+    max-width: 100%;
+}
+
+/* Make the message textarea grow to use remaining column height */
+.formCol form textarea {
+    flex: 1;
+}
+
+.colHeading {
+    margin: 0;
+}
+
+.bookingBtn {
+    width: fit-content;
+}
+
+.colDescription {
+    color: var(--grey-four);
+}
+
+.consent {
+    font-size: 13px;
+    color: var(--grey-three);
+    margin-top: var(--spacing-five);
+}
+
+.consentLink {
+    color: var(--grey-three);
+    text-decoration: underline;
+    transition: color 0.15s ease;
+}
+
+.consentLink:hover {
+    color: var(--rwi-blue);
+}
+
+/* Mobile: stack columns, booking on top, hide divider */
+@media screen and (max-width: 860px) {
+    .columns {
+        flex-direction: column;
+        gap: var(--spacing-eight);
+    }
+
+    .bookingCol {
+        padding-right: 0;
+    }
+
+    .bookingBtn {
+        margin: 0 auto;
+    }
+
+    .formCol {
+        padding-left: 0;
+    }
+
+    .divider {
+        display: none;
+    }
+
+    .consent {
+        text-align: center;
+    }
+}

@@ -20,28 +20,21 @@ function getAdminHtml(body:any):string {
     <p>You have received a new contact form submission! Congratulations, please see details below.</p>
     <table>
         <tr>
-            <td>
-                Name:
-            </td>
-            <td>
-                ${body.name}
-            </td>
+            <td>Name:</td>
+            <td>${body.name}</td>
+        </tr>
+        ${body.company ? `<tr><td>Company:</td><td>${body.company}</td></tr>` : ''}
+        <tr>
+            <td>Email:</td>
+            <td>${body.email || '—'}</td>
         </tr>
         <tr>
-            <td>
-                Email:
-            </td>
-            <td>
-                ${body.email}
-            </td>
+            <td>Phone:</td>
+            <td>${body.phone || '—'}</td>
         </tr>
         <tr>
-            <td>
-                Message:
-            </td>
-            <td>
-                ${body.message}
-            </td>
+            <td>Message:</td>
+            <td>${body.message}</td>
         </tr>
     </table>
     `
