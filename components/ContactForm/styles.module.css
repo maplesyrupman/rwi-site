@@ -57,3 +57,14 @@
     color: var(--rwi-red);
     margin: 0;
 }
+
+.errorLink {
+    color: var(--rwi-red);
+    text-decoration: underline;
+}
+
+.successMessage {
+    font-size: 14px;
+    color: var(--rwi-red);
+    margin: 0;
+}

@@ -3,27 +3,38 @@ import styles from "./styles.module.css"
 
 import React, { useState } from "react"
 
+const EMPTY_FORM = { name: '', company: '', email: '', phone: '', message: '' }
+
 export default function ContactForm() {
-    const [formState, setFormState] = useState({ name: '', company: '', email: '', phone: '', message: '' })
+    const [formState, setFormState] = useState(EMPTY_FORM)
     const [contactError, setContactError] = useState(false)
+    const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
 
     function handleChange(e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) {
         setFormState({ ...formState, [e.target.id]: e.target.value })
         if (contactError) setContactError(false)
     }
 
-    function handleSubmit(e: React.FormEvent) {
+    async function handleSubmit(e: React.FormEvent) {
         e.preventDefault()
         if (!formState.email && !formState.phone) {
             setContactError(true)
             return
         }
         setContactError(false)
-        fetch('/api/contact', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(formState),
-        }).then(res => console.log(res.status))
+
+        try {
+            const res = await fetch('/api/contact', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(formState),
+            })
+            if (!res.ok) throw new Error(`Status ${res.status}`)
+            setFormState(EMPTY_FORM)
+            setSubmitStatus('success')
+        } catch {
+            setSubmitStatus('error')
+        }
     }
 
     return (
@@ -98,6 +109,17 @@ export default function ContactForm() {
             <div className={styles.submitBtn}>
                 <Button text='Submit Inquiry' type='submit' btnStyle='primary' />
             </div>
+            {submitStatus === 'success' && (
+                <p className={styles.successMessage}>
+                    Thanks for reaching out — we&apos;ll be in touch within one business day.
+                </p>
+            )}
+            {submitStatus === 'error' && (
+                <p className={styles.error}>
+                    Something went wrong. Please try again or email us at{' '}
+                    <a href='mailto:info@rwilabs.io' className={styles.errorLink}>info@rwilabs.io</a>
+                </p>
+            )}
         </form>
     )
 }
